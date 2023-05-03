@@ -4,15 +4,25 @@ services:
     build: ./h4221-frontend
     container_name: frontend
     ports:
-      - "4200:4200"
+      - 4200:3000
     depends_on:
       - backend
-      # - BD
   backend:
     backend: ./h4221-backend
     ports:
-      - "8080:8080"
+      - 9000:9000
+    depends_on:
+      - mongo
     container_name: backend
-  # BD:
-  #   image: imageBD/imageBD
-  #   container_name: BD
+  mongo:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: pld-smart-database
+    volumes:
+      - datamongodb:/data/db
