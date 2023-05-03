@@ -2,27 +2,32 @@ version: "3.9"
 services:
   frontend:
     build: ./h4221-frontend
-    container_name: frontend
     ports:
       - 4200:3000
     depends_on:
       - backend
+    container_name: frontend
   backend:
     build: ./h4221-backend
     ports:
       - 9000:9000
-    # depends_on:
-      # - mongo
+    depends_on:
+      - mongo
     container_name: backend
-  # mongo:
-  #   image: mongo
-  #   container_name: mongodb
-  #   restart: always
-  #   ports:
-  #     - 27017:27017
-  #   environment:
-  #     MONGO_INITDB_ROOT_USERNAME: root
-  #     MONGO_INITDB_ROOT_PASSWORD: root
-  #     MONGO_INITDB_DATABASE: pld-smart-database
-  #   volumes:
-  #     - datamongodb:/data/db
+  mongo:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: pld-smart-database
+    volumes:
+      - mongodb_data:/data/db
+volumes:
+  mongodb_data:
+    driver: local
+# volumes:
+#   - datamongodb:/data/db
