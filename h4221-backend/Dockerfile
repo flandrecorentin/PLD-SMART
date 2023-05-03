@@ -13,4 +13,4 @@ RUN apk add openjdk17
 RUN apk add maven
 COPY . .
 RUN mvn install && mvn package
-ENTRYPOINT ["java","-jar","./target/h4221-backend-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar","./target/h4221-backend-0.0.1-SNAPSHOT.jar"]
