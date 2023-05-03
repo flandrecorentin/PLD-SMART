@@ -1,0 +1,25 @@
+Alors : 
+
+I : docker : 
+    1. installer docker desktop et le lancer
+    2. build les images avec la commande "docker-compose build" dans racine de PLD-SMART
+    3. start avec "docker-compose up"
+    On peut désormais accéder au back avec localhost:9000, au front avec localhost:4200, à mongodb sur le port 27017
+    On peut consulter l'état des machines, leurs fichiers, leurs logs, et un terminal sur Docker Desktop dans les Containers en fonctionnement
+
+II : dev : (pour permettre le hot reload du front)
+    1. Frontend : 
+        a. Installer angular
+            - installer npm : https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-installer-to-install-nodejs-and-npm
+            - installer angular : npm install -g @angular/cli
+        b. npm install (pour installer les dépendances)
+        b. npm start (pour lancer le serveur)
+        On peut accéder au frond sur localhost:4200 maintenant.
+    2. Backend :
+        a. Installer maven 3.8.1 : 
+            - https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.8.1/apache-maven-3.8.1-bin.zip
+            - Suivre ce tuto pour les variables d'environnement : https://phoenixnap.com/kb/install-maven-windows
+        b. mvn install (pour installer les dépendances)
+        c. mvn spring-boot:run (pour lance le serveur)
+        On peut accéder au back sur localhost:9000 maintenant.
+        

@@ -6,6 +6,8 @@ services:
       - 4200:3000
     depends_on:
       - backend
+    networks:
+      - my-network
     container_name: frontend
   backend:
     build: ./h4221-backend
@@ -13,6 +15,8 @@ services:
       - 9000:9000
     depends_on:
       - mongo
+    networks:
+      - my-network
     container_name: backend
   mongo:
     image: mongo
@@ -29,5 +33,7 @@ services:
 volumes:
   mongodb_data:
     driver: local
+networks:
+  my-network:
 # volumes:
 #   - datamongodb:/data/db
