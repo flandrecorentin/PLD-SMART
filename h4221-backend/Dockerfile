@@ -7,10 +7,12 @@
 #EXPOSE 8080
 #ENTRYPOINT [ "java" , "-jar" , "/h4221-backend/target/" ]
 FROM eclipse-temurin:17-jdk-alpine
-VOLUME /tmp
+# VOLUME /tmp
+WORKDIR /dockerback
 RUN apk update
 RUN apk add openjdk17
 RUN apk add maven
 COPY . .
+EXPOSE 9000
 RUN mvn install && mvn package
 CMD ["java","-jar","./target/h4221-backend-0.0.1-SNAPSHOT.jar"]
