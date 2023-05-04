@@ -1,11 +1,8 @@
-FROM node:lts-alpine
-RUN npm install -g @angular/cli@15.2.7
-RUN npm install -g serve
+FROM node:alpine
 WORKDIR /dockerfront
-COPY package*.json ./
-RUN npm install
 COPY . .
-# RUN npm run build
+RUN npm install && npm install -g @angular/cli@15.2.7
+RUN npm run build
 EXPOSE 4200
-# CMD [ "serve", "-s" ,"/dockerfront/dist/h4221-frontend" ]
-CMD [ "npm", "start" ]
+CMD ["ng", "serve", "--host", "0.0.0.0"]
+# CMD [ "npm", "start" ]

@@ -3,25 +3,31 @@ services:
   frontend:
     build: 
       context: ./h4221-frontend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-hotreload
     ports:
       - 4200:4200    
+    volumes:
+      - ./h4221-frontend:/dockerfront
     depends_on:
       - backend
     networks:
       - my-network
     container_name: frontend
+    command: ng serve --host 0.0.0.0 --disable-host-check --poll 2000
   backend:
     build: 
       context: ./h4221-backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-hotreload
     ports:
       - 9000:9000
+    volumes:
+      - ./h4221-backend:/dockerback
     depends_on:
       - mongo
     networks:
       - my-network
     container_name: backend
+    command: mvn spring-boot:run
   mongo:
     image: mongo
     container_name: mongodb

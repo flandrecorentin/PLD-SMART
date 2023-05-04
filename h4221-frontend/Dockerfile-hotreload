@@ -1,0 +1,10 @@
+FROM node:alpine
+WORKDIR /dockerfront
+COPY src/ /dockerfront/src/
+COPY *.json .
+COPY *.iml .
+RUN npm install -g @angular/cli@15.2.7 && npm install -g serve && npm install
+# RUN npm run build
+EXPOSE 4200
+# CMD [ "serve", "-s" ,"/dockerfront/dist/h4221-frontend" ]
+CMD [ "npm", "start" ]

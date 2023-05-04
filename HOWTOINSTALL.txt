@@ -1,13 +1,15 @@
 Alors : 
 
-I : docker : 
+I : docker (pour la demo) : 
     1. installer docker desktop et le lancer
-    2. build les images avec la commande "docker-compose build" dans racine de PLD-SMART
+    2. build les images avec la commande "docker-compose build " dans racine de PLD-SMART (attention, construire le .jar du backend avant)
     3. start avec "docker-compose up"
     On peut désormais accéder au back avec localhost:9000, au front avec localhost:4200, à mongodb sur le port 27017
     On peut consulter l'état des machines, leurs fichiers, leurs logs, et un terminal sur Docker Desktop dans les Containers en fonctionnement
 
-II : dev : (pour permettre le hot reload du front)
+    BONUS : pour essayer le hotreload, ajouter "-f docker-compose-hotreload.yaml" à chaque commande docker-compose
+
+II : Pour dev :
     1. Frontend : 
         a. Installer angular
             - installer npm : https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-installer-to-install-nodejs-and-npm

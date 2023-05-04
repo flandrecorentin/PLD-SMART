@@ -9,10 +9,7 @@
 FROM eclipse-temurin:17-jdk-alpine
 # VOLUME /tmp
 WORKDIR /dockerback
-RUN apk update
-RUN apk add openjdk17
-RUN apk add maven
-COPY . .
+COPY ./target/h4221-backend-0.0.1-SNAPSHOT.jar ./target/h4221-backend-0.0.1-SNAPSHOT.jar
 EXPOSE 9000
-RUN mvn install && mvn package
+# RUN mvn install && mvn package
 CMD ["java","-jar","./target/h4221-backend-0.0.1-SNAPSHOT.jar"]
