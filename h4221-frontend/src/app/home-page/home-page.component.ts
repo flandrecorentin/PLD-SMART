@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {AppSettings} from '../app-settings';
+
 
 @Component({
   selector: 'app-home-page',
@@ -13,7 +15,7 @@ export class HomePageComponent {
   ngOnInit() {
   }
   onCharge(){
-    const req = this._httpClient.post('http://localhost:9000/inscription', {mail:'test@test', name:'THOMAS', password:'1234'}, {observe:'response'}).subscribe(response => {this.resultat = response.status.toString()});
+    const req = this._httpClient.post(AppSettings.API_ENDPOINT+'inscription', {mail:'test@test', name:'THOMAS', password:'1234'}, {observe:'response'}).subscribe(response => {this.resultat = response.status.toString()});
   }
   httpGet(){
     }
