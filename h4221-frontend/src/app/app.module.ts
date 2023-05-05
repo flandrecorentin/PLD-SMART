@@ -12,6 +12,7 @@ import { ConnexionPageComponent } from './connexion-page/connexion-page.componen
 import { InscriptionPageComponent } from './inscription-page/inscription-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ConnexionPageComponent,
     InscriptionPageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

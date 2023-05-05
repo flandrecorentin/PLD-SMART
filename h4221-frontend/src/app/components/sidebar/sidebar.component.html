@@ -1,0 +1,18 @@
+
+<div id="sidebar">
+    <!-- <div class="logo-container">
+        <button class="logo"></button>
+         <div class="logo-txt">
+            <img class="sidebar-link-icon" src="../../assets/logo.png"/>
+        </div>
+        <button class="btn-close"></button>
+    </div> -->
+    <ul class="sidebar-nav">
+        <li class="sidebar-van-item" *ngFor="let data of navData">
+            <a href="" class="sidebar-nav-link" [routerLink]="data.routeLink">
+                <img class="sidebar-link-icon" [src]="data.icon"/>
+                <span class="sidebar-link-text" >{{data.label}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

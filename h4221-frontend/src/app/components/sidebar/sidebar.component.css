@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500,550,600,700&display=swap');
+#sidebar {
+
+    background: #EAF4F4;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width:5vw;
+    height: 100vh;
+    border-right:black solid 1px;
+    white-space: nowrap;
+    transition:0.4s;
+}
+#sidebar:hover{
+    
+    width:20vw;
+}
+#sidebar ul{
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    margin-top:20vh;
+}
+#sidebar ul li{
+    margin:5px;
+    margin-left:20px;
+    margin-bottom:20px;
+}#sidebar img{
+    width:40px;
+    transform: translate(0%,25%);
+}
+a{  
+    text-decoration: none;
+}
+#sidebar span{
+    color:rgba(0, 0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-size:1vw;
+    font-weight: 500;
+    top:0;
+    margin-left:10px;
+    transition:0.4s;
+}
+#sidebar:hover span{
+    color:rgb(0, 0, 0);
+}
