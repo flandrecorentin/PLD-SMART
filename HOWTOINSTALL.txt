@@ -24,4 +24,7 @@ II : Pour dev :
         b. mvn install (pour installer les dépendances)
         c. mvn spring-boot:run (pour lance le serveur)
         On peut accéder au back sur localhost:9000 maintenant.
-        
+    3. Database : 
+        a. docker-compose -f mongo.yaml build
+        b. docker-compose -f mongo.yaml up
+        C'est bon c'est lancé ! On peut vérifier que ca marche sur http://localhost:27017/
