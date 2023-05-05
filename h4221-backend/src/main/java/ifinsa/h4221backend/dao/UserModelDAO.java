@@ -14,4 +14,7 @@ public interface UserModelDAO extends MongoRepository<User, String> {
 
     @Query("{mail:'?0'")
     User get(String mail);
+
+    @Query("{ 'mail' : ?0, 'password' : ?0 }")
+    User findUserByMailAndPassword(String name, String password);
 }
