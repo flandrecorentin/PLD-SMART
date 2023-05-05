@@ -1,1 +1,254 @@
-{"Brandenburgische Technische Universit\u00e4t Cottbus-Senftenberg": {"nom": "test", "nomcourt": "", "url": "http://www.b-tu.de/", "cadre": ["Erasmus", "SMS (etudiante)"], "codeErasmus": "D COTTBUS03", "departements": ["G\u00e9nie Civil et Urbanisme"], "nombrePlaceTotal": 4, "nombrePlaceDispo": 2, "fraisSemestre": 0, "fraisAnnee": 0, "niveauLangueRequis": "B1 Allemand ou Anglais", "debutS1": "", "finS1": "", "debutS2": "", "finS2": "", "gpa": 10, "procedureCandidature": "", "fichierInfos": "", "destination": {"continent": "Europe", "pays": "Allemagne", "ville": "Cottbus", "langueNat1": "Allemand", "langueNat2": "", "visaRequis": "oui", "lienVisa": "immigration.de/studentvisa", "climat": "tempere", "nombreHabitant": 98359, "nombreEtudiant": 6600}}, "test": {"nom": "test", "nomcourt": "", "url": "http://www.b-tu.de/", "cadre": ["Erasmus", "SMS (etudiante)"], "codeErasmus": "D COTTBUS03", "departements": ["G\u00e9nie Civil et Urbanisme"], "nombrePlaceTotal": 4, "nombrePlaceDispo": 2, "fraisSemestre": 0, "fraisAnnee": 0, "niveauLangueRequis": "B1 Allemand ou Anglais", "debutS1": "", "finS1": "", "debutS2": "", "finS2": "", "gpa": 10, "procedureCandidature": "", "fichierInfos": "", "destination": {"continent": "Europe", "pays": "Allemagne", "ville": "Cottbus", "langueNat1": "Allemand", "langueNat2": "", "visaRequis": "oui", "lienVisa": "immigration.de/studentvisa", "climat": "tempere", "nombreHabitant": 98359, "nombreEtudiant": 6600}}}
+{
+    "brandenburgische technische universit\u00e4t cottbus-senftenberg": {
+        "nom": "National University of Civil Engineering"
+    },
+    "karlsruher institut f\u00fcr technologie": {
+        "nom": "National University of Civil Engineering"
+    },
+    "instituto tecnol\u00f3gico de buenos aires": {
+        "nom": "National University of Civil Engineering"
+    },
+    "instituto universitario aeron\u00e1utico": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidad de buenos aires": {
+        "nom": "National University of Civil Engineering"
+    },
+    "montanuniversit\u00e4t leoben": {
+        "nom": "National University of Civil Engineering"
+    },
+    "technische universit\u00e4t graz": {
+        "nom": "National University of Civil Engineering"
+    },
+    "ku leuven": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universit\u00e9 de namur": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universit\u00e9 libre de bruxelles": {
+        "nom": "National University of Civil Engineering"
+    },
+    "pontificia universidade cat\u00f3lica do rio de janeiro": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidade de s\u00e3o paulo": {
+        "nom": "National University of Civil Engineering"
+    },
+    "bureau de coop\u00e9ration interuniversitaire (bci)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "\u00e9cole de technologie sup\u00e9rieure (ets)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "\u00e9cole polytechnique de montr\u00e9al": {
+        "nom": "National University of Civil Engineering"
+    },
+    "pontificia universidad cat\u00f3lica de chile": {
+        "nom": "National University of Civil Engineering"
+    },
+    "pontificia universidad cat\u00f3lica de valpara\u00edso": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidad cat\u00f3lica del norte": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidad de chile": {
+        "nom": "National University of Civil Engineering"
+    },
+    "beijing jiaotong university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "northwestern polytechnical university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "shanghai jiao tong university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "pontificia universidad javeriana": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidad de antioquia": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidad de los andes": {
+        "nom": "National University of Civil Engineering"
+    },
+    "daegu gyeongbuk institute of science and technology": {
+        "nom": "National University of Civil Engineering"
+    },
+    "gwangju institute of science and technology": {
+        "nom": "National University of Civil Engineering"
+    },
+    "korea advanced institute of science and technology": {
+        "nom": "National University of Civil Engineering"
+    },
+    "aalborg universitet": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidad carlos iii de madrid": {
+        "nom": "National University of Civil Engineering"
+    },
+    "tartu \u00fclikool": {
+        "nom": "National University of Civil Engineering"
+    },
+    "ge3 - institute of international education (iie)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "georgia institute of technology (georgia tech)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "illinois institute of technology": {
+        "nom": "National University of Civil Engineering"
+    },
+    "international student exchange program (isep)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "aalto-yliopisto": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universit\u00e9 d'orl\u00e9ans": {
+        "nom": "National University of Civil Engineering"
+    },
+    "aristoteleio panepistimio thessalonikis": {
+        "nom": "National University of Civil Engineering"
+    },
+    "city university of hong kong": {
+        "nom": "National University of Civil Engineering"
+    },
+    "the hong kong polytechnic university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "budapesti m\u0171szaki \u00e9s gazdas\u00e1gtudom\u00e1nyi egyetem": {
+        "nom": "National University of Civil Engineering"
+    },
+    "indian institute of technology bombay (iit bombay)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "indian institute of technology delhi (iit delhi)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "indian institute of technology kanpur (iit kanpur)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "indian institute of technology madras (iit madras)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "institut teknologi bandung": {
+        "nom": "National University of Civil Engineering"
+    },
+    "institut teknologi sepuluh nopember (its)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "dublin city university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "h\u00e1sk\u00f3li \u00edslands university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "politecnico di bari": {
+        "nom": "National University of Civil Engineering"
+    },
+    "keio university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "kobe university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "kyushu university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "the university of tokyo": {
+        "nom": "National University of Civil Engineering"
+    },
+    "vilnius tech": {
+        "nom": "National University of Civil Engineering"
+    },
+    "benem\u00e9rita universidad aut\u00f3noma de puebla": {
+        "nom": "National University of Civil Engineering"
+    },
+    "instituto polit\u00e9cnico nacional": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidad aut\u00f3noma de baja california": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidad aut\u00f3noma de nuevo le\u00f3n": {
+        "nom": "National University of Civil Engineering"
+    },
+    "norges teknisk-naturvitenskapelige universitet": {
+        "nom": "National University of Civil Engineering"
+    },
+    "technische universiteit delft": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universiteit twente": {
+        "nom": "National University of Civil Engineering"
+    },
+    "akademia g\u00f3rniczo-hutnicza im. stanis\u0142awa staszica w krakowie": {
+        "nom": "National University of Civil Engineering"
+    },
+    "politechnika gdanska": {
+        "nom": "National University of Civil Engineering"
+    },
+    "instituto superior t\u00e9cnico": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universitatea 'politehnica' din bucuresti (upb)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "imperial college london": {
+        "nom": "National University of Civil Engineering"
+    },
+    "loughborough university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "national university of singapore": {
+        "nom": "National University of Civil Engineering"
+    },
+    "singapore university of technology and design": {
+        "nom": "National University of Civil Engineering"
+    },
+    "slovensk\u00e1 technick\u00e1 univerzita v bratislave (stu)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "univerza v ljubljani": {
+        "nom": "National University of Civil Engineering"
+    },
+    "chalmers tekniska h\u00f6gskola": {
+        "nom": "National University of Civil Engineering"
+    },
+    "eastern switzerland university of applied sciences ost": {
+        "nom": "National University of Civil Engineering"
+    },
+    "national tsing hua university": {
+        "nom": "National University of Civil Engineering"
+    },
+    "cesk\u00e9 vysok\u00e9 uceni technick\u00e9 v praze": {
+        "nom": "National University of Civil Engineering"
+    },
+    "vysok\u00e9 ucen\u00ed technick\u00e9 v brne": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universit\u00e9 de lom\u00e9": {
+        "nom": "National University of Civil Engineering"
+    },
+    "ecole nationale d'ing\u00e9nieurs de sfax (universit\u00e9 de sfax)": {
+        "nom": "National University of Civil Engineering"
+    },
+    "bogazi\u00e7i \u00fcniversitesi": {
+        "nom": "National University of Civil Engineering"
+    },
+    "galatasaray universitesi": {
+        "nom": "National University of Civil Engineering"
+    },
+    "universidad de la rep\u00fablica": {
+        "nom": "National University of Civil Engineering"
+    },
+    "ho chi minh city university of technology": {
+        "nom": "National University of Civil Engineering"
+    },
+    "national university of civil engineering": {
+        "nom": "National University of Civil Engineering"
+    }
+}

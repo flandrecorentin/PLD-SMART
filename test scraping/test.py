@@ -11,34 +11,78 @@ driver = webdriver.Chrome(service)"""
 """from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By"""
-
-
 from selenium import webdriver
 from selenium import *
 from selenium.webdriver.common.by import By
 import time
+import json
+import unidecode
+#import js
 
+#initialisation page
 DRIVER_PATH = 'chromedriver'
 driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 url = 'https://insalyon.adv-pub.moveonfr.com/report-page-1653/'
 driver.maximize_window() #maximize the window
 driver.get(url)          #open the URL
 driver.implicitly_wait(220) #maximum time to load the link
-#driver.execute_script("window.scrollTo(0, document.body.scrollHeight,)")
+
+#initialisation donnes
+etablissement = {}
+listeEtablissement = {}
+#JavascriptExecutor js = (JavascriptExecutor) driver
+#js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "")
+for i in range (1,2) :
+    time.sleep(2)
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight,)")
+
+#listenom = driver.find_elements(By.XPATH, '//div[@class="_univname"]')
+#listelien = driver.find_element(By.XPATH, '//span[@class="more_info_text"]').click()
+driver.find_element(By.CLASS_NAME, "more_info_text").click()
+#driver.find_element(By.link, "Plus de détails").click()
+#driver.find_element_by_link_text("Plus de détails").click()
+
+for lien in listelien:
+    print(lien.text)
+    lien.click()
+    driver.find_element(By.CLASS_NAME, "_modal_univ_moreclose").click()
+
+    """
+    nomuniversite = nomuniversite.text
+    #Normalisation des noms d'université
+    idNom = nomuniversite.lower()
+    idnom = idNom.replace(" ","-")
+    idnomfinale = unidecode.unidecode(idnom)
+    print(nomuniversite)
+    print(idnomfinale)
+    if idnom not in listeEtablissement : 
+        etablissement = {}
+        etablissement["nom"]=nomuniversite
+        listeEtablissement[idnomfinale] = etablissement
+    """
+
+    #a = driver.find_element(By.CLASS_NAME, "university_stats")
+
+
 print("coucou")
-driver.find_element(By.CLASS_NAME, "irm_filter_btn").click()
+driver.find_element(By.CLASS_NAME, "irm_filter_btn")
 print("coucou")
+
+with open('data9.json', 'w') as mon_fichier:
+    json.dump(listeEtablissement, mon_fichier)
+#driver.close()
 
 #sel = Select(driver.find_element(By.CLASS_NAME, "relation_internal_institution_ids_js"))
 
 
 #select by select_by_visible_text() method
-sel.select_by_visible_text("  --- Informatique")
+
+#sel.select_by_visible_text("  --- Informatique")
 time.sleep(0.8)
 #select by select_by_index() method
-sel.select_by_index(0)
-driver.close()
-driver.find_element(By.CLASS_NAME, "irm_filter_btn").click()
+#sel.select_by_index(0)
+
+#driver.find_element(By.CLASS_NAME, "irm_filter_btn").click()
 
 #element = driver.find_element_by_xpath('//h2[text()=”Top Cuisines Near You”]’).find_element_by_xpath(‘//a[@class=”sc-hrWEMg fFHnHa”]')
 
