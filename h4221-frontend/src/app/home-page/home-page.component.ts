@@ -14,11 +14,23 @@ export class HomePageComponent {
   }
   ngOnInit() {
   }
-  onCharge(){
-    const req = this._httpClient.post(AppSettings.API_ENDPOINT+'inscription', {mail:'test@test', name:'THOMAS', password:'1234'}, {observe:'response'}).subscribe(response => {this.resultat = response.status.toString()});
+  onInscrit(){
+    const req = this._httpClient.post(AppSettings.API_ENDPOINT+'inscription', {mail:'test@test', name:'THOMAS', password:'1234'}, {observe:'response'}).subscribe(response => {
+      if(response.body!=null){
+        this.resultat = response.body!.toString();
+      }
+    });
   }
+  onConnecte(){
+    const req = this._httpClient.post(AppSettings.API_ENDPOINT+'connection', {mail:'test@test', password:'1234'}, {observe:'response'}).subscribe(response => {
+      if(response.body!=null){
+        this.resultat = response.body!.toString();
+      }
+    });
+  }
+  
   httpGet(){
-    }
+  }
   
 
 }
