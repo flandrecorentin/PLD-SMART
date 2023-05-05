@@ -10,6 +10,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
 import { InscriptionPageComponent } from './inscription-page/inscription-page.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { InscriptionPageComponent } from './inscription-page/inscription-page.co
     PageNotFoundComponent,
     HomePageComponent,
     ConnexionPageComponent,
-    InscriptionPageComponent
+    InscriptionPageComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
