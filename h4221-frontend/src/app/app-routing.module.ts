@@ -3,12 +3,11 @@ import {Input, NgModule} from '@angular/core';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent},
   { path: 'connexion', component: ConnexionPageComponent},
-  { path: 'sidebar', component: SidebarComponent},
   // { path: 'curriculum', component: CurriculumComponent},
   // { path: 'projects', component: ProjectsComponent},
   // { path: 'hobbies/sport', component: HobbiesSportComponent},
