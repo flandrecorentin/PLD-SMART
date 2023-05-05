@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-connexion-page',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./connexion-page.component.css']
 })
 export class ConnexionPageComponent {
+  id = new FormControl();
+  password = new FormControl();
 
+    submitConnexion() {
+        console.log(this.id.value);
+        console.log(this.password.value);
+
+    }
 }
