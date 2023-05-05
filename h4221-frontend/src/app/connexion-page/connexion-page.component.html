@@ -1,7 +1,9 @@
-<div id="inscription">
+<div id="connection">
     <img id="logo" src="../assets/logo.png"/>
 
-    <h3 id="titre">Inscrire</h3>
+    <p id="titre">Se connecter à son compte</p>
+    
+    <p id="soustitre">Bienvenue sur Mobilit’IF! Entrez vos détails.</p>
 
     <!-- <form action="/action_page.php">
         <label for="fname">First name:</label>
@@ -10,4 +12,24 @@
         <input type="text" id="fname" name="fname"><br><br>
         <input type="submit" value="Submit">
     </form> -->
+    <p class="label">Email</p>
+    <input
+    type="text"
+    [formControl]="id"
+    placeholder="Username / email">
+    <p class="label">Password</p>
+<input 
+type="password"
+[formControl]="password"
+placeholder="••••••••">
+
+<button
+    id="signin"
+    type="submit"
+    (click)="submitConnexion()">Sign in</button>
+
+
+
+<p id="signup">Don't have an account ? <a class="link-same-page" routerLink="../inscription">Sign up</a></p>
+
 </div>

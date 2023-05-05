@@ -1,1 +1,38 @@
-<p>inscription-page works!</p>
+<div id="inscription">
+    <img id="logo" src="../assets/logo.png"/>
+
+    <p id="titre">Inscrire</p>
+
+    <!-- <form action="/action_page.php">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <input type="submit" value="Submit">
+    </form> -->
+    <p class="label">Name*</p>
+    <input 
+    type="text"
+    [formControl]="name"
+    placeholder="Entrez votre nom">
+    <p class="label">Email*</p>
+    <input
+    type="text"
+    [formControl]="mail"
+    placeholder="Entrez votre email">
+    <p class="label">Password*</p>
+<input 
+type="password"
+[formControl]="password"
+placeholder="••••••••">
+
+<button
+    id="signin"
+    type="submit"
+    (click)="submitInscription()">Sign up</button>
+
+
+
+<p id="signup">Already have an account ? <a class="link-same-page" routerLink="../connexion">Sign in</a></p>
+
+</div>

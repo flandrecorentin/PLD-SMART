@@ -1,17 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@350&display=swap');
-#inscription{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500,550,600,700&display=swap');
+#connection{
     margin:auto;
     width: 30%;
     margin-top:10vh;
 }
 
-#inscription #logo{
+#connection #logo{
     display: block;
     margin:auto;
     height:15vw;
 }
-#inscription #titre{
+#connection #titre{
     font-family: 'Inter', sans-serif;
-    font-size:2.2vw;
+    font-size:2vw;
+    font-weight: 700;
+    align-self:center;
+    text-align: center;
+    margin-bottom:0;
+}
+#connection #soustitre{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size:1.2vw;
+    color:grey;
+    align-self:center;
+    text-align: center;
+}
+#connection .label{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size:0.8vw;
     align-self:left;
+    text-align: left;
+    margin-bottom: 5px;
+}
+#connection input{
+    padding:10px;
+    width:100%;
+    border-radius: 10px;
+    border: 0.5px solid #bbbbbb;
+    box-sizing: border-box;
+}
+#connection #signin{
+    width:100%;
+    height:40px;
+    margin:0;
+    margin-top:20px;
+    border-radius: 10px;
+    background-color:#6B9080;
+    color: white;
+    border-color: rgba(240, 248, 255, 0);
+    animation-duration: 0.3s;
+}
+
+#connection #signin:hover {
+    
+    background-color:#5a796c;
+}
+#connection #signin:active {
+    translate: 0px 1px;
+}
+#connection #signup{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size:0.8vw;
+    align-self:center;
+    text-align: center;
+    margin-bottom: 5px;
+    color:grey;
+}
+#connection #signup a{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size:0.8vw;
+    align-self:center;
+    text-align: center;
+    margin-bottom: 5px;
+    color:#6B9080;
+    text-decoration:none;
 }
