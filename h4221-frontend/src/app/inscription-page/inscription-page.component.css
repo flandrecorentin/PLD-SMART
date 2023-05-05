@@ -2,7 +2,7 @@
 #inscription{
     margin:auto;
     width: 30%;
-    margin-top:5vh;
+    margin-top:2vh;
 }
 
 #inscription #logo{
@@ -14,8 +14,8 @@
     font-family: 'Inter', sans-serif;
     font-size:2vw;
     font-weight: 700;
-    align-self:left;
-    text-align: left;
+    align-self:center;
+    text-align: center;
     margin-bottom:0;
 }
 #inscription #soustitre{
