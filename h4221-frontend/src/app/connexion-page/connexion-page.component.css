@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@350&display=swap');
+#inscription{
+    margin:auto;
+    width: 30%;
+    margin-top:10vh;
+}
+
+#inscription #logo{
+    display: block;
+    margin:auto;
+    height:15vw;
+}
+#inscription #titre{
+    font-family: 'Inter', sans-serif;
+    font-size:2.2vw;
+    align-self:left;
+}
