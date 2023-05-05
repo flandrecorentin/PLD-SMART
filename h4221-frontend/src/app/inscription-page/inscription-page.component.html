@@ -3,7 +3,7 @@
 <div id="inscription">
     <img id="logo" src="../assets/logo.png"/>
 
-    <p id="titre">Inscrire</p>
+    <p id="titre">S'inscrire</p>
 
     <!-- <form action="/action_page.php">
         <label for="fname">First name:</label>
@@ -12,7 +12,7 @@
         <input type="text" id="fname" name="fname"><br><br>
         <input type="submit" value="Submit">
     </form> -->
-    <p class="label">Name*</p>
+    <p class="label">Nom*</p>
     <input 
     type="text"
     [formControl]="name"
@@ -22,7 +22,7 @@
     type="text"
     [formControl]="mail"
     placeholder="Entrez votre email">
-    <p class="label">Password*</p>
+    <p class="label">Mot de passe*</p>
 <input 
 type="password"
 [formControl]="password"
@@ -38,3 +38,5 @@ placeholder="••••••••">
 <p id="signup">Already have an account ? <a class="link-same-page" routerLink="../connexion">Sign in</a></p>
 
 </div>
+
+<app-footer></app-footer>
