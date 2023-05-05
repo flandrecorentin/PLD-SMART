@@ -4,6 +4,7 @@ import ifinsa.h4221backend.model.User;
 import ifinsa.h4221backend.service.ExampleService;
 import ifinsa.h4221backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("*")
@@ -25,6 +26,8 @@ public class UserAdminController {
         System.out.println("-------------------------------------------------------------");
         System.out.println("-------------------------------------------------------------");
         userService.inscrireService(user);
+
+//        return new ResponseStatus(HttpStatus.OK);
     }
 
 

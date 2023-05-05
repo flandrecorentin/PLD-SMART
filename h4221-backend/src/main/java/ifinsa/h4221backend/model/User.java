@@ -8,13 +8,7 @@ public class User{
 
     @Id
     private String mail;
-
-    public String getName() {
-        return name;
-    }
-
     private String name;
-
     private String password;
 
     public User() {
@@ -25,5 +19,15 @@ public class User{
         this.name = name;
         this.password = password;
     }
+    public String getName() {
+        return name;
+    }
 
+    public String getMail() {
+        return mail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }
