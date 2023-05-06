@@ -2,38 +2,31 @@
 <app-header></app-header>
 
 <div id="connection">
-    <img id="logo" src="../assets/logo.png"/>
-
+    <img id="logo" src="../assets/logo.png" />
     <p id="titre">Se connecter à son compte</p>
-    
     <p id="soustitre">Bienvenue sur Mobilit’IF! Entrez vos détails.</p>
 
-    <!-- <form action="/action_page.php">
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <input type="submit" value="Submit">
-    </form> -->
-    <p class="label">Email</p>
-    <input
-    type="text"
-    [formControl]="id"
-    placeholder="Entrez votre e-mail">
-    <p class="label">Password</p>
-<input 
-type="password"
-[formControl]="password"
-placeholder="••••••••">
+    <form id="login-form" [formGroup]="loginForm" (ngSubmit)="submitConnexion()">
 
-<button
-    id="signin"
-    type="submit"
-    (click)="submitConnexion()">Connection</button>
+        <label for="login" class="label">Email</label>
+        <input id="login" type="email" email="true" formControlName="login" placeholder="Entrez votre e-mail">
+        <div *ngIf="loginForm.controls.login.invalid && (loginForm.controls.login.dirty || loginForm.controls.login.touched)">
+            <p class="label error">L'adresse mail est obligatoire !</p>
+        </div>
 
+        <label for="password" class="label">Password</label>
+        <input id="password" type="password" formControlName="password" placeholder="••••••••">
+        <div *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">
+            <p class="label error">Le mot de passe est obligatoire !</p>
+        </div>
 
+        <button id="signin" type="submit" [disabled]="!loginForm.valid">Connexion</button>
+    </form>
 
-<p id="signup">Vous n'avez pas de compte ? <a class="link-same-page" routerLink="../inscription">Inscrivez-vous</a></p>
+    <p id="signup">
+        Vous n'avez pas de compte ?
+        <a class="link-same-page" routerLink="../inscription">Inscrivez-vous</a>
+    </p>
 
 </div>
 <app-footer></app-footer>

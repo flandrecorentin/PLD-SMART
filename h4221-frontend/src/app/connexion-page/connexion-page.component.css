@@ -79,3 +79,11 @@
     color:#6B9080;
     text-decoration:none;
 }
+
+#connection .error {
+    color: red;
+}
+
+#connection .ng-invalid.ng-touched {
+    border-color: red;
+}
