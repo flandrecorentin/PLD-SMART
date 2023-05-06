@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-connexion-page',
@@ -7,12 +7,16 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./connexion-page.component.css']
 })
 export class ConnexionPageComponent {
-  id = new FormControl();
-  password = new FormControl();
 
-    submitConnexion() {
-        console.log(this.id.value);
-        console.log(this.password.value);
+  constructor(private fb: FormBuilder) { }
 
-    }
+  loginForm = this.fb.group({
+    login: ["", Validators.required],
+    password: ["", Validators.required]
+  })
+
+  submitConnexion() {
+    //Here, we will call the service in order to log the user to Mobilit'if
+    console.log(this.loginForm.value);
+  }
 }

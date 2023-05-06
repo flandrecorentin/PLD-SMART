@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500,550,600,700&display=swap');
 #sidebar {
-
     background: #EAF4F4;
     position: absolute;
     z-index: 1;
@@ -10,9 +9,9 @@
     border-right:black solid 1px;
     white-space: nowrap;
     transition:0.4s;
+    border-right: #526d62 1px solid
 }
 #sidebar:hover{
-    
     width:20vw;
 }
 #sidebar ul{

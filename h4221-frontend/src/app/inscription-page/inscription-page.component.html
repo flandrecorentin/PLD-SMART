@@ -1,42 +1,39 @@
 <app-header></app-header>
 
-<div id="inscription">
-    <img id="logo" src="../assets/logo.png"/>
+<form id="inscription" [formGroup]="inscriptionForm" (ngSubmit)="submitInscription()">
+    <img id="logo" src="../assets/logo.png" />
 
     <p id="titre">S'inscrire</p>
 
-    <!-- <form action="/action_page.php">
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <input type="submit" value="Submit">
-    </form> -->
-    <p class="label">Nom*</p>
-    <input 
-    type="text"
-    [formControl]="name"
-    placeholder="Entrez votre nom">
-    <p class="label">Email*</p>
-    <input
-    type="text"
-    [formControl]="mail"
-    placeholder="Entrez votre email">
-    <p class="label">Mot de passe*</p>
-<input 
-type="password"
-[formControl]="password"
-placeholder="••••••••">
+    <label for="lastName" class="label">Nom</label>
+    <input id="lastName" type="text" formControlName="lastName" placeholder="Entrez votre nom" required>
+    <div *ngIf="inscriptionForm.controls.lastName.invalid && (inscriptionForm.controls.lastName.dirty || inscriptionForm.controls.lastName.touched)">
+        <p class="label error">Le nom est obligatoire !</p>
+    </div>
 
-<button
-    id="signin"
-    type="submit"
-    (click)="submitInscription()">Sign up</button>
+    <label for class="label">Prénom</label>
+    <input id="firstName" type="text" formControlName="firstName" placeholder="Entrez votre prénom" required>
+    <div *ngIf="inscriptionForm.controls.firstName.invalid && (inscriptionForm.controls.firstName.dirty || inscriptionForm.controls.firstName.touched)">
+        <p class="label error">Le prénom est obligatoire !</p>
+    </div>
 
+    <label for="email" class="label">Email</label>
+    <input id="email" type="email" email="true" formControlName="mail" placeholder="Entrez votre email" required>
+    <div *ngIf="inscriptionForm.controls.mail.invalid && (inscriptionForm.controls.mail.dirty || inscriptionForm.controls.mail.touched)">
+        <p class="label error">Le mail est obligatoire !</p>
+    </div>
 
+    <label for="password" class="label">Mot de passe</label>
+    <input id="password" type="password" formControlName="password" placeholder="••••••••" required>
+    <div *ngIf="inscriptionForm.controls.password.invalid && (inscriptionForm.controls.password.dirty || inscriptionForm.controls.password.touched)">
+        <p class="label error">Le mot de passe est obligatoire !</p>
+    </div>
 
-<p id="signup">Already have an account ? <a class="link-same-page" routerLink="../connexion">Sign in</a></p>
+    <button id="signin" type="submit" [disabled]="!inscriptionForm.valid">Créer mon compte</button>
 
-</div>
+    <label id="signup">Tu as déjà un compte ? <a class="link-same-page" routerLink="../connexion">Connecte-toi
+            ici</a></label>
+
+</form>
 
 <app-footer></app-footer>
