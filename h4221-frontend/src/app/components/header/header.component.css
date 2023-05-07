@@ -5,7 +5,7 @@
     margin:0;
     padding:10px;
     box-sizing: border-box;
-    border-bottom: #526d62 1px solid;
+    border-bottom: #526d6253 1px solid
 }
 #header button{
     float:right;
