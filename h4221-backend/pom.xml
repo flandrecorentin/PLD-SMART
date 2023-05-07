@@ -37,7 +37,7 @@
             <version>3.8.1</version>
         </dependency>
 
-        <!--    Base de données non relationnelle MongoDB-->
+<!--        base de données non relationnelle -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -52,6 +52,12 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
+        </dependency>
+<!--        Pour la lecture de fichier JSON  -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
         </dependency>
 
         <dependency>
@@ -82,7 +88,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--                <version>2.3.0.RELEASE</version>-->
+<!--                <version>2.3.0.RELEASE</version>-->
             </plugin>
         </plugins>
     </build>
