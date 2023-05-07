@@ -13,7 +13,7 @@ public class FormulaireREXService {
     FormulaireREXDAO formulaireREXDAO ;
     public boolean sauvegarder(FormulaireREX formulaireREX) {
         try{
-            formulaireREXDAO.save(formulaireREXDAO);
+            formulaireREXDAO.save(formulaireREX);
             return true;
         }
         catch (Exception exception) {

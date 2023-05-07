@@ -1,44 +1,60 @@
 package ifinsa.h4221backend.model;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.util.Pair;
 
-import java.util.LinkedList;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
 
-@Document("Formulaire REX")
+@Document("FormulaireREX")
 public class FormulaireREX {
 
+
+    public int getId() {
+        return id;
+    }
+
     @Id
-    private long id;
+    @Transient
+    private int id;
     private String author;
     private String date;
-    private LinkedList<Pair<String,String>> information;
+    private Map<String, String> information;
 
     public FormulaireREX() {
-        information = initialisationInformation();
+
     }
 
-    private static LinkedList<Pair<String, String>> initialisationInformation() {
-        return null;
-    }
 
-    public FormulaireREX(LinkedList<Pair<String,String>> information) {
-//        this.information = information;
-    }
-
-    public long getId() {
-        return this.id;
-    }
-
-    @Autowired
 
     @Override
     public String toString() {
         return "FormulaireREX{" +
-                "id=" + id +
+                "author='" + author + '\'' +
+                ", date='" + date + '\'' +
                 ", information=" + information +
                 '}';
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setInformation(Map<String, String> information) {
+        this.information = information;
     }
 }
