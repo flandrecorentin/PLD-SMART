@@ -27,10 +27,10 @@ public class FormulaireREXController {
     public ResponseEntity inscrire(@RequestBody FormulaireREX formulaireREX){
         try{
             if(formulaireREXService.sauvegarder(formulaireREX)){
-                System.out.println("[FormulaireREXController]: Sauvegarde du questionnaire d'identifiant"+formulaireREX.getId());
+                System.out.println("[FormulaireREXController]: Sauvegarde du questionnaire");
                 return new ResponseEntity(HttpStatus.OK);
             }else{
-                System.out.println("[FormulaireREXController]: Le formulaire  d'identifiant " +formulaireREX.getId()+" a un format invalide");
+                System.out.println("[FormulaireREXController]: Le formulaire  a un format invalide");
                 return new ResponseEntity(HttpStatus.CONFLICT);
             }
         }
