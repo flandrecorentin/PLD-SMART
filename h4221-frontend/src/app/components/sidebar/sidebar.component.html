@@ -1,4 +1,16 @@
 <div id="sidebar">
+    <img id="logo" src="../../assets/logo.png"/>
+    <p id="titre">Mobilit'IF</p>
+
+
+    <form id="recherche-form" [formGroup]="rechercheForm" (ngSubmit)="submitRecherche()">
+
+
+        <button type="submit" [disabled]="!rechercheForm.valid"><img src="../../assets/search.png"></button>
+        <input type="text" formControlName="recherche" placeholder="Rechercher une destination">
+
+    </form>
+
     <ul class="sidebar-nav">
         <li class="sidebar-van-item" *ngFor="let data of navData">
             <a href="" class="sidebar-nav-link" [routerLink]="data.routeLink">
@@ -7,4 +19,8 @@
             </a>
         </li>
     </ul>
+    <a href="" id="help" routerLink="/help">
+        <img class="sidebar-link-icon" src="../../assets/assist.png"/>
+        <span class="sidebar-link-text" >Support</span>
+    </a>
 </div>

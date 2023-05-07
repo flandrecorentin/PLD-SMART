@@ -1,31 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500,550,600,700&display=swap');
 #sidebar {
-    background: #EAF4F4;
+    background: #FFFFFF;
     position: absolute;
     z-index: 1;
     top: 0;
-    width:5vw;
+    width:65px;
     height: 100vh;
-    border-right:black solid 1px;
     white-space: nowrap;
     transition:0.4s;
-    border-right: #526d62 1px solid
+    border-right: #526d6253 1px solid
 }
 #sidebar:hover{
-    width:20vw;
+    width:18vw;
 }
+#sidebar #logo{
+    margin-left:10px;
+    width:40px;
+}
+#sidebar #titre{
+    font-family: 'Inter', sans-serif;
+    font-size:2vw;
+    font-weight: 600;
+    margin-left:40px;
+    color:#6b908000;
+    transition-delay:0s;
+    transition-duration:0.2s;
+}#sidebar:hover #titre{
+    color:#6B9080;
+    transition-delay:0.2s;
+    transition-duration:0.2s;
+}
+#sidebar #recherche-form input{
+    height:35px;
+    border-radius:5px;
+    border:rgba(128, 128, 128, 0) 1px solid;
+    background-color: #6b908000;
+    color:rgba(0, 0, 0, 0);
+    width:13vw;
+    margin:auto;
+    margin-left:1vw;
+    padding-left:40px;
+    transition-delay:0s;
+    transition-duration:0.2s;
+}
+
+#sidebar #recherche-form ::placeholder{
+    color:#6b908000;
+        
+    transition-delay:0s;
+    transition-duration:0.2s;
+}
+#sidebar:hover #recherche-form ::placeholder{
+    color:grey;
+        
+    transition-delay:0.2s;
+    transition-duration:0.2s;
+}
+#sidebar:hover #recherche-form input{
+    border:rgba(128, 128, 128, 0.218) 1px solid;
+    
+    color:black;
+    transition-delay:0.2s;
+    transition-duration:0.2s;
+}
+
+#sidebar #recherche-form button{
+    position:absolute;
+    margin-left:1vw;
+    color:#ffffff00;
+    border:#6b908000;
+    background-color: transparent;
+}
+
+
 #sidebar ul{
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margins */
-    margin-top:20vh;
+    margin-top:20px;
 }
 #sidebar ul li{
     margin:5px;
     margin-left:20px;
     margin-bottom:20px;
 }#sidebar img{
-    width:40px;
+    width:25px;
     transform: translate(0%,25%);
 }
 a{  
@@ -37,9 +96,22 @@ a{
     font-size:1vw;
     font-weight: 500;
     top:0;
-    margin-left:10px;
-    transition:0.4s;
+    margin-left:15px;
+    transition-delay:0s;
+    transition-duration:0.2s;
 }
 #sidebar:hover span{
+    
+    transition-delay:0.2s;
+    transition-duration:0.2s;
     color:rgb(0, 0, 0);
+}
+
+#sidebar #help{
+    position:absolute;
+    bottom:10px;
+    margin:5px;
+    
+    margin-left:20px;
+    margin-bottom:20px;
 }
