@@ -30,13 +30,16 @@
     transition-delay:0.2s;
     transition-duration:0.2s;
 }
+#sidebar #recherche-form{
+    padding:0;
+}
 #sidebar #recherche-form input{
     height:35px;
     border-radius:5px;
     border:rgba(128, 128, 128, 0) 1px solid;
     background-color: #6b908000;
     color:rgba(0, 0, 0, 0);
-    width:13vw;
+    width:11vw;
     margin:auto;
     margin-left:1vw;
     padding-left:40px;
@@ -65,8 +68,9 @@
 }
 
 #sidebar #recherche-form button{
+    padding:0;
     position:absolute;
-    margin-left:1vw;
+    margin-left:20px;
     color:#ffffff00;
     border:#6b908000;
     background-color: transparent;
