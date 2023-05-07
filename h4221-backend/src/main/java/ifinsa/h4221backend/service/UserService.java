@@ -10,14 +10,19 @@ import org.springframework.stereotype.Service;
 public class UserService {
     @Autowired
     UserModelDAO userModelDAO ;
-    public void inscrireService(User user){
-        System.out.println("------------------------Controller---------------------------");
-        System.out.println("-------------------------------------------------------------");
-        System.out.println(user.getName());
-        System.out.print("Inscription de "+user.getName());
-        System.out.println("-------------------------------------------------------------");
-        System.out.println("-------------------------------------------------------------");
-        userModelDAO.save(user);
+    public boolean inscrireService(User user){
+        try{
+            if(userModelDAO.findUserByMail(user.getMail())==null){
+                userModelDAO.save(user);
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch (Exception exception) {
+            return false;
+        }
     }
 
     public User verifierConnexion(PairAuthentification pairAuthentification){

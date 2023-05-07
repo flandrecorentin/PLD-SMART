@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public interface UserModelDAO extends MongoRepository<User, String> {
 
     @Query("{mail:'?0'}")
-    User get(String mail);
+    User findUserByMail(String mail);
 
     @Query("{mail: ?0, password: ?1}")
     User findUserByMailAndPassword(String mail, String password);
