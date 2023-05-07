@@ -20,13 +20,8 @@ import java.util.*;
 public class FormulaireREX {
 
 
-    public int getId() {
-        return id;
-    }
 
-    @Id
-    @Transient
-    private int id;
+
     private String author;
     private String date;
     private Map<String, String> information;

@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 @Repository
 public interface FormulaireREXDAO extends MongoRepository<FormulaireREX, String> {
 
-    @Query("{name:'?0'}")
-    User findFormulaireREXDAOByName(String name);
+
 
 }
