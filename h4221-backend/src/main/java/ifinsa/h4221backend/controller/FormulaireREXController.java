@@ -24,7 +24,7 @@ public class FormulaireREXController {
     FormulaireREXService formulaireREXService;
 
     @PostMapping("/formulaire")
-    public ResponseEntity inscrire(@RequestBody FormulaireREX formulaireREX){
+    public ResponseEntity sauvegardeFormulaire(@RequestBody FormulaireREX formulaireREX){
         try{
             if(formulaireREXService.sauvegarder(formulaireREX)){
                 System.out.println("[FormulaireREXController]: Sauvegarde du questionnaire");
