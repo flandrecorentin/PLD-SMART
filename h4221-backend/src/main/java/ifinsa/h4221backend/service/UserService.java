@@ -40,4 +40,9 @@ public class UserService {
         if(userModelDAO.findUserByMailAndPassword(pairAuthentification.getLogin(), pairAuthentification.getPassword())==null)return true;
         else return false;
     }
+
+    public boolean connexionService(PairAuthentification pairAuthentification) {
+        if(userModelDAO.findUserByMailAndPassword(pairAuthentification.getLogin(), pairAuthentification.getPassword())==null)return true;
+        else return false;
+    }
 }
