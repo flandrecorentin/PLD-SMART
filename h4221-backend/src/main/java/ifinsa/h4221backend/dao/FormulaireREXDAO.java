@@ -1,5 +1,6 @@
 package ifinsa.h4221backend.dao;
 
+import ifinsa.h4221backend.model.FormulaireREX;
 import ifinsa.h4221backend.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
@@ -10,9 +11,9 @@ import org.springframework.stereotype.Service;
 @Service
 @EnableMongoRepositories
 @Repository
-public interface FormulaireREXDAO extends MongoRepository<FormulaireREXDAO, Long> {
+public interface FormulaireREXDAO extends MongoRepository<FormulaireREX, String> {
 
-    @Query("{id:'?0'}")
-    User findUserById(Long id);
+    @Query("{name:'?0'}")
+    User findFormulaireREXDAOByName(String name);
 
 }

@@ -785,18 +785,6 @@
       "title": {
        "fr": "Démarches administratives"
       }
-     },
-     {
-      "name": "LifeOnSite",
-      "title": {
-       "fr": "La vie sur place"
-      }
-     },
-     {
-      "name": "page1",
-      "title": {
-       "fr": "Questions ouvertes"
-      }
      }
     ],
     "sendResultOnPageNext": true,
