@@ -9,10 +9,7 @@ import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.LinkedHashMap;
 
@@ -37,6 +34,17 @@ public class FormulaireREXController {
         catch (Exception exception){
             exception.printStackTrace();
             return new ResponseEntity(HttpStatus.FORBIDDEN);
+        }
+    }
+
+    @GetMapping("/formulaire")
+    public ResponseEntity<JSONObject> chargerFormulaireVierge(){
+        try {
+            JSONObject jsonFormulaire = formulaireREXService.chargerFormulaire();
+            return new ResponseEntity<>(jsonFormulaire, HttpStatus.OK);
+        }
+        catch (Exception exception){
+            return new ResponseEntity<>(new JSONObject(), HttpStatus.NOT_FOUND);
         }
     }
 }
