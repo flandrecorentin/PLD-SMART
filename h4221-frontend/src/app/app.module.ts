@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
 import { SurveyModule } from 'survey-angular-ui';
 
 import { AppComponent } from './app.component';
@@ -16,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormComponent } from './components/form/form.component';
+import { FormPageComponent } from './form-page/form-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { FormComponent } from './components/form/form.component';
     FooterComponent,
     SidebarComponent,
     FaqPageComponent,
-    FormComponent
+    FormComponent,
+    FormPageComponent
   ],
   imports: [
     BrowserModule,

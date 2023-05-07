@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ConfigService } from '../config/config.service';
+import { ConnexionDetails } from '../interfaces/connexion-details.model';
 
 @Component({
   selector: 'app-connexion-page',
@@ -8,7 +10,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ConnexionPageComponent {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private configService: ConfigService) { }
 
   loginForm = this.fb.group({
     login: ["", Validators.required],
@@ -18,5 +20,6 @@ export class ConnexionPageComponent {
   submitConnexion() {
     //Here, we will call the service in order to log the user to Mobilit'if
     console.log(this.loginForm.value);
+    this.configService.connexion(this.loginForm.value).subscribe((data: ConnexionDetails) => console.log(data));
   }
 }

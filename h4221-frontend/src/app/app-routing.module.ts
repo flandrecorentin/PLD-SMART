@@ -5,12 +5,14 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { InscriptionPageComponent } from './inscription-page/inscription-page.component';
+import { FormPageComponent } from './form-page/form-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent},
   { path: 'connexion', component: ConnexionPageComponent},
   { path: 'inscription', component: InscriptionPageComponent},
   { path: 'faq', component: FaqPageComponent},
+  { path: 'form', component: FormPageComponent},
   // { path: 'curriculum', component: CurriculumComponent},
   // { path: 'projects', component: ProjectsComponent},
   // { path: 'hobbies/sport', component: HobbiesSportComponent},
