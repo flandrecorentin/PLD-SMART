@@ -1,0 +1,43 @@
+<app-sidebar></app-sidebar>
+<div id="faq">
+    <p id="titre">FAQ Générale : questions récurrentes</p>
+    <p id="soustitre">Retrouvez ici les questions récurrentes par thématiques.</p>
+
+    <button id="reponse">+ Proposer une réponse</button>
+    <div id="tri-questions">
+        <div id="barre-boutons">
+            <button class="borderradiusleft">Afficher toutes</button>
+            <button>Bourses</button>
+            <button>Formalités</button>
+            <button>Candidatures</button>
+            <button>Voeux</button>
+            <button class="borderradiusright">Logement</button>
+
+            
+        </div>
+        <form id="recherche-form" [formGroup]="rechercheForm" (ngSubmit)="submitRecherche()">
+
+
+            <button type="submit" [disabled]="!rechercheForm.valid"><img src="../../assets/search.png"></button>
+            <input type="text" formControlName="recherche" placeholder="Chercher une question">
+    
+        </form>
+
+        <button id="filtre">Filtres</button>
+    </div>
+
+    <div id="qagrid">
+        <div class="qablock" *ngFor="let qa of qas; let i=index">
+            <p class="type">{{qa.type}}</p>
+            <p class="question">{{qa.question}}</p>
+            <p class="answer">{{qa.answer}}</p>
+        </div>
+    </div>
+    <div id="changerPage">
+        <p>Page {{pagenumber}} sur {{maxPageNumber}}</p>
+        <div id="boutons">
+        <button (click)="onClickPlus()">Next</button>
+        <button (click)="onClickMoins()">Previous</button>
+    </div>
+    </div>
+</div>

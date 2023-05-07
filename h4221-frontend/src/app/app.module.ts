@@ -10,6 +10,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
 import { InscriptionPageComponent } from './inscription-page/inscription-page.component';
+import { FaqPageComponent } from './faq-page/faq-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -23,7 +24,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     InscriptionPageComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    FaqPageComponent
   ],
   imports: [
     BrowserModule,
