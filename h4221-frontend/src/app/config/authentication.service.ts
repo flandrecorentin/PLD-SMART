@@ -9,7 +9,7 @@ import { InscriptionDetails } from '../interfaces/inscription-details.model';
   providedIn: 'root'
 })
 
-export class ConfigService {
+export class AuthenticationService {
 
   // Links to call back-end services
   backendUrl = 'http://localhost:9000'
@@ -24,6 +24,6 @@ export class ConfigService {
   }
 
   connexion(userCredentials: ConnexionDetails) {
-    return this.http.post(this.connexionUrl, userCredentials, {headers: this.httpHeaders});
+    return this.http.post(this.connexionUrl, userCredentials, {headers: this.httpHeaders, responseType:"text"});
   }
 }
