@@ -25,6 +25,8 @@ public class FormulaireREX {
     private String author;
     private String date;
     private Map<String, String> information;
+    private String exchangeCountry;
+    private String exchangeUniversity;
 
     public FormulaireREX() {
 
@@ -37,6 +39,8 @@ public class FormulaireREX {
         return "FormulaireREX{" +
                 "author='" + author + '\'' +
                 ", date='" + date + '\'' +
+                ", ExchangeCountry='" + exchangeCountry + '\'' +
+                ", ExchangeUniversity='" + exchangeUniversity + '\'' +
                 ", information=" + information +
                 '}';
     }
@@ -49,7 +53,17 @@ public class FormulaireREX {
         return date;
     }
 
+    public String getExchangeCountry() {
+        return exchangeCountry;
+    }
+
+    public String getExchangeUniversity() {
+        return exchangeUniversity;
+    }
+
     public void setInformation(Map<String, String> information) {
         this.information = information;
+        this.exchangeCountry = this.information.get("ExchangeCountry");
+        this.exchangeUniversity = this.information.get("ExchangeUniversity");
     }
 }
