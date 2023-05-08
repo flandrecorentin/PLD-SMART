@@ -8,11 +8,14 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @EnableMongoRepositories
 @Repository
 public interface FormulaireREXDAO extends MongoRepository<FormulaireREX, String> {
 
-
+    @Query("{exchangeUniversity: ?0}")
+    List<FormulaireREX> findAllByExchangeUniversity(String exchangeUniversity);
 
 }

@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.FileReader;
+import java.util.LinkedList;
+import java.util.List;
 
 @Service
 public class FormulaireREXService {
@@ -33,6 +35,15 @@ public class FormulaireREXService {
         }
         catch (Exception exception){
             return new JSONObject();
+        }
+    }
+
+    public List<FormulaireREX> findFormulaireREXsByExchangeUniversity(String university){
+        try {
+            return formulaireREXDAO.findAllByExchangeUniversity(university);
+        }
+        catch (Exception exception){
+            return null;
         }
     }
 }
