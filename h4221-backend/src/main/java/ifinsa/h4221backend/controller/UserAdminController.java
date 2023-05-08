@@ -47,7 +47,7 @@ public class UserAdminController {
                 System.out.println("[UserAdminController]: La pair d'authenfication |" +pairAuthentification.getLogin()+ "| |"+pairAuthentification.getPassword()+"| n'est pas correcte");
                 return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
             }else{
-                System.out.println("[UserAdminController]: Connexion de " + user.getName());
+                System.out.println("[UserAdminController]: Connexion de " + user.getName() +" " + user.getSurname());
                 return new ResponseEntity<>(user, HttpStatus.OK);
             }
         } catch(Exception exception){
