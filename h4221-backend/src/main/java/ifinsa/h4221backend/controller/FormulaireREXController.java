@@ -17,7 +17,7 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-public class FormulaireREXController {
+public class /FormulaireREXController {
 
     @Autowired
     FormulaireREXService formulaireREXService;
