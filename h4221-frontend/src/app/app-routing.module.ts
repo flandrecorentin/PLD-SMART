@@ -6,14 +6,17 @@ import { ConnexionPageComponent } from './connexion-page/connexion-page.componen
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { InscriptionPageComponent } from './inscription-page/inscription-page.component';
 import { FormPageComponent } from './form-page/form-page.component';
+import { AuthguardGuard } from './shared/authguard.guard';
 import { AccueilPageComponent } from './accueil-page/accueil-page.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent},
+  { path: 'home', component: HomePageComponent, canActivate:[AuthguardGuard]},
   { path: 'connexion', component: ConnexionPageComponent},
   { path: 'inscription', component: InscriptionPageComponent},
-  { path: 'faq', component: FaqPageComponent},
-  { path: 'form', component: FormPageComponent},
+  { path: 'faq', component: FaqPageComponent, canActivate:[AuthguardGuard]},
+  { path: 'form', component: FormPageComponent,canActivate:[AuthguardGuard]},
+  { path: 'faq', component: FaqPageComponent, canActivate:[AuthguardGuard]},
+  { path: 'form', component: FormPageComponent, canActivate:[AuthguardGuard]},
   { path: '', component: AccueilPageComponent},
   // { path: 'curriculum', component: CurriculumComponent},
   // { path: 'projects', component: ProjectsComponent},
