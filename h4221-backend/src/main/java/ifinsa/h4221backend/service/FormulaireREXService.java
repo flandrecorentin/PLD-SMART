@@ -46,4 +46,13 @@ public class FormulaireREXService {
             return null;
         }
     }
+
+    public List<FormulaireREX> findFormulaireREXsByExchangeCountry(String country){
+        try {
+            return formulaireREXDAO.findAllByExchangeCountry(country);
+        }
+        catch (Exception exception){
+            return null;
+        }
+    }
 }

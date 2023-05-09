@@ -18,4 +18,6 @@ public interface FormulaireREXDAO extends MongoRepository<FormulaireREX, String>
     @Query("{exchangeUniversity: ?0}")
     List<FormulaireREX> findAllByExchangeUniversity(String exchangeUniversity);
 
+    @Query("{exchangeCountry: ?0}")
+    List<FormulaireREX> findAllByExchangeCountry(String exchangeCountry);
 }
