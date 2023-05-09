@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
-import { ConfigService } from '../config/config.service';
+import { AuthenticationService } from '../config/authentication.service';
 import { InscriptionDetails } from '../interfaces/inscription-details.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inscription-page',
@@ -10,7 +11,7 @@ import { InscriptionDetails } from '../interfaces/inscription-details.model';
 })
 export class InscriptionPageComponent {
 
-  constructor(private fb: FormBuilder, private configService: ConfigService) { }
+  constructor(private router:Router, private fb: FormBuilder, private authenticationService: AuthenticationService) { }
 
   inscriptionForm = this.fb.group({
     mail: ["", Validators.required],
@@ -20,10 +21,11 @@ export class InscriptionPageComponent {
   })
 
   submitInscription() {
-    // Here, we need to call the back service to register a new user using the form value !
-    console.log(this.inscriptionForm.value)
     if(this.inscriptionForm?.value != null){
-      this.configService.inscription(this.inscriptionForm.value).subscribe((data: InscriptionDetails) => console.log(data));
+      this.authenticationService.inscription(this.inscriptionForm.value).subscribe( res => {
+        this.router.navigateByUrl('/connexion');
+      }
+      );
     }
   }
 }

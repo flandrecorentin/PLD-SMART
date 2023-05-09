@@ -18,7 +18,6 @@ public class ExampleModel {
     }
 
 
-
     public ExampleModel(String test) {
         this.file = test;
     }
