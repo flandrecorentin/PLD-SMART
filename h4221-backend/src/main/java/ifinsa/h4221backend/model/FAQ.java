@@ -9,6 +9,7 @@ public class FAQ {
 
     @Id
     private String question;
+    private String categorie;
     private String reponse;
     private String authorQuestion;
     private String authorReponse;
@@ -56,6 +57,14 @@ public class FAQ {
 
     public void setDateReponse(String dateReponse) {
         this.dateReponse = dateReponse;
+    }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
     }
 
     public String getDate() {
