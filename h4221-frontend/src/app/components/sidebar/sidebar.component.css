@@ -116,11 +116,19 @@ a{
     color:rgb(0, 0, 0);
 }
 
-#sidebar #help{
+#sidebar #help {
     position:absolute;
-    bottom:10px;
+    bottom:60px;
     margin:5px;
-    
     margin-left:20px;
     margin-bottom:20px;
 }
+
+#sidebar #logout {
+    position:absolute;
+    bottom:10px;
+    margin:5px;
+    margin-left:20px;
+    margin-bottom:20px;
+}
+

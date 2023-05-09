@@ -1,16 +1,11 @@
 export const navbarData = [
     {
-        routeLink: '',
-        icon: '../../assets/home.png',
-        label: 'Home'
-    },
-    {
-        routeLink: '',
+        routeLink: '/home',
         icon: '../../assets/globe.png',
         label: 'Destinations'
     },
     {
-        routeLink: '',
+        routeLink: '/faq',
         icon: '../../assets/question.png',
         label: 'FAQ Générale'
     },
