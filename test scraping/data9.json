@@ -1,1 +1,86 @@
-{"": {"nom": ""}, "plus-de-details": {"nom": "Plus de d\u00e9tails"}}
+{
+    "brandenburgische-technische-universitat-cottbus-senftenberg": {
+        "nom": "Brandenburgische Technische Universit\u00e4t Cottbus-Senftenberg"
+    },
+    "karlsruher-institut-fur-technologie": {
+        "nom": "Karlsruher Institut f\u00fcr Technologie"
+    },
+    "instituto-tecnologico-de-buenos-aires": {
+        "nom": "Instituto Tecnol\u00f3gico de Buenos Aires"
+    },
+    "instituto-universitario-aeronautico": {
+        "nom": "Instituto Universitario Aeron\u00e1utico"
+    },
+    "universidad-de-buenos-aires": {
+        "nom": "Universidad de Buenos Aires"
+    },
+    "montanuniversitat-leoben": {
+        "nom": "Montanuniversit\u00e4t Leoben"
+    },
+    "technische-universitat-graz": {
+        "nom": "Technische Universit\u00e4t Graz"
+    },
+    "ku-leuven": {
+        "nom": "KU Leuven"
+    },
+    "universite-de-namur": {
+        "nom": "Universit\u00e9 de Namur"
+    },
+    "universite-libre-de-bruxelles": {
+        "nom": "Universit\u00e9 Libre de Bruxelles"
+    },
+    "pontificia-universidade-catolica-do-rio-de-janeiro": {
+        "nom": "Pontificia Universidade Cat\u00f3lica do Rio de Janeiro"
+    },
+    "universidade-de-sao-paulo": {
+        "nom": "Universidade de S\u00e3o Paulo"
+    },
+    "bureau-de-cooperation-interuniversitaire-(bci)": {
+        "nom": "Bureau de Coop\u00e9ration Interuniversitaire (BCI)"
+    },
+    "ecole-de-technologie-superieure-(ets)": {
+        "nom": "\u00c9cole de Technologie Sup\u00e9rieure (ETS)"
+    },
+    "ecole-polytechnique-de-montreal": {
+        "nom": "\u00c9cole Polytechnique de Montr\u00e9al"
+    },
+    "pontificia-universidad-catolica-de-chile": {
+        "nom": "Pontificia Universidad Cat\u00f3lica de Chile"
+    },
+    "pontificia-universidad-catolica-de-valparaiso": {
+        "nom": "Pontificia Universidad Cat\u00f3lica de Valpara\u00edso"
+    },
+    "universidad-catolica-del-norte": {
+        "nom": "Universidad Cat\u00f3lica del Norte"
+    },
+    "universidad-de-chile": {
+        "nom": "Universidad de Chile"
+    },
+    "beijing-jiaotong-university": {
+        "nom": "Beijing Jiaotong University"
+    },
+    "northwestern-polytechnical-university": {
+        "nom": "Northwestern Polytechnical University"
+    },
+    "shanghai-jiao-tong-university": {
+        "nom": "Shanghai Jiao Tong University"
+    },
+    "pontificia-universidad-javeriana": {
+        "nom": "Pontificia Universidad Javeriana"
+    },
+    "universidad-de-antioquia": {
+        "nom": "Universidad de Antioquia"
+    },
+    "universidad-de-los-andes": {
+        "nom": "Universidad de Los Andes"
+    },
+    "daegu-gyeongbuk-institute-of-science-and-technology": {
+        "nom": "Daegu Gyeongbuk Institute of Science and Technology"
+    },
+    "gwangju-institute-of-science-and-technology": {
+        "nom": "Gwangju Institute of Science and Technology"
+    },
+    "korea-advanced-institute-of-science-and-technology": {
+        "nom": "Korea Advanced Institute of Science and Technology"
+    }
+}

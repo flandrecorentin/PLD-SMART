@@ -37,17 +37,23 @@ for i in range (1,2) :
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight,)")
 
 #listenom = driver.find_elements(By.XPATH, '//div[@class="_univname"]')
-#listelien = driver.find_element(By.XPATH, '//span[@class="more_info_text"]').click()
-driver.find_element(By.CLASS_NAME, "more_info_text").click()
+print(driver.find_element(By.XPATH, '//span[@class="more_info_text"]').text)
+#driver.find_element(By.CLASS_NAME, "more_info_text").click()
 #driver.find_element(By.link, "Plus de détails").click()
 #driver.find_element_by_link_text("Plus de détails").click()
 
-for lien in listelien:
+for nomuniversite in listenom:
+
+
+    """
     print(lien.text)
     lien.click()
     driver.find_element(By.CLASS_NAME, "_modal_univ_moreclose").click()
-
     """
+    
+
+
+
     nomuniversite = nomuniversite.text
     #Normalisation des noms d'université
     idNom = nomuniversite.lower()
@@ -59,7 +65,7 @@ for lien in listelien:
         etablissement = {}
         etablissement["nom"]=nomuniversite
         listeEtablissement[idnomfinale] = etablissement
-    """
+    
 
     #a = driver.find_element(By.CLASS_NAME, "university_stats")
 
@@ -68,7 +74,7 @@ print("coucou")
 driver.find_element(By.CLASS_NAME, "irm_filter_btn")
 print("coucou")
 
-with open('data9.json', 'w') as mon_fichier:
+with open('listeNom.json', 'w') as mon_fichier:
     json.dump(listeEtablissement, mon_fichier)
 #driver.close()
 
