@@ -23,7 +23,6 @@ public class User implements UserDetails {
     private int studyYear;
     private String university;
     private String country;
-    private String password;
 
     public User() {
     }
@@ -51,9 +50,6 @@ public String getFullName() {
         return lastName;
     }
 
-    public String getRole() {
-        return role;
-    }
 
     public void setRole(String role) {
         this.role = role;
