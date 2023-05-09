@@ -17,8 +17,12 @@ public class ConversationService {
 
     @Autowired
     ConversationDAO conversationDAO ;
-    public boolean posterMessage(Message message) {
+    public boolean posterMessage(ObjectId author, String texte, ObjectId conversationID) {
         try{
+            Conversation conversation = chatDAO.getConversationByID();
+            Message message = Message(author, texte);
+            conversation.posterMessage
+
             chatDAO.posterMessage(message);
             return true;
         }

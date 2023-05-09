@@ -11,10 +11,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class ChatController {
 
     @Autowired
-    ChatService ChatService;
+    ChatService chatService;
 
     // POST exemple /attachment/{id}
     @PostMapping("/conversation/{id}")
+    public void uploadAttachedFile(@PathVariable(value = "id") String idTest) {
+        exampleService.uploadAttachedFile(idTest);
+    }
+
+    @PostMapping("/conversation/message{texte, author, conversationId, }")
     public void uploadAttachedFile(@PathVariable(value = "id") String idTest) {
         exampleService.uploadAttachedFile(idTest);
     }

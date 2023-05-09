@@ -14,8 +14,13 @@ import java.util.List;
 public interface ChatDAO extends MongoRepository<Conversation, String> {
 
     @Query("{name:regex('0')}")
-    list<Conversation> findConversationsByName(String name);
+    list<Conversation> searchConversations(String name);
 
+    @Query("{name:regex('0')}")
+    Conversation findConversationByName(String name);
+
+    @Query("{id:'?0'}")
+    User findConversationByID(String id);
 
 
     /*@Query("{mail:'?0'}")

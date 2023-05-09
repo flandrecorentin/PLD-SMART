@@ -25,6 +25,7 @@ public class Conversation {
     private ObjectId university;
     private String scale;
     private bool closed;
+    private int nombreDeMessages;
     private list<Message> messagelist;
 
     public Conversation(String name, String creator, String university, String scale) {
@@ -34,6 +35,7 @@ public class Conversation {
         this.scale = scale;
         this.closed = false;
         this.creationDate = SystemClockFactory.getDatetime();
+        this.nombreDeMessages = 0;
     }
 
     @Override
@@ -72,6 +74,10 @@ public class Conversation {
 
     public void close() {
         closed = true;
+    }
+
+    public void posterMessage(Message message) {
+        this.messagelist.add(nombreDeMessages,message)
     }
 
 }

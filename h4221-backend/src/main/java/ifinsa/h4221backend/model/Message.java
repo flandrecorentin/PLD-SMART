@@ -24,8 +24,9 @@ public class Message {
     private Date date;
     private String text;
 
-    public Message() {
-
+    public Message(ObjectId author, String date) {
+        this.author = author;
+        this.date =
     }
 
 
