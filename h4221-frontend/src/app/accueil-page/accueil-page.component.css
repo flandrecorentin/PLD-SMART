@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500,550,600,700&display=swap');
+#accueil{
+    margin:auto;
+    width: 40%;
+    margin-top:2vh;
+}
+
+#accueil #logo{
+    display: block;
+    margin:auto;
+    height:15vw;
+}
+#accueil #titre{
+    font-family: 'Inter', sans-serif;
+    font-size:2vw;
+    font-weight: 700;
+    align-self:center;
+    text-align: center;
+    margin-bottom:0;
+}
+#accueil #soustitre{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size:1.2vw;
+    color:grey;
+    align-self:center;
+    text-align: center;
+}
+#accueil #paragraphe{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size:1.2vw;
+    color:grey;
+    align-self:center;
+}
