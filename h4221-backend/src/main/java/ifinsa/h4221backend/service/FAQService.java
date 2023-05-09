@@ -16,8 +16,28 @@ public class FAQService {
     FAQDAO faqdao;
 
 
-    public boolean sauvegarderFAQ(FAQ faq) {
+    public boolean poserFAQ(FAQ faq) {
         try{
+            faq.setReponse(null);
+            faq.setAuthorReponse(null);
+            faq.setDateReponse(null);
+            faqdao.save(faq);
+            return true;
+        }
+        catch (Exception exception) {
+            return false;
+        }
+    }
+
+    public boolean repondreFAQ(FAQ faq) {
+        try{
+            String reponse = faq.getReponse();
+            String authorReponse = faq.getAuthorReponse();
+            String dateReponse = faq.getDateReponse();
+            faq = faqdao.findByQuestion(faq.getQuestion());
+            faq.setAuthorReponse(authorReponse);
+            faq.setReponse(reponse);
+            faq.setDateReponse(dateReponse);
             faqdao.save(faq);
             return true;
         }

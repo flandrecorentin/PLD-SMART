@@ -19,10 +19,27 @@ public class FAQController {
     @Autowired
     FAQService faqService;
 
-    @PostMapping("/faq")
-    public ResponseEntity sauvegarderFAQ(@RequestBody FAQ faq){
+    @PostMapping("/ask-faq")
+    public ResponseEntity poserFAQ(@RequestBody FAQ faq){
         try{
-            if(faqService.sauvegarderFAQ(faq)){
+            if(faqService.poserFAQ(faq)){
+                System.out.println("[FAQController]: Sauvegarde de la FAQ: "+faq.getQuestion());
+                return new ResponseEntity(HttpStatus.OK);
+            }else{
+                System.out.println("[FAQController]: La FAQ a un format invalide");
+                return new ResponseEntity(HttpStatus.CONFLICT);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("[FAQController]: ERREUR lors de la sauvegarde de la FAQ");
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/answer-faq")
+    public ResponseEntity repondreFAQ(@RequestBody FAQ faq){
+        try{
+            if(faqService.repondreFAQ(faq)){
                 System.out.println("[FAQController]: Sauvegarde de la FAQ: "+faq.getQuestion());
                 return new ResponseEntity(HttpStatus.OK);
             }else{

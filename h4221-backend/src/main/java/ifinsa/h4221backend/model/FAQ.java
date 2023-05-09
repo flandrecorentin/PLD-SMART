@@ -1,17 +1,19 @@
 package ifinsa.h4221backend.model;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.List;
-import java.util.Map;
 
 @Document("FAQ")
 public class FAQ {
 
+    @Id
     private String question;
     private String reponse;
-    private String author;
-    private String date;
+    private String authorQuestion;
+    private String authorReponse;
+    private String dateQuestion;
+    private String dateReponse;
 
     public FAQ() {
     }
@@ -24,12 +26,40 @@ public class FAQ {
         return reponse;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getAuthorQuestion() {
+        return authorQuestion;
+    }
+
+    public void setAuthorQuestion(String authorQuestion) {
+        this.authorQuestion = authorQuestion;
+    }
+
+    public String getAuthorReponse() {
+        return authorReponse;
+    }
+
+    public void setAuthorReponse(String authorReponse) {
+        this.authorReponse = authorReponse;
+    }
+
+    public String getDateQuestion() {
+        return dateQuestion;
+    }
+
+    public void setDateQuestion(String dateQuestion) {
+        this.dateQuestion = dateQuestion;
+    }
+
+    public String getDateReponse() {
+        return dateReponse;
+    }
+
+    public void setDateReponse(String dateReponse) {
+        this.dateReponse = dateReponse;
     }
 
     public String getDate() {
-        return date;
+        return dateQuestion;
     }
 
     public void setQuestion(String question) {
@@ -41,10 +71,10 @@ public class FAQ {
     }
 
     public void setAuthor(String author) {
-        this.author = author;
+        this.authorQuestion = author;
     }
 
     public void setDate(String date) {
-        this.date = date;
+        this.dateQuestion = date;
     }
 }
