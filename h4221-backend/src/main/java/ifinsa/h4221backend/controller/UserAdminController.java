@@ -3,10 +3,12 @@ package ifinsa.h4221backend.controller;
 import ifinsa.h4221backend.config.JwtUtil;
 import ifinsa.h4221backend.model.AuthenticationRequest;
 import ifinsa.h4221backend.model.User;
+import ifinsa.h4221backend.model.UserInfo;
 import ifinsa.h4221backend.service.ExampleService;
 import ifinsa.h4221backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -87,4 +89,23 @@ public class UserAdminController {
             return new ResponseEntity<>(Boolean.FALSE, HttpStatus.FORBIDDEN);
         }
     };
+
+    @GetMapping("/information")
+    public ResponseEntity<UserInfo> chercherInformationUtilisateurConnecte(@RequestHeader(HttpHeaders.AUTHORIZATION) String tokenUser) {
+        try{
+            tokenUser = tokenUser.substring(7);
+            UserInfo userInfo = userService.chercherParToken(tokenUser);
+            if(userInfo!=null){
+                System.out.println("[UserAdminController]: Récupération des informations de "+ userInfo.getFirstName() +" "+ userInfo.getLastName() +" effectue");
+                return new ResponseEntity(userInfo, HttpStatus.OK);
+            }else{
+                System.out.println("[UserAdminController]: L'email " + userInfo.getMail()+ " ne correspond a aucun compte");
+                return new ResponseEntity(null, HttpStatus.CONFLICT);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("[UserAdminController]: Problème de serveur lors de la récupération de l'utilisateur");
+            return new ResponseEntity(null, HttpStatus.FORBIDDEN);
+        }
+    }
 }

@@ -1,9 +1,10 @@
 package ifinsa.h4221backend.service;
 
+import ifinsa.h4221backend.config.JwtUtil;
 import ifinsa.h4221backend.dao.UserModelDAO;
 import ifinsa.h4221backend.model.AuthenticationRequest;
-import ifinsa.h4221backend.model.Departement;
 import ifinsa.h4221backend.model.User;
+import ifinsa.h4221backend.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,6 +15,9 @@ import org.springframework.stereotype.Service;
 public class UserService implements UserDetailsService {
     @Autowired
     UserModelDAO userModelDAO;
+
+    @Autowired
+    JwtUtil jwtUtil;
 
     public boolean inscrireService(User user) {
         try {
@@ -63,5 +67,16 @@ public class UserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String mail) throws UsernameNotFoundException {
         return userModelDAO.findUserByMail(mail);
+    }
+
+    public UserInfo chercherParToken(String tokenUser){
+        try {
+            String mail = jwtUtil.extractUsername(tokenUser);
+            User user = userModelDAO.findUserByMail(mail);
+            UserInfo userInfo = new UserInfo(user.getMail(), user.getFirstName(), user.getLastName(), user.getDepartement(), user.getStudyYear(), user.getUniversity(), user.getCountry());
+            return userInfo;
+        }catch (Exception exception){
+            return null;
+        }
     }
 }
