@@ -8,27 +8,17 @@ import { InscriptionPageComponent } from './inscription-page/inscription-page.co
 import { FormPageComponent } from './form-page/form-page.component';
 import { AuthguardGuard } from './shared/authguard.guard';
 import { AccueilPageComponent } from './accueil-page/accueil-page.component';
+import { AlreadyLoggedInGuard } from './shared/already-logged-in.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, canActivate:[AuthguardGuard]},
-  { path: 'connexion', component: ConnexionPageComponent},
-  { path: 'inscription', component: InscriptionPageComponent},
+  { path: 'connexion', component: ConnexionPageComponent, canActivate:[AlreadyLoggedInGuard]},
+  { path: 'inscription', component: InscriptionPageComponent, canActivate:[AlreadyLoggedInGuard]},
   { path: 'faq', component: FaqPageComponent, canActivate:[AuthguardGuard]},
   { path: 'form', component: FormPageComponent,canActivate:[AuthguardGuard]},
   { path: 'faq', component: FaqPageComponent, canActivate:[AuthguardGuard]},
   { path: 'form', component: FormPageComponent, canActivate:[AuthguardGuard]},
-  { path: '', component: AccueilPageComponent},
-  // { path: 'curriculum', component: CurriculumComponent},
-  // { path: 'projects', component: ProjectsComponent},
-  // { path: 'hobbies/sport', component: HobbiesSportComponent},
-  // { path: 'hobbies/art', component: HobbiesArtComponent},
-  // { path: 'hobbies', component: HobbiesComponent},
-  // { path: 'about', component: AboutComponent},
-  // { path: 'contact', component: ContactComponent},
-  // { path: 'svg/:id', component: SvgComponent},
-  // { path: 'svg/:id', component: PageNotFoundComponent},
-  // { path: 'index.html',   redirectTo: '', pathMatch: 'full' },
-  // Route for 404 request : resources not found
+  { path: '', component: AccueilPageComponent, canActivate:[AlreadyLoggedInGuard]},
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 

@@ -24,7 +24,7 @@ export class ConnexionPageComponent {
     this.authenticationService.connexion(this.loginForm.value).subscribe(
       (rep: string) => {
       localStorage.setItem('auth_token', rep);
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/home');
       },
       (error) => {
         console.log(error);
