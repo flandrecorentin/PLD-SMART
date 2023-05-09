@@ -4,20 +4,19 @@ import { FormBuilder, FormControl, Validators } from'@angular/forms';
 import { FaqService } from '../config/faq.service';
 
 @Component({
-  selector: 'app-faq-page',
-  templateUrl: './faq-page.component.html',
-  styleUrls: ['./faq-page.component.css']
+  selector: 'app-faq-admin-page',
+  templateUrl: './faq-admin-page.component.html',
+  styleUrls: ['./faq-admin-page.component.css']
 })
-export class FaqPageComponent {
+export class FaqAdminPageComponent {
   constructor(private fb: FormBuilder, private http: HttpClient, private faqService: FaqService) { }
 
   rechercheForm = this.fb.group({
     recherche: ["", Validators.required]
   });
 
-  questionForm = this.fb.group({
-    question: ["", Validators.required],
-    categorie: ["", Validators.required]
+  answerForm = this.fb.group({
+    answer: ["", Validators.required]
   });
 
 
@@ -107,10 +106,10 @@ export class FaqPageComponent {
       document.getElementById("proposerquestionpopup")!.style.visibility="hidden";
     }
 
-    submitQuestion(){
+    submitAnswer(){
       var date = new Date();
       var dateText = date.getDay()+"-"+date.getMonth()+"-"+date.getFullYear()
-      this.faqService.askFaq({question:this.questionForm.value.question,authorQuestion:"auteur",dateQuestion:dateText,categorie:this.questionForm.value.categorie}).subscribe(
+      this.faqService.answerFaq({reponse:this.answerForm.value.answer,authorReponse:"auteur",dateReponse:dateText,question:this.popupqa.question}).subscribe(
         (datas: any) => {
             console.log("in");
             
@@ -142,6 +141,7 @@ export class FaqPageComponent {
             })
             
           }
+          this.allqas = this.allqas.filter(t=>t.answer==null);
         this.selectedqas = this.allqas;
         this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
 

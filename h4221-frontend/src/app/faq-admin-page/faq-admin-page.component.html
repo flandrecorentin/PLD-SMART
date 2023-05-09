@@ -3,7 +3,6 @@
     <p id="titre">FAQ Générale : questions récurrentes</p>
     <p id="soustitre">Retrouvez ici les questions récurrentes par thématiques.</p>
 
-    <button id="reponse" (click)="onClickProposer()">+ Proposer une question</button>
     <div id="tri-questions">
         <div id="barre-boutons">
             <button class="borderradiusleft" (click)="onClickFilter('All')">Afficher toutes</button>
@@ -42,6 +41,7 @@
 
 
 
+    
     <div id="popup" class="overlay">
         <div id="questiondetailspopup">
             <img src="../assets/close.png" (click)="onClickClose()"/>
@@ -50,32 +50,21 @@
             <p class="question">{{popupqa.question}}</p>
             <p class="questiondetails">Posté le {{popupqa.questiondate}} par {{popupqa.questionauthor}}</p>
             <p class="answer" *ngIf=popupqa.answered>{{popupqa.answer}}</p>
-            <p class="answerdetails" *ngIf=popupqa.answered>Posté le {{popupqa.answerdate}} <param name="" value=""> {{popupqa.answerauthor}}</p>
-        </div>
+            <p class="answerdetails" *ngIf=popupqa.answered>Posté le {{popupqa.answerdate}} par {{popupqa.answerauthor}}</p>
+            
+            <form id="answer-form" [formGroup]="answerForm" (ngSubmit)="submitAnswer()">
 
 
-
-
-        <div id="proposerquestionpopup">
-            <img src="../assets/close.png" (click)="onClickClose()"/>
-            <br/>
-            <form id="question-form" [formGroup]="questionForm" (ngSubmit)="submitQuestion()">
-
-
-                <textarea formControlName="question" placeholder="Entrez votre question" ></textarea>
-                <input type=text list=browsers formControlName="categorie" placeholder="Type de question"/>
-                <datalist id=browsers >
-                <option> Bourses
-                <option> Formalités
-                    <option> Candidatures
-                        <option> Voeux
-                            <option> Logements
-                </datalist>
-                <br/>
-                <button type="submit" [disabled]="!questionForm.valid">+ Proposer la question</button>
+                <textarea formControlName="answer" placeholder="Entrez votre réponse" ></textarea>
+                <button type="submit" [disabled]="!answerForm.valid">+ Envoyer la réponse</button>
         
             </form>
         </div>
+
+
+
+
+        
 
 
     </div>

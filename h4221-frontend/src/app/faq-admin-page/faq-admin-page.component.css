@@ -181,6 +181,9 @@
     width:50vw;
 }
 
+#faq #questiondetailspopup .type{
+    margin-left:20px;
+}
 
 
 
@@ -280,11 +283,8 @@
     left:50%;
     transform:translate(-50%,0)
 }
-#faq #questiondetailspopup .type{
-    margin-left:20px;
-}
 
-#faq #question-form button{
+#faq #answer-form button{
     width:200px;
     height:40px;
     border-radius: 10px;
@@ -297,7 +297,7 @@
 
 }
 
-#faq #question-form textarea{
+#faq #answer-form textarea{
     width:350px;
     height:200px;
     border-radius: 5px;
