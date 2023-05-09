@@ -26,4 +26,8 @@ export class AuthenticationService {
   connexion(userCredentials: ConnexionDetails) {
     return this.http.post(this.connexionUrl, userCredentials, {headers: this.httpHeaders, responseType:"text"});
   }
+
+  isLoggedIn() {
+    return localStorage.getItem("auth_token") != null;
+  }
 }
