@@ -8,13 +8,43 @@ import java.util.Map;
 @Document("FAQ")
 public class FAQ {
 
-    // boolean isgeneral, question, list<reponse, author, nbvote+, nbvote-, dateréponse >,  authorquestion, date(création),
-    private boolean isGeneral;
     private String question;
-    private List<Reponse> reponses;
+    private String reponse;
     private String author;
     private String date;
 
     public FAQ() {
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public String getReponse() {
+        return reponse;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public void setReponse(String reponse) {
+        this.reponse = reponse;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
