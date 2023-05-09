@@ -8,7 +8,8 @@
     height: 100vh;
     white-space: nowrap;
     transition:0.4s;
-    border-right: #526d6253 1px solid
+    border-right: #526d6253 1px solid;
+    position: fixed;
 }
 #sidebar:hover{
     width:18vw;
@@ -25,10 +26,12 @@
     color:#6b908000;
     transition-delay:0s;
     transition-duration:0.2s;
+    visibility: hidden;
 }#sidebar:hover #titre{
     color:#6B9080;
     transition-delay:0.2s;
     transition-duration:0.2s;
+    visibility: visible;
 }
 #sidebar #recherche-form{
     padding:0;
@@ -45,11 +48,12 @@
     padding-left:40px;
     transition-delay:0s;
     transition-duration:0.2s;
+    visibility: hidden;
 }
 
 #sidebar #recherche-form ::placeholder{
     color:#6b908000;
-        
+    
     transition-delay:0s;
     transition-duration:0.2s;
 }
@@ -65,6 +69,7 @@
     color:black;
     transition-delay:0.2s;
     transition-duration:0.2s;
+    visibility:visible;
 }
 
 #sidebar #recherche-form button{
