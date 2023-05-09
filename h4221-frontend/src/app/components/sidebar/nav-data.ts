@@ -10,6 +10,11 @@ export const navbarData = [
         label: 'FAQ Générale'
     },
     {
+        routeLink: '/form',
+        icon: '../../assets/questionnaire.png',
+        label: 'Retour d\'échange'
+    },
+    {
         routeLink: '',
         icon: '../../assets/settings.png',
         label: 'Paramètres et profil'

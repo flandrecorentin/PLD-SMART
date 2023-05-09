@@ -16,11 +16,13 @@ export class FormService {
 
   constructor(private http: HttpClient) { }
 
-  sentForm(form: any) {
+  sendForm(form: JSON) {
     return this.http.post(this.formURL, form, {headers: this.httpHeaders});
   }
 
   getForm() {
     return this.http.get<JSON>(this.formURL, {headers: this.httpHeaders});
   }
+
+
 }
