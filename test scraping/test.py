@@ -22,24 +22,59 @@ driver.implicitly_wait(220) #maximum time to load the link
 etablissement = {}
 listeEtablissement = {}
 
-#Scroll down: Il faut laisser le temps au driver de charger la page avant d'ouvrir "plus de détails"
-time.sleep(3)
-#driver.execute_script("window.scrollTo(0, 1000,)")
-time.sleep(3)
 """
-for i in range (1,13) :
-    time.sleep(2)
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight,)")
+#Scroll down: Il faut laisser le temps au driver de charger la page avant d'ouvrir "plus de détails"
+time.sleep(2)
+print(test.text)
+driver.execute_script("arguments[0].scrollIntoView();",test)
+test.click
+driver.execute_script("window.scrollTo(0, 700,)")
+"""
+
+"""
+test = driver.find_element(By.LINK_TEXT, "Plus de détails")
+time.sleep(1)
+print(test.text)
+driver.execute_script("arguments[0].scrollIntoView();",test)
+time.sleep(1)
+test.click()
+"""
+
+"""
+#Fonctionne bien pour scroller d'une université à l'autre.
+test = driver.find_elements(By.LINK_TEXT, "Plus de détails")
+for t in test :
+    time.sleep(1)
+    print(t.text)
+    driver.execute_script("arguments[0].scrollIntoView();",t)
 time.sleep(2)
 """
-#plusInfos = driver.find_element(By.XPATH, '//span[@class="more_info_text float-right"]/a')
-plusInfos = driver.find_element("link text", "Plus de détails")
-#driver.execute_script("window.scrollTo(0, 50,)")
-print(plusInfos.text)
-time.sleep(3)
-#element = wait.until(EC.element_to_be_clickable((By.XPATH, '//span[@class="more_info_text float-right"]/a')))
-plusInfos.click()
 
+#Scrolling parfait pour ouvrir la première page "Plus d'infos"
+plusInfo = driver.find_element(By.LINK_TEXT, "Plus de détails")
+time.sleep(1)
+plusInfo.location_once_scrolled_into_view
+time.sleep(1)
+driver.execute_script("window.scrollTo(0, window.scrollY - 200)")
+time.sleep(1)
+#Ouverture de la page "Plus d'infos"
+plusInfo.click()
+time.sleep(2)
+#Ouverture de l'onglet "etablissement"
+univBtn = driver.find_element(By.LINK_TEXT, "Etablissements")
+univBtn.click()
+time.sleep(2)
+#Fermeture de la page "Plus d'infos"
+closeBtn = driver.find_element(By.XPATH, '//button[@class="_modal_univ_moreclose"]')
+closeBtn.click()
+
+
+"""
+wait = WebDriverWait(driver, 10)
+element = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Plus de détails")))
+print(element.text)
+element.click()
+"""
 """
 for nomuniversite in listenom:
     
