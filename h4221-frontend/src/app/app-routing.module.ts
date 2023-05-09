@@ -3,6 +3,7 @@ import {Input, NgModule} from '@angular/core';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
+import { FaqAdminPageComponent } from './faq-admin-page/faq-admin-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { InscriptionPageComponent } from './inscription-page/inscription-page.component';
 import { FormPageComponent } from './form-page/form-page.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'connexion', component: ConnexionPageComponent},
   { path: 'inscription', component: InscriptionPageComponent},
   { path: 'faq', component: FaqPageComponent},
+  { path: 'faq-admin', component: FaqAdminPageComponent},
   { path: 'form', component: FormPageComponent},
   { path: '', component: AccueilPageComponent},
   // { path: 'curriculum', component: CurriculumComponent},

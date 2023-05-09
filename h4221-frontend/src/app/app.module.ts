@@ -17,6 +17,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormComponent } from './components/form/form.component';
 import { FormPageComponent } from './form-page/form-page.component';
 import { AccueilPageComponent } from './accueil-page/accueil-page.component';
+import { FaqAdminPageComponent } from './faq-admin-page/faq-admin-page.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MapComponent } from './components/map/map.component';
@@ -32,6 +33,7 @@ import { MapComponent } from './components/map/map.component';
     FooterComponent,
     SidebarComponent,
     FaqPageComponent,
+    FaqAdminPageComponent,
     FormComponent,
     FormPageComponent,
     AccueilPageComponent,

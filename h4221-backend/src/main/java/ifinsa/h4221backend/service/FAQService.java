@@ -32,13 +32,11 @@ public class FAQService {
     public boolean repondreFAQ(FAQ faq) {
         try{
             String reponse = faq.getReponse();
-            String categorie = faq.getCategorie();
             String authorReponse = faq.getAuthorReponse();
             String dateReponse = faq.getDateReponse();
             faq = faqdao.findByQuestion(faq.getQuestion());
             faq.setAuthorReponse(authorReponse);
             faq.setReponse(reponse);
-            faq.setCategorie(categorie);
             faq.setDateReponse(dateReponse);
             faqdao.save(faq);
             return true;
