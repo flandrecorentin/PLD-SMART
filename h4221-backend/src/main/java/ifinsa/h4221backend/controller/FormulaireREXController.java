@@ -54,7 +54,7 @@ public class FormulaireREXController {
 
 
     @GetMapping("/formulaire/{university}")
-    public ResponseEntity<List<FormulaireREX>> chargerFormulaireVierge(@PathVariable(value="university") String university){
+    public ResponseEntity<List<FormulaireREX>> chercherFormulaireParUniversite(@PathVariable(value="university") String university){
         List<FormulaireREX> formulaireREXs = new LinkedList<>();
         try {
             formulaireREXs = formulaireREXService.findFormulaireREXsByExchangeUniversity(university);
