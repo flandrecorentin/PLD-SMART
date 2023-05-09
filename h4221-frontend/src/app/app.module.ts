@@ -19,6 +19,7 @@ import { FormPageComponent } from './form-page/form-page.component';
 import { AccueilPageComponent } from './accueil-page/accueil-page.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     FaqPageComponent,
     FormComponent,
     FormPageComponent,
-    AccueilPageComponent
+    AccueilPageComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
