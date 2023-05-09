@@ -28,4 +28,8 @@ export class AuthenticationService {
   isLoggedIn() {
     return localStorage.getItem("auth_token") != null;
   }
+
+  logout() {
+    localStorage.removeItem("auth_token");
+  }
 }
