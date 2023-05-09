@@ -19,11 +19,10 @@ public class ConversationService {
     ConversationDAO conversationDAO ;
     public boolean posterMessage(ObjectId author, String texte, ObjectId conversationID) {
         try{
-            Conversation conversation = chatDAO.getConversationByID();
+            Conversation conversation = chatDAO.getConversationByID(conversationID);
             Message message = Message(author, texte);
-            conversation.posterMessage
-
-            chatDAO.posterMessage(message);
+            conversation.posterMessage(message);
+            chatDAO.save(conversation);
             return true;
         }
         catch (Exception exception) {

@@ -21,12 +21,13 @@ public class Message {
 //TODO : compléter la classe
 
     private String author;
-    private Date date;
+    private String date;
     private String text;
 
-    public Message(ObjectId author, String date) {
+    public Message(ObjectId author, String text, String date) {
         this.author = author;
-        this.date =
+        this.text = text;
+        this.date = date;
     }
 
 

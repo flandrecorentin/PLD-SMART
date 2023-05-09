@@ -15,7 +15,7 @@ public class ChatController {
 
     // POST exemple /attachment/{id}
     @PostMapping("/conversation/{id}")
-    public void uploadAttachedFile(@PathVariable(value = "id") String idTest) {
+    public void ResponseEntity postMessage(@requestBody(value = "id") String idTest) {
         exampleService.uploadAttachedFile(idTest);
     }
 
@@ -24,24 +24,7 @@ public class ChatController {
         exampleService.uploadAttachedFile(idTest);
     }
 
-}
-/*
-package ifinsa.h4221backend.controller;
-
-        import ifinsa.h4221backend.model.FormulaireREX;
-        import ifinsa.h4221backend.model.User;
-        import ifinsa.h4221backend.service.FormulaireREXService;
-        import ifinsa.h4221backend.service.UserService;
-        import org.json.simple.JSONObject;
-        import org.json.simple.parser.JSONParser;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.http.HttpStatus;
-        import org.springframework.http.ResponseEntity;
-        import org.springframework.web.bind.annotation.*;
-
-        import java.util.LinkedHashMap;
-        import java.util.LinkedList;
-        import java.util.List;
+}t;
 
 @CrossOrigin("*")
 @RestController
@@ -51,7 +34,7 @@ public class FormulaireREXController {
     FormulaireREXService formulaireREXService;
 
     @PostMapping("/formulaire")
-    public ResponseEntity sauvegardeFormulaire(@RequestBody FormulaireREX formulaireREX){
+    public ResponseEntity sauvegardeFormulaire(@RequestBody String text, ObjectID){
         try{
             if(formulaireREXService.sauvegarder(formulaireREX)){
                 System.out.println("[FormulaireREXController]: Sauvegarde du questionnaire");

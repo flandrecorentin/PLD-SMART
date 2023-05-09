@@ -77,7 +77,8 @@ public class Conversation {
     }
 
     public void posterMessage(Message message) {
-        this.messagelist.add(nombreDeMessages,message)
+        this.messagelist.add(nombreDeMessages,message);
+        nombreDeMessages++;
     }
 
 }
