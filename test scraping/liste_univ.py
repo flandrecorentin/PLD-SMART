@@ -25,28 +25,38 @@ for i in range (1,20) :
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight,)")
 
 listenom = driver.find_elements(By.XPATH, '//div[@class="_univname"]')
-
+listepays = driver.find_elements(By.XPATH, '//div[@class ="university_stats"]/p[text() = "Pays"]/../../following-sibling::div/div/p')
+listeAccord = driver.find_elements(By.XPATH, '//div[@class ="university_stats"]/p[text() = "Accord"]/../../following-sibling::div/div/p')
+i =0
 
 for nomuniversite in listenom:
-    
+    print("--------------------------")
+    print(listepays[i].text)
     nomuniversite = nomuniversite.text
     #Normalisation des noms d'université
     idNom = nomuniversite.lower()
     idnom = idNom.replace(" ","-")
-    idnomfinale = unidecode.unidecode(idnom)
+    idnom = unidecode.unidecode(idnom)
     print(nomuniversite)
-    print(idnomfinale)
+    print(idnom)
     if idnom not in listeEtablissement : 
         etablissement = {}
+        Accord = []
+        Accord.append(listeAccord[i].text)
         etablissement["nom"]=nomuniversite
-        listeEtablissement[idnomfinale] = etablissement
-    
+        etablissement["pays"]=listepays[i].text
+        etablissement["accord"]=Accord
+        listeEtablissement[idnom] = etablissement
+    else:
+        listeEtablissement[idnom]['accord'].append(listeAccord[i].text)
+    i = i+1
 
     #a = driver.find_element(By.CLASS_NAME, "university_stats")
 
-with open('listeNom.json', 'w') as mon_fichier:
+print(listeEtablissement)
+with open('liste_univ_pays_accord.json', 'w') as mon_fichier:
     json.dump(listeEtablissement, mon_fichier)
-webdriver.close()
+driver.close()
 
 
 

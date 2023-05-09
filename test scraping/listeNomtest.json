@@ -1,0 +1,42 @@
+{
+    "brandenburgische-technische-universitat-cottbus-senftenberg": {
+        "nom": "Brandenburgische Technische Universit\u00e4t Cottbus-Senftenberg",
+        "pays": "Allemagne"
+    },
+    "karlsruher-institut-fur-technologie": {
+        "nom": "Karlsruher Institut f\u00fcr Technologie",
+        "pays": "Allemagne"
+    },
+    "instituto-tecnologico-de-buenos-aires": {
+        "nom": "Instituto Tecnol\u00f3gico de Buenos Aires",
+        "pays": "Argentine"
+    },
+    "instituto-universitario-aeronautico": {
+        "nom": "Instituto Universitario Aeron\u00e1utico",
+        "pays": "Argentine"
+    },
+    "universidad-de-buenos-aires": {
+        "nom": "Universidad de Buenos Aires",
+        "pays": "Argentine"
+    },
+    "montanuniversitat-leoben": {
+        "nom": "Montanuniversit\u00e4t Leoben",
+        "pays": "Autriche"
+    },
+    "technische-universitat-graz": {
+        "nom": "Technische Universit\u00e4t Graz",
+        "pays": "Autriche"
+    },
+    "ku-leuven": {
+        "nom": "KU Leuven",
+        "pays": "Belgique"
+    },
+    "universite-de-namur": {
+        "nom": "Universit\u00e9 de Namur",
+        "pays": "Belgique"
+    },
+    "universite-libre-de-bruxelles": {
+        "nom": "Universit\u00e9 Libre de Bruxelles",
+        "pays": "Belgique"
+    }
+}
