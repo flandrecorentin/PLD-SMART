@@ -121,4 +121,6 @@ public String getFullName() {
         this.password = password;
         System.out.println("SET PASSWORD"+password);
     }
+
+    //TODO : pas de 'toString'
 }
