@@ -253,10 +253,30 @@ export class FaqPageComponent {
 
     ngOnInit() {
       this.faqService.faq().subscribe(
-        //(token: string) => {
-        // localStorage.setItem('auth_token', token);
-        // this.router.navigateByUrl('/');
-      //}
+        (datas: any) => {
+          this.allqas=[];
+          for (var data of datas){
+            this.allqas.push({
+              question:data.question,
+              answer:data.reponse,
+              type:data.type,
+              questionauthor:data.authorQuestion,
+              questiondate:data.dateQuestion,
+              answerauthor:data.authorReponse,
+              answerdate:data.date,
+            })
+            
+          }
+        this.selectedqas = this.allqas;
+        this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
+
+          // {question:"28"+this.mockquestion, answer:this.mockanswer, type:this.mocktype
+          // ,questionauthor:this.mockquestionauthor,
+          // answerauthor:this.mockanswerauthor,
+          // questiondate:this.mockdatequestion,
+          // answerdate:this.mockdateanswer},
+
+        }
       );
     }
 
