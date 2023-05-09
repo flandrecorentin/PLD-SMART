@@ -1,0 +1,338 @@
+{
+  "brandenburgische-technische-universitat-cottbus-senftenberg": {
+    "nom": "Brandenburgische Technische Universit\u00e4t Cottbus-Senftenberg",
+    "pays": "Allemagne"
+  },
+  "karlsruher-institut-fur-technologie": {
+    "nom": "Karlsruher Institut f\u00fcr Technologie",
+    "pays": "Allemagne"
+  },
+  "instituto-tecnologico-de-buenos-aires": {
+    "nom": "Instituto Tecnol\u00f3gico de Buenos Aires",
+    "pays": "Argentine"
+  },
+  "instituto-universitario-aeronautico": {
+    "nom": "Instituto Universitario Aeron\u00e1utico",
+    "pays": "Argentine"
+  },
+  "universidad-de-buenos-aires": {
+    "nom": "Universidad de Buenos Aires",
+    "pays": "Argentine"
+  },
+  "montanuniversitat-leoben": {
+    "nom": "Montanuniversit\u00e4t Leoben",
+    "pays": "Autriche"
+  },
+  "technische-universitat-graz": {
+    "nom": "Technische Universit\u00e4t Graz",
+    "pays": "Autriche"
+  },
+  "ku-leuven": {
+    "nom": "KU Leuven",
+    "pays": "Belgique"
+  },
+  "universite-de-namur": {
+    "nom": "Universit\u00e9 de Namur",
+    "pays": "Belgique"
+  },
+  "universite-libre-de-bruxelles": {
+    "nom": "Universit\u00e9 Libre de Bruxelles",
+    "pays": "Belgique"
+  },
+  "pontificia-universidade-catolica-do-rio-de-janeiro": {
+    "nom": "Pontificia Universidade Cat\u00f3lica do Rio de Janeiro",
+    "pays": "Br\u00e9sil"
+  },
+  "universidade-de-sao-paulo": {
+    "nom": "Universidade de S\u00e3o Paulo",
+    "pays": "Br\u00e9sil"
+  },
+  "bureau-de-cooperation-interuniversitaire-(bci)": {
+    "nom": "Bureau de Coop\u00e9ration Interuniversitaire (BCI)",
+    "pays": "Canada"
+  },
+  "ecole-de-technologie-superieure-(ets)": {
+    "nom": "\u00c9cole de Technologie Sup\u00e9rieure (ETS)",
+    "pays": "Canada"
+  },
+  "ecole-polytechnique-de-montreal": {
+    "nom": "\u00c9cole Polytechnique de Montr\u00e9al",
+    "pays": "Canada"
+  },
+  "pontificia-universidad-catolica-de-chile": {
+    "nom": "Pontificia Universidad Cat\u00f3lica de Chile",
+    "pays": "Chili"
+  },
+  "pontificia-universidad-catolica-de-valparaiso": {
+    "nom": "Pontificia Universidad Cat\u00f3lica de Valpara\u00edso",
+    "pays": "Chili"
+  },
+  "universidad-catolica-del-norte": {
+    "nom": "Universidad Cat\u00f3lica del Norte",
+    "pays": "Chili"
+  },
+  "universidad-de-chile": {
+    "nom": "Universidad de Chile",
+    "pays": "Chili"
+  },
+  "beijing-jiaotong-university": {
+    "nom": "Beijing Jiaotong University",
+    "pays": "Chine"
+  },
+  "northwestern-polytechnical-university": {
+    "nom": "Northwestern Polytechnical University",
+    "pays": "Chine"
+  },
+  "shanghai-jiao-tong-university": {
+    "nom": "Shanghai Jiao Tong University",
+    "pays": "Chine"
+  },
+  "pontificia-universidad-javeriana": {
+    "nom": "Pontificia Universidad Javeriana",
+    "pays": "Colombie"
+  },
+  "universidad-de-antioquia": {
+    "nom": "Universidad de Antioquia",
+    "pays": "Colombie"
+  },
+  "universidad-de-los-andes": {
+    "nom": "Universidad de Los Andes",
+    "pays": "Colombie"
+  },
+  "daegu-gyeongbuk-institute-of-science-and-technology": {
+    "nom": "Daegu Gyeongbuk Institute of Science and Technology",
+    "pays": "Cor\u00e9e, R\u00e9publique de"
+  },
+  "gwangju-institute-of-science-and-technology": {
+    "nom": "Gwangju Institute of Science and Technology",
+    "pays": "Cor\u00e9e, R\u00e9publique de"
+  },
+  "korea-advanced-institute-of-science-and-technology": {
+    "nom": "Korea Advanced Institute of Science and Technology",
+    "pays": "Cor\u00e9e, R\u00e9publique de"
+  },
+  "aalborg-universitet": {
+    "nom": "Aalborg Universitet",
+    "pays": "Danemark"
+  },
+  "universidad-carlos-iii-de-madrid": {
+    "nom": "Universidad Carlos III de Madrid",
+    "pays": "Espagne"
+  },
+  "tartu-ulikool": {
+    "nom": "Tartu \u00dclikool",
+    "pays": "Estonie"
+  },
+  "ge3---institute-of-international-education-(iie)": {
+    "nom": "GE3 - Institute of International Education (IIE)",
+    "pays": "\u00c9tats-Unis"
+  },
+  "georgia-institute-of-technology-(georgia-tech)": {
+    "nom": "Georgia Institute of Technology (Georgia Tech)",
+    "pays": "\u00c9tats-Unis"
+  },
+  "illinois-institute-of-technology": {
+    "nom": "Illinois Institute of Technology",
+    "pays": "\u00c9tats-Unis"
+  },
+  "international-student-exchange-program-(isep)": {
+    "nom": "International Student Exchange Program (ISEP)",
+    "pays": "\u00c9tats-Unis"
+  },
+  "aalto-yliopisto": {
+    "nom": "Aalto-yliopisto",
+    "pays": "Finlande"
+  },
+  "universite-d'orleans": {
+    "nom": "Universit\u00e9 d'Orl\u00e9ans",
+    "pays": "France"
+  },
+  "aristoteleio-panepistimio-thessalonikis": {
+    "nom": "Aristoteleio Panepistimio Thessalonikis",
+    "pays": "Gr\u00e8ce"
+  },
+  "city-university-of-hong-kong": {
+    "nom": "City University of Hong Kong",
+    "pays": "Hong-Kong"
+  },
+  "the-hong-kong-polytechnic-university": {
+    "nom": "The Hong Kong Polytechnic University",
+    "pays": "Hong-Kong"
+  },
+  "budapesti-muszaki-es-gazdasagtudomanyi-egyetem": {
+    "nom": "Budapesti M\u0171szaki \u00e9s Gazdas\u00e1gtudom\u00e1nyi Egyetem",
+    "pays": "Hongrie"
+  },
+  "indian-institute-of-technology-bombay-(iit-bombay)": {
+    "nom": "Indian Institute of Technology Bombay (IIT Bombay)",
+    "pays": "Inde"
+  },
+  "indian-institute-of-technology-delhi-(iit-delhi)": {
+    "nom": "Indian Institute of Technology Delhi (IIT Delhi)",
+    "pays": "Inde"
+  },
+  "indian-institute-of-technology-kanpur-(iit-kanpur)": {
+    "nom": "Indian Institute of Technology Kanpur (IIT Kanpur)",
+    "pays": "Inde"
+  },
+  "indian-institute-of-technology-madras-(iit-madras)": {
+    "nom": "Indian Institute of Technology Madras (IIT Madras)",
+    "pays": "Inde"
+  },
+  "institut-teknologi-bandung": {
+    "nom": "Institut Teknologi Bandung",
+    "pays": "Indon\u00e9sie"
+  },
+  "institut-teknologi-sepuluh-nopember-(its)": {
+    "nom": "Institut Teknologi Sepuluh Nopember (ITS)",
+    "pays": "Indon\u00e9sie"
+  },
+  "dublin-city-university": {
+    "nom": "Dublin City University",
+    "pays": "Irlande"
+  },
+  "haskoli-islands-university": {
+    "nom": "H\u00e1sk\u00f3li \u00cdslands University",
+    "pays": "Islande"
+  },
+  "politecnico-di-bari": {
+    "nom": "Politecnico di Bari",
+    "pays": "Italie"
+  },
+  "keio-university": {
+    "nom": "Keio University",
+    "pays": "Japon"
+  },
+  "kobe-university": {
+    "nom": "Kobe University",
+    "pays": "Japon"
+  },
+  "kyushu-university": {
+    "nom": "Kyushu University",
+    "pays": "Japon"
+  },
+  "the-university-of-tokyo": {
+    "nom": "The University of Tokyo",
+    "pays": "Japon"
+  },
+  "vilnius-tech": {
+    "nom": "VILNIUS TECH",
+    "pays": "Lituanie"
+  },
+  "benemerita-universidad-autonoma-de-puebla": {
+    "nom": "Benem\u00e9rita Universidad Aut\u00f3noma de Puebla",
+    "pays": "Mexique"
+  },
+  "instituto-politecnico-nacional": {
+    "nom": "Instituto Polit\u00e9cnico Nacional",
+    "pays": "Mexique"
+  },
+  "universidad-autonoma-de-baja-california": {
+    "nom": "Universidad Aut\u00f3noma de Baja California",
+    "pays": "Mexique"
+  },
+  "universidad-autonoma-de-nuevo-leon": {
+    "nom": "Universidad Aut\u00f3noma de Nuevo Le\u00f3n",
+    "pays": "Mexique"
+  },
+  "norges-teknisk-naturvitenskapelige-universitet": {
+    "nom": "Norges Teknisk-Naturvitenskapelige Universitet",
+    "pays": "Norv\u00e8ge"
+  },
+  "technische-universiteit-delft": {
+    "nom": "Technische Universiteit Delft",
+    "pays": "Pays-Bas"
+  },
+  "universiteit-twente": {
+    "nom": "Universiteit Twente",
+    "pays": "Pays-Bas"
+  },
+  "akademia-gorniczo-hutnicza-im.-stanislawa-staszica-w-krakowie": {
+    "nom": "Akademia G\u00f3rniczo-Hutnicza im. Stanis\u0142awa Staszica w Krakowie",
+    "pays": "Pologne"
+  },
+  "politechnika-gdanska": {
+    "nom": "Politechnika Gdanska",
+    "pays": "Pologne"
+  },
+  "instituto-superior-tecnico": {
+    "nom": "Instituto Superior T\u00e9cnico",
+    "pays": "Portugal"
+  },
+  "universitatea-'politehnica'-din-bucuresti-(upb)": {
+    "nom": "Universitatea 'Politehnica' din Bucuresti (UPB)",
+    "pays": "Roumanie"
+  },
+  "imperial-college-london": {
+    "nom": "Imperial College London",
+    "pays": "Royaume-Uni"
+  },
+  "loughborough-university": {
+    "nom": "Loughborough University",
+    "pays": "Royaume-Uni"
+  },
+  "national-university-of-singapore": {
+    "nom": "National University of Singapore",
+    "pays": "Singapour"
+  },
+  "singapore-university-of-technology-and-design": {
+    "nom": "Singapore University of Technology and Design",
+    "pays": "Singapour"
+  },
+  "slovenska-technicka-univerzita-v-bratislave-(stu)": {
+    "nom": "Slovensk\u00e1 Technick\u00e1 Univerzita v Bratislave (STU)",
+    "pays": "Slovaquie"
+  },
+  "univerza-v-ljubljani": {
+    "nom": "Univerza v Ljubljani",
+    "pays": "Slov\u00e9nie"
+  },
+  "chalmers-tekniska-hogskola": {
+    "nom": "Chalmers tekniska h\u00f6gskola",
+    "pays": "Su\u00e8de"
+  },
+  "eastern-switzerland-university-of-applied-sciences-ost": {
+    "nom": "Eastern Switzerland University of Applied Sciences OST",
+    "pays": "Suisse"
+  },
+  "national-tsing-hua-university": {
+    "nom": "National Tsing Hua University",
+    "pays": "Ta\u00efwan"
+  },
+  "ceske-vysoke-uceni-technicke-v-praze": {
+    "nom": "Cesk\u00e9 Vysok\u00e9 Uceni Technick\u00e9 v Praze",
+    "pays": "Tch\u00e8que, R\u00e9publique"
+  },
+  "vysoke-uceni-technicke-v-brne": {
+    "nom": "Vysok\u00e9 Ucen\u00ed Technick\u00e9 v Brne",
+    "pays": "Tch\u00e8que, R\u00e9publique"
+  },
+  "universite-de-lome": {
+    "nom": "Universit\u00e9 de Lom\u00e9",
+    "pays": "Togo"
+  },
+  "ecole-nationale-d'ingenieurs-de-sfax-(universite-de-sfax)": {
+    "nom": "Ecole Nationale d'Ing\u00e9nieurs de Sfax (Universit\u00e9 de Sfax)",
+    "pays": "Tunisie"
+  },
+  "bogazici-universitesi": {
+    "nom": "Bogazi\u00e7i \u00dcniversitesi",
+    "pays": "Turquie"
+  },
+  "galatasaray-universitesi": {
+    "nom": "Galatasaray Universitesi",
+    "pays": "Turquie"
+  },
+  "universidad-de-la-republica": {
+    "nom": "Universidad de la Rep\u00fablica",
+    "pays": "Uruguay"
+  },
+  "ho-chi-minh-city-university-of-technology": {
+    "nom": "Ho Chi Minh City University of Technology",
+    "pays": "Viet Nam"
+  },
+  "national-university-of-civil-engineering": {
+    "nom": "National University of Civil Engineering",
+    "pays": "Viet Nam"
+  }
+}

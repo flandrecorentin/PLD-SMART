@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@550&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+#home{
+    margin-left:80px;
+    overflow: hidden;
+}
+#home #headerhome{
+    width:100%;
+    height:70px;
+}
+#home #headerhome #titre{
+    margin-left:30px;
+    font-family: 'Inter', sans-serif;
+    font-size:1.7vw;
+    font-weight: 500;
+    align-self:center;
+    text-align: left;
+    margin-bottom:0;
+}
+#home #headerhome #logotitre{
+    width:35px;
+    margin:10px;
+transform:translate(0,15px);
+margin-right:30px;
+}
+
+#home #headerhome button{
+    padding:5px 10px 10px 5px;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    font-size:0.9vw;
+    font-weight: 500;
+    border:rgb(198, 198, 198) 1px solid;
+    border-radius: 10px;
+    margin-left:10px;
+    transform:translate(0,-5px);
+}
+
+#home #headerhome button img{
+    width:20px;
+    margin-right:5px;
+}
+#home #headerhome .greenButton{
+    color:white;
+    background-color: #6B9080;
+    border:transparent;
+}
+#home .wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    height:500px;
+}
+#home #univs{
+    /* border: red 1px solid; */
+    padding:5px;
+}
+#home #map{
+    /* border: red 1px solid; */
+    padding:5px;
+}
+#home #faq{
+    grid-column: 1 / 3;
+    /* border: red 1px solid; */
+    padding:5px;
+}
+#home #univs #titreunivs{
+    font-family: 'Inter', sans-serif;
+    font-size:1.5vw;
+    font-weight: 600;
+    margin-bottom:3px;
+}
+#home #univs .univblock{
+    margin-left:10px;    
+}
+#home #univs .nomuniv{
+    margin-bottom:0;
+    font-family: 'Inter', sans-serif;
+    font-size:1vw;
+    font-weight: 600;
+}
+#home #univs .liensuniv{
+    margin-top:5px;
+    margin-bottom:40px;
+    margin-left:20px;
+    color:black;
+    
+    font-family: 'Inter', sans-serif;
+    font-size:0.8vw;
+    font-weight: 400;
+}
+#home #univs .liensuniv a{
+    color:black; 
+}
+.scrollable{
+    overflow-y: scroll;
+    height:250px;
+}
+.scrollable::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.scrollable::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}.scrollable::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+
+
+
+#home #qagrid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+}
+#home .qablock{
+    height:130px;
+}   
+#home .type{
+    border:#6B9080 1px solid;
+    border-radius: 5px;
+    margin:auto;
+    margin-top:5px;
+    margin-bottom:5px;
+    padding:6px 10px 6px 10px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size:13px;
+    font-weight: 500;
+    color:#6B9080;
+    background-color: #ECFDF3;
+    display: inline-block;
+    
+}
+#home .question{
+    margin-top:0px;
+    margin-bottom:10px;
+    font-family: 'Inter', sans-serif;
+    font-size:18px;
+    font-weight: 600;
+    margin-bottom:0px;
+}
+
+#home .answer{
+    margin-top:10px;
+    font-family: 'Inter', sans-serif;
+    font-size:15px;
+    font-weight: 400;
+    color:#667085;
+    overflow: hidden;
+    /*text-overflow: ellipsis; */   
+    height:58px;
+    margin:0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+#home #toFaq{
+    margin-top:10px;
+    margin-right:10px;
+    font-family: 'Inter', sans-serif;
+    font-size:1vw;
+    font-weight: 500;
+    padding:3px 5px 8px 5px;
+    background-color: white;
+    float:right;
+    border-radius: 5px;
+    border: rgb(197, 197, 197) 1px solid;
+}
+#home #toFaq img{
+    height:20px;
+    transform:translate(0,3px)
+}

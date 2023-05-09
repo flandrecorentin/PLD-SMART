@@ -37,12 +37,14 @@ public class SecurityConfig {
                         .requestMatchers("/connexion", "/inscription", "/error").permitAll()
                         .anyRequest().authenticated()
                 )
+                .cors()
+                .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
-                ;
+        ;
         return http.build();
     }
 
@@ -64,4 +66,5 @@ public class SecurityConfig {
         return NoOpPasswordEncoder.getInstance();
         //return new BCryptPasswordEncoder();
     }
+
 }

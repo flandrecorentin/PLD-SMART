@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
 import { ConnexionDetails } from '../interfaces/connexion-details.model';
 import { InscriptionDetails } from '../interfaces/inscription-details.model';
 

@@ -14,24 +14,27 @@ export class HomePageComponent {
   }
   ngOnInit() {
   }
-  onInscrit(){
-    const req = this._httpClient.post(AppSettings.API_ENDPOINT+'inscription', {mail:'test@test', name:'THOMAS', password:'1234'}, {observe:'response'}).subscribe(response => {
-      if(response.body!=null){
-        this.resultat = response.body!.toString();
-      }
-    });
-  }
-  onConnecte(){
-    const req = this._httpClient.post(AppSettings.API_ENDPOINT+'connection', {mail:'test@test', password:'1234'}, {observe:'response'}).subscribe(response => {
-      if(response.body!=null){
-        this.resultat = response.body!.toString();
-      }
-    });
-  }
   
-  httpGet(){
-  }
-  
+  mockUniversites=[
+    {name:"GE3 - Institute of International Education (IIE)", site:"google.com", fiche:"google.com"},
+    {name:"Illinois Institute of Technology", site:"google.com", fiche:"google.com"},
+    {name:"Georgia Institute of Technology (Georgia Tech)", site:"google.com", fiche:"google.com"},
+    {name:"International Student Exchange Program (ISEP)", site:"google.com", fiche:"google.com"},
+    {name:"GE3 - Institute of International Education (IIE)", site:"google.com", fiche:"google.com"},
+    {name:"Illinois Institute of Technology", site:"google.com", fiche:"google.com"},
+    {name:"Georgia Institute of Technology (Georgia Tech)", site:"google.com", fiche:"google.com"},
+    {name:"International Student Exchange Program (ISEP)", site:"google.com", fiche:"google.com"},
+  ]
+  univs=this.mockUniversites;
+
+  mockQas=[
+    {question:"Is there a free trial available?", answer:"Yes, you can try us for free for 30 days. Our friendly team will work with you to get you up and running as soon as possible.", type:"logement"},
+    {question:"Is there a free trial available?", answer:"Yes, you can try us for free for 30 days. Our friendly team will work with you to get you up and running as soon as possible.", type:"logement"},
+    {question:"Is there a free trial available?", answer:"Yes, you can try us for free for 30 days. Our friendly team will work with you to get you up and running as soon as possible.", type:"logement"},
+    {question:"Is there a free trial available?", answer:"Yes, you can try us for free for 30 days. Our friendly team will work with you to get you up and running as soon as possible.", type:"logement"},
+    {question:"Is there a free trial available?", answer:"Yes, you can try us for free for 30 days. Our friendly team will work with you to get you up and running as soon as possible.", type:"logement"},
+  ]
+  qas=this.mockQas;
 
 }
 

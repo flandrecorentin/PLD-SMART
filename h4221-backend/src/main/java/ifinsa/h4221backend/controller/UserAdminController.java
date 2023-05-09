@@ -3,8 +3,10 @@ package ifinsa.h4221backend.controller;
 import ifinsa.h4221backend.config.JwtUtil;
 import ifinsa.h4221backend.model.AuthenticationRequest;
 import ifinsa.h4221backend.model.User;
+import ifinsa.h4221backend.service.ExampleService;
 import ifinsa.h4221backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.util.Pair;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -27,16 +29,34 @@ public class UserAdminController {
     }
 
     @PostMapping("/inscription")
-    public ResponseEntity inscrire(@RequestBody User user) {
-        try {
-            if (userService.inscrireService(user)) {
-                System.out.println("[UserAdminController]: Inscription de " + user.getFullName());
+    public ResponseEntity inscrire(@RequestBody User user){
+        try{
+            if(userService.inscrireService(user)){
+                System.out.println("[UserAdminController]: Inscription de "+ user.getFullName());
                 return new ResponseEntity(HttpStatus.OK);
-            } else {
-                System.out.println("[UserAdminController]: L'email " + user.getMail() + " est déjà utilisé");
+            }else{
+                System.out.println("[UserAdminController]: L'email " + user.getMail()+ " est déjà utilisé");
                 return new ResponseEntity(HttpStatus.CONFLICT);
             }
-        } catch (Exception exception) {
+        }
+        catch (Exception exception){
+            return new ResponseEntity(HttpStatus.FORBIDDEN);
+        }
+    }
+
+    @PutMapping("/parametres")
+    public ResponseEntity modifierParametres(@RequestBody User user){
+        try{
+            if(userService.modifierParametres(user)){
+                System.out.println("[UserAdminController]: Modification de "+ user.getFullName() +" effectue");
+                return new ResponseEntity(HttpStatus.OK);
+            }else{
+                System.out.println("[UserAdminController]: L'email " + user.getMail()+ " ne correspond a aucun compte");
+                return new ResponseEntity(HttpStatus.CONFLICT);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("[UserAdminController]: Problème de serveur");
             return new ResponseEntity(HttpStatus.FORBIDDEN);
         }
     }
@@ -53,9 +73,9 @@ public class UserAdminController {
                 String token = jwtUtil.generateToken(user);
                 return new ResponseEntity<>(token, HttpStatus.OK);
             }
-        } catch (Exception exception) {
+        } catch(Exception exception){
             System.out.println("[UserAdminController]: Problème de serveur");
-            return new ResponseEntity<>("Server issues", HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
         }
     }
 

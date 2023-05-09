@@ -2,6 +2,7 @@ package ifinsa.h4221backend.service;
 
 import ifinsa.h4221backend.dao.UserModelDAO;
 import ifinsa.h4221backend.model.AuthenticationRequest;
+import ifinsa.h4221backend.model.Departement;
 import ifinsa.h4221backend.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,6 +18,21 @@ public class UserService implements UserDetailsService {
     public boolean inscrireService(User user) {
         try {
             if (userModelDAO.findUserByMail(user.getMail()) == null) {
+                userModelDAO.save(user);
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception exception) {
+            return false;
+        }
+    }
+
+    public boolean modifierParametres(User user) {
+        try {
+            if (userModelDAO.findUserByMail(user.getMail())!= null) {
+                // on ne peut pas changer son MDP avec l'API REST sur la modification des paramètres
+                user.setPassword(userModelDAO.findUserByMail(user.getMail()).getPassword());
                 userModelDAO.save(user);
                 return true;
             } else {
