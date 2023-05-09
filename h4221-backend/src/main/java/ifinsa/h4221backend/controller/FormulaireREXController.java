@@ -53,8 +53,8 @@ public class /FormulaireREXController {
     }
 
 
-    @GetMapping("/formulaire/{university}")
-    public ResponseEntity<List<FormulaireREX>> chargerFormulaireVierge(@PathVariable(value="university") String university){
+    @GetMapping("/formulaire/university/{university}")
+    public ResponseEntity<List<FormulaireREX>> chercherFormulaireParUniversite(@PathVariable(value="university") String university){
         List<FormulaireREX> formulaireREXs = new LinkedList<>();
         try {
             formulaireREXs = formulaireREXService.findFormulaireREXsByExchangeUniversity(university);
@@ -64,6 +64,26 @@ public class /FormulaireREXController {
             }
             else{
                 System.out.println("[FormulaireREXController]: Récupération de " + formulaireREXs.size()+ " formulaires REX correspondant à l'université "+ university);
+                return new ResponseEntity<>(formulaireREXs, HttpStatus.OK);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("[FormulaireREXController]: ERREUR lors de la récupération des formulaires REX");
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("/formulaire/country/{country}")
+    public ResponseEntity<List<FormulaireREX>> chercherFormulaireParPays(@PathVariable(value="country") String country){
+        List<FormulaireREX> formulaireREXs = new LinkedList<>();
+        try {
+            formulaireREXs = formulaireREXService.findFormulaireREXsByExchangeCountry(country);
+            if(formulaireREXs.size()==0){
+                System.out.println("[FormulaireREXController]: Aucun formulaire REX avec le pays " + country +" est renseigné en base de donnée");
+                return new ResponseEntity<>(formulaireREXs, HttpStatus.NOT_FOUND);
+            }
+            else{
+                System.out.println("[FormulaireREXController]: Récupération de " + formulaireREXs.size()+ " formulaires REX correspondant au pays "+ country);
                 return new ResponseEntity<>(formulaireREXs, HttpStatus.OK);
             }
         }
