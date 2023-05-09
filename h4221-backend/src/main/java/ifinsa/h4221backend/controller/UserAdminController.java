@@ -44,6 +44,23 @@ public class UserAdminController {
         }
     }
 
+    @PutMapping("/parametres")
+    public ResponseEntity modifierParametres(@RequestBody User user){
+        try{
+            if(userService.modifierParametres(user)){
+                System.out.println("[UserAdminController]: Modification de "+ user.getFullName() +" effectue");
+                return new ResponseEntity(HttpStatus.OK);
+            }else{
+                System.out.println("[UserAdminController]: L'email " + user.getMail()+ " ne correspond a aucun compte");
+                return new ResponseEntity(HttpStatus.CONFLICT);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("[UserAdminController]: Problème de serveur");
+            return new ResponseEntity(HttpStatus.FORBIDDEN);
+        }
+    }
+
     @PostMapping("/connexion")
     public ResponseEntity<String> connexion(@RequestBody AuthenticationRequest authenticationRequest) {
         try {
