@@ -17,6 +17,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormComponent } from './components/form/form.component';
 import { FormPageComponent } from './form-page/form-page.component';
 import { AccueilPageComponent } from './accueil-page/accueil-page.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -31,15 +33,17 @@ import { AccueilPageComponent } from './accueil-page/accueil-page.component';
     FaqPageComponent,
     FormComponent,
     FormPageComponent,
-    AccueilPageComponent,
+    AccueilPageComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    SurveyModule
+    SurveyModule,
+    ScrollingModule
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ], // Must add this one.
   providers: [],
   bootstrap: [AppComponent]
 })
