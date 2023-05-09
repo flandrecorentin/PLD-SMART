@@ -3,9 +3,9 @@ import {Input, NgModule} from '@angular/core';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
-import { FaqAdminPageComponent } from './faq-admin-page/faq-admin-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { InscriptionPageComponent } from './inscription-page/inscription-page.component';
+import { FaqAdminPageComponent } from './faq-admin-page/faq-admin-page.component';
 import { FormPageComponent } from './form-page/form-page.component';
 import { AuthguardGuard } from './shared/authguard.guard';
 import { AccueilPageComponent } from './accueil-page/accueil-page.component';
@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'faq', component: FaqPageComponent, canActivate:[AuthguardGuard]},
   { path: 'form', component: FormPageComponent, canActivate:[AuthguardGuard]},
   { path: '', component: AccueilPageComponent, canActivate:[AlreadyLoggedInGuard]},
+  { path: 'faq-admin', component: FaqAdminPageComponent, canActivate:[AuthguardGuard]},
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
