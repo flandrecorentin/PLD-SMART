@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@550&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+#home{
+    margin-left:80px;
+}
+#home #headerhome{
+    width:100%;
+    height:100px;
+}
+#home #headerhome #titre{
+    margin-left:30px;
+    font-family: 'Inter', sans-serif;
+    font-size:1.7vw;
+    font-weight: 500;
+    align-self:center;
+    text-align: left;
+    margin-bottom:0;
+}
+#home #headerhome #logotitre{
+    width:35px;
+    margin:10px;
+transform:translate(0,15px);
+margin-right:30px;
+}
+
+#home #headerhome button{
+    padding:5px 10px 10px 5px;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    font-size:0.9vw;
+    font-weight: 500;
+    border:rgb(198, 198, 198) 1px solid;
+    border-radius: 10px;
+    margin-left:10px;
+    transform:translate(0,-5px);
+}
+
+#home #headerhome button img{
+    width:20px;
+    margin-right:5px;
+}
+#home #headerhome .greenButton{
+    color:white;
+    background-color: #6B9080;
+    border:transparent;
+}
+
