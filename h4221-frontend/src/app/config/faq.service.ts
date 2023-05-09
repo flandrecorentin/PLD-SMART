@@ -12,14 +12,15 @@ export class FaqService {
   // Links to call back-end services
   backendUrl = 'http://localhost:9000'
   faqUrl = this.backendUrl + '/faq';
-  httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+  httpHeaders = new HttpHeaders({'Content-Type': 'application/json',
+  'Authorization': `Bearer ${localStorage.getItem("auth_token")}`,});
 
   constructor(private http: HttpClient) { }
 
   faq(
     //faqDetails: FaqDetails
     ) {
-    return this.http.post(this.faqUrl, 
+    return this.http.get(this.faqUrl, 
       //faqDetails, 
       {headers: this.httpHeaders});
   }
