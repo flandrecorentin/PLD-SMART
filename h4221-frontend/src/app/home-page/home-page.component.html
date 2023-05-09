@@ -7,4 +7,27 @@
         <button id="completerInfos"><img src="../assets/baguette.png"/>Compléter mes informations</button>
         <button id="découvrirDestinations" class="greenButton"><img src="../assets/palmier.png"/>Découvrir les destinations</button>
     </div>
+    <div class="wrapper">
+        <div id="univs">
+            <p id="titreunivs">Découvrir les universités</p>
+            <div class="scrollable">
+                <div *ngFor="let univ of univs; let i=index" class="univblock">
+                    <p class="nomuniv">· {{univ.name}}</p>
+                    <p class="liensuniv"><a href={{univ.site}}>Consulter le site web</a> - <a href={{univ.fiche}}>Ouvrir la fiche destination</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+        <div id="faq">
+            <div id="qagrid">
+                <div class="qablock" *ngFor="let qa of qas; let i=index">
+                    <p class="type">{{qa.type}}</p>
+                    <p class="question">{{qa.question}}</p>
+                    <p class="answer">{{qa.answer}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <button id="toFaq"><img src="../assets/question.png"/>Accéder à l'intégralité de la FAQ</button>
 </div>
