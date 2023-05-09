@@ -30,19 +30,19 @@ export class MapComponent implements AfterViewInit {
     this.initMap();
   }
 
-  addCountriesLayer() {
-    // Chargez les données des pays à partir d'un fichier JSON
-    const countriesData = require('./countries.geojson');
+  // addCountriesLayer() {
+  //   // Chargez les données des pays à partir d'un fichier JSON
+  //   const countriesData = require('./countries.geojson');
 
-    L.geoJSON(countriesData, {
-      style: { color: 'blue' }, // Style des pays
-      onEachFeature: (feature, layer) => {
-        layer.on('click', (event) => {
-          const countryName = feature.properties.name; // Récupération du nom du pays
-          console.log('Pays cliqué:', countryName);
-          // Faites ce que vous souhaitez avec le nom du pays
-        });
-      }
-    }).addTo(this.map);
-  }
+  //   L.geoJSON(countriesData, {
+  //     style: { color: 'blue' }, // Style des pays
+  //     onEachFeature: (feature, layer) => {
+  //       layer.on('click', (event) => {
+  //         const countryName = feature.properties.name; // Récupération du nom du pays
+  //         console.log('Pays cliqué:', countryName);
+  //         // Faites ce que vous souhaitez avec le nom du pays
+  //       });
+  //     }
+  //   }).addTo(this.map);
+  // }
 }
