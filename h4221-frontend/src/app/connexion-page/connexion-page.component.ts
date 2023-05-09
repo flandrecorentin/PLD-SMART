@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class ConnexionPageComponent {
 
+  invalidCredentials = false;
+
   constructor(private router: Router, private fb: FormBuilder, private authenticationService: AuthenticationService) { }
 
   loginForm = this.fb.group({
@@ -19,9 +21,14 @@ export class ConnexionPageComponent {
   })
 
   submitConnexion() {
-    this.authenticationService.connexion(this.loginForm.value).subscribe((token: string) => {
-      localStorage.setItem('auth_token', token);
-      this.router.navigateByUrl('/');
-    });
+    this.authenticationService.connexion(this.loginForm.value).subscribe(
+      (rep: string) => {
+      localStorage.setItem('auth_token', rep);
+      this.router.navigateByUrl('/home');
+      },
+      (error) => {
+        console.log(error);
+        this.invalidCredentials = true;
+      });
   }
 }

@@ -1,4 +1,3 @@
-
 <app-header></app-header>
 
 <div id="connection">
@@ -18,6 +17,10 @@
         <input id="password" type="password" formControlName="password" placeholder="••••••••">
         <div *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">
             <p class="label error">Le mot de passe est obligatoire !</p>
+        </div>
+
+        <div *ngIf="invalidCredentials">
+            <p class="label error">Adresse mail et/ou mot de passe incorrect.</p>
         </div>
 
         <button id="signin" type="submit" [disabled]="!loginForm.valid">Connexion</button>
