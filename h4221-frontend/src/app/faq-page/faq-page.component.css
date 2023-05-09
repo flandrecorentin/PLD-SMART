@@ -225,7 +225,7 @@
 
 #faq .overlay .question{
     margin-top:20px;
-    margin-bottom:50px;
+    margin-bottom:0px;
 }
 
 #faq .overlay .answer{
@@ -239,4 +239,69 @@
     height:auto;
     margin:0;
     display:block;
+}
+
+#faq .overlay .questiondetails{
+    margin-top:0px;
+    font-family: 'Inter', sans-serif;
+    font-size:12px;
+    font-weight: 400;
+    color:#667085;
+    overflow: hidden;
+    /*text-overflow: ellipsis; */   
+    height:auto;
+    margin:0;
+    display:block;
+    margin-bottom:50px;
+}
+
+#faq .overlay .answerdetails{
+    margin-top:0px;
+    font-family: 'Inter', sans-serif;
+    font-size:12px;
+    font-weight: 400;
+    color:#667085;
+    overflow: hidden;
+    /*text-overflow: ellipsis; */   
+    height:auto;
+    margin:0;
+    display:block;
+    margin-bottom:50px;
+}
+#faq #proposerquestionpopup{
+    visibility:hidden;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,0)
+}
+#faq #questiondetailspopup{
+    visibility:hidden;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,0)
+}
+
+#faq #question-form button{
+    width:200px;
+    height:40px;
+    border-radius: 10px;
+    background-color:#6B9080;
+    color:white;
+    border-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size:0.9vw;
+    font-weight: 500;
+
+}
+
+#faq #question-form textarea{
+    width:350px;
+    height:200px;
+    border-radius: 5px;
+    border:grey 1px solid;
+    margin-bottom:50px;
+    font-family: 'Inter', sans-serif;
+    font-size:15px;
+    font-weight: 400;
+    color:#667085;
 }
