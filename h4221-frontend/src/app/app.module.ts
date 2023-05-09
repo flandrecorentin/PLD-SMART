@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FormComponent } from './components/form/form.component';
 import { FormPageComponent } from './form-page/form-page.component';
+import { AccueilPageComponent } from './accueil-page/accueil-page.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormPageComponent } from './form-page/form-page.component';
     SidebarComponent,
     FaqPageComponent,
     FormComponent,
-    FormPageComponent
+    FormPageComponent,
+    AccueilPageComponent,
   ],
   imports: [
     BrowserModule,
