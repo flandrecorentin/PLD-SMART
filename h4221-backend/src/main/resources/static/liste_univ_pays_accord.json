@@ -1,279 +1,913 @@
 {
   "brandenburgische-technische-universitat-cottbus-senftenberg": {
-    "nom": "Brandenburgische Technische Universit\u00e4t Cottbus-Senftenberg",
+    "nom": "Brandenburgische Technische Universitat Cottbus-Senftenberg",
     "pays": "Allemagne",
     "accord": [
-      "Brandenburgische Technische Universit\u00e4t Cottbus-Senftenberg - Erasmus + SMS (\u00e9tudiante) - GCU",
-      "Brandenburgische Technische Universit\u00e4t Cottbus-Senftenberg - Erasmus + SMS (\u00e9tudiante) - GEN"
+      "Brandenburgische Technische Universitat Cottbus-Senftenberg - Erasmus + SMS (etudiante) - GCU",
+      "Brandenburgische Technische Universitat Cottbus-Senftenberg - Erasmus + SMS (etudiante) - GEN"
     ]
   },
   "karlsruher-institut-fur-technologie": {
-    "nom": "Karlsruher Institut f\u00fcr Technologie",
+    "nom": "Karlsruher Institut fur Technologie",
     "pays": "Allemagne",
     "accord": [
-      "Karlsruher Institut f\u00fcr Technologie - Accord de double-dipl\u00f4me 1 - GM",
-      "Karlsruher Institut f\u00fcr Technologie - Erasmus + SMS (\u00e9tudiante) - BS"
+      "Karlsruher Institut fur Technologie - Accord de double-diplome 1 - GM",
+      "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - BS",
+      "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - GCU",
+      "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - GE",
+      "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - GEN",
+      "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - GI",
+      "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - GM",
+      "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - IF",
+      "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - SGM",
+      "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "ludwig-maximilians-universitat-munchen": {
+    "nom": "Ludwig-Maximilians-Universitat Munchen",
+    "pays": "Allemagne",
+    "accord": [
+      "Ludwig-Maximilians-Universitat Munchen - Erasmus + SMS (etudiante) - BS",
+      "Ludwig-Maximilians-Universitat Munchen - Erasmus + SMS (etudiante) - IF",
+      "Ludwig-Maximilians-Universitat Munchen - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "rheinisch-westfalische-technische-hochschule-aachen": {
+    "nom": "Rheinisch-Westfalische Technische Hochschule Aachen",
+    "pays": "Allemagne",
+    "accord": [
+      "Rheinisch-Westfalische Technische Hochschule Aachen - Erasmus + SMS (etudiante) - GCU",
+      "Rheinisch-Westfalische Technische Hochschule Aachen - Erasmus + SMS (etudiante) - GE",
+      "Rheinisch-Westfalische Technische Hochschule Aachen - Erasmus + SMS (etudiante) - GEN",
+      "Rheinisch-Westfalische Technische Hochschule Aachen - Erasmus + SMS (etudiante) - GM",
+      "Rheinisch-Westfalische Technische Hochschule Aachen - Erasmus + SMS (etudiante) - IF",
+      "Rheinisch-Westfalische Technische Hochschule Aachen - Erasmus + SMS (etudiante) - SGM",
+      "Rheinisch-Westfalische Technische Hochschule Aachen - Erasmus + SMS (etudiante) - TC",
+      "Rheinisch-Westfalische Technische Hochschule Aachen - UNITECH"
+    ]
+  },
+  "technische-universitat-berlin": {
+    "nom": "Technische Universitat Berlin",
+    "pays": "Allemagne",
+    "accord": [
+      "Technische Universitat Berlin - Faculty III (Process Sciences) - Erasmus + SMS (etudiante) - GEN",
+      "Technische Universitat Berlin - Faculty IV (Electrical Eng. and Computer Science) - Erasmus + SMS (etudiante) - IF",
+      "Technische Universitat Berlin - Faculty V (Mechanical Eng. and Transport Systems) - Erasmus + SMS (etudiante) - GM",
+      "Technische Universitat Berlin - Faculty VII (Economics and Management) - Erasmus + SMS (etudiante) - GI"
+    ]
+  },
+  "technische-universitat-darmstadt": {
+    "nom": "Technische Universitat Darmstadt",
+    "pays": "Allemagne",
+    "accord": [
+      "Technische Universitat Darmstadt - Erasmus + SMS (etudiante) - GCU",
+      "Technische Universitat Darmstadt - Erasmus + SMS (etudiante) - GM"
+    ]
+  },
+  "technische-universitat-dortmund": {
+    "nom": "Technische Universitat Dortmund",
+    "pays": "Allemagne",
+    "accord": [
+      "Technische Universitat Dortmund - Erasmus + SMS (etudiante) - IF",
+      "Technische Universitat Dortmund - Erasmus + SMS (etudiante) - TC",
+      "Technische Universitat Dortmund - Faculty of Mechanical Eng. - Erasmus + SMS (etudiante) - GM *OUT*"
+    ]
+  },
+  "technische-universitat-dresden": {
+    "nom": "Technische Universitat Dresden",
+    "pays": "Allemagne",
+    "accord": [
+      "TU Dresden - School of Civil and Environmental Eng. - Faculty of Business and Economics - Erasmus + SMS (etudiante) - GI",
+      "TU Dresden - School of Eng. Sciences - Faculty of Computer Science - Erasmus + SMS (etudiante) - IF",
+      "TU Dresden - School of Eng. Sciences - Faculty of Electrical and Computer Eng. - Erasmus + SMS (etudiante) - GE",
+      "TU Dresden - School of Eng. Sciences - Faculty of Electrical and Computer Eng. - Erasmus + SMS (etudiante) - TC",
+      "TU Dresden - School of Eng. Sciences - Faculty of Mechanical Science and Eng. - Erasmus + SMS (etudiante) - GM",
+      "TU Dresden - School of Eng. Sciences - Faculty of Mechanical Science and Eng. - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "technische-universitat-hamburg-harburg": {
+    "nom": "Technische Universitat Hamburg-Harburg",
+    "pays": "Allemagne",
+    "accord": [
+      "Technische Universitat Hamburg-Harburg - Erasmus + SMS (etudiante) - GEN",
+      "Technische Universitat Hamburg-Harburg - School of Electrical Eng, Computer Science and Mathematics - Erasmus + SMS (etudiante) - IF",
+      "Technische Universitat Hamburg-Harburg - School of Electrical Eng, Computer Science and Mathematics - Erasmus + SMS (etudiante) - TC",
+      "Technische Universitat Hamburg-Harburg - School of Managment Science & Technology - Erasmus + SMS (etudiante) - GI",
+      "Technische Universitat Hamburg-Harburg - School of Mechanical Eng - Erasmus + SMS (etudiante) - GM",
+      "Technische Universitat Hamburg-Harburg - School of Mechanical Eng - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "technische-universitat-kaiserslautern": {
+    "nom": "Technische Universitat Kaiserslautern",
+    "pays": "Allemagne",
+    "accord": [
+      "Technische Universitat Kaiserslautern - Erasmus + SMS (etudiante) - GM"
+    ]
+  },
+  "technische-universitat-munchen-(tum)": {
+    "nom": "Technische Universitat Munchen (TUM)",
+    "pays": "Allemagne",
+    "accord": [
+      "Technische Universitat Munchen - Dpt of Civil, Geo and Environmental Eng - Erasmus + SMS (etudiante) - GCU",
+      "Technische Universitat Munchen - Dpt of Civil, Geo and Environmental Eng - Erasmus + SMS (etudiante) - GEN",
+      "Technische Universitat Munchen - Dpt of Electrical and Computer Eng - Erasmus + SMS (etudiante) - GE"
+    ]
+  },
+  "universitat-passau": {
+    "nom": "Universitat Passau",
+    "pays": "Allemagne",
+    "accord": [
+      "Universitat Passau - Accord de double-diplome 1 - IF",
+      "Universitat Passau - Erasmus + SMS (etudiante) - IF"
+    ]
+  },
+  "universitat-stuttgart": {
+    "nom": "Universitat Stuttgart",
+    "pays": "Allemagne",
+    "accord": [
+      "Universitat Stuttgart - Erasmus + SMS (etudiante) - BS",
+      "Universitat Stuttgart - Erasmus + SMS (etudiante) - GE",
+      "Universitat Stuttgart - Erasmus + SMS (etudiante) - GEN",
+      "Universitat Stuttgart - Erasmus + SMS (etudiante) - GI",
+      "Universitat Stuttgart - Erasmus + SMS (etudiante) - GM",
+      "Universitat Stuttgart - Erasmus + SMS (etudiante) - IF",
+      "Universitat Stuttgart - Erasmus + SMS (etudiante) - SGM",
+      "Universitat Stuttgart - Erasmus + SMS (etudiante) - TC"
     ]
   },
   "instituto-tecnologico-de-buenos-aires": {
-    "nom": "Instituto Tecnol\u00f3gico de Buenos Aires",
+    "nom": "Instituto Tecnologico de Buenos Aires",
     "pays": "Argentine",
     "accord": [
-      "Instituto Tecnol\u00f3gico de Buenos Aires - Accord de double dipl\u00f4me 1 - GM",
-      "Instituto Tecnol\u00f3gico de Buenos Aires - Accord de mobilit\u00e9 - BS-GE-GEN-GI-GM-IF-SGM-TC"
+      "Instituto Tecnologico de Buenos Aires - Accord de double diplome 1 - GM",
+      "Instituto Tecnologico de Buenos Aires - Accord de mobilite - BS-GE-GEN-GI-GM-IF-SGM-TC"
     ]
   },
   "instituto-universitario-aeronautico": {
-    "nom": "Instituto Universitario Aeron\u00e1utico",
+    "nom": "Instituto Universitario Aeronautico",
     "pays": "Argentine",
     "accord": [
-      "Instituto Universitario Aeron\u00e1utico - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Instituto Universitario Aeronautico - Accord de mobilite - Tous Departements"
     ]
   },
   "universidad-de-buenos-aires": {
     "nom": "Universidad de Buenos Aires",
     "pays": "Argentine",
     "accord": [
-      "Universidad de Buenos Aires - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Universidad de Buenos Aires - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-nacional-de-cordoba": {
+    "nom": "Universidad Nacional de Cordoba",
+    "pays": "Argentine",
+    "accord": [
+      "Universidad Nacional de Cordoba - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-nacional-de-cuyo": {
+    "nom": "Universidad Nacional de Cuyo",
+    "pays": "Argentine",
+    "accord": [
+      "Universidad Nacional de Cuyo - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-nacional-de-mar-del-plata": {
+    "nom": "Universidad Nacional de Mar del Plata",
+    "pays": "Argentine",
+    "accord": [
+      "Universidad Nacional de Mar del Plata - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-nacional-de-rio-cuarto": {
+    "nom": "Universidad Nacional de Rio Cuarto",
+    "pays": "Argentine",
+    "accord": [
+      "Universidad Nacional de Rio Cuarto - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-nacional-de-rosario": {
+    "nom": "Universidad Nacional de Rosario",
+    "pays": "Argentine",
+    "accord": [
+      "Universidad Nacional de Rosario - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-nacional-de-tucuman": {
+    "nom": "Universidad Nacional de Tucuman",
+    "pays": "Argentine",
+    "accord": [
+      "Universidad Nacional de Tucuman - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-nacional-del-litoral": {
+    "nom": "Universidad Nacional del Litoral",
+    "pays": "Argentine",
+    "accord": [
+      "Universidad Nacional del Litoral - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-nacional-del-sur": {
+    "nom": "Universidad Nacional del Sur",
+    "pays": "Argentine",
+    "accord": [
+      "Universidad Nacional del Sur - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-tecnologica-nacional": {
+    "nom": "Universidad Tecnologica Nacional",
+    "pays": "Argentine",
+    "accord": [
+      "Universidad Tecnologica Nacional - Bahia Blanca - Accord de mobilite - Tous Departements",
+      "Universidad Tecnologica Nacional - Cordoba - Accord de mobilite - Tous Departements",
+      "Universidad Tecnologica Nacional - Mendoza - Accord de mobilite - Tous Departements",
+      "Universidad Tecnologica Nacional - Santa Fe - Accord de mobilite - Tous Departements"
     ]
   },
   "montanuniversitat-leoben": {
-    "nom": "Montanuniversit\u00e4t Leoben",
+    "nom": "Montanuniversitat Leoben",
     "pays": "Autriche",
     "accord": [
-      "Montanuniversit\u00e4t Leoben - Erasmus + SMS (\u00e9tudiante) - GEN - *OUT*",
-      "Montanuniversit\u00e4t Leoben - Erasmus + SMS (\u00e9tudiante) - SGM - *OUT*"
+      "Montanuniversitat Leoben - Erasmus + SMS (etudiante) - GEN - *OUT*",
+      "Montanuniversitat Leoben - Erasmus + SMS (etudiante) - SGM - *OUT*"
     ]
   },
   "technische-universitat-graz": {
-    "nom": "Technische Universit\u00e4t Graz",
+    "nom": "Technische Universitat Graz",
     "pays": "Autriche",
     "accord": [
-      "Technische Universit\u00e4t Graz - Erasmus + SMS (\u00e9tudiante) - GM",
-      "Technische Universit\u00e4t Graz - Erasmus + SMS (\u00e9tudiante) - SGM"
+      "Technische Universitat Graz - Erasmus + SMS (etudiante) - GM",
+      "Technische Universitat Graz - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "technische-universitat-wien": {
+    "nom": "Technische Universitat Wien",
+    "pays": "Autriche",
+    "accord": [
+      "Technische Universitat Wien - Accord de double-diplome 1 - IF",
+      "Technische Universitat Wien - Erasmus + SMS (etudiante) - BS",
+      "Technische Universitat Wien - Erasmus + SMS (etudiante) - GCU",
+      "Technische Universitat Wien - Erasmus + SMS (etudiante) - GE",
+      "Technische Universitat Wien - Erasmus + SMS (etudiante) - GI",
+      "Technische Universitat Wien - Erasmus + SMS (etudiante) - GM",
+      "Technische Universitat Wien - Erasmus + SMS (etudiante) - IF",
+      "Technische Universitat Wien - Erasmus + SMS (etudiante) - SGM",
+      "Technische Universitat Wien - Erasmus + SMS (etudiante) - TC"
     ]
   },
   "ku-leuven": {
     "nom": "KU Leuven",
     "pays": "Belgique",
     "accord": [
-      "KU Leuven - Erasmus + SMS (\u00e9tudiante) - BS",
-      "KU Leuven - Erasmus + SMS (\u00e9tudiante) - GEN-GI-SGM-TC"
+      "KU Leuven - Erasmus + SMS (etudiante) - BS",
+      "KU Leuven - Erasmus + SMS (etudiante) - GEN-GI-SGM-TC"
     ]
   },
   "universite-de-namur": {
-    "nom": "Universit\u00e9 de Namur",
+    "nom": "Universite de Namur",
     "pays": "Belgique",
     "accord": [
-      "Universit\u00e9 de Namur - Faculty of Computer Science - Erasmus + SMS (\u00e9tudiante) - IF-TC *OUT*"
+      "Universite de Namur - Faculty of Computer Science - Erasmus + SMS (etudiante) - IF-TC *OUT*"
     ]
   },
   "universite-libre-de-bruxelles": {
-    "nom": "Universit\u00e9 Libre de Bruxelles",
+    "nom": "Universite Libre de Bruxelles",
     "pays": "Belgique",
     "accord": [
-      "Universit\u00e9 Libre-Ecole Polytechnique de Bruxelles - Erasmus + SMS (\u00e9tudiante) - BS-GCU-GE-GEN-GI-GM-IF-TC"
+      "Universite Libre-Ecole Polytechnique de Bruxelles - Erasmus + SMS (etudiante) - BS-GCU-GE-GEN-GI-GM-IF-TC",
+      "Universite Libre-Ecole Polytechnique de Bruxelles - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "universiteit-gent": {
+    "nom": "Universiteit Gent",
+    "pays": "Belgique",
+    "accord": [
+      "Universiteit Gent - Erasmus + SMS (etudiante) - GCU"
     ]
   },
   "pontificia-universidade-catolica-do-rio-de-janeiro": {
-    "nom": "Pontificia Universidade Cat\u00f3lica do Rio de Janeiro",
-    "pays": "Br\u00e9sil",
+    "nom": "Pontificia Universidade Catolica do Rio de Janeiro",
+    "pays": "Bresil",
     "accord": [
-      "Pontificia Universidade Cat\u00f3lica do Rio de Janeiro - Accord de double-dipl\u00f4me 1 - Tous D\u00e9partements",
-      "Pontificia Universidade Cat\u00f3lica do Rio de Janeiro - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Pontificia Universidade Catolica do Rio de Janeiro - Accord de double-diplome 1 - Tous Departements",
+      "Pontificia Universidade Catolica do Rio de Janeiro - Accord de mobilite - Tous Departements"
     ]
   },
   "universidade-de-sao-paulo": {
-    "nom": "Universidade de S\u00e3o Paulo",
-    "pays": "Br\u00e9sil",
+    "nom": "Universidade de Sao Paulo",
+    "pays": "Bresil",
     "accord": [
-      "Universidade de S\u00e3o Paulo - Campus de S\u00e3o Carlos - Accord de mobilit\u00e9 - Tous D\u00e9partements",
-      "Universidade de S\u00e3o Paulo - Escola Polit\u00e9cnica - Accord de double-dipl\u00f4me 1 - GCU"
+      "Universidade de Sao Paulo - Campus de Sao Carlos - Accord de mobilite - Tous Departements",
+      "Universidade de Sao Paulo - Escola Politecnica - Accord de double-diplome 1 - GCU",
+      "Universidade de Sao Paulo - Escola Politecnica - Accord de double-diplome 1 - SGM",
+      "Universidade de Sao Paulo - Escola Politecnica - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-estadual-de-campinas-(unicamp)": {
+    "nom": "Universidade Estadual de Campinas (UNICAMP)",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Estadual de Campinas (UNICAMP) - Accord de double-diplome 1 - Tous Departements",
+      "Universidade Estadual de Campinas (UNICAMP) - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-federal-da-paraiba-(ufpb)": {
+    "nom": "Universidade Federal da Paraiba (UFPB)",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Federal da Paraiba (UFPB) - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-federal-de-goias": {
+    "nom": "Universidade Federal de Goias",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Federal de Goias - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-federal-de-minas-gerais-(ufmg)": {
+    "nom": "Universidade Federal de Minas Gerais (UFMG)",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Federal de Minas Gerais (UFMG) - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-federal-de-santa-catarina": {
+    "nom": "Universidade Federal de Santa Catarina",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Federal de Santa Catarina - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-federal-de-uberlandia-(ufu)": {
+    "nom": "Universidade Federal de Uberlandia (UFU)",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Federal de Uberlandia (UFU) - Accord de double-diplome 1 - Tous Departements",
+      "Universidade Federal de Uberlandia (UFU) - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-federal-do-ceara": {
+    "nom": "Universidade Federal do Ceara",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Federal do Ceara - Accord de double-diplome 1 - Tous Departements",
+      "Universidade Federal do Ceara - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-federal-do-parana-(ufpr)": {
+    "nom": "Universidade Federal do Parana (UFPR)",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Federal do Parana (UFPR) - Accord de double-diplome 1 - Tous Departements",
+      "Universidade Federal do Parana (UFPR) - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-federal-do-rio-de-janeiro-(ufrj)": {
+    "nom": "Universidade Federal do Rio de Janeiro (UFRJ)",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Federal do Rio de Janeiro (UFRJ) - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidade-tecnologica-federal-do-parana-(utfpr)": {
+    "nom": "Universidade Tecnologica Federal do Parana (UTFPR)",
+    "pays": "Bresil",
+    "accord": [
+      "Universidade Tecnologica Federal do Parana (UTFPR) - Accord de mobilite - Tous Departements"
     ]
   },
   "bureau-de-cooperation-interuniversitaire-(bci)": {
-    "nom": "Bureau de Coop\u00e9ration Interuniversitaire (BCI)",
+    "nom": "Bureau de Cooperation Interuniversitaire (BCI)",
     "pays": "Canada",
     "accord": [
-      "Bureau de Coop\u00e9ration Interuniversitaire (BCI) - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Bureau de Cooperation Interuniversitaire (BCI) - Accord de mobilite - Tous Departements"
     ]
   },
   "ecole-de-technologie-superieure-(ets)": {
-    "nom": "\u00c9cole de Technologie Sup\u00e9rieure (ETS)",
+    "nom": "Ecole de Technologie Superieure (ETS)",
     "pays": "Canada",
     "accord": [
-      "\u00c9cole de Technologie Sup\u00e9rieure (ETS) - Accord de double-dipl\u00f4me 1 - GCU-GE-GEN-GI-GM-IF-SGM-TC",
-      "\u00c9cole de Technologie Sup\u00e9rieure (ETS) - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Ecole de Technologie Superieure (ETS) - Accord de double-diplome 1 - GCU-GE-GEN-GI-GM-IF-SGM-TC",
+      "Ecole de Technologie Superieure (ETS) - Accord de mobilite - Tous Departements"
     ]
   },
   "ecole-polytechnique-de-montreal": {
-    "nom": "\u00c9cole Polytechnique de Montr\u00e9al",
+    "nom": "Ecole Polytechnique de Montreal",
     "pays": "Canada",
     "accord": [
-      "\u00c9cole Polytechnique de Montr\u00e9al - Accord de double-dipl\u00f4me 1 - Tous D\u00e9partements"
+      "Ecole Polytechnique de Montreal - Accord de double-diplome 1 - Tous Departements",
+      "Ecole Polytechnique de Montreal - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "programme-ontario/rhone-alpes": {
+    "nom": "Programme Ontario/Rhone-Alpes",
+    "pays": "Canada",
+    "accord": [
+      "Programme Ontario/Rhone-Alpes - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universite-du-quebec-a-chicoutimi": {
+    "nom": "Universite du Quebec a Chicoutimi",
+    "pays": "Canada",
+    "accord": [
+      "Universite du Quebec a Chicoutimi - Accord de double-diplome 1 - IF",
+      "Universite du Quebec a Chicoutimi - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universite-laval": {
+    "nom": "Universite Laval",
+    "pays": "Canada",
+    "accord": [
+      "Universite Laval - Accord de double-diplome 1 - GE-GM-IF-TC",
+      "Universite Laval - Accord de mobilite - GE-GM-IF-TC"
+    ]
+  },
+  "university-of-guelph": {
+    "nom": "University of Guelph",
+    "pays": "Canada",
+    "accord": [
+      "University of Guelph - Accord de mobilite - BS-GE-GM-GEN-IF"
+    ]
+  },
+  "university-of-ottawa": {
+    "nom": "University of Ottawa",
+    "pays": "Canada",
+    "accord": [
+      "University of Ottawa - Accord de Mobilite - GCU-GE-GEN-GM-IF-SGM-TC"
+    ]
+  },
+  "university-of-sherbrooke": {
+    "nom": "University of Sherbrooke",
+    "pays": "Canada",
+    "accord": [
+      "University of Sherbrooke - Accord de double-diplome 1 - GCU-GE-GM-IF-SGM",
+      "University of Sherbrooke - Accord de double-diplome 1 - Maitrise en ingenierie de projet - GI"
     ]
   },
   "pontificia-universidad-catolica-de-chile": {
-    "nom": "Pontificia Universidad Cat\u00f3lica de Chile",
+    "nom": "Pontificia Universidad Catolica de Chile",
     "pays": "Chili",
     "accord": [
-      "Pontificia Universidad Cat\u00f3lica de Chile - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Pontificia Universidad Catolica de Chile - Accord de mobilite - Tous Departements"
     ]
   },
   "pontificia-universidad-catolica-de-valparaiso": {
-    "nom": "Pontificia Universidad Cat\u00f3lica de Valpara\u00edso",
+    "nom": "Pontificia Universidad Catolica de Valparaiso",
     "pays": "Chili",
     "accord": [
-      "Pontificia Universidad Cat\u00f3lica de Valpara\u00edso - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Pontificia Universidad Catolica de Valparaiso - Accord de mobilite - Tous Departements"
     ]
   },
   "universidad-catolica-del-norte": {
-    "nom": "Universidad Cat\u00f3lica del Norte",
+    "nom": "Universidad Catolica del Norte",
     "pays": "Chili",
     "accord": [
-      "Universidad Cat\u00f3lica del Norte - Accord de mobilit\u00e9 - BS-GCU-GE-GEN-GI-IF-SGM-TC"
+      "Universidad Catolica del Norte - Accord de mobilite - BS-GCU-GE-GEN-GI-IF-SGM-TC"
     ]
   },
   "universidad-de-chile": {
     "nom": "Universidad de Chile",
     "pays": "Chili",
     "accord": [
-      "Universidad de Chile - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Universidad de Chile - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-de-concepcion": {
+    "nom": "Universidad de Concepcion",
+    "pays": "Chili",
+    "accord": [
+      "Universidad de Concepcion - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-de-santiago-de-chile": {
+    "nom": "Universidad de Santiago de Chile",
+    "pays": "Chili",
+    "accord": [
+      "Universidad de Santiago de Chile - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-tecnica-federico-santa-maria": {
+    "nom": "Universidad Tecnica Federico Santa Maria",
+    "pays": "Chili",
+    "accord": [
+      "Universidad Tecnica Federico Santa Maria - Accord de double-diplome 1 - GM-IF",
+      "Universidad Tecnica Federico Santa Maria - Campus Santiago - Accord de mobilite - Tous Departements",
+      "Universidad Tecnica Federico Santa Maria - Campus Valparaiso - Accord de mobilite - Tous Departements"
     ]
   },
   "beijing-jiaotong-university": {
     "nom": "Beijing Jiaotong University",
     "pays": "Chine",
     "accord": [
-      "Beijing Jiaotong University - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Beijing Jiaotong University - Accord de mobilite - Tous Departements"
     ]
   },
   "northwestern-polytechnical-university": {
     "nom": "Northwestern Polytechnical University",
     "pays": "Chine",
     "accord": [
-      "Northwestern Polytechnical University - Accord de double-dipl\u00f4me 1 - Groupe INSA - GE-GM",
-      "Northwestern Polytechnical University - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Northwestern Polytechnical University - Accord de double-diplome 1 - Groupe INSA - GE-GM",
+      "Northwestern Polytechnical University - Accord de mobilite - Tous Departements"
     ]
   },
   "shanghai-jiao-tong-university": {
     "nom": "Shanghai Jiao Tong University",
     "pays": "Chine",
     "accord": [
-      "Shanghai Jiao Tong University - Accord de double-dipl\u00f4me 1 - GE-TC"
+      "Shanghai Jiao Tong University - Accord de double-diplome 1 - GE-TC",
+      "Shanghai Jiao Tong University - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "tongji-university": {
+    "nom": "Tongji University",
+    "pays": "Chine",
+    "accord": [
+      "Tongji University - Accord de double-diplome 1 - GCU",
+      "Tongji University - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "tsinghua-university": {
+    "nom": "Tsinghua University",
+    "pays": "Chine",
+    "accord": [
+      "Tsinghua University - Accord de mobilite - Tous Departements"
     ]
   },
   "pontificia-universidad-javeriana": {
     "nom": "Pontificia Universidad Javeriana",
     "pays": "Colombie",
     "accord": [
-      "Pontificia Universidad Javeriana - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Pontificia Universidad Javeriana - Accord de mobilite - Tous Departements"
     ]
   },
   "universidad-de-antioquia": {
     "nom": "Universidad de Antioquia",
     "pays": "Colombie",
     "accord": [
-      "Universidad de Antioquia - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Universidad de Antioquia - Accord de mobilite - Tous Departements"
     ]
   },
   "universidad-de-los-andes": {
     "nom": "Universidad de Los Andes",
     "pays": "Colombie",
     "accord": [
-      "Universidad de Los Andes - Accord de double-dipl\u00f4me 1 - IF",
-      "Universidad de Los Andes - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Universidad de Los Andes - Accord de double-diplome 1 - IF",
+      "Universidad de Los Andes - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-militar-nueva-granada": {
+    "nom": "Universidad Militar Nueva Granada",
+    "pays": "Colombie",
+    "accord": [
+      "Universidad Militar Nueva Granada - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-nacional-de-colombia": {
+    "nom": "Universidad Nacional de Colombia",
+    "pays": "Colombie",
+    "accord": [
+      "Universidad Nacional de Colombia - Accord de double-diplome 1 - GCU",
+      "Universidad Nacional de Colombia - Accord de double-diplome 1 - GE",
+      "Universidad Nacional de Colombia - Accord de double-diplome 1 - GEN",
+      "Universidad Nacional de Colombia - Accord de double-diplome 1 - GI",
+      "Universidad Nacional de Colombia - Accord de double-diplome 1 - GM",
+      "Universidad Nacional de Colombia - Accord de mobilite - Tous Departements"
     ]
   },
   "daegu-gyeongbuk-institute-of-science-and-technology": {
     "nom": "Daegu Gyeongbuk Institute of Science and Technology",
-    "pays": "Cor\u00e9e, R\u00e9publique de",
+    "pays": "Coree, Republique de",
     "accord": [
-      "Daegu Gyeongbuk Institute of Science and Technology - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Daegu Gyeongbuk Institute of Science and Technology - Accord de mobilite - Tous Departements"
     ]
   },
   "gwangju-institute-of-science-and-technology": {
     "nom": "Gwangju Institute of Science and Technology",
-    "pays": "Cor\u00e9e, R\u00e9publique de",
+    "pays": "Coree, Republique de",
     "accord": [
-      "Gwangju Institute of Science and Technology - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Gwangju Institute of Science and Technology - Accord de mobilite - Tous Departements"
     ]
   },
   "korea-advanced-institute-of-science-and-technology": {
     "nom": "Korea Advanced Institute of Science and Technology",
-    "pays": "Cor\u00e9e, R\u00e9publique de",
+    "pays": "Coree, Republique de",
     "accord": [
-      "Korea Advanced Institute of Science and Technology - Accord de double-dipl\u00f4me 1 - GI",
-      "Korea Advanced Institute of Science and Technology - Accord de double-dipl\u00f4me 1 - GM"
+      "Korea Advanced Institute of Science and Technology - Accord de double-diplome 1 - GI",
+      "Korea Advanced Institute of Science and Technology - Accord de double-diplome 1 - GM",
+      "Korea Advanced Institute of Science and Technology - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "korea-university": {
+    "nom": "Korea University",
+    "pays": "Coree, Republique de",
+    "accord": [
+      "Korea University - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "pohang-university-of-science-and-technology": {
+    "nom": "Pohang University of Science and Technology",
+    "pays": "Coree, Republique de",
+    "accord": [
+      "Pohang University of Science and Technology - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "sogang-university": {
+    "nom": "Sogang University",
+    "pays": "Coree, Republique de",
+    "accord": [
+      "Sogang University - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "ulsan-national-institute-of-science-and-technology": {
+    "nom": "Ulsan national Institute of science and technology",
+    "pays": "Coree, Republique de",
+    "accord": [
+      "Ulsan national Institute of science and technology - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "yonsei-university": {
+    "nom": "Yonsei University",
+    "pays": "Coree, Republique de",
+    "accord": [
+      "Yonsei University - Accord de mobilite - Tous Departements"
     ]
   },
   "aalborg-universitet": {
     "nom": "Aalborg Universitet",
     "pays": "Danemark",
     "accord": [
-      "Aalborg - Faculty of Engineering and Science - Dpt of Built Environment - Erasmus + SMS (\u00e9tudiante) - GCU",
-      "Aalborg - Technical Faculty of IT and Design - Dpt of Electronic Systems - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Aalborg - Technical Faculty of IT and Design - Dpt of Electronic Systems - Erasmus + SMS (\u00e9tudiante) - TC",
-      "Aalborg - Technical Faculty of IT and Design - Dpt of of Computer Science - Erasmus + SMS (\u00e9tudiante) - IF"
+      "Aalborg - Faculty of Engineering and Science - Dpt of Built Environment - Erasmus + SMS (etudiante) - GCU",
+      "Aalborg - Technical Faculty of IT and Design - Dpt of Electronic Systems - Erasmus + SMS (etudiante) - GE",
+      "Aalborg - Technical Faculty of IT and Design - Dpt of Electronic Systems - Erasmus + SMS (etudiante) - TC",
+      "Aalborg - Technical Faculty of IT and Design - Dpt of of Computer Science - Erasmus + SMS (etudiante) - IF",
+      "Aalborg Universitet - Faculty of Industry and Global Business - Erasmus + SMS (etudiante) - GI"
+    ]
+  },
+  "danmarks-tekniske-universitet": {
+    "nom": "Danmarks Tekniske Universitet",
+    "pays": "Danemark",
+    "accord": [
+      "Danmarks Tekniske Universitet - Erasmus + SMS (etudiante) - BS",
+      "Danmarks Tekniske Universitet - Erasmus + SMS (etudiante) - GCU",
+      "Danmarks Tekniske Universitet - Erasmus + SMS (etudiante) - GE",
+      "Danmarks Tekniske Universitet - Erasmus + SMS (etudiante) - GEN",
+      "Danmarks Tekniske Universitet - Erasmus + SMS (etudiante) - GI",
+      "Danmarks Tekniske Universitet - Erasmus + SMS (etudiante) - GM",
+      "Danmarks Tekniske Universitet - Erasmus + SMS (etudiante) - IF",
+      "Danmarks Tekniske Universitet - Erasmus + SMS (etudiante) - SGM",
+      "Danmarks Tekniske Universitet - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "syddansk-universitet": {
+    "nom": "Syddansk Universitet",
+    "pays": "Danemark",
+    "accord": [
+      "Syddansk Universitet - Erasmus + SMS (etudiante) - BS-GCU-GE-GEN-GI-GM-IF-TC"
     ]
   },
   "universidad-carlos-iii-de-madrid": {
     "nom": "Universidad Carlos III de Madrid",
     "pays": "Espagne",
     "accord": [
-      "Universidad Carlos III de Madrid - Erasmus + SMS (\u00e9tudiante) - GE-GEN",
-      "Universidad Carlos III de Madrid - Erasmus + SMS (\u00e9tudiante) - GI",
-      "Universidad Carlos III de Madrid - Erasmus + SMS (\u00e9tudiante) - GM",
-      "Universidad Carlos III de Madrid - Erasmus + SMS (\u00e9tudiante) - TC"
+      "Universidad Carlos III de Madrid - Erasmus + SMS (etudiante) - GE-GEN",
+      "Universidad Carlos III de Madrid - Erasmus + SMS (etudiante) - GI",
+      "Universidad Carlos III de Madrid - Erasmus + SMS (etudiante) - GM",
+      "Universidad Carlos III de Madrid - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universidad-de-cantabria": {
+    "nom": "Universidad de Cantabria",
+    "pays": "Espagne",
+    "accord": [
+      "Universidad de Cantabria - Erasmus + SMS (etudiante) - GCU",
+      "Universidad de Cantabria - Erasmus + SMS (etudiante) - GE",
+      "Universidad de Cantabria - Erasmus + SMS (etudiante) - GI",
+      "Universidad de Cantabria - Erasmus + SMS (etudiante) - IF",
+      "Universidad de Cantabria - Erasmus + SMS (etudiante) - SGM",
+      "Universidad de Cantabria - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universidad-de-castilla-la-mancha": {
+    "nom": "Universidad de Castilla-La Mancha",
+    "pays": "Espagne",
+    "accord": [
+      "Universidad de Castilla-La Mancha - Erasmus + SMS (etudiante) - GCU"
+    ]
+  },
+  "universidad-de-sevilla": {
+    "nom": "Universidad de Sevilla",
+    "pays": "Espagne",
+    "accord": [
+      "Universidad de Sevilla - Erasmus + SMS (etudiante) - IF",
+      "Universidad de Sevilla - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "universidad-de-zaragoza": {
+    "nom": "Universidad de Zaragoza",
+    "pays": "Espagne",
+    "accord": [
+      "Universidad de Zaragoza - Erasmus + SMS (etudiante) - GE",
+      "Universidad de Zaragoza - Erasmus + SMS (etudiante) - GM",
+      "Universidad de Zaragoza - Erasmus + SMS (etudiante) - IF",
+      "Universidad de Zaragoza - Erasmus + SMS (etudiante) - SGM",
+      "Universidad de Zaragoza - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universidad-del-pais-vasco-/-euskal-herriko-unibertsitatea": {
+    "nom": "Universidad del Pais Vasco / Euskal Herriko Unibertsitatea",
+    "pays": "Espagne",
+    "accord": [
+      "Universidad del Pais Vasco / Euskal Herriko Unibertsitatea - Erasmus + SMS (etudiante) - BS",
+      "Universidad del Pais Vasco / Euskal Herriko Unibertsitatea - Erasmus + SMS (etudiante) - GEN",
+      "Universidad del Pais Vasco / Euskal Herriko Unibertsitatea - Erasmus + SMS (etudiante) - GM",
+      "Universidad del Pais Vasco / Euskal Herriko Unibertsitatea - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "universidad-politecnica-de-madrid": {
+    "nom": "Universidad Politecnica de Madrid",
+    "pays": "Espagne",
+    "accord": [
+      "Universidad Politecnica de Madrid - ETSIAAB - Agronomica, Alimentaria y de Biosistemas - Erasmus + SMS (etudiante) - BS",
+      "Universidad Politecnica de Madrid - ETSICCP - Caminos, Canales y Puertos - Accord de double-diplome 1 - GCU",
+      "Universidad Politecnica de Madrid - ETSICCP - Caminos, Canales y Puertos - Accord de double-diplome 1 - SGM",
+      "Universidad Politecnica de Madrid - ETSICCP - Caminos, Canales y Puertos - Erasmus + SMS (etudiante) - GCU",
+      "Universidad Politecnica de Madrid - ETSICCP - Caminos, Canales y Puertos - Erasmus + SMS (etudiante) - SGM",
+      "Universidad Politecnica de Madrid - ETSIDI - Ingenieria y Diseno Industrial - Erasmus + SMS (etudiante) - GE *OUT*",
+      "Universidad Politecnica de Madrid - ETSIDI - Ingenieria y Diseno Industrial - Erasmus + SMS (etudiante) - GM *OUT*",
+      "Universidad Politecnica de Madrid - ETSII - Industriales - Erasmus + SMS (etudiante) - GE",
+      "Universidad Politecnica de Madrid - ETSII - Industriales - Erasmus + SMS (etudiante) - GEN",
+      "Universidad Politecnica de Madrid - ETSII - Industriales - Erasmus + SMS (etudiante) - GI",
+      "Universidad Politecnica de Madrid - ETSII - Industriales - Erasmus + SMS (etudiante) - GM",
+      "Universidad Politecnica de Madrid - ETSIINF - Informatica - Erasmus + SMS (etudiante) - IF",
+      "Universidad Politecnica de Madrid - ETSIME - Ingenieros de Minas y Energia - Erasmus + SMS (etudiante) - GEN * OUT*",
+      "Universidad Politecnica de Madrid - ETSIT - Telecomunicacion - Erasmus + SMS (etudiante) - BS",
+      "Universidad Politecnica de Madrid - ETSIT - Telecomunicacion - Erasmus + SMS (etudiante) - GE",
+      "Universidad Politecnica de Madrid - ETSIT - Telecomunicacion - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universidad-pontificia-comillas,-madrid": {
+    "nom": "Universidad Pontificia Comillas, Madrid",
+    "pays": "Espagne",
+    "accord": [
+      "Universidad Pontificia Comillas, Madrid - Erasmus + SMS (etudiante) - GEN-GI-GM-IF-SGM-TC"
+    ]
+  },
+  "universidade-da-coruna": {
+    "nom": "Universidade da Coruna",
+    "pays": "Espagne",
+    "accord": [
+      "Universidad de A Coruna - Erasmus + SMS (etudiante) - GE - *OUT*"
+    ]
+  },
+  "universitat-jaume-i": {
+    "nom": "Universitat Jaume I",
+    "pays": "Espagne",
+    "accord": [
+      "Universitat Jaume I de Castellon - Accord de double-diplome 1 - GE-GEN-GI-GM-SGM",
+      "Universitat Jaume I de Castellon - Erasmus + SMS (etudiante) - GE-GEN",
+      "Universitat Jaume I de Castellon - Erasmus + SMS (etudiante) - GI",
+      "Universitat Jaume I de Castellon - Erasmus + SMS (etudiante) - GM",
+      "Universitat Jaume I de Castellon - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "universitat-politecnica-de-catalunya": {
+    "nom": "Universitat Politecnica de Catalunya",
+    "pays": "Espagne",
+    "accord": [
+      "Universitat Politecnica de Catalunya - EEBE - East School - Erasmus + SMS (etudiante) - GE",
+      "Universitat Politecnica de Catalunya - EEBE - East School - Erasmus + SMS (etudiante) - GEN",
+      "Universitat Politecnica de Catalunya - EEBE - East School - Erasmus + SMS (etudiante) - GM",
+      "Universitat Politecnica de Catalunya - EEBE - East School - Erasmus + SMS (etudiante) - SGM",
+      "Universitat Politecnica de Catalunya - EETAC - Telecomunicacio i Aeroespacial de Castelldefels - Erasmus + SMS (etudiante) - TC",
+      "Universitat Politecnica de Catalunya - ESEIAAT - Industrial, Aeroespacial i Audiovisual de Terrassa - Erasmus + SMS (etudiante) - GE-GEN-GI-GM",
+      "Universitat Politecnica de Catalunya - ETSECCPB - Camins, Canals i Ports - Erasmus + SMS (etudiante) - GCU",
+      "Universitat Politecnica de Catalunya - ETSEIB - Industrial - Accord de double-diplome 1 - GI",
+      "Universitat Politecnica de Catalunya - ETSEIB - Industrial - Erasmus + SMS (etudiante) - GE-GEN-GI-GM-IF-TC",
+      "Universitat Politecnica de Catalunya - ETSETB - Telecomunicacions - Erasmus + SMS (etudiante) - GE",
+      "Universitat Politecnica de Catalunya - ETSETB - Telecomunicacions - Erasmus + SMS (etudiante) - TC",
+      "Universitat Politecnica de Catalunya - FIB - Informatica - Erasmus + SMS (etudiante) - IF",
+      "Universitat Politecnica de Catalunya - UNITECH"
+    ]
+  },
+  "universitat-politecnica-de-valencia": {
+    "nom": "Universitat Politecnica de Valencia",
+    "pays": "Espagne",
+    "accord": [
+      "Universitat Politecnica de Valencia - ETSICCP - Caminos, Canales y Puertos - Erasmus + SMS (etudiante) - GCU",
+      "Universitat Politecnica de Valencia - ETSID - Design - Erasmus + SMS (etudiante) - GM",
+      "Universitat Politecnica de Valencia - ETSID - Design - Erasmus + SMS (etudiante) - GE",
+      "Universitat Politecnica de Valencia - ETSII - Industrial - Erasmus + SMS (etudiante) - GEN",
+      "Universitat Politecnica de Valencia - ETSII - Industrial - Erasmus + SMS (etudiante) - GI",
+      "Universitat Politecnica de Valencia - ETSII - Industrial - Erasmus + SMS (etudiante) - SGM",
+      "Universitat Politecnica de Valencia - ETSINF - Informatica - Erasmus + SMS (etudiante) - IF",
+      "Universitat Politecnica de Valencia - ETSIT - Telecomunicacion - Erasmus + SMS (etudiante) - TC"
     ]
   },
   "tartu-ulikool": {
-    "nom": "Tartu \u00dclikool",
+    "nom": "Tartu Ulikool",
     "pays": "Estonie",
     "accord": [
-      "Tartu \u00dclikool - Erasmus+ SMS - IF - *OUT*"
+      "Tartu Ulikool - Erasmus+ SMS - IF - *OUT*"
     ]
   },
   "ge3---institute-of-international-education-(iie)": {
     "nom": "GE3 - Institute of International Education (IIE)",
-    "pays": "\u00c9tats-Unis",
+    "pays": "Etats-Unis",
     "accord": [
-      "Institute of International Education (IIE) - GE3 - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Institute of International Education (IIE) - GE3 - Accord de mobilite - Tous Departements"
     ]
   },
   "georgia-institute-of-technology-(georgia-tech)": {
     "nom": "Georgia Institute of Technology (Georgia Tech)",
-    "pays": "\u00c9tats-Unis",
+    "pays": "Etats-Unis",
     "accord": [
-      "Georgia Institute of Technology (Georgia Tech) - Accord de double-dipl\u00f4me 1 - GE-GM-IF-SGM-TC"
+      "Georgia Institute of Technology (Georgia Tech) - Accord de double-diplome 1 - GE-GM-IF-SGM-TC"
     ]
   },
   "illinois-institute-of-technology": {
     "nom": "Illinois Institute of Technology",
-    "pays": "\u00c9tats-Unis",
+    "pays": "Etats-Unis",
     "accord": [
-      "Illinois Institute of Technology - Accord de double-dipl\u00f4me 1 - Tous D\u00e9partements"
+      "Illinois Institute of Technology - Accord de double-diplome 1 - Tous Departements"
     ]
   },
   "international-student-exchange-program-(isep)": {
     "nom": "International Student Exchange Program (ISEP)",
-    "pays": "\u00c9tats-Unis",
+    "pays": "Etats-Unis",
     "accord": [
-      "International Student Exchange Program (ISEP) - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "International Student Exchange Program (ISEP) - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "missouri-university-of-science-and-technology": {
+    "nom": "Missouri University of Science and Technology",
+    "pays": "Etats-Unis",
+    "accord": [
+      "Missouri University of Science and Technology - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "university-of-pittsburgh": {
+    "nom": "University of Pittsburgh",
+    "pays": "Etats-Unis",
+    "accord": [
+      "University of Pittsburgh - Accord de double-diplome 1 - GE"
     ]
   },
   "aalto-yliopisto": {
     "nom": "Aalto-yliopisto",
     "pays": "Finlande",
     "accord": [
-      "Aalto-yliopisto - School of Chemical Eng. - Erasmus + SMS (\u00e9tudiante) - SGM",
-      "Aalto-yliopisto - School of Electrical Eng. - Erasmus + SMS (\u00e9tudiante) - BS",
-      "Aalto-yliopisto - School of Electrical Eng. - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Aalto-yliopisto - School of Electrical Eng. - Erasmus + SMS (\u00e9tudiante) - TC"
+      "Aalto-yliopisto - School of Chemical Eng. - Erasmus + SMS (etudiante) - SGM",
+      "Aalto-yliopisto - School of Electrical Eng. - Erasmus + SMS (etudiante) - BS",
+      "Aalto-yliopisto - School of Electrical Eng. - Erasmus + SMS (etudiante) - GE",
+      "Aalto-yliopisto - School of Electrical Eng. - Erasmus + SMS (etudiante) - TC",
+      "Aalto-yliopisto - School of Eng. - Erasmus + SMS (etudiante) - GCU",
+      "Aalto-yliopisto - School of Eng. - Erasmus + SMS (etudiante) - GEN",
+      "Aalto-yliopisto - School of Eng. - Erasmus + SMS (etudiante) - GM",
+      "Aalto-yliopisto - School of Science - Erasmus + SMS (etudiante) - IF"
+    ]
+  },
+  "abo-akademi": {
+    "nom": "Abo Akademi",
+    "pays": "Finlande",
+    "accord": [
+      "Abo Akademi - Erasmus + SMS (etudiante) - IF-GE-TC"
+    ]
+  },
+  "jyvaskylan-yliopisto": {
+    "nom": "Jyvaskylan Yliopisto",
+    "pays": "Finlande",
+    "accord": [
+      "Jyvaskylan Yliopisto - Faculty of IT - Erasmus + SMS (etudiante) - IF",
+      "Jyvaskylan Yliopisto - Faculty of Mathematics and Science - Erasmus + SMS (etudiante) - BS",
+      "Jyvaskylan Yliopisto - Faculty of Mathematics and Science - Erasmus + SMS (etudiante) - GEN",
+      "Jyvaskylan Yliopisto - Faculty of Mathematics and Science - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "lut-university": {
+    "nom": "LUT University",
+    "pays": "Finlande",
+    "accord": [
+      "Lappeenrannan Teknillinen Yliopisto - Erasmus + SMS (etudiante) - GEN",
+      "Lappeenrannan Teknillinen Yliopisto - Erasmus + SMS (etudiante) - GM",
+      "Lappeenrannan Teknillinen Yliopisto - Erasmus + SMS (etudiante) - IF",
+      "Lappeenrannan Teknillinen Yliopisto - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "tampere-university": {
+    "nom": "Tampere University",
+    "pays": "Finlande",
+    "accord": [
+      "Tampereen Teknillinen Yliopisto - Erasmus + SMS (etudiante) - GCU",
+      "Tampereen Teknillinen Yliopisto - Erasmus + SMS (etudiante) - GE",
+      "Tampereen Teknillinen Yliopisto - Erasmus + SMS (etudiante) - GI",
+      "Tampereen Teknillinen Yliopisto - Erasmus + SMS (etudiante) - GM",
+      "Tampereen Teknillinen Yliopisto - Erasmus + SMS (etudiante) - IF",
+      "Tampereen Teknillinen Yliopisto - Erasmus + SMS (etudiante) - SGM",
+      "Tampereen Teknillinen Yliopisto - Erasmus + SMS (etudiante) - TC"
     ]
   },
   "universite-d'orleans": {
-    "nom": "Universit\u00e9 d'Orl\u00e9ans",
+    "nom": "Universite d'Orleans",
     "pays": "France",
     "accord": [
       "TEST - Learning agreement"
@@ -281,376 +915,776 @@
   },
   "aristoteleio-panepistimio-thessalonikis": {
     "nom": "Aristoteleio Panepistimio Thessalonikis",
-    "pays": "Gr\u00e8ce",
+    "pays": "Grece",
     "accord": [
-      "Aristoteleio Panepistimio Thessalonikis - Faculty of Engineering - School of Civil Eng.- Erasmus + SMS (\u00e9tudiante) - GCU",
-      "Aristoteleio Panepistimio Thessalonikis - Faculty of Science - School of Physics - Erasmus + SMS (\u00e9tudiante) - SGM"
+      "Aristoteleio Panepistimio Thessalonikis - Faculty of Engineering - School of Civil Eng.- Erasmus + SMS (etudiante) - GCU",
+      "Aristoteleio Panepistimio Thessalonikis - Faculty of Science - School of Physics - Erasmus + SMS (etudiante) - SGM"
     ]
   },
   "city-university-of-hong-kong": {
     "nom": "City University of Hong Kong",
     "pays": "Hong-Kong",
     "accord": [
-      "City University of Hong Kong - College of Eng. - Accord de mobilit\u00e9 - Tous D\u00e9partements",
-      "City University of Hong Kong - College of Science - Accord de mobilit\u00e9 - Tous D\u00e9partements",
-      "City University of Hong Kong - School of Energy and Environment - Accord de mobilit\u00e9 - GEN"
+      "City University of Hong Kong - College of Eng. - Accord de mobilite - Tous Departements",
+      "City University of Hong Kong - College of Science - Accord de mobilite - Tous Departements",
+      "City University of Hong Kong - School of Energy and Environment - Accord de mobilite - GEN"
     ]
   },
   "the-hong-kong-polytechnic-university": {
     "nom": "The Hong Kong Polytechnic University",
     "pays": "Hong-Kong",
     "accord": [
-      "The Hong Kong Polytechnic University - Accord de mobilit\u00e9 - GE-GI-GM-IF-TC"
+      "The Hong Kong Polytechnic University - Accord de mobilite - GE-GI-GM-IF-TC"
+    ]
+  },
+  "the-hong-kong-university-of-science-and-technology": {
+    "nom": "The Hong Kong University of Science and Technology",
+    "pays": "Hong-Kong",
+    "accord": [
+      "The Hong Kong University of Science and Technology - School of Engineering - Accord de mobilite - Tous Departements"
     ]
   },
   "budapesti-muszaki-es-gazdasagtudomanyi-egyetem": {
-    "nom": "Budapesti M\u0171szaki \u00e9s Gazdas\u00e1gtudom\u00e1nyi Egyetem",
+    "nom": "Budapesti Muszaki es Gazdasagtudomanyi Egyetem",
     "pays": "Hongrie",
     "accord": [
-      "Budapesti M\u0171szaki \u00e9s Gazdas\u00e1gtudom\u00e1nyi Egyetem - Erasmus + SMS (\u00e9tudiante) - GCU",
-      "Budapesti M\u0171szaki \u00e9s Gazdas\u00e1gtudom\u00e1nyi Egyetem - Erasmus + SMS (\u00e9tudiante) - GEN",
-      "Budapesti M\u0171szaki \u00e9s Gazdas\u00e1gtudom\u00e1nyi Egyetem - Erasmus + SMS (\u00e9tudiante) - GM",
-      "Budapesti M\u0171szaki \u00e9s Gazdas\u00e1gtudom\u00e1nyi Egyetem - Erasmus + SMS (\u00e9tudiante) - IF"
+      "Budapesti Muszaki es Gazdasagtudomanyi Egyetem - Erasmus + SMS (etudiante) - GCU",
+      "Budapesti Muszaki es Gazdasagtudomanyi Egyetem - Erasmus + SMS (etudiante) - GEN",
+      "Budapesti Muszaki es Gazdasagtudomanyi Egyetem - Erasmus + SMS (etudiante) - GM",
+      "Budapesti Muszaki es Gazdasagtudomanyi Egyetem - Erasmus + SMS (etudiante) - IF",
+      "Budapesti Muszaki es Gazdasagtudomanyi Egyetem - Erasmus + SMS (etudiante) - SGM"
     ]
   },
   "indian-institute-of-technology-bombay-(iit-bombay)": {
     "nom": "Indian Institute of Technology Bombay (IIT Bombay)",
     "pays": "Inde",
     "accord": [
-      "Indian Institute of Technology Bombay (IIT Bombay) - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Indian Institute of Technology Bombay (IIT Bombay) - Accord de mobilite - Tous Departements"
     ]
   },
   "indian-institute-of-technology-delhi-(iit-delhi)": {
     "nom": "Indian Institute of Technology Delhi (IIT Delhi)",
     "pays": "Inde",
     "accord": [
-      "Indian Institute of Technology Delhi (IIT Delhi) - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Indian Institute of Technology Delhi (IIT Delhi) - Accord de mobilite - Tous Departements"
     ]
   },
   "indian-institute-of-technology-kanpur-(iit-kanpur)": {
     "nom": "Indian Institute of Technology Kanpur (IIT Kanpur)",
     "pays": "Inde",
     "accord": [
-      "Indian Institute of Technology Kanpur (IIT Kanpur) - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Indian Institute of Technology Kanpur (IIT Kanpur) - Accord de mobilite - Tous Departements"
     ]
   },
   "indian-institute-of-technology-madras-(iit-madras)": {
     "nom": "Indian Institute of Technology Madras (IIT Madras)",
     "pays": "Inde",
     "accord": [
-      "Indian Institute of Technology Madras (IIT Madras) - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Indian Institute of Technology Madras (IIT Madras) - Accord de mobilite - Tous Departements"
     ]
   },
   "institut-teknologi-bandung": {
     "nom": "Institut Teknologi Bandung",
-    "pays": "Indon\u00e9sie",
+    "pays": "Indonesie",
     "accord": [
-      "Institut Teknologi Bandung (ITB) - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Institut Teknologi Bandung (ITB) - Accord de mobilite - Tous Departements"
     ]
   },
   "institut-teknologi-sepuluh-nopember-(its)": {
     "nom": "Institut Teknologi Sepuluh Nopember (ITS)",
-    "pays": "Indon\u00e9sie",
+    "pays": "Indonesie",
     "accord": [
-      "Institut Teknologi Sepuluh Nopember - Accord de mobilit\u00e9"
+      "Institut Teknologi Sepuluh Nopember - Accord de mobilite"
     ]
   },
   "dublin-city-university": {
     "nom": "Dublin City University",
     "pays": "Irlande",
     "accord": [
-      "Dublin City University - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Dublin City University - Erasmus + SMS (\u00e9tudiante) - GI-GM-SGM",
-      "Dublin City University - Erasmus + SMS (\u00e9tudiante) - IF",
-      "Dublin City University - Erasmus + SMS (\u00e9tudiante) - TC"
+      "Dublin City University - Erasmus + SMS (etudiante) - GE",
+      "Dublin City University - Erasmus + SMS (etudiante) - GI-GM-SGM",
+      "Dublin City University - Erasmus + SMS (etudiante) - IF",
+      "Dublin City University - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "trinity-college-dublin": {
+    "nom": "Trinity College Dublin",
+    "pays": "Irlande",
+    "accord": [
+      "Trinity College Dublin - Erasmus + SMS (etudiante) - GCU",
+      "Trinity College Dublin - Erasmus + SMS (etudiante) - GE",
+      "Trinity College Dublin - Erasmus + SMS (etudiante) - GEN",
+      "Trinity College Dublin - Erasmus + SMS (etudiante) - GI",
+      "Trinity College Dublin - Erasmus + SMS (etudiante) - GM",
+      "Trinity College Dublin - Erasmus + SMS (etudiante) - IF",
+      "Trinity College Dublin - Erasmus + SMS (etudiante) - SGM",
+      "Trinity College Dublin - Erasmus + SMS (etudiante) - TC",
+      "Trinity College Dublin - UNITECH"
+    ]
+  },
+  "university-college-dublin": {
+    "nom": "University College Dublin",
+    "pays": "Irlande",
+    "accord": [
+      "University College Dublin - School of Computer Science - Erasmus + SMS (etudiante) - IF"
+    ]
+  },
+  "university-of-limerick": {
+    "nom": "University of Limerick",
+    "pays": "Irlande",
+    "accord": [
+      "University of Limerick - Erasmus + SMS (etudiante) - IF"
     ]
   },
   "haskoli-islands-university": {
-    "nom": "H\u00e1sk\u00f3li \u00cdslands University",
+    "nom": "Haskoli Islands University",
     "pays": "Islande",
     "accord": [
-      "University of Iceland - Erasmus + SMS (\u00e9tudiante) - Tous D\u00e9partements"
+      "University of Iceland - Erasmus + SMS (etudiante) - Tous Departements"
     ]
   },
   "politecnico-di-bari": {
     "nom": "Politecnico di Bari",
     "pays": "Italie",
     "accord": [
-      "Politecnico di Bari - Dpt of Electrical and Information Eng - Erasmus + SMS (\u00e9tudiante) - TC *OUT*",
-      "Politecnico di Bari - Dpt of Electrical and Information Eng - Erasmus + SMS (\u00e9tudiante) - GEN * OUT*",
-      "Politecnico di Bari - Dpt of Electrical and Information Eng - Erasmus + SMS (\u00e9tudiante) - IF *OUT*",
-      "Politecnico di Bari - Dpt of Mechanics, Mathematics and Management - Erasmus + SMS (\u00e9tudiante) - GI *OUT*"
+      "Politecnico di Bari - Dpt of Electrical and Information Eng - Erasmus + SMS (etudiante) - TC *OUT*",
+      "Politecnico di Bari - Dpt of Electrical and Information Eng - Erasmus + SMS (etudiante) - GEN * OUT*",
+      "Politecnico di Bari - Dpt of Electrical and Information Eng - Erasmus + SMS (etudiante) - IF *OUT*",
+      "Politecnico di Bari - Dpt of Mechanics, Mathematics and Management - Erasmus + SMS (etudiante) - GI *OUT*",
+      "Politecnico di Bari - Dpt of Mechanics, Mathematics and Management - Erasmus + SMS (etudiante) - GM *OUT*"
+    ]
+  },
+  "politecnico-di-milano": {
+    "nom": "Politecnico di Milano",
+    "pays": "Italie",
+    "accord": [
+      "Politecnico di Milano - Erasmus + SMS (etudiante) - BS-GE-GEN-IF-SGM-TC",
+      "Politecnico di Milano - Erasmus + SMS (etudiante) - GCU",
+      "Politecnico di Milano - Erasmus + SMS (etudiante) - GI",
+      "Politecnico di Milano - Erasmus + SMS (etudiante) - GM",
+      "Politecnico di Milano - UNITECH"
+    ]
+  },
+  "politecnico-di-torino": {
+    "nom": "Politecnico di Torino",
+    "pays": "Italie",
+    "accord": [
+      "Politecnico di Torino - Accord de double-diplome 1 - GI",
+      "Politecnico di Torino - Accord de double-diplome 1 - GM",
+      "Politecnico di Torino - Accord de double-diplome 1 - TC",
+      "Politecnico di Torino - Erasmus + SMS (etudiante) - BS",
+      "Politecnico di Torino - Erasmus + SMS (etudiante) - GCU",
+      "Politecnico di Torino - Erasmus + SMS (etudiante) - GE",
+      "Politecnico di Torino - Erasmus + SMS (etudiante) - GEN",
+      "Politecnico di Torino - Erasmus + SMS (etudiante) - GI",
+      "Politecnico di Torino - Erasmus + SMS (etudiante) - GM",
+      "Politecnico di Torino - Erasmus + SMS (etudiante) - IF",
+      "Politecnico di Torino - Erasmus + SMS (etudiante) - SGM",
+      "Politecnico di Torino - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universita-degli-studi-di-catania": {
+    "nom": "Universita degli Studi di Catania",
+    "pays": "Italie",
+    "accord": [
+      "Universita degli Studi di Catania - Erasmus + SMS (etudiante) - GCU"
+    ]
+  },
+  "universita-degli-studi-di-milano": {
+    "nom": "Universita degli Studi di Milano",
+    "pays": "Italie",
+    "accord": [
+      "Universita degli Studi di Milano - Erasmus + SMS (etudiante) - IF"
+    ]
+  },
+  "universita-degli-studi-di-napoli-federico-ii": {
+    "nom": "Universita degli Studi di Napoli Federico II",
+    "pays": "Italie",
+    "accord": [
+      "Universita degli Studi di Napoli Federico II - Erasmus + SMS (etudiante) - GEN"
+    ]
+  },
+  "universita-degli-studi-di-roma-'la-sapienza'": {
+    "nom": "Universita degli Studi di Roma 'La Sapienza'",
+    "pays": "Italie",
+    "accord": [
+      "Universita degli Studi di Roma 'La Sapienza' - Faculty of Civil and Industrial Eng. - Erasmus + SMS (etudiante) - GM",
+      "Universita degli Studi di Roma 'La Sapienza' - Faculty of Mathematical, Natural and Physical Sciences - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "universita-degli-studi-di-trento": {
+    "nom": "Universita degli Studi di Trento",
+    "pays": "Italie",
+    "accord": [
+      "Universita degli Studi di Trento - Dpt of Civil, Environmental and Mechanical Eng. - Erasmus + SMS (etudiante) - GCU",
+      "Universita degli Studi di Trento - Dpt of Civil, Environmental and Mechanical Eng. - Erasmus + SMS (etudiante) - GEN",
+      "Universita degli Studi di Trento - Dpt of Industrial Eng. - Erasmus + SMS (etudiante) - GI",
+      "Universita degli Studi di Trento - Dpt of Industrial Eng. - Erasmus + SMS (etudiante) - SGM",
+      "Universita degli Studi di Trento - Dpt of Information Engineering and Computer Science - Erasmus + SMS (etudiante) - GE",
+      "Universita degli Studi di Trento - Dpt of Information Engineering and Computer Science - Erasmus + SMS (etudiante) - IF",
+      "Universita degli Studi di Trento - Dpt of Information Engineering and Computer Science - Erasmus + SMS (etudiante) - TC"
     ]
   },
   "keio-university": {
     "nom": "Keio University",
     "pays": "Japon",
     "accord": [
-      "Keio University - Grad School of Science and Technology - Tous d\u00e9partements"
+      "Keio University - Grad School of Science and Technology - Tous departements"
     ]
   },
   "kobe-university": {
     "nom": "Kobe University",
     "pays": "Japon",
     "accord": [
-      "Kobe University - Faculty of Engineering and Graduate School of Systems Informatics - Faculty of Maritime Sciences and Graduate School of Maritime Sciences - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Kobe University - Faculty of Engineering and Graduate School of Systems Informatics - Faculty of Maritime Sciences and Graduate School of Maritime Sciences - Accord de mobilite - Tous Departements"
     ]
   },
   "kyushu-university": {
     "nom": "Kyushu University",
     "pays": "Japon",
     "accord": [
-      "Kyushu University - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Kyushu University - Accord de mobilite - Tous Departements"
     ]
   },
   "the-university-of-tokyo": {
     "nom": "The University of Tokyo",
     "pays": "Japon",
     "accord": [
-      "The University of Tokyo - School of Eng. - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "The University of Tokyo - School of Eng. - Accord de mobilite - Tous Departements",
+      "The University of Tokyo - School of Frontier Sciences - Accord de mobilite - Tous Departements",
+      "The University of Tokyo - School of Information Science and Technology - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "tohoku-university": {
+    "nom": "Tohoku University",
+    "pays": "Japon",
+    "accord": [
+      "Tohoku University - Accord de double-diplome 1 - Tous Departements",
+      "Tohoku University - Accord de mobilite - Tous Departements"
     ]
   },
   "vilnius-tech": {
     "nom": "VILNIUS TECH",
     "pays": "Lituanie",
     "accord": [
-      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (\u00e9tudiante) - GCU",
-      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (\u00e9tudiante) - GI",
-      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (\u00e9tudiante) - GM"
+      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (etudiante) - GCU",
+      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (etudiante) - GE",
+      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (etudiante) - GI",
+      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (etudiante) - GM",
+      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (etudiante) - IF",
+      "Vilniaus Gedimino Technikos Universitetas (VIESOJI ISTAIGA) (VGTU) - Erasmus + SMS (etudiante) - TC"
     ]
   },
   "benemerita-universidad-autonoma-de-puebla": {
-    "nom": "Benem\u00e9rita Universidad Aut\u00f3noma de Puebla",
+    "nom": "Benemerita Universidad Autonoma de Puebla",
     "pays": "Mexique",
     "accord": [
-      "Benem\u00e9rita Universidad Aut\u00f3noma de Puebla - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Benemerita Universidad Autonoma de Puebla - Accord de mobilite - Tous Departements"
     ]
   },
   "instituto-politecnico-nacional": {
-    "nom": "Instituto Polit\u00e9cnico Nacional",
+    "nom": "Instituto Politecnico Nacional",
     "pays": "Mexique",
     "accord": [
-      "Instituto Polit\u00e9cnico Nacional - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Instituto Politecnico Nacional - Accord de mobilite - Tous Departements"
     ]
   },
   "universidad-autonoma-de-baja-california": {
-    "nom": "Universidad Aut\u00f3noma de Baja California",
+    "nom": "Universidad Autonoma de Baja California",
     "pays": "Mexique",
     "accord": [
-      "Universidad Aut\u00f3noma de Baja California - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Universidad Autonoma de Baja California - Accord de mobilite - Tous Departements"
     ]
   },
   "universidad-autonoma-de-nuevo-leon": {
-    "nom": "Universidad Aut\u00f3noma de Nuevo Le\u00f3n",
+    "nom": "Universidad Autonoma de Nuevo Leon",
     "pays": "Mexique",
     "accord": [
-      "Universidad Aut\u00f3noma de Nuevo Le\u00f3n - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Universidad Autonoma de Nuevo Leon - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-autonoma-de-san-luis-potosi": {
+    "nom": "Universidad Autonoma de San Luis Potosi",
+    "pays": "Mexique",
+    "accord": [
+      "Universidad Autonoma de San Luis Potosi - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-autonoma-de-yucatan": {
+    "nom": "Universidad Autonoma de Yucatan",
+    "pays": "Mexique",
+    "accord": [
+      "Universidad Autonoma de Yucatan - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-autonoma-metropolitana": {
+    "nom": "Universidad Autonoma Metropolitana",
+    "pays": "Mexique",
+    "accord": [
+      "Universidad Autonoma Metropolitana - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-de-guadalajara": {
+    "nom": "Universidad de Guadalajara",
+    "pays": "Mexique",
+    "accord": [
+      "Universidad de Guadalajara - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-de-guanajuato": {
+    "nom": "Universidad de Guanajuato",
+    "pays": "Mexique",
+    "accord": [
+      "Universidad de Guanajuato - Accord de mobilite - Tous Departements"
+    ]
+  },
+  "universidad-veracruzana": {
+    "nom": "Universidad Veracruzana",
+    "pays": "Mexique",
+    "accord": [
+      "Universidad Veracruzana - Accord de mobilite - Tous Departements"
     ]
   },
   "norges-teknisk-naturvitenskapelige-universitet": {
     "nom": "Norges Teknisk-Naturvitenskapelige Universitet",
-    "pays": "Norv\u00e8ge",
+    "pays": "Norvege",
     "accord": [
-      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (\u00e9tudiante) - BS",
-      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (\u00e9tudiante) - GCU",
-      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (\u00e9tudiante) - GEN"
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - BS",
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - GCU",
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - GE",
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - GEN",
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - GI",
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - GM",
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - IF",
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - SGM",
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - SHN - Tous Departements",
+      "Norges Teknisk-Naturvitenskapelige Universitet - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universitetet-i-stavanger": {
+    "nom": "Universitetet i Stavanger",
+    "pays": "Norvege",
+    "accord": [
+      "Universitetet i Stavanger - Erasmus + SMS (etudiante) - BS *OUT*",
+      "Universitetet i Stavanger - Erasmus + SMS (etudiante) - GI *OUT*",
+      "Universitetet i Stavanger - Erasmus + SMS (etudiante) - GM *OUT*",
+      "Universitetet i Stavanger - Erasmus + SMS (etudiante) - IF * OUT*",
+      "Universitetet i Stavanger - Erasmus + SMS (etudiante) - SGM *OUT*",
+      "Universitetet i Stavanger - Erasmus + SMS (etudiante) - TC *OUT*"
     ]
   },
   "technische-universiteit-delft": {
     "nom": "Technische Universiteit Delft",
     "pays": "Pays-Bas",
     "accord": [
-      "Technische Universiteit Delft - Faculty of Civil Eng. and Geosciences - Erasmus + SMS (\u00e9tudiante) - GCU-GEN"
+      "Technische Universiteit Delft - Faculty of Civil Eng. and Geosciences - Erasmus + SMS (etudiante) - GCU-GEN"
     ]
   },
   "universiteit-twente": {
     "nom": "Universiteit Twente",
     "pays": "Pays-Bas",
     "accord": [
-      "Universiteit Twente - Faculty of Electrical Eng, Mathematics and Computer Science (EEMCS) - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Universiteit Twente - Faculty of Electrical Eng, Mathematics and Computer Science (EEMCS) - Erasmus + SMS (\u00e9tudiante) - IF",
-      "Universiteit Twente - Faculty of Electrical Eng, Mathematics and Computer Science (EEMCS) - Erasmus + SMS (\u00e9tudiante) - TC"
+      "Universiteit Twente - Faculty of Electrical Eng, Mathematics and Computer Science (EEMCS) - Erasmus + SMS (etudiante) - GE",
+      "Universiteit Twente - Faculty of Electrical Eng, Mathematics and Computer Science (EEMCS) - Erasmus + SMS (etudiante) - IF",
+      "Universiteit Twente - Faculty of Electrical Eng, Mathematics and Computer Science (EEMCS) - Erasmus + SMS (etudiante) - TC",
+      "Universiteit Twente - Faculty of Eng. Technology (ET) - Erasmus + SMS (etudiante) - GCU",
+      "Universiteit Twente - Faculty of Eng. Technology (ET) - Erasmus + SMS (etudiante) - GEN",
+      "Universiteit Twente - Faculty of Eng. Technology (ET) - Erasmus + SMS (etudiante) - GM",
+      "Universiteit Twente - Faculty of Science & Technology (TNW) - Erasmus + SMS (etudiante) - SGM"
     ]
   },
   "akademia-gorniczo-hutnicza-im.-stanislawa-staszica-w-krakowie": {
-    "nom": "Akademia G\u00f3rniczo-Hutnicza im. Stanis\u0142awa Staszica w Krakowie",
+    "nom": "Akademia Gorniczo-Hutnicza im. Stanislawa Staszica w Krakowie",
     "pays": "Pologne",
     "accord": [
-      "Akademia G\u00f3rniczo-Hutnicza im. Stanis\u0142awa Staszica w Krakowie - Erasmus + SMS (\u00e9tudiante) - GE-GM-IF-TC",
-      "Akademia G\u00f3rniczo-Hutnicza im. Stanis\u0142awa Staszica w Krakowie - Faculty of Foundry Engineering - Erasmus + SMS (\u00e9tudiante) - GI",
-      "Akademia G\u00f3rniczo-Hutnicza im. Stanis\u0142awa Staszica w Krakowie - Faculty of Mechanical Eng. and Robotics - Erasmus + SMS (\u00e9tudiante) - SGM"
+      "Akademia Gorniczo-Hutnicza im. Stanislawa Staszica w Krakowie - Erasmus + SMS (etudiante) - GE-GM-IF-TC",
+      "Akademia Gorniczo-Hutnicza im. Stanislawa Staszica w Krakowie - Faculty of Foundry Engineering - Erasmus + SMS (etudiante) - GI",
+      "Akademia Gorniczo-Hutnicza im. Stanislawa Staszica w Krakowie - Faculty of Mechanical Eng. and Robotics - Erasmus + SMS (etudiante) - SGM"
     ]
   },
   "politechnika-gdanska": {
     "nom": "Politechnika Gdanska",
     "pays": "Pologne",
     "accord": [
-      "Politechnika Gdanska - Erasmus + SMS (\u00e9tudiante) - GCU"
+      "Politechnika Gdanska - Erasmus + SMS (etudiante) - GCU",
+      "Politechnika Gdanska - Faculty of Applied Physics and Mathematics - Erasmus + SMS (etudiante) - SGM",
+      "Politechnika Gdanska - Faculty of Electronics, Telecommunications and Informatics - Erasmus + SMS (etudiante) - IF",
+      "Politechnika Gdanska - Faculty of Mechanical Eng. - Erasmus + SMS (etudiante) - GM"
+    ]
+  },
+  "politechnika-lodzka": {
+    "nom": "Politechnika Lodzka",
+    "pays": "Pologne",
+    "accord": [
+      "Politechnika Lodzka UT - Erasmus + SMS (etudiante) - BS",
+      "Politechnika Lodzka UT - Erasmus + SMS (etudiante) - GE",
+      "Politechnika Lodzka UT - Erasmus + SMS (etudiante) - IF",
+      "Politechnika Lodzka UT - Erasmus + SMS (etudiante) - SGM",
+      "Politechnika Lodzka UT - Erasmus + SMS (etudiante) - TC",
+      "Politechnika Lodzka UT - IFE - Erasmus + SMS (etudiante) - BS",
+      "Politechnika Lodzka UT - IFE - Erasmus + SMS (etudiante) - GI",
+      "Politechnika Lodzka UT - IFE - Erasmus + SMS (etudiante) - GM",
+      "Politechnika Lodzka UT - IFE - Erasmus + SMS (etudiante) - IF"
+    ]
+  },
+  "politechnika-warszawska": {
+    "nom": "Politechnika Warszawska",
+    "pays": "Pologne",
+    "accord": [
+      "Politechnika Warszawska - Faculty of Civil Eng. - Erasmus + SMS (etudiante) - GCU",
+      "Politechnika Warszawska - Faculty of Electronics and IT - Erasmus + SMS (etudiante) - GE - *OUT*",
+      "Politechnika Warszawska - Faculty of Electronics and IT - Erasmus + SMS (etudiante) - IF - *OUT*",
+      "Politechnika Warszawska - Faculty of Materials Science and Eng. - Erasmus + SMS (etudiante) - SGM",
+      "Politechnika Warszawska - Faculty of Mechanical and Industrial Eng. - Erasmus + SMS (etudiante) - GI"
     ]
   },
   "instituto-superior-tecnico": {
-    "nom": "Instituto Superior T\u00e9cnico",
+    "nom": "Instituto Superior Tecnico",
     "pays": "Portugal",
     "accord": [
-      "Instituto Superior T\u00e9cnico - UT-IST - Erasmus + SMS (\u00e9tudiante) - GCU",
-      "Instituto Superior T\u00e9cnico - UT-IST - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Instituto Superior T\u00e9cnico - UT-IST - Erasmus + SMS (\u00e9tudiante) - GI",
-      "Instituto Superior T\u00e9cnico - UT-IST - Erasmus + SMS (\u00e9tudiante) - GM"
+      "Instituto Superior Tecnico - UT-IST - Erasmus + SMS (etudiante) - GCU",
+      "Instituto Superior Tecnico - UT-IST - Erasmus + SMS (etudiante) - GE",
+      "Instituto Superior Tecnico - UT-IST - Erasmus + SMS (etudiante) - GI",
+      "Instituto Superior Tecnico - UT-IST - Erasmus + SMS (etudiante) - GM",
+      "Instituto Superior Tecnico - UT-IST - Erasmus + SMS (etudiante) - IF",
+      "Instituto Superior Tecnico - UT-IST - Erasmus + SMS (etudiante) - SGM",
+      "Instituto Superior Tecnico - UT-IST - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universidade-do-porto": {
+    "nom": "Universidade do Porto",
+    "pays": "Portugal",
+    "accord": [
+      "Universidade do Porto - Erasmus + SMS (etudiante) - GI - *OUT*",
+      "Universidade do Porto - FEUP - Erasmus + SMS (etudiante) - GM"
     ]
   },
   "universitatea-'politehnica'-din-bucuresti-(upb)": {
     "nom": "Universitatea 'Politehnica' din Bucuresti (UPB)",
     "pays": "Roumanie",
     "accord": [
-      "Universitatea 'Politehnica' din Bucuresti (UPB) - Accord de double-dipl\u00f4me 1 - ARUT - Tous D\u00e9partements",
-      "Universitatea 'Politehnica' din Bucuresti (UPB) - Erasmus + SMS (\u00e9tudiante) - GI",
-      "Universitatea 'Politehnica' din Bucuresti (UPB) - Erasmus + SMS (\u00e9tudiante) - GM",
-      "Universitatea 'Politehnica' din Bucuresti (UPB) - Erasmus + SMS (\u00e9tudiante) - SGM"
+      "Universitatea 'Politehnica' din Bucuresti (UPB) - Accord de double-diplome 1 - ARUT - Tous Departements",
+      "Universitatea 'Politehnica' din Bucuresti (UPB) - Erasmus + SMS (etudiante) - GI",
+      "Universitatea 'Politehnica' din Bucuresti (UPB) - Erasmus + SMS (etudiante) - GM",
+      "Universitatea 'Politehnica' din Bucuresti (UPB) - Erasmus + SMS (etudiante) - SGM",
+      "Universitatea 'Politehnica' din Bucuresti (UPB) - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universitatea-'politehnica'-din-timisoara": {
+    "nom": "Universitatea 'Politehnica' din Timisoara",
+    "pays": "Roumanie",
+    "accord": [
+      "Universitatea 'Politehnica' din Timisoara - Accord de double-diplome 1 - ARUT - Tous Departements",
+      "Universitatea 'Politehnica' din Timisoara - Erasmus + SMS (etudiante) - SGM",
+      "Universitatea 'Politehnica' din Timisoara - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universitatea-din-bacau": {
+    "nom": "Universitatea din Bacau",
+    "pays": "Roumanie",
+    "accord": [
+      "Universitatea din Bacau - Erasmus + SMS (etudiante) - GI"
+    ]
+  },
+  "universitatea-sapientia-din-cluj-napoca": {
+    "nom": "Universitatea Sapientia din Cluj-Napoca",
+    "pays": "Roumanie",
+    "accord": [
+      "Universitatea Sapientia din Cluj-Napoca - Erasmus + SMS (etudiante) - IF"
+    ]
+  },
+  "universitatea-tehnica-'gheorghe-asachi'-din-iasi": {
+    "nom": "Universitatea Tehnica 'Gheorghe Asachi' din Iasi",
+    "pays": "Roumanie",
+    "accord": [
+      "Universitatea Tehnica 'Gheorghe Asachi' din Iasi - Accord de double-diplome 1 - ARUT - Tous Departements",
+      "Universitatea Tehnica 'Gheorghe Asachi' din Iasi - Erasmus + SMS (etudiante) - BS",
+      "Universitatea Tehnica 'Gheorghe Asachi' din Iasi - Erasmus + SMS (etudiante) - GE",
+      "Universitatea Tehnica 'Gheorghe Asachi' din Iasi - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "universitatea-tehnica-de-constructii-din-bucuresti": {
+    "nom": "Universitatea Tehnica de Constructii din Bucuresti",
+    "pays": "Roumanie",
+    "accord": [
+      "Universitatea Tehnica de Constructii din Bucuresti - Accord de double-diplome 1 - ARUT - Tous Departements",
+      "Universitatea Tehnica de Constructii din Bucuresti - Erasmus + SMS (etudiante) - GCU *OUT*"
+    ]
+  },
+  "universitatea-tehnica-din-cluj-napoca": {
+    "nom": "Universitatea Tehnica din Cluj-Napoca",
+    "pays": "Roumanie",
+    "accord": [
+      "Universitatea Tehnica din Cluj-Napoca - Accord de double-diplome 1 - ARUT - Tous Departements",
+      "Universitatea Tehnica din Cluj-Napoca - Erasmus + SMS (etudiante) - GCU",
+      "Universitatea Tehnica din Cluj-Napoca - Erasmus + SMS (etudiante) - IF"
     ]
   },
   "imperial-college-london": {
     "nom": "Imperial College London",
     "pays": "Royaume-Uni",
     "accord": [
-      "Imperial College London - Erasmus + SMS (\u00e9tudiante) - SGM"
+      "Imperial College London - Erasmus + SMS (etudiante) - SGM"
     ]
   },
   "loughborough-university": {
     "nom": "Loughborough University",
     "pays": "Royaume-Uni",
     "accord": [
-      "Loughborough University - Erasmus + SMS (\u00e9tudiante) - GCU",
-      "Loughborough University - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Loughborough University - Erasmus + SMS (\u00e9tudiante) - GEN"
+      "Loughborough University - Erasmus + SMS (etudiante) - GCU",
+      "Loughborough University - Erasmus + SMS (etudiante) - GE",
+      "Loughborough University - Erasmus + SMS (etudiante) - GEN",
+      "Loughborough University - Erasmus + SMS (etudiante) - GI",
+      "Loughborough University - Erasmus + SMS (etudiante) - GM",
+      "Loughborough University - Erasmus + SMS (etudiante) - IF",
+      "Loughborough University - Erasmus + SMS (etudiante) - SGM",
+      "Loughborough University - Erasmus + SMS (etudiante) - TC",
+      "Loughborough University - UNITECH"
+    ]
+  },
+  "university-of-bath": {
+    "nom": "University of Bath",
+    "pays": "Royaume-Uni",
+    "accord": [
+      "University of Bath - Erasmus + SMS (etudiante) - GI",
+      "University of Bath - Erasmus + SMS (etudiante) - GM",
+      "University of Bath - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "university-of-birmingham": {
+    "nom": "University of Birmingham",
+    "pays": "Royaume-Uni",
+    "accord": [
+      "University of Birmingham - Erasmus + SMS (etudiante) - BS",
+      "University of Birmingham - Erasmus + SMS (etudiante) - GEN",
+      "University of Birmingham - Erasmus + SMS (etudiante) - IF",
+      "University of Birmingham - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "university-of-leeds": {
+    "nom": "University of Leeds",
+    "pays": "Royaume-Uni",
+    "accord": [
+      "University of Leeds - Erasmus + SMS (etudiante) - GCU",
+      "University of Leeds - Erasmus + SMS (etudiante) - GM",
+      "University of Leeds - Erasmus + SMS (etudiante) - IF"
+    ]
+  },
+  "university-of-sheffield": {
+    "nom": "University of Sheffield",
+    "pays": "Royaume-Uni",
+    "accord": [
+      "University of Sheffield - Erasmus + SMS (etudiante) - GCU",
+      "University of Sheffield - Erasmus + SMS (etudiante) - GE",
+      "University of Sheffield - Erasmus + SMS (etudiante) - GEN",
+      "University of Sheffield - Erasmus + SMS (etudiante) - GM",
+      "University of Sheffield - Erasmus + SMS (etudiante) - SGM"
+    ]
+  },
+  "university-of-strathclyde": {
+    "nom": "University of Strathclyde",
+    "pays": "Royaume-Uni",
+    "accord": [
+      "University of Strathclyde - Erasmus + SMS (etudiante) - GM"
     ]
   },
   "national-university-of-singapore": {
     "nom": "National University of Singapore",
     "pays": "Singapour",
     "accord": [
-      "National University of Singapore - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "National University of Singapore - Accord de mobilite - Tous Departements"
     ]
   },
   "singapore-university-of-technology-and-design": {
     "nom": "Singapore University of Technology and Design",
     "pays": "Singapour",
     "accord": [
-      "Singapore University of Technology and Design - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Singapore University of Technology and Design - Accord de mobilite - Tous Departements"
     ]
   },
   "slovenska-technicka-univerzita-v-bratislave-(stu)": {
-    "nom": "Slovensk\u00e1 Technick\u00e1 Univerzita v Bratislave (STU)",
+    "nom": "Slovenska Technicka Univerzita v Bratislave (STU)",
     "pays": "Slovaquie",
     "accord": [
-      "Slovensk\u00e1 Technick\u00e1 Univerzita v Bratislave (STU) - Faculty of Informatics and Information Technologies - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Slovensk\u00e1 Technick\u00e1 Univerzita v Bratislave (STU) - Faculty of Informatics and Information Technologies - Erasmus + SMS (\u00e9tudiante) - IF",
-      "Slovensk\u00e1 Technick\u00e1 Univerzita v Bratislave (STU) - Faculty of Informatics and Information Technologies - Erasmus + SMS (\u00e9tudiante) - TC",
-      "Slovensk\u00e1 Technick\u00e1 Univerzita v Bratislave (STU) - Faculty of Materials Science and Technology - Erasmus + SMS (\u00e9tudiante) - SGM"
+      "Slovenska Technicka Univerzita v Bratislave (STU) - Faculty of Informatics and Information Technologies - Erasmus + SMS (etudiante) - GE",
+      "Slovenska Technicka Univerzita v Bratislave (STU) - Faculty of Informatics and Information Technologies - Erasmus + SMS (etudiante) - IF",
+      "Slovenska Technicka Univerzita v Bratislave (STU) - Faculty of Informatics and Information Technologies - Erasmus + SMS (etudiante) - TC",
+      "Slovenska Technicka Univerzita v Bratislave (STU) - Faculty of Materials Science and Technology - Erasmus + SMS (etudiante) - SGM",
+      "Slovenska Technicka Univerzita v Bratislave (STU) - Faculty of Mechanical Eng. - Erasmus + SMS (etudiante) - GM"
     ]
   },
   "univerza-v-ljubljani": {
     "nom": "Univerza v Ljubljani",
-    "pays": "Slov\u00e9nie",
+    "pays": "Slovenie",
     "accord": [
-      "Univerza v Ljubljani - Faculty of Computer and Information Science - Erasmus + SMS (\u00e9tudiante) - IF",
-      "Univerza v Ljubljani - Faculty of Mechanical Eng. - Erasmus + SMS (\u00e9tudiante) - GM"
+      "Univerza v Ljubljani - Faculty of Computer and Information Science - Erasmus + SMS (etudiante) - IF",
+      "Univerza v Ljubljani - Faculty of Mechanical Eng. - Erasmus + SMS (etudiante) - GM"
     ]
   },
   "chalmers-tekniska-hogskola": {
-    "nom": "Chalmers tekniska h\u00f6gskola",
-    "pays": "Su\u00e8de",
+    "nom": "Chalmers tekniska hogskola",
+    "pays": "Suede",
     "accord": [
-      "Chalmers tekniska h\u00f6gskola - Erasmus + SMS (\u00e9tudiante) - BS",
-      "Chalmers tekniska h\u00f6gskola - Erasmus + SMS (\u00e9tudiante) - GCU",
-      "Chalmers tekniska h\u00f6gskola - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Chalmers tekniska h\u00f6gskola - Erasmus + SMS (\u00e9tudiante) - GEN"
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - BS",
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - GCU",
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - GE",
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - GEN",
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - GI",
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - GM",
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - IF",
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - SGM",
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - SHN - Tous Departements",
+      "Chalmers tekniska hogskola - Erasmus + SMS (etudiante) - TC",
+      "Chalmers tekniska hogskola - UNITECH"
+    ]
+  },
+  "kungliga-tekniska-hogskolan-(kth)": {
+    "nom": "Kungliga Tekniska hogskolan (KTH)",
+    "pays": "Suede",
+    "accord": [
+      "Kungliga Tekniska hogskolan (KTH) - Accord de double-diplome 1 - IF",
+      "Kungliga Tekniska hogskolan (KTH) - Erasmus + SMS (etudiante) - BS",
+      "Kungliga Tekniska hogskolan (KTH) - Erasmus + SMS (etudiante) - GCU",
+      "Kungliga Tekniska hogskolan (KTH) - Erasmus + SMS (etudiante) - GE",
+      "Kungliga Tekniska hogskolan (KTH) - Erasmus + SMS (etudiante) - GEN",
+      "Kungliga Tekniska hogskolan (KTH) - Erasmus + SMS (etudiante) - GI",
+      "Kungliga Tekniska hogskolan (KTH) - Erasmus + SMS (etudiante) - GM",
+      "Kungliga Tekniska hogskolan (KTH) - Erasmus + SMS (etudiante) - IF",
+      "Kungliga Tekniska hogskolan (KTH) - Erasmus + SMS (etudiante) - SGM",
+      "Kungliga Tekniska hogskolan (KTH) - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "lulea-tekniska-universitet": {
+    "nom": "Lulea tekniska universitet",
+    "pays": "Suede",
+    "accord": [
+      "Lulea tekniska universitet - Erasmus + SMS (etudiante) - GCU",
+      "Lulea tekniska universitet - Erasmus + SMS (etudiante) - GE",
+      "Lulea tekniska universitet - Erasmus + SMS (etudiante) - GEN",
+      "Lulea tekniska universitet - Erasmus + SMS (etudiante) - GI",
+      "Lulea tekniska universitet - Erasmus + SMS (etudiante) - GM",
+      "Lulea tekniska universitet - Erasmus + SMS (etudiante) - IF",
+      "Lulea tekniska universitet - Erasmus + SMS (etudiante) - SGM",
+      "Lulea tekniska universitet - Erasmus + SMS (etudiante) - TC"
+    ]
+  },
+  "lunds-universitet": {
+    "nom": "Lunds universitet",
+    "pays": "Suede",
+    "accord": [
+      "Lunds universitet - Erasmus + SMS (etudiante) - GM-GI",
+      "Lunds universitet - Erasmus + SMS (etudiante) - IF-SGM-TC"
+    ]
+  },
+  "stockholms-universitet": {
+    "nom": "Stockholms universitet",
+    "pays": "Suede",
+    "accord": [
+      "Stockholms universitet - Faculty of Science - Chemistry Section - Erasmus + SMS (etudiante) - SGM",
+      "Stockholms universitet - Faculty of Social Sciences - Dpt of Computer and System Science - Erasmus + SMS (etudiante) - IF",
+      "Stockholms universitet - Faculty of Social Sciences - Dpt of Computer and System Science - Erasmus + SMS (etudiante) - TC"
     ]
   },
   "eastern-switzerland-university-of-applied-sciences-ost": {
     "nom": "Eastern Switzerland University of Applied Sciences OST",
     "pays": "Suisse",
     "accord": [
-      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (\u00e9tudiante) - GE *OUT*",
-      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (\u00e9tudiante) - GEN *OUT*",
-      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (\u00e9tudiante) - GI *OUT*",
-      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (\u00e9tudiante) - GM *OUT*"
+      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (etudiante) - GE *OUT*",
+      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (etudiante) - GEN *OUT*",
+      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (etudiante) - GI *OUT*",
+      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (etudiante) - GM *OUT*",
+      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (etudiante) - IF *OUT*",
+      "Eastern Switzerland University of Applied Sciences OST - Erasmus + SMS (etudiante) - TC *OUT*"
+    ]
+  },
+  "eidgenossische-technische-hochschule-(eth)-zurich": {
+    "nom": "Eidgenossische Technische Hochschule (ETH) Zurich",
+    "pays": "Suisse",
+    "accord": [
+      "Eidgenossische Technische Hochschule (ETH) Zurich - UNITECH"
     ]
   },
   "national-tsing-hua-university": {
     "nom": "National Tsing Hua University",
-    "pays": "Ta\u00efwan",
+    "pays": "Taiwan",
     "accord": [
-      "National Tsing Hua University - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "National Tsing Hua University - Accord de mobilite - Tous Departements"
     ]
   },
   "ceske-vysoke-uceni-technicke-v-praze": {
-    "nom": "Cesk\u00e9 Vysok\u00e9 Uceni Technick\u00e9 v Praze",
-    "pays": "Tch\u00e8que, R\u00e9publique",
+    "nom": "Ceske Vysoke Uceni Technicke v Praze",
+    "pays": "Tcheque, Republique",
     "accord": [
-      "Cesk\u00e9 Vysok\u00e9 Uceni Technick\u00e9 v Praze - Faculty of Mechanical Engineering - Erasmus + SMS (\u00e9tudiante) - GE-GEN-GI-GM *OUT*",
-      "Cesk\u00e9 Vysok\u00e9 Uceni Technick\u00e9 v Praze - Faculty of Nuclear Sciences and Physical Eng. - Erasmus + SMS (\u00e9tudiante) - SGM *OUT*"
+      "Ceske Vysoke Uceni Technicke v Praze - Faculty of Mechanical Engineering - Erasmus + SMS (etudiante) - GE-GEN-GI-GM *OUT*",
+      "Ceske Vysoke Uceni Technicke v Praze - Faculty of Nuclear Sciences and Physical Eng. - Erasmus + SMS (etudiante) - SGM *OUT*"
     ]
   },
   "vysoke-uceni-technicke-v-brne": {
-    "nom": "Vysok\u00e9 Ucen\u00ed Technick\u00e9 v Brne",
-    "pays": "Tch\u00e8que, R\u00e9publique",
+    "nom": "Vysoke Uceni Technicke v Brne",
+    "pays": "Tcheque, Republique",
     "accord": [
-      "Vysok\u00e9 Ucen\u00ed Technick\u00e9 v Brne (FEEC) - Erasmus + SMS (\u00e9tudiante) - GE",
-      "Vysok\u00e9 Ucen\u00ed Technick\u00e9 v Brne (FIT) - Erasmus + SMS (\u00e9tudiante) - IF"
+      "Vysoke Uceni Technicke v Brne (FEEC) - Erasmus + SMS (etudiante) - GE",
+      "Vysoke Uceni Technicke v Brne (FIT) - Erasmus + SMS (etudiante) - IF",
+      "Vysoke Uceni Technicke v Brne (FME) - Erasmus + SMS (etudiante) - GM"
+    ]
+  },
+  "zapadoceska-univerzita-v-plzni": {
+    "nom": "Zapadoceska Univerzita v Plzni",
+    "pays": "Tcheque, Republique",
+    "accord": [
+      "Zapadoceska Univerzita v Plzni - Erasmus + SMS (etudiante) - GE-GM-IF-TC"
     ]
   },
   "universite-de-lome": {
-    "nom": "Universit\u00e9 de Lom\u00e9",
+    "nom": "Universite de Lome",
     "pays": "Togo",
     "accord": [
-      "Universit\u00e9 de Lom\u00e9 - Accord de double-dipl\u00f4me 1 - GM"
+      "Universite de Lome - Accord de double-diplome 1 - GM"
     ]
   },
   "ecole-nationale-d'ingenieurs-de-sfax-(universite-de-sfax)": {
-    "nom": "Ecole Nationale d'Ing\u00e9nieurs de Sfax (Universit\u00e9 de Sfax)",
+    "nom": "Ecole Nationale d'Ingenieurs de Sfax (Universite de Sfax)",
     "pays": "Tunisie",
     "accord": [
-      "Ecole Nationale d'Ing\u00e9nieurs de Sfax - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Ecole Nationale d'Ingenieurs de Sfax - Accord de mobilite - Tous Departements"
     ]
   },
   "bogazici-universitesi": {
-    "nom": "Bogazi\u00e7i \u00dcniversitesi",
+    "nom": "Bogazici Universitesi",
     "pays": "Turquie",
     "accord": [
-      "Bogazi\u00e7i \u00dcniversitesi - Erasmus + SMS (\u00e9tudiante) - GM"
+      "Bogazici Universitesi - Erasmus + SMS (etudiante) - GM"
     ]
   },
   "galatasaray-universitesi": {
     "nom": "Galatasaray Universitesi",
     "pays": "Turquie",
     "accord": [
-      "Galatasaray Universitesi - Erasmus + SMS (\u00e9tudiante) - GI",
-      "Galatasaray Universitesi - Erasmus + SMS (\u00e9tudiante) - IF",
-      "Galatasaray Universitesi - Erasmus + SMS (\u00e9tudiante) - TC"
+      "Galatasaray Universitesi - Erasmus + SMS (etudiante) - GI",
+      "Galatasaray Universitesi - Erasmus + SMS (etudiante) - IF",
+      "Galatasaray Universitesi - Erasmus + SMS (etudiante) - TC"
     ]
   },
   "universidad-de-la-republica": {
-    "nom": "Universidad de la Rep\u00fablica",
+    "nom": "Universidad de la Republica",
     "pays": "Uruguay",
     "accord": [
-      "Universidad de la Rep\u00fablica - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Universidad de la Republica - Accord de mobilite - Tous Departements"
     ]
   },
   "ho-chi-minh-city-university-of-technology": {
     "nom": "Ho Chi Minh City University of Technology",
     "pays": "Viet Nam",
     "accord": [
-      "Ho Chi Minh City University of Technology - Accord de mobilit\u00e9 - Tous D\u00e9partements"
+      "Ho Chi Minh City University of Technology - Accord de mobilite - Tous Departements"
     ]
   },
   "national-university-of-civil-engineering": {
     "nom": "National University of Civil Engineering",
     "pays": "Viet Nam",
     "accord": [
-      "National University of Civil Engineering - Accord de double-dipl\u00f4me 1 - GCU",
-      "National University of Civil Engineering - Accord de mobilit\u00e9 - GCU"
+      "National University of Civil Engineering - Accord de double-diplome 1 - GCU",
+      "National University of Civil Engineering - Accord de mobilite - GCU"
     ]
   }
 }
