@@ -14,28 +14,40 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import org.bson.types.ObjectId;
 
 @Document("Conversation")
 public class Conversation {
 
-    private String name;
-    private ObjectId creator;
-    private Date creationDate;
-    private ObjectId university;
-    private String scale;
-    private bool closed;
-    private int nombreDeMessages;
-    private list<Message> messagelist;
+    @Id
+    private ObjectId id;
 
-    public Conversation(String name, String creator, String university, String scale) {
+    private String name;
+    private String creator;
+    private String creationDate;
+    private String university;
+    private String scale;
+    private boolean closed;
+    private int nombreDeMessages;
+    private List<Message> messageList;
+
+    public Conversation(String name, String creator, String creationDate, String university, String scale) {
         this.name = name;
         this.creator = creator;
+        this.creationDate = creationDate;
         this.university = university;
         this.scale = scale;
         this.closed = false;
-        this.creationDate = SystemClockFactory.getDatetime();
         this.nombreDeMessages = 0;
+        this.messageList = new LinkedList<>();
+    }
+
+    public Conversation() {
+        this.closed = false;
+        this.nombreDeMessages = 0;
+        this.messageList = new LinkedList<>();
     }
 
     @Override
@@ -54,6 +66,10 @@ public class Conversation {
         return creator;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String getCreationDate() {
         return creationDate;
     }
@@ -62,11 +78,7 @@ public class Conversation {
         return university;
     }
 
-    public String getExchangeUniversity() {
-        return exchangeUniversity;
-    }
-
-    public String getClosed() {
+    public boolean getClosed() {
         return closed;
     }
 
@@ -77,8 +89,24 @@ public class Conversation {
     }
 
     public void posterMessage(Message message) {
-        this.messagelist.add(nombreDeMessages,message);
+        this.messageList.add(0,message);
         nombreDeMessages++;
     }
 
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+    }
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setUniversity(String university) {
+        this.university = university;
+    }
+
+    public void setScale(String scale) {
+        this.scale = scale;
+    }
 }

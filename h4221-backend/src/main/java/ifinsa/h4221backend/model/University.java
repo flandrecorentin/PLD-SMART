@@ -19,8 +19,7 @@ import java.util.*;
 @Document("University")
 public class University {
 //TODO : compléter la classe
-    private ObjectId city;
-    private int places;
+    private String city;
 
     public University() {
 
@@ -33,15 +32,10 @@ public class University {
         return "University{" +
                 "city'" + city + '\'' +
                 '}';
-        //TODO : ajouter places
     }
 
     public String getCity() {
         return city;
-    }
-
-    public String getPlaces() {
-        return places;
     }
 
 }

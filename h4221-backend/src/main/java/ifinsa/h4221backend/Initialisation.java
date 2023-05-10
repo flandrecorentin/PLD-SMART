@@ -2,7 +2,9 @@ package ifinsa.h4221backend;
 
 import ifinsa.h4221backend.model.Departement;
 import ifinsa.h4221backend.model.User;
+import ifinsa.h4221backend.model.Conversation;
 import ifinsa.h4221backend.service.UserService;
+import ifinsa.h4221backend.service.ChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -18,6 +20,9 @@ public class Initialisation implements ApplicationRunner {
     @Autowired
     UserService userService;
 
+    @Autowired
+    ChatService chatService;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         // appel des services à faire à l'initialisation
@@ -31,6 +36,8 @@ public class Initialisation implements ApplicationRunner {
         users.add(corentin);
         users.add(colin);
         users.add(elise);
+
+
         for (User user: users) {
             userService.inscrireService(user);
         }

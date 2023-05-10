@@ -23,12 +23,17 @@ public class Message {
     private String author;
     private String date;
     private String text;
+    private String conversation;
 
-    public Message(ObjectId author, String text, String date) {
+    public Message(String author, String text, String date) {
         this.author = author;
         this.text = text;
         this.date = date;
     }
+
+    public Message() {
+    }
+
 
 
 
@@ -41,8 +46,24 @@ public class Message {
                 '}';
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setConversation(String conversation) {
+        this.conversation = conversation;
     }
 
     public String getAuthor() {
@@ -53,4 +74,7 @@ public class Message {
         return text;
     }
 
+    public String getConversation() {
+        return conversation;
+    }
 }
