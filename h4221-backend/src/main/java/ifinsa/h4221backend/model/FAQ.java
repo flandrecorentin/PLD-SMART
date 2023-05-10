@@ -9,6 +9,7 @@ public class FAQ {
 
     @Id
     private String question;
+    private String categorie;
     private String reponse;
     private String authorQuestion;
     private String authorReponse;
@@ -16,6 +17,16 @@ public class FAQ {
     private String dateReponse;
 
     public FAQ() {
+    }
+
+    public FAQ(String question, String categorie, String reponse, String authorQuestion, String authorReponse, String dateQuestion, String dateReponse) {
+        this.question = question;
+        this.categorie = categorie;
+        this.reponse = reponse;
+        this.authorQuestion = authorQuestion;
+        this.authorReponse = authorReponse;
+        this.dateQuestion = dateQuestion;
+        this.dateReponse = dateReponse;
     }
 
     public String getQuestion() {
@@ -56,6 +67,14 @@ public class FAQ {
 
     public void setDateReponse(String dateReponse) {
         this.dateReponse = dateReponse;
+    }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
     }
 
     public String getDate() {

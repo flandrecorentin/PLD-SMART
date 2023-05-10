@@ -1,5 +1,5 @@
 <div id="sidebar">
-    <img id="logo" src="../../assets/logo.png"/>
+    <img id="logo" [routerLink]="navData[0].routeLink" src="../../assets/logo.png"/>
     <p id="titre">Mobilit'IF</p>
 
 
@@ -19,8 +19,13 @@
             </a>
         </li>
     </ul>
-    <a href="" id="help" routerLink="/help">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" id="help">
         <img class="sidebar-link-icon" src="../../assets/assist.png"/>
         <span class="sidebar-link-text" >Support</span>
+    </a>
+
+    <a (click)="logout()" href="/" id="logout">
+        <img class="sidebar-link-icon" src="../../assets/logout.png">
+        <span class="sidebar-link-text">Se déconnecter</span>
     </a>
 </div>

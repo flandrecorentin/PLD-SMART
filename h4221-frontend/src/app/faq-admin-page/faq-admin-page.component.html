@@ -1,0 +1,71 @@
+<app-sidebar></app-sidebar>
+<div id="faq">
+    <p id="titre">FAQ Générale : questions récurrentes</p>
+    <p id="soustitre">Retrouvez ici les questions récurrentes par thématiques.</p>
+
+    <div id="tri-questions">
+        <div id="barre-boutons">
+            <button class="borderradiusleft" (click)="onClickFilter('All')">Afficher toutes</button>
+            <button (click)="onClickFilter('Bourses')">Bourses</button>
+            <button (click)="onClickFilter('Formalités')">Formalités</button>
+            <button (click)="onClickFilter('Candidatures')">Candidatures</button>
+            <button (click)="onClickFilter('Voeux')">Voeux</button>
+            <button class="borderradiusright" (click)="onClickFilter('Logement')">Logement</button>
+
+            
+        </div>
+        <form id="recherche-form" [formGroup]="rechercheForm" (ngSubmit)="submitRecherche()">
+
+
+            <button type="submit" [disabled]="!rechercheForm.valid"><img src="../../assets/search.png"></button>
+            <input type="text" formControlName="recherche" placeholder="Chercher une question">
+    
+        </form>
+
+    </div>
+
+    <div id="qagrid">
+        <div class="qablock" *ngFor="let qa of qas; let i=index" (click)="selectQuestion(qa)">
+            <p class="type">{{qa.type}}</p>
+            <p class="question">{{qa.question}}</p>
+            <p class="answer">{{qa.answer}}</p>
+        </div>
+    </div>
+    <div id="changerPage">
+        <p>Page {{pagenumber}} sur {{maxPageNumber}}</p>
+        <div id="boutons">
+        <button (click)="onClickPlus()">Next</button>
+        <button (click)="onClickMoins()">Previous</button>
+    </div>
+    </div>
+
+
+
+    
+    <div id="popup" class="overlay">
+        <div id="questiondetailspopup">
+            <img src="../assets/close.png" (click)="onClickClose()"/>
+            <br/>
+            <p class="type">{{popupqa.type}}</p>
+            <p class="question">{{popupqa.question}}</p>
+            <p class="questiondetails">Posté le {{popupqa.questiondate}} par {{popupqa.questionauthor}}</p>
+            <p class="answer" *ngIf=popupqa.answered>{{popupqa.answer}}</p>
+            <p class="answerdetails" *ngIf=popupqa.answered>Posté le {{popupqa.answerdate}} par {{popupqa.answerauthor}}</p>
+            
+            <form id="answer-form" [formGroup]="answerForm" (ngSubmit)="submitAnswer()">
+
+
+                <textarea formControlName="answer" placeholder="Entrez votre réponse" ></textarea>
+                <button type="submit" [disabled]="!answerForm.valid">+ Envoyer la réponse</button>
+        
+            </form>
+        </div>
+
+
+
+
+        
+
+
+    </div>
+</div>

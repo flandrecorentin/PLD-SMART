@@ -19,9 +19,6 @@ import java.util.*;
 @Document("FormulaireREX")
 public class FormulaireREX {
 
-
-
-
     private String author;
     private String date;
     private Map<String, String> information;

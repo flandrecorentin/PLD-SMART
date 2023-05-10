@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, SimpleChanges } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from'@angular/forms';
+import { FaqService } from '../config/faq.service';
 
 @Component({
   selector: 'app-faq-page',
@@ -7,63 +9,61 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./faq-page.component.css']
 })
 export class FaqPageComponent {
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, private faqService: FaqService) { }
 
   rechercheForm = this.fb.group({
     recherche: ["", Validators.required]
-  })
+  });
+
+  questionForm = this.fb.group({
+    question: ["", Validators.required],
+    categorie: ["", Validators.required]
+  });
+
+
+  popupqa={
+    question:"",
+    answer:"",
+    type:"",
+    answerdate:"",
+    questiondate:"",
+    answerauthor:"",
+    questionauthor:"",
+    answered:true
+  }
+
+  allqas=[{
+    question:"",
+    answer:"",
+    type:"",
+    answerdate:"",
+    questiondate:"",
+    answerauthor:"",
+    questionauthor:""}
+    ]  
+    selectedqas = this.allqas;
+    qas = this.allqas.slice(0,15);
+
+    pagenumber=1;
+    maxPageNumber = Math.ceil(this.selectedqas.length/15);
 
   submitRecherche() {
     //Here, we will call the service in order to log the user to Mobilit'if
     console.log(this.rechercheForm.value);
+    this.selectedqas=this.allqas.filter(qa=> 
+      qa.question.toLowerCase().includes(this.rechercheForm.value.recherche!.toLowerCase()) || 
+      (qa.answer!=null ? qa.answer.toLowerCase().includes(this.rechercheForm.value.recherche!.toLowerCase()) : false));
+    this.pagenumber=1;
+    this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
   }
 
-  mockquestion="Is there a free trial available?";
-  mockanswer="Yes, you can try us for free for 30 days. Our friendly team will work with you to get you up and running as soon as possible.Our friendly team will work with you to get you up and running as soon as possible.Our friendly team will work with you to get you up and running as soon as possible.Our friendly team will work with you to get you up and running as soon as possible.";
-  mocktype="Logement"
-
-  allqas=[
-    {question:"1"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"2"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"3"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"4"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"5"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"6"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"7"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"8"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"9"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"10"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"12"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"13"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"14"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"15"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"16"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"17"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"18"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"19"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"20"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"21"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"22"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"23"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"24"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"25"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"26"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"27"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"28"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"29"+this.mockquestion, answer:this.mockanswer, type:this.mocktype},
-    {question:"30"+this.mockquestion, answer:this.mockanswer, type:this.mocktype}
-    ]  
-
-    qas = this.allqas.slice(0,15);
-
-    pagenumber=1;
-    maxPageNumber = Math.ceil(this.allqas.length/15);
+  
 
     onClickPlus(){
-      if(this.pagenumber*15<this.allqas.length) {
+      if(this.pagenumber*15<this.selectedqas.length) {
 
         this.pagenumber++;
-        this.qas = this.allqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
+        this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
       }
     }
 
@@ -71,8 +71,129 @@ export class FaqPageComponent {
       if(this.pagenumber>1){
 
         this.pagenumber = this.pagenumber-1;
-        this.qas = this.allqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
+        this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
       }
+    }
+    onClickFilter(filtre: any){
+      this.pagenumber=1;
+      if(filtre=="All"){
+        this.selectedqas = this.allqas; 
+      }else{
+        this.selectedqas = this.allqas.filter((t) => t.type==filtre); 
+      }
+      this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
+    }
+
+    selectQuestion(qa:any){
+      this.popupqa=qa;
+      if(this.popupqa.answerauthor==null){
+        this.popupqa.answered=false;
+      }else{
+        this.popupqa.answered=true;
+      }
+      document.getElementById("popup")!.style.visibility="visible";
+      document.getElementById("popup")!.style.opacity="1";
+      document.getElementById("questiondetailspopup")!.style.visibility="visible";
+    }
+    onClickProposer(){
+      document.getElementById("popup")!.style.visibility="visible";
+      document.getElementById("popup")!.style.opacity="1";
+      document.getElementById("proposerquestionpopup")!.style.visibility="visible";
+    }
+    onClickClose(){
+      document.getElementById("popup")!.style.visibility="hidden";
+      document.getElementById("popup")!.style.opacity="0";
+      document.getElementById("questiondetailspopup")!.style.visibility="hidden";
+      document.getElementById("proposerquestionpopup")!.style.visibility="hidden";
+    }
+
+    submitQuestion(){
+      var date = new Date();
+      var dateText = date.getDay()+"-"+date.getMonth()+"-"+date.getFullYear();
+      var mail = localStorage.getItem("mail");
+
+      this.faqService.askFaq({question:this.questionForm.value.question,authorQuestion:mail,dateQuestion:dateText,categorie:this.questionForm.value.categorie}).subscribe(
+        (datas: any) => {
+            
+          }
+
+          // {question:"28"+this.mockquestion, answer:this.mockanswer, type:this.mocktype
+          // ,questionauthor:this.mockquestionauthor,
+          // answerauthor:this.mockanswerauthor,
+          // questiondate:this.mockdatequestion,
+          // answerdate:this.mockdateanswer},
+
+      );
+      window.location.reload();
+    }
+
+    ngOnInit() {
+      this.faqService.faq().subscribe(
+        (datas: any) => {
+          this.allqas=[];
+          for (var data of datas){
+            this.allqas.push({
+              question:data.question,
+              answer:data.reponse,
+              type:data.categorie,
+              questionauthor:data.authorQuestion,
+              questiondate:data.dateQuestion,
+              answerauthor:data.authorReponse,
+              answerdate:data.date,
+            })
+            
+          }
+          // function compare(a, b) {
+          //   if (a est inférieur à b selon les critères de tri)
+          //      return -1;
+          //   if (a est supérieur à b selon les critères de tri)
+          //      return 1;
+          //   // a doit être égal à b
+          //   return 0;
+          // }
+
+          this.allqas.sort(function(a,b) {
+            
+            var datea, dateb
+            if(a.answer!=null){
+               datea = a.answerdate.split('-')
+            }else{
+               datea = a.questiondate.split('-')
+            }
+
+            if(b.answer!=null){
+              dateb = b.answerdate.split('-')
+           }else{
+              dateb = b.questiondate.split('-')
+           }
+
+           if(datea[2]!=dateb[2]){
+            return +dateb[2]- +datea[2];
+           }else if(datea[1]!=dateb[1]){
+            return +dateb[1]- +datea[1];
+           }else if(datea[0]!=dateb[0]){
+            return +dateb[0]- +datea[0];
+           }else{
+            return 0;
+           }
+           
+           
+           
+          })
+        this.selectedqas = this.allqas;
+        this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
+        
+
+
+
+          // {question:"28"+this.mockquestion, answer:this.mockanswer, type:this.mocktype
+          // ,questionauthor:this.mockquestionauthor,
+          // answerauthor:this.mockanswerauthor,
+          // questiondate:this.mockdatequestion,
+          // answerdate:this.mockdateanswer},
+        
+        }
+      );
     }
 
 
@@ -80,3 +201,5 @@ export class FaqPageComponent {
 
 
 }
+
+

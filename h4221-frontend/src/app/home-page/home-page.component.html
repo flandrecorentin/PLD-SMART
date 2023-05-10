@@ -1,10 +1,46 @@
-<h2>Page d'acceuil du front-end PLD-MARS</h2>
-<a class="link-same-page" routerLink="./blabla-corentin-est-trop-fort">example link page not found</a>
-<p>{{resultat}}</p>
-<a class="link-same-page" routerLink="./inscription">INSCRIRE</a>
-<br/>
-<a class="link-same-page" routerLink="./connexion">CONNECTER</a>
-<br/>
-<a class="link-same-page" routerLink="./faq">FAQ</a>
-<br/>
-<a class="link-same-page" routerLink="./form">FORM</a>
+<app-sidebar></app-sidebar>
+<div id="home">
+
+    <div id="headerhome">
+        <span id="titre">Bienvenue sur Mobilit’IF</span>
+        <img src="../assets/globe.png" id="logotitre"/>
+        <button id="completerInfos"><img src="../assets/baguette.png"/>Compléter mes informations</button>
+        <button id="découvrirDestinations" class="greenButton"><img src="../assets/palmier.png"/>Découvrir les destinations</button>
+    </div>
+    <div class="wrapper">
+        <div id="univs">
+            <p id="titreunivs">Découvrir les universités</p>
+<!--            <div id="choiceCountry">-->
+<!--                <p>choix</p>-->
+<!--              <span>Pays</span>-->
+<!--              <input id="universite" list=list formControlName="university" class="doubleLong" placeholder="Université d'échange" [value]="universite">-->
+<!--              <datalist id=list >-->
+
+<!--                <option *ngFor="for let univ of allUnivs, let i= index">{{univ.nom}}</option>-->
+<!--              </datalist>-->
+<!--            </div>-->
+            <div class="scrollable">
+                <div *ngFor="let univ of univs; let i=index" class="univblock">
+                    <p class="nomuniv">· {{univ.name}}</p>
+                    <p class="liensuniv"><a href={{univ.site}}>Consulter le site web</a> - <a href={{univ.fiche}}>Ouvrir la fiche destination</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="map">
+            <!-- <app-map></app-map> -->
+
+            <img src="../assets/worldHigh.svg" viewBox="0 0 684 648" xmlns="http://www.w3.org/2000/svg" (click)="essai($event)"/>
+        </div>
+        <div id="faq">
+            <div id="qagrid">
+                <div class="qablock" *ngFor="let qa of qas; let i=index">
+                    <p class="type">{{qa.type}}</p>
+                    <p class="question">{{qa.question}}</p>
+                    <p class="answer">{{qa.answer}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <a class="link-same-page" routerLink="/faq"><button id="toFaq"><img src="../assets/question.png"/>Accéder à l'intégralité de la FAQ</button></a>
+</div>

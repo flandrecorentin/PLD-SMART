@@ -1,21 +1,21 @@
 export const navbarData = [
     {
-        routeLink: '',
-        icon: '../../assets/home.png',
-        label: 'Home'
-    },
-    {
-        routeLink: '',
+        routeLink: '/home',
         icon: '../../assets/globe.png',
         label: 'Destinations'
     },
     {
-        routeLink: '',
+        routeLink: '/faq',
         icon: '../../assets/question.png',
         label: 'FAQ Générale'
     },
     {
-        routeLink: '',
+        routeLink: '/form',
+        icon: '../../assets/questionnaire.png',
+        label: 'Retour d\'échange'
+    },
+    {
+        routeLink: '/settings',
         icon: '../../assets/settings.png',
         label: 'Paramètres et profil'
     }
