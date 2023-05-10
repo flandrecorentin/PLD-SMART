@@ -51,7 +51,7 @@ export class FaqAdminPageComponent {
     console.log(this.rechercheForm.value);
     this.selectedqas=this.allqas.filter(qa=> 
       qa.question.toLowerCase().includes(this.rechercheForm.value.recherche!.toLowerCase()) || 
-      qa.answer.toLowerCase().includes(this.rechercheForm.value.recherche!.toLowerCase()));
+      (qa.answer!=null ? qa.answer.toLowerCase().includes(this.rechercheForm.value.recherche!.toLowerCase()) : false));
     this.pagenumber=1;
     this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
   }
@@ -109,9 +109,10 @@ export class FaqAdminPageComponent {
     submitAnswer(){
       var date = new Date();
       var dateText = date.getDay()+"-"+date.getMonth()+"-"+date.getFullYear()
-      this.faqService.answerFaq({reponse:this.answerForm.value.answer,authorReponse:"auteur",dateReponse:dateText,question:this.popupqa.question}).subscribe(
+      
+      var mail = localStorage.getItem("mail");
+      this.faqService.answerFaq({reponse:this.answerForm.value.answer,authorReponse:mail,dateReponse:dateText,question:this.popupqa.question}).subscribe(
         (datas: any) => {
-            console.log("in");
             
           }
 

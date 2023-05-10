@@ -44,6 +44,10 @@ export class HomePageComponent {
             answerdate:"",
   }];
 
+  essai(event:any){
+    console.log("AAAAAAAAh");
+    console.log(event.target)
+  }
 
   ngOnInit() {
     this.faqService.faq().subscribe(
@@ -71,8 +75,63 @@ export class HomePageComponent {
       
       }
     );
+
+
+
+
+    /* Bouton 4 - Afficher SVG */
+
+  // var svg = chargerHttpXML("../assets/worldHigh.svg");
+  // var serializer = new XMLSerializer();
+  // var str = serializer.serializeToString(svg);
+  // var elementHtmlParent = window.document.getElementById(
+  //     "map"
+  // );
+  // elementHtmlParent!.innerHTML = str;
+  // /* Ajout pour le bouton 5 */
+
+  //     elementHtmlParent!.setAttribute(
+  //         "style",
+  //         "background-color: #0af;display: flex;flex-direction: row;justify-content:center;"
+  //     )
+  //     /* Ajouts pour la carte */
+  //     const lesPays = document.getElementsByClassName("land");
+  //     Array.from(lesPays).forEach((pays) => {
+  //         // Do stuff here
+          
+  //         pays.addEventListener("mouseover", () =>
+  //             console.log(pays.getAttribute("id"))
+  //         );
+  //         // pays.addEventListener("mouseleave", () =>
+  //         //     )
+  //         // );
+  //     });
+  
+
+
+
+          
+    
   }
 }
+// function chargerHttpXML(xmlDocumentUrl:any) {
 
+//   var httpAjax;
+
+//   // httpAjax = window.XMLHttpRequest ?
+//   //     new XMLHttpRequest() :
+//   //     new ActiveXObject('Microsoft.XMLHTTP');
+//   httpAjax = new XMLHttpRequest();
+
+//   if (httpAjax.overrideMimeType) {
+//       httpAjax.overrideMimeType('text/xml');
+//   }
+
+//   //chargement du fichier XML � l'aide de XMLHttpRequest synchrone (le 3� param�tre est d�fini � false)
+//   httpAjax.open('GET', xmlDocumentUrl, false);
+//   httpAjax.send();
+
+//   return httpAjax.responseXML;
+// }
 
 
