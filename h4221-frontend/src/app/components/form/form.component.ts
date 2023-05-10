@@ -15,6 +15,26 @@ export class FormComponent implements OnInit {
 
   constructor(private formService: FormService, private router: Router) {}
 
+  flattenObject = (obj: any) => {
+    const flattened : any = {}
+  
+    Object.keys(obj).forEach((key) => {
+      const value = obj[key.toString()]
+  
+      if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+        Object.assign(flattened, this.flattenObject(value))
+      } else if(Array.isArray(value)) {
+        for(let i in value){
+          flattened[value[i]] = true
+        }
+      }
+      else {
+        flattened[key] = value
+      }
+    })
+    return flattened
+  }
+
   sendResults (sender: Model) {
     const mail = localStorage.getItem('mail');
     const date = formatDate(Date.now(), 'dd-MM-yyyy', 'en');
@@ -23,7 +43,7 @@ export class FormComponent implements OnInit {
       { 
       "author": mail,
       "date": date,
-      "information": sender.data
+      "information": this.flattenObject(sender.data)
     });
     this.formService.sendForm(results).subscribe(
       res => {
