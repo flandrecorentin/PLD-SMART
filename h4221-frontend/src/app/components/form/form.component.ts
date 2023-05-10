@@ -1,4 +1,6 @@
+import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormService } from 'src/app/config/form.service';
 import { Model } from "survey-core"
 
@@ -11,11 +13,23 @@ export class FormComponent implements OnInit {
   title = 'My first survey';
   surveyModel !: Model;
 
-  constructor(private formService: FormService) {}
+  constructor(private formService: FormService, private router: Router) {}
 
-  alertResults (sender: Model) {
-    const results = JSON.stringify(sender.data);
-    console.log(results);
+  sendResults (sender: Model) {
+    const mail = localStorage.getItem('mail');
+    const date = formatDate(Date.now(), 'dd-MM-yyyy', 'en');
+    var results : JSON = JSON.parse('{}');
+    Object.assign(results, 
+      { 
+      "author": mail,
+      "date": date,
+      "information": sender.data
+    });
+    this.formService.sendForm(results).subscribe(
+      res => {
+        console.log(res)
+      }
+    )
   }
 
   ngOnInit() {
@@ -23,7 +37,7 @@ export class FormComponent implements OnInit {
       (res) => {
         const survey = new Model(res);
         this.surveyModel = survey;
-        survey.onComplete.add(this.alertResults)
+        survey.onComplete.add(this.sendResults.bind(this))
       }
     )
     

@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AuthenticationService } from '../config/authentication.service';
 import { ConnexionDetails } from '../interfaces/connexion-details.model';
 import { Router } from '@angular/router';
+import { Userdetails } from '../interfaces/userdetails';
 
 @Component({
   selector: 'app-connexion-page',
@@ -24,6 +25,13 @@ export class ConnexionPageComponent {
     this.authenticationService.connexion(this.loginForm.value).subscribe(
       (rep: string) => {
       localStorage.setItem('auth_token', rep);
+      this.authenticationService.getUserDetails().subscribe(
+        (userDetails : Userdetails) => {
+          if(userDetails.mail != null) {
+            localStorage.setItem('mail', userDetails.mail);
+          }
+        }
+      )
       this.router.navigateByUrl('/home');
       },
       (error) => {
