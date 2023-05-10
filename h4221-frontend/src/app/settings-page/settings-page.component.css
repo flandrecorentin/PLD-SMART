@@ -15,7 +15,7 @@
     font-size:2vw;
     font-weight: 500;
 }
-#settings div .titre{
+#settings .titre{
     
     margin-left:0px;
     font-family: 'Inter', sans-serif;
@@ -23,7 +23,7 @@
     font-weight: 500;
     margin-bottom:0px;
 }
-#settings div .soustitre{
+#settings .soustitre{
     margin-top:3px;
     color:grey;
     margin-left:0px;
@@ -55,4 +55,27 @@
 }
 #settings .block .doubleLong{
     grid-column: 2 / 4;
+}
+
+#settings form button{
+    border-radius: 5px;
+    padding:7px 12px 7px 12px;
+    border: rgb(187, 187, 187) 1px solid;
+    font-family: 'Inter', sans-serif;
+    font-size:0.9vw;
+    font-weight: 500;
+    float: right;
+    margin-right:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#settings #annuler{
+    background-color: white;
+}
+#settings #save{
+    background-color: #6B9080;
+    color:white;
+}
+#settings #mdp-form{
+    margin-top:100px;
 }
