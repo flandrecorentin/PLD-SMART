@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+import ifinsa.h4221backend.service.ChatService;
 
 import java.io.FileReader;
 import java.util.LinkedList;
@@ -21,6 +22,9 @@ public class Initialisation implements ApplicationRunner {
 //    Liste des services utiles à l'initialisation
     @Autowired
     UserService userService;
+
+    @Autowired
+    ChatService chatService;
 
     @Autowired
     UniversiteService universiteService;
