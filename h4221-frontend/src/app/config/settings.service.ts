@@ -9,6 +9,7 @@ export class SettingsService {
   // Links to call back-end services
   backendUrl = 'http://localhost:9000'
   formURL = this.backendUrl + '/parametres';
+  mdpURL = this.backendUrl + '/changepassword';
   httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${localStorage.getItem("auth_token")}`,
@@ -19,6 +20,6 @@ export class SettingsService {
     return this.http.put<JSON>(this.formURL, form, {headers: this.httpHeaders});
   }
   modifyMdp(form:any) {
-    return this.http.put<JSON>(this.formURL, form, {headers: this.httpHeaders});
+    return this.http.put<JSON>(this.mdpURL, form, {headers: this.httpHeaders});
   }
 }

@@ -6,6 +6,7 @@ import { UnivService } from '../config/univ.service';
 import { Userdetails } from '../interfaces/userdetails';
 import { ConnexionDetails } from '../interfaces/connexion-details.model';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-settings-page',
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./settings-page.component.css']
 })
 export class SettingsPageComponent {
-
+  errorMessage = "";
   invalidCredentials = false;
 
   constructor(private router: Router, private fb: FormBuilder, private settingsService: SettingsService, private authenticationService : AuthenticationService, private univService: UnivService) { }
@@ -34,7 +35,16 @@ export class SettingsPageComponent {
   })
 
   submitMdp(){
-    console.log("OUI")
+    this.settingsService.modifyMdp({nouveauMDP:this.mdpForm.value.nouveauMdp, ancienMDP:this.mdpForm.value.ancienMdp}).subscribe(
+      (rep: any) => {
+        
+        this.router.navigateByUrl('/home')
+      },
+      (error: HttpErrorResponse) => {
+        this.errorMessage = "Le mot de passe actuel était erronné, veuillez l'entrer à nouveau"
+        // Handle error
+        // Use if conditions to check error code, this depends on your api, how it sends error messages
+      });
   }
 
   submitSettings() {
@@ -48,10 +58,10 @@ export class SettingsPageComponent {
       departement:this.settingsForm.value.departement,
       country:this.settingsForm.value.country,
     }
-    if(this.annee=="Autre"){
+    if(this.settingsForm.value.studyYear=="Autre"){
       JSONEnvoi.studyYear= "0"
     }else{
-      JSONEnvoi.studyYear= this.annee![0]
+      JSONEnvoi.studyYear= this.settingsForm.value.studyYear![0]
     }
     var universiteTrouvee=this.allUnivs[0];
     for(let univIter of this.allUnivs){

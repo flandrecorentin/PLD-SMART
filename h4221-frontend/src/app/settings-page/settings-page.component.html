@@ -73,15 +73,15 @@
             <p class="soustitre">Entrez votre ancien et votre nouveau mot de passe</p>
             
             <hr/>
+            <p id="messageErreur">{{errorMessage}}</p>
             <div class="block">
                 <span>Ancien mot de passe</span>
-                <input id="ancienMdp" formControlName="ancienMdp" class="doubleLong"/>
+                <input id="ancienMdp" type="password" formControlName="ancienMdp" class="doubleLong" placeholder="·······"/>
             </div>
-            
             <hr/>
             <div class="block">
                 <span>Nouveau mot de passe</span>
-                <input id="nouveauMdp" formControlName="nouveauMdp" class="doubleLong"/>
+                <input id="nouveauMdp" type="password" formControlName="nouveauMdp" class="doubleLong" placeholder="·······"/>
             </div>
             
         <button id="save" type="submit">Sauvegarder le mot de passe</button>
