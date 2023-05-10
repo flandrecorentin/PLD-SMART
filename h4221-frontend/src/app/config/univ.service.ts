@@ -4,22 +4,23 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class SettingsService {
+export class UnivService {
 
   // Links to call back-end services
   backendUrl = 'http://localhost:9000'
-  formURL = this.backendUrl + '/parametres';
-  mdpURL = this.backendUrl + '/changepassword';
+  univURL = this.backendUrl + '/universite';
   httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${localStorage.getItem("auth_token")}`,
 });
 
   constructor(private http: HttpClient) { }
-  modify(form:any) {
-    return this.http.put<JSON>(this.formURL, form, {headers: this.httpHeaders});
+
+
+  getAllUnivs() {
+    return this.http.get<JSON>(this.univURL, {headers: this.httpHeaders});
   }
-  modifyMdp(form:any) {
-    return this.http.put<JSON>(this.mdpURL, form, {headers: this.httpHeaders});
-  }
+  // modify(form:any) {
+  //   return this.http.post<JSON>(this.formURL, form, {headers: this.httpHeaders});
+  // }
 }
