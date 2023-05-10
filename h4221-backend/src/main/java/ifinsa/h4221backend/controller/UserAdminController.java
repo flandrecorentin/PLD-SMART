@@ -78,6 +78,7 @@ public class UserAdminController {
                 return new ResponseEntity<>(token, HttpStatus.OK);
             }
         } catch(Exception exception){
+            System.out.println(exception);
             System.out.println("[UserAdminController]: Problème de serveur");
             return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
         }

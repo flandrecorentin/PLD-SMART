@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthenticationService } from '../config/authentication.service';
-import { ConnexionDetails } from '../interfaces/connexion-details.model';
 import { Router } from '@angular/router';
 import { Userdetails } from '../interfaces/userdetails';
 

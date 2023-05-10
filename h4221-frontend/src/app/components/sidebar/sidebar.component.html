@@ -13,7 +13,7 @@
 
     <ul class="sidebar-nav">
         <li class="sidebar-van-item" *ngFor="let data of navData">
-            <a href="" class="sidebar-nav-link" [routerLink]="data.routeLink">
+            <a href="" class="sidebar-nav-link" [routerLink]="data.routeLink" *ngIf="(data.access=='ROLE_USER'|| (this.isAdmin == true && data.access == 'ROLE_ADMIN'))">
                 <img class="sidebar-link-icon" [src]="data.icon"/>
                 <span class="sidebar-link-text" >{{data.label}}</span>
             </a>
