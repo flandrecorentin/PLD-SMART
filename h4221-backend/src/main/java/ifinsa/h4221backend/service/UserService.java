@@ -79,4 +79,29 @@ public class UserService implements UserDetailsService {
             return null;
         }
     }
+
+    public int modificationMotDePasse(String tokenUser, String ancienPassword, String nouveauPassword){
+        try{
+            String mail = jwtUtil.extractUsername(tokenUser);
+            User user = userModelDAO.findUserByMail(mail);
+            System.out.println(user.getPassword()+"=="+ancienPassword);
+            if(user==null){
+                return 1;
+            }else if(!user.getPassword().equals(ancienPassword)){
+                return 2;
+            }else if(user.getPassword().equals(ancienPassword)){
+                // faire modification password
+                user.setPassword(nouveauPassword);
+                userModelDAO.save(user);
+                return 0;
+            }else{
+
+            }
+            System.out.println(user);
+            return 0;
+        }catch (Exception exception){
+
+            return 0;
+        }
+    }
 }
