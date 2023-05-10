@@ -82,7 +82,10 @@ except:
         plusInfo.click()
         time.sleep(2)
 
-        nomuniversite = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Etablissement externe"]/../../../div[2]/div/p').text
+        try:
+            nomuniversite = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Etablissement externe"]/../../../div[2]/div/p').text
+        except:
+            nomuniversite = "universite"
         nomuniversite = unidecode.unidecode(nomuniversite)
         idNom = nomuniversite.lower()   
         idnom = idNom.replace(" ","-")
@@ -97,68 +100,104 @@ except:
             
 
             etablissement["nom"]=nomuniversite
+            try:
+                pays = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "PAYS (relation)"]/../../../div[2]/div/p')
+                print(pays.text)
+                etablissement["pays"]=unidecode.unidecode(pays.text)
+            except:
+                etablissement["pays"]="N/A"
 
-            pays = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "PAYS (relation)"]/../../../div[2]/div/p')
-            print(pays.text)
-            etablissement["pays"]=unidecode.unidecode(pays.text)
+            try:
+                Accord = []
+                accord = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Accord"]/../../../div[2]/div/p')
+                print(accord.text)
+                Accord.append(unidecode.unidecode(accord.text))
+                etablissement["accord"]=Accord
+            except:
+                etablissement["accord"]="N/A"
 
-            Accord = []
-            accord = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Accord"]/../../../div[2]/div/p')
-            print(accord.text)
-            Accord.append(unidecode.unidecode(accord.text))
-            etablissement["accord"]=Accord
+            try:
+                place = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Places - Nombre et durée"]/../../../div[2]/div/p')
+                print(place.text)
+                etablissement["place"]=unidecode.unidecode(place.text)
+            except:
+                etablissement["place"]="N/A"
 
-            place = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Places - Nombre et durée"]/../../../div[2]/div/p')
-            print(place.text)
-            etablissement["place"]=unidecode.unidecode(place.text)
+            try:
+                descr = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Description"]/../../../div[2]/div/p')
+                print(descr.text)
+                etablissement["descr"]=unidecode.unidecode(descr.text)
+            except:
+                etablissement["descr"]="N/A"
 
-            descr = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Description"]/../../../div[2]/div/p')
-            print(descr.text)
-            etablissement["descr"]=unidecode.unidecode(descr.text)
-
-            niveauLV = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Niveau de langues demandé"]/../../../div[2]/div/p')
-            print(niveauLV.text)
-            etablissement["niveauLV"]=unidecode.unidecode(niveauLV.text)
-
-            debuts1= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Début S1"]/../../../div[2]/div/p')
-            print(debuts1.text)
-            etablissement["debuts1"]=unidecode.unidecode(debuts1.text)
-
-            fins1= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Fin S1"]/../../../div[2]/div/p')
-            print(fins1.text)
-            etablissement["Fins1"]=unidecode.unidecode(fins1.text)
-
-            debuts2= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Début S2"]/../../../div[2]/div/p')
-            print(debuts2.text)
-            etablissement["debuts2"]=unidecode.unidecode(debuts2.text)
-
-            fins2= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Fin S2"]/../../../div[2]/div/p')
-            print(fins2.text)
-            etablissement["finS2"]=unidecode.unidecode(fins2.text)
-
-            candidature= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Mode de candidature"]/../../../div[2]/div/p')
-            print(candidature.text)
-            etablissement["candidature"]=unidecode.unidecode(candidature.text)
+            try:
+                niveauLV = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Niveau de langues demandé"]/../../../div[2]/div/p')
+                print(niveauLV.text)
+                etablissement["niveauLV"]=unidecode.unidecode(niveauLV.text)
+            except:
+                etablissement["niveauLV"]="N/A"
             
+            try:
+                debuts1= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Début S1"]/../../../div[2]/div/p')
+                print(debuts1.text)
+                etablissement["debuts1"]=unidecode.unidecode(debuts1.text)
+            except:
+                etablissement["debuts1"]="N/A"
+                
+            try:
+                fins1= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Fin S1"]/../../../div[2]/div/p')
+                print(fins1.text)
+                etablissement["Fins1"]=unidecode.unidecode(fins1.text)
+            except:
+                etablissement["Fins1"]="N/A"
 
+            try:
+                debuts2= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Début S2"]/../../../div[2]/div/p')
+                print(debuts2.text)
+                etablissement["debuts2"]=unidecode.unidecode(debuts2.text)
+            except:
+                etablissement["debuts2"]="N/A"
+
+            try:
+                fins2= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Fin S2"]/../../../div[2]/div/p')
+                print(fins2.text)
+                etablissement["finS2"]=unidecode.unidecode(fins2.text)
+            except:
+                etablissement["finS2"]="N/A"
+
+            try:
+                candidature= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Mode de candidature"]/../../../div[2]/div/p')
+                print(candidature.text)
+                etablissement["candidature"]=unidecode.unidecode(candidature.text)
+            except:
+                etablissement["candidature"]="N/A"
+                
             #etablissement["pays"]=unidecode.unidecode(pays.text)
-            
-            
+                
             univBtn = driver.find_element(By.LINK_TEXT, "Etablissements")
             univBtn.click()
             time.sleep(1)
 
-            Ville= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Ville"]/../../../div[2]/div/p')
-            print(Ville.text)
-            etablissement["ville"]=unidecode.unidecode(Ville.text)
+            try:
+                Ville= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Ville"]/../../../div[2]/div/p')
+                print(Ville.text)
+                etablissement["ville"]=unidecode.unidecode(Ville.text)
+            except:
+                etablissement["ville"]="N/A"
 
-            URL= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "URL"]/../../../div[2]/div/p')
-            print(URL.text)
-            etablissement["URL"]=unidecode.unidecode(URL.text)
+            try:
+                URL= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "URL"]/../../../div[2]/div/p')
+                print(URL.text)
+                etablissement["URL"]=unidecode.unidecode(URL.text)
+            except:
+                etablissement["URL"]="N/A"
 
-            Fichier= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Fichier"]/../../../div[2]/div/p')
-            print(Fichier.text)
-            etablissement["URL"]=unidecode.unidecode(Fichier.text)
+            try:
+                Fichier= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Fichier"]/../../../div[2]/div/p')
+                print(Fichier.text)
+                etablissement["Fichier"]=unidecode.unidecode(Fichier.text)
+            except:
+                etablissement["Fichier"]="N/A"
 
 
 
