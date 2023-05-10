@@ -1,1 +1,188 @@
-{"brandenburgische-technische-universitat-cottbus-senftenberg,-allemagne": {"nom": "Brandenburgische Technische Universitat Cottbus-Senftenberg, Allemagne", "pays": "Allemagne", "accord": ["Brandenburgische Technische Universit\u00e4t Cottbus-Senftenberg - Erasmus + SMS (\u00e9tudiante) - GCU", "Brandenburgische Technische Universitat Cottbus-Senftenberg - Erasmus + SMS (etudiante) - GEN"]}, "karlsruher-institut-fur-technologie,-allemagne": {"nom": "Karlsruher Institut fur Technologie, Allemagne", "pays": "Allemagne", "accord": ["Karlsruher Institut f\u00fcr Technologie - Accord de double-dipl\u00f4me 1 - GM", "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - BS"]}, "instituto-tecnologico-de-buenos-aires,-argentine": {"nom": "Instituto Tecnologico de Buenos Aires, Argentine", "pays": "Argentine", "accord": ["Instituto Tecnol\u00f3gico de Buenos Aires - Accord de double dipl\u00f4me 1 - GM", "Instituto Tecnologico de Buenos Aires - Accord de mobilite - BS-GE-GEN-GI-GM-IF-SGM-TC"]}, "instituto-universitario-aeronautico,-argentine": {"nom": "Instituto Universitario Aeronautico, Argentine", "pays": "Argentine", "accord": ["Instituto Universitario Aeron\u00e1utico - Accord de mobilit\u00e9 - Tous D\u00e9partements"]}, "universidad-de-buenos-aires,-argentine": {"nom": "Universidad de Buenos Aires, Argentine", "pays": "Argentine", "accord": ["Universidad de Buenos Aires - Accord de mobilit\u00e9 - Tous D\u00e9partements"]}, "montanuniversitat-leoben,-autriche": {"nom": "Montanuniversitat Leoben, Autriche", "pays": "Autriche", "accord": ["Montanuniversit\u00e4t Leoben - Erasmus + SMS (\u00e9tudiante) - GEN - *OUT*", "Montanuniversitat Leoben - Erasmus + SMS (etudiante) - SGM - *OUT*"]}, "technische-universitat-graz,-autriche": {"nom": "Technische Universitat Graz, Autriche", "pays": "Autriche", "accord": ["Technische Universit\u00e4t Graz - Erasmus + SMS (\u00e9tudiante) - GM", "Technische Universitat Graz - Erasmus + SMS (etudiante) - SGM"]}, "ku-leuven,-belgique": {"nom": "KU Leuven, Belgique", "pays": "Belgique", "accord": ["KU Leuven - Erasmus + SMS (\u00e9tudiante) - BS", "KU Leuven - Erasmus + SMS (etudiante) - GEN-GI-SGM-TC"]}, "universite-de-namur,-belgique": {"nom": "Universite de Namur, Belgique", "pays": "Belgique", "accord": ["Universit\u00e9 de Namur - Faculty of Computer Science - Erasmus + SMS (\u00e9tudiante) - IF-TC *OUT*"]}, "universite-libre-de-bruxelles,-belgique": {"nom": "Universite Libre de Bruxelles, Belgique", "pays": "Belgique", "accord": ["Universit\u00e9 Libre-Ecole Polytechnique de Bruxelles - Erasmus + SMS (\u00e9tudiante) - BS-GCU-GE-GEN-GI-GM-IF-TC"]}}
+{
+    "brandenburgische-technische-universitat-cottbus-senftenberg": {
+        "nom": "Brandenburgische Technische Universitat Cottbus-Senftenberg",
+        "pays": "Allemagne",
+        "accord": [
+            "Brandenburgische Technische Universitat Cottbus-Senftenberg - Erasmus + SMS (etudiante) - GCU",
+            "Brandenburgische Technische Universitat Cottbus-Senftenberg - Erasmus + SMS (etudiante) - GEN"
+        ],
+        "place": "2/4.00 Periode academique ( 2023/24 )",
+        "descr": "",
+        "niveauLV": "B1 Allemand ou Anglais",
+        "debuts1": "01/10/2020",
+        "Fins1": "31/03/2021",
+        "debuts2": "01/04/2021",
+        "finS2": "30/09/2021",
+        "candidature": "Online Application via MoveON (https://www.b-tu.de/en/international/incoming-exchange/exchange-students-incomings/erasmus-eu)",
+        "ville": "Cottbus",
+        "URL": "http://www.b-tu.de/",
+        "Fichier": "N/A"
+    },
+    "karlsruher-institut-fur-technologie": {
+        "nom": "Karlsruher Institut fur Technologie",
+        "pays": "Allemagne",
+        "accord": [
+            "Karlsruher Institut fur Technologie - Accord de double-diplome 1 - GM",
+            "Karlsruher Institut fur Technologie - Erasmus + SMS (etudiante) - BS"
+        ],
+        "place": "7/14.00 Periode academique ( 2023/24 )",
+        "descr": "Groupe franco-allemand en 3A et 4A a l'INSA. Stage industriel en 4A, semestre 2.Depart au KIT en 5A pour 3 semestres.",
+        "niveauLV": "Niveau suffisant en allemand. TOEIC 785 en fin de semestre 7.",
+        "debuts1": "01/10/2020",
+        "Fins1": "31/03/2021",
+        "debuts2": "12/04/2021",
+        "finS2": "28/08/2021",
+        "candidature": "-",
+        "ville": "Karlsruhe",
+        "URL": "http://www.kit.edu/",
+        "Fichier": "N/A"
+    },
+    "instituto-tecnologico-de-buenos-aires": {
+        "nom": "Instituto Tecnologico de Buenos Aires",
+        "pays": "Argentine",
+        "accord": [
+            "Instituto Tecnologico de Buenos Aires - Accord de double diplome 1 - GM",
+            "Instituto Tecnologico de Buenos Aires - Accord de mobilite - BS-GE-GEN-GI-GM-IF-SGM-TC"
+        ],
+        "place": "2/2.00 Periode academique ( 2023/24 )",
+        "descr": "Depart uniquement au s2 de la 4eme annee",
+        "niveauLV": "Niveau B1 en espagnol",
+        "debuts1": "01/08/2022",
+        "Fins1": "23/12/2022",
+        "debuts2": "02/03/2022",
+        "finS2": "22/07/2022",
+        "candidature": "Una vez cerrado el periodo de nominacion, ITBA contactara directamente via mail a los alumnos nominados. Compartiremos con ellos un link a nuestra plataforma para que realicen su aplicacion online donde deberan adjuntar los siguientes documentos: * Fotocopia de las dos primeras paginas del pasaporte. * Carta de motivacion explicando las razones por las que el alumno desea estudiar en el ITBA. * Certificado(s) analitico(s) de notas original(es) firmado(s) y sellado(s) por la universidad de origen. * Plan de estudios (listado de asignaturas a cursar durante el semestre en ITBA). En caso el alumno haya sido nominado por su universidad de origen para cursar un ano academico en el ITBA, en la aplicacion solicitamos incluir unicamente las materias que el alumno vaya a cursar durante su primer semestre en el ITBA. * Formulario medico (template sera enviado via mail) * Examen diagnostico de espanol (template sera enviado via mail). Dicho examen debe ser incluido en la aplicacion unicamente si el idioma nativo no es el espanol. * Los alumnos nominados a una doble titulacion deberan incluir tambien certificado de graduacion original del colegio secundario. Importante: Solicitamos por favor no enviar documentacion via mail.",
+        "ville": "Buenos Aires",
+        "URL": "http://www.itba.edu.ar",
+        "Fichier": "N/A"
+    },
+    "instituto-universitario-aeronautico": {
+        "nom": "Instituto Universitario Aeronautico",
+        "pays": "Argentine",
+        "accord": [
+            "Instituto Universitario Aeronautico - Accord de mobilite - Tous Departements"
+        ],
+        "place": "10/20.00 Periode academique ( 2023/24 )",
+        "descr": "",
+        "niveauLV": "-",
+        "debuts1": "N/A",
+        "Fins1": "N/A",
+        "debuts2": "N/A",
+        "finS2": "N/A",
+        "candidature": "",
+        "ville": "Cordoba",
+        "URL": "http://www.iua.edu.ar",
+        "Fichier": "N/A"
+    },
+    "uba---facultad-de-ingenieria,-universidad-de-buenos-aires": {
+        "nom": "UBA - Facultad de Ingenieria, Universidad de Buenos Aires",
+        "pays": "Argentine",
+        "accord": [
+            "Universidad de Buenos Aires - Accord de mobilite - Tous Departements"
+        ],
+        "place": "10/10.00 Periode academique ( Semestre Automne Hiver 2023/24 )",
+        "descr": "",
+        "niveauLV": "Niveau B1 en espagnol",
+        "debuts1": "01/03/2022",
+        "Fins1": "",
+        "debuts2": "",
+        "finS2": "",
+        "candidature": "",
+        "ville": "Buenos Aires",
+        "URL": "http://www.uba.ar",
+        "Fichier": "N/A"
+    },
+    "montanuniversitat-leoben": {
+        "nom": "Montanuniversitat Leoben",
+        "pays": "Autriche",
+        "accord": [
+            "Montanuniversitat Leoben - Erasmus + SMS (etudiante) - GEN - *OUT*",
+            "Montanuniversitat Leoben - Erasmus + SMS (etudiante) - SGM - *OUT*"
+        ],
+        "place": "1/1.00 Periode academique ( 2023/24 )",
+        "descr": "Academic calendar: https://www.unileoben.ac.at/en/studying/academic-calendar",
+        "niveauLV": "B2",
+        "debuts1": "",
+        "Fins1": "",
+        "debuts2": "",
+        "finS2": "",
+        "candidature": "",
+        "ville": "Leoben",
+        "URL": "http://www.unileoben.ac.at",
+        "Fichier": "N/A"
+    },
+    "technische-universitat-graz": {
+        "nom": "Technische Universitat Graz",
+        "pays": "Autriche",
+        "accord": [
+            "Technische Universitat Graz - Erasmus + SMS (etudiante) - GM",
+            "Technische Universitat Graz - Erasmus + SMS (etudiante) - SGM"
+        ],
+        "place": "2/2.00 Periode academique ( 2023/24 )",
+        "descr": "",
+        "niveauLV": "English OR German Level of at least Level B2 according to CEFR",
+        "debuts1": "N/A",
+        "Fins1": "31/01/2022",
+        "debuts2": "N/A",
+        "finS2": "",
+        "candidature": "",
+        "ville": "Graz",
+        "URL": "http://www.tugraz.at",
+        "Fichier": "N/A"
+    },
+    "ku-leuven": {
+        "nom": "KU Leuven",
+        "pays": "Belgique",
+        "accord": [
+            "KU Leuven - Erasmus + SMS (etudiante) - BS",
+            "KU Leuven - Erasmus + SMS (etudiante) - GEN-GI-SGM-TC"
+        ],
+        "place": "2/4.00 Periode academique ( 2023/24 )",
+        "descr": "",
+        "niveauLV": "B2",
+        "debuts1": "21/09/2020",
+        "Fins1": "",
+        "debuts2": "",
+        "finS2": "",
+        "candidature": "",
+        "ville": "Leuven",
+        "URL": "http://www.kuleuven.be",
+        "Fichier": "N/A"
+    },
+    "universite-de-namur": {
+        "nom": "Universite de Namur",
+        "pays": "Belgique",
+        "accord": [
+            "Universite de Namur - Faculty of Computer Science - Erasmus + SMS (etudiante) - IF-TC *OUT*"
+        ],
+        "place": "2/2.00 Periode academique ( 2023/24 )",
+        "descr": "",
+        "niveauLV": "-",
+        "debuts1": "N/A",
+        "Fins1": "N/A",
+        "debuts2": "N/A",
+        "finS2": "N/A",
+        "candidature": "",
+        "ville": "Namur",
+        "URL": "http://www.fundp.ac.be",
+        "Fichier": "N/A"
+    },
+    "universite-libre-de-bruxelles": {
+        "nom": "Universite Libre de Bruxelles",
+        "pays": "Belgique",
+        "accord": [
+            "Universite Libre-Ecole Polytechnique de Bruxelles - Erasmus + SMS (etudiante) - BS-GCU-GE-GEN-GI-GM-IF-TC"
+        ],
+        "place": "2/4.00 Periode academique ( 2023/24 )",
+        "descr": "https://www.ulb.be/en/incoming-mobility/practical-information-for-incoming-students",
+        "niveauLV": "B1",
+        "debuts1": "14/09/2020",
+        "Fins1": "",
+        "debuts2": "",
+        "finS2": "",
+        "candidature": "",
+        "ville": "Bruxelles",
+        "URL": "http://www.ulb.ac.be",
+        "Fichier": "N/A"
+    }
+}
