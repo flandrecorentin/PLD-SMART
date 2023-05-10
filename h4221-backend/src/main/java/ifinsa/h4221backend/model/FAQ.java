@@ -19,6 +19,16 @@ public class FAQ {
     public FAQ() {
     }
 
+    public FAQ(String question, String categorie, String reponse, String authorQuestion, String authorReponse, String dateQuestion, String dateReponse) {
+        this.question = question;
+        this.categorie = categorie;
+        this.reponse = reponse;
+        this.authorQuestion = authorQuestion;
+        this.authorReponse = authorReponse;
+        this.dateQuestion = dateQuestion;
+        this.dateReponse = dateReponse;
+    }
+
     public String getQuestion() {
         return question;
     }
