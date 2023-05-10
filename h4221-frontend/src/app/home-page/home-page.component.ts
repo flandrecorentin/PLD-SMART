@@ -2,6 +2,9 @@ import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {AppSettings} from '../app-settings';
 import { FaqService } from '../config/faq.service';
+import { PaysService } from '../config/pays.service';
+import { UnivService } from '../config/univ.service';
+import {FormBuilder, Validators } from '@angular/forms';
 
 
 @Component({
@@ -11,9 +14,15 @@ import { FaqService } from '../config/faq.service';
 })
 export class HomePageComponent {
   resultat = ""
-  constructor(private _httpClient: HttpClient, private faqService: FaqService) {
-  }
+  univsOfTheCountry!: any;
+  constructor(private _httpClient: HttpClient, private fb: FormBuilder, private faqService: FaqService , private paysService: PaysService, private univService: UnivService) {
 
+  }
+  paysForm = this.fb.group({
+    pays: ["", Validators.required],
+  })
+  pays!: string;
+  allPays=[{identifiant: ''}];
   mockUniversites=[
     {name:"GE3 - Institute of International Education (IIE)", site:"google.com", fiche:"google.com"},
     {name:"Illinois Institute of Technology", site:"google.com", fiche:"google.com"},
@@ -49,23 +58,23 @@ export class HomePageComponent {
     console.log(event.target)
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.faqService.faq().subscribe(
       (datas: any) => {
-        this.allqas=[];
-        for (var data of datas){
+        this.allqas = [];
+        for (var data of datas) {
           this.allqas.push({
-            question:data.question,
-            answer:data.reponse,
-            type:data.categorie,
-            questionauthor:data.authorQuestion,
-            questiondate:data.dateQuestion,
-            answerauthor:data.authorReponse,
-            answerdate:data.date,
+            question: data.question,
+            answer: data.reponse,
+            type: data.categorie,
+            questionauthor: data.authorQuestion,
+            questiondate: data.dateQuestion,
+            answerauthor: data.authorReponse,
+            answerdate: data.date,
           })
 
         }
-      this.qas = this.allqas.slice(0,5);
+        this.qas = this.allqas.slice(0, 5);
 
         // {question:"28"+this.mockquestion, answer:this.mockanswer, type:this.mocktype
         // ,questionauthor:this.mockquestionauthor,
@@ -77,50 +86,60 @@ export class HomePageComponent {
     );
 
 
-
-
     /* Bouton 4 - Afficher SVG */
 
-  // var svg = chargerHttpXML("../assets/worldHigh.svg");
-  // var serializer = new XMLSerializer();
-  // var str = serializer.serializeToString(svg);
-  // var elementHtmlParent = window.document.getElementById(
-  //     "map"
-  // );
-  // elementHtmlParent!.innerHTML = str;
-  // /* Ajout pour le bouton 5 */
+    // var svg = chargerHttpXML("../assets/worldHigh.svg");
+    // var serializer = new XMLSerializer();
+    // var str = serializer.serializeToString(svg);
+    // var elementHtmlParent = window.document.getElementById(
+    //     "map"
+    // );
+    // elementHtmlParent!.innerHTML = str;
+    // /* Ajout pour le bouton 5 */
 
-  //     elementHtmlParent!.setAttribute(
-  //         "style",
-  //         "background-color: #0af;display: flex;flex-direction: row;justify-content:center;"
-  //     )
-  //     /* Ajouts pour la carte */
-  //     const lesPays = document.getElementsByClassName("land");
-  //     Array.from(lesPays).forEach((pays) => {
-  //         // Do stuff here
+    //     elementHtmlParent!.setAttribute(
+    //         "style",
+    //         "background-color: #0af;display: flex;flex-direction: row;justify-content:center;"
+    //     )
+    //     /* Ajouts pour la carte */
+    //     const lesPays = document.getElementsByClassName("land");
+    //     Array.from(lesPays).forEach((pays) => {
+    //         // Do stuff here
 
-  //         pays.addEventListener("mouseover", () =>
-  //             console.log(pays.getAttribute("id"))
-  //         );
-  //         // pays.addEventListener("mouseleave", () =>
-  //         //     )
-  //         // );
-  //     });
+    //         pays.addEventListener("mouseover", () =>
+    //             console.log(pays.getAttribute("id"))
+    //         );
+    //         // pays.addEventListener("mouseleave", () =>
+    //         //     )
+    //         // );
+    //     });
 
 
-  //  Liste des universites
+    //  Liste des universites
 
 
     // liste des pays
-    // await this.univService.getAllUnivs().forEach(
-    //   (rep:any) => {
-    //     this.allUnivs=rep
-    //     return 1;
-    //   }
-    // );
+    await this.paysService.getAllPays().forEach(
+      (rep: any) => {
+        console.log(rep)
+        this.allPays = rep
+        return 1;
+      }
+    );
   }
 
-  allUnivs=[{pays: ''}];
+
+  submitPays() {
+    console.log(this.paysForm.value.pays)
+    this.univService.getAllUnivsByCountry(this.paysForm.value.pays).subscribe(
+      (rep: any) => {
+        this.univsOfTheCountry = rep;
+        console.log(this.univsOfTheCountry)
+      });
+
+    // this.router.navigateByUrl("/")
+  }
+
 }
 // function chargerHttpXML(xmlDocumentUrl:any) {
 

@@ -10,19 +10,19 @@
     <div class="wrapper">
         <div id="univs">
             <p id="titreunivs">Découvrir les universités</p>
-<!--            <div id="choiceCountry">-->
-<!--                <p>choix</p>-->
-<!--              <span>Pays</span>-->
-<!--              <input id="universite" list=list formControlName="university" class="doubleLong" placeholder="Université d'échange" [value]="universite">-->
-<!--              <datalist id=list >-->
-
-<!--                <option *ngFor="for let univ of allUnivs, let i= index">{{univ.nom}}</option>-->
-<!--              </datalist>-->
-<!--            </div>-->
+            <form id="settings-form" [formGroup]="paysForm" (ngSubmit)="submitPays()">
+              <div id="choiceCountry">
+                <span id="span-country">Choix par pays:</span>
+                <input id="paysChoice" list=list formControlName="pays" class="doubleLong" placeholder="Pays" [value]="pays">
+                <datalist id=list >
+                  <option *ngFor="for let pays of allPays, let i= index">{{pays.identifiant}}</option>
+                </datalist>
+              </div>
+            </form>
             <div class="scrollable">
-                <div *ngFor="let univ of univs; let i=index" class="univblock">
-                    <p class="nomuniv">· {{univ.name}}</p>
-                    <p class="liensuniv"><a href={{univ.site}}>Consulter le site web</a> - <a href={{univ.fiche}}>Ouvrir la fiche destination</a></p>
+                <div *ngFor="let univ of univsOfTheCountry; let i=index" class="univblock">
+                    <p class="nomuniv">· {{univ.nom}} - ({{univ.pays}})</p>
+                    <p class="liensuniv"><a href={{univ.site}}>Consulter le site web</a> - <a routerLink="/universite" [queryParams]="{univId: univ.identifiant}" queryParamsHandling="merge" >Ouvrir la fiche destination</a></p>
                 </div>
             </div>
         </div>
