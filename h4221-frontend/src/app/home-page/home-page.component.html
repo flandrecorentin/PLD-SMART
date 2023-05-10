@@ -10,6 +10,15 @@
     <div class="wrapper">
         <div id="univs">
             <p id="titreunivs">Découvrir les universités</p>
+<!--            <div id="choiceCountry">-->
+<!--                <p>choix</p>-->
+<!--              <span>Pays</span>-->
+<!--              <input id="universite" list=list formControlName="university" class="doubleLong" placeholder="Université d'échange" [value]="universite">-->
+<!--              <datalist id=list >-->
+
+<!--                <option *ngFor="for let univ of allUnivs, let i= index">{{univ.nom}}</option>-->
+<!--              </datalist>-->
+<!--            </div>-->
             <div class="scrollable">
                 <div *ngFor="let univ of univs; let i=index" class="univblock">
                     <p class="nomuniv">· {{univ.name}}</p>

@@ -13,7 +13,7 @@ export class HomePageComponent {
   resultat = ""
   constructor(private _httpClient: HttpClient, private faqService: FaqService) {
   }
-  
+
   mockUniversites=[
     {name:"GE3 - Institute of International Education (IIE)", site:"google.com", fiche:"google.com"},
     {name:"Illinois Institute of Technology", site:"google.com", fiche:"google.com"},
@@ -63,7 +63,7 @@ export class HomePageComponent {
             answerauthor:data.authorReponse,
             answerdate:data.date,
           })
-          
+
         }
       this.qas = this.allqas.slice(0,5);
 
@@ -72,7 +72,7 @@ export class HomePageComponent {
         // answerauthor:this.mockanswerauthor,
         // questiondate:this.mockdatequestion,
         // answerdate:this.mockdateanswer},
-      
+
       }
     );
 
@@ -98,7 +98,7 @@ export class HomePageComponent {
   //     const lesPays = document.getElementsByClassName("land");
   //     Array.from(lesPays).forEach((pays) => {
   //         // Do stuff here
-          
+
   //         pays.addEventListener("mouseover", () =>
   //             console.log(pays.getAttribute("id"))
   //         );
@@ -106,13 +106,21 @@ export class HomePageComponent {
   //         //     )
   //         // );
   //     });
-  
 
 
+  //  Liste des universites
 
-          
-    
+
+    // liste des pays
+    // await this.univService.getAllUnivs().forEach(
+    //   (rep:any) => {
+    //     this.allUnivs=rep
+    //     return 1;
+    //   }
+    // );
   }
+
+  allUnivs=[{pays: ''}];
 }
 // function chargerHttpXML(xmlDocumentUrl:any) {
 
