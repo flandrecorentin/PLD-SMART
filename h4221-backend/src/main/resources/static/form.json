@@ -75,47 +75,252 @@
      },
      "isRequired": true,
      "choices": [
-      "Allemagne",
-      "Argentine",
-      "Autriche",
-      "Belgique",
-      "Brésil",
-      "Canada",
-      "Chili",
-      "Chine",
-      "Colombie",
-      "République De Corée",
-      "Danemark",
-      "Espagne",
-      "Estonie",
-      "États-unis",
-      "Finlande",
-      "France",
-      "Hong-kong",
-      "Hongrie",
-      "Inde",
-      "Indonésie",
-      "Irlande",
-      "Islande",
-      "Italie",
-      "Japon",
-      "Lituanie",
-      "Mexique",
-      "Norvège",
-      "Pays-bas",
-      "Pologne",
-      "Portugal",
-      "Roumanie",
-      "Royaume-uni",
-      "Singapour",
-      "Slovaquie",
-      "Slovénie",
-      "Suède",
-      "Suisse",
-      "TaÏwan",
-      "République Tchèque",
-      "Tunisie",
-      "Turquie"
+      {
+       "value": "Allemagne",
+       "text": {
+        "fr": " Allemagne"
+       }
+      },
+      {
+       "value": "Argentine",
+       "text": {
+        "fr": " Argentine"
+       }
+      },
+      {
+       "value": "Autriche",
+       "text": {
+        "fr": " Autriche"
+       }
+      },
+      {
+       "value": "Belgique",
+       "text": {
+        "fr": " Belgique"
+       }
+      },
+      {
+       "value": "Bresil",
+       "text": {
+        "fr": " Brésil"
+       }
+      },
+      {
+       "value": "Canada",
+       "text": {
+        "fr": "Canada"
+       }
+      },
+      {
+       "value": "Chili",
+       "text": {
+        "fr": "Chili"
+       }
+      },
+      {
+       "value": "Chine",
+       "text": {
+        "fr": " Chine"
+       }
+      },
+      {
+       "value": "Colombie",
+       "text": {
+        "fr": " Colombie"
+       }
+      },
+      {
+       "value": "Coree, Republique de",
+       "text": {
+        "fr": " République De Corée"
+       }
+      },
+      {
+       "value": "Danemark",
+       "text": {
+        "fr": " Danemark"
+       }
+      },
+      {
+       "value": "Espagne",
+       "text": {
+        "fr": "Espagne"
+       }
+      },
+      {
+       "value": "Estonie",
+       "text": {
+        "fr": " Estonie"
+       }
+      },
+      {
+       "value": "Etats-Unis",
+       "text": {
+        "fr": " États-unis"
+       }
+      },
+      {
+       "value": "Finlande",
+       "text": {
+        "fr": " Finlande"
+       }
+      },
+      {
+       "value": "France",
+       "text": {
+        "fr": " France"
+       }
+      },
+      {
+       "value": "Hong-kong",
+       "text": {
+        "fr": " Hong-kong"
+       }
+      },
+      {
+       "value": "Hongrie",
+       "text": {
+        "fr": " Hongrie"
+       }
+      },
+      {
+       "value": "Inde",
+       "text": {
+        "fr": " Inde"
+       }
+      },
+      {
+       "value": "Indonesie",
+       "text": {
+        "fr": " Indonésie"
+       }
+      },
+      {
+       "value": "Irlande",
+       "text": {
+        "fr": "Irlande"
+       }
+      },
+      {
+       "value": "Islande",
+       "text": {
+        "fr": " Islande"
+       }
+      },
+      {
+       "value": "Italie",
+       "text": {
+        "fr": " Italie"
+       }
+      },
+      {
+       "value": "Japon",
+       "text": {
+        "fr": " Japon"
+       }
+      },
+      {
+       "value": "Lituanie",
+       "text": {
+        "fr": " Lituanie"
+       }
+      },
+      {
+       "value": "Mexique",
+       "text": {
+        "fr": " Mexique"
+       }
+      },
+      {
+       "value": "Norvege",
+       "text": {
+        "fr": " Norvège"
+       }
+      },
+      {
+       "value": "Pays-bas",
+       "text": {
+        "fr": "Pays-bas"
+       }
+      },
+      {
+       "value": "Pologne",
+       "text": {
+        "fr": " Pologne"
+       }
+      },
+      {
+       "value": "Portugal",
+       "text": {
+        "fr": " Portugal"
+       }
+      },
+      {
+       "value": "Roumanie",
+       "text": {
+        "fr": " Roumanie"
+       }
+      },
+      {
+       "value": "Royaume-Uni",
+       "text": {
+        "fr": " Royaume-uni"
+       }
+      },
+      {
+       "value": "Singapour",
+       "text": {
+        "fr": " Singapour"
+       }
+      },
+      {
+       "value": "Slovaquie",
+       "text": {
+        "fr": " Slovaquie"
+       }
+      },
+      {
+       "value": "Slovenie",
+       "text": {
+        "fr": " Slovénie"
+       }
+      },
+      {
+       "value": "Suede",
+       "text": {
+        "fr": " Suède"
+       }
+      },
+      {
+       "value": "Suisse",
+       "text": {
+        "fr": " Suisse"
+       }
+      },
+      {
+       "value": "Taiwan",
+       "text": {
+        "fr": " TaÏwan"
+       }
+      },
+      {
+       "value": "Tcheque, Republique",
+       "text": {
+        "fr": "République Tchèque"
+       }
+      },
+      {
+       "value": "Tunisie",
+       "text": {
+        "fr": " Tunisie"
+       }
+      },
+      {
+       "value": "Turquie",
+       "text": {
+        "fr": "Turquie"
+       }
+      }
      ],
      "autocomplete": "country-name"
     },
@@ -129,11 +334,11 @@
      "requiredErrorText": {
       "fr": "Réponse obligatoire"
      },
-     "choices": [
-      "Item 1",
-      "Item 2",
-      "Item 3"
-     ]
+     "choicesByUrl": {
+      "url": "http://localhost:9000/universite/{ExchangeCountry}",
+      "valueName": "identifiant",
+      "titleName": "nom"
+     }
     }
    ],
    "title": {

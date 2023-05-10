@@ -5,6 +5,7 @@ import ifinsa.h4221backend.model.FAQ;
 import ifinsa.h4221backend.model.Universite;
 import ifinsa.h4221backend.model.User;
 import ifinsa.h4221backend.service.FAQService;
+import ifinsa.h4221backend.service.PaysService;
 import ifinsa.h4221backend.service.UniversiteService;
 import ifinsa.h4221backend.service.UserService;
 import org.json.simple.JSONObject;
@@ -30,6 +31,9 @@ public class Initialisation implements ApplicationRunner {
 
     @Autowired
     FAQService faqService;
+
+    @Autowired
+    PaysService paysService;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -91,6 +95,8 @@ public class Initialisation implements ApplicationRunner {
             faqService.createFAQ(faq);
         }
 
+        // Initialisation des pays
+        paysService.sauvegarderToutPays();
         System.out.println("|| Fin Initialisation ");
     }
 

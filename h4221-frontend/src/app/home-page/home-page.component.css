@@ -74,7 +74,7 @@ margin-right:30px;
     margin-bottom:3px;
 }
 #home #univs .univblock{
-    margin-left:10px;    
+    margin-left:10px;
 }
 #home #univs .nomuniv{
     margin-bottom:0;
@@ -87,13 +87,13 @@ margin-right:30px;
     margin-bottom:40px;
     margin-left:20px;
     color:black;
-    
+
     font-family: 'Inter', sans-serif;
     font-size:0.8vw;
     font-weight: 400;
 }
 #home #univs .liensuniv a{
-    color:black; 
+    color:black;
 }
 .scrollable{
     overflow-y: scroll;
@@ -130,7 +130,7 @@ margin-right:30px;
 }
 #home .qablock{
     height:130px;
-}   
+}
 #home .type{
     border:#6B9080 1px solid;
     border-radius: 5px;
@@ -145,7 +145,7 @@ margin-right:30px;
     color:#6B9080;
     background-color: #ECFDF3;
     display: inline-block;
-    
+
 }
 #home .question{
     margin-top:0px;
@@ -163,7 +163,7 @@ margin-right:30px;
     font-weight: 400;
     color:#667085;
     overflow: hidden;
-    /*text-overflow: ellipsis; */   
+    /*text-overflow: ellipsis; */
     height:58px;
     margin:0;
     display: -webkit-box;
@@ -187,4 +187,9 @@ margin-right:30px;
 #home #toFaq img{
     height:20px;
     transform:translate(0,3px)
+}
+
+#choiceCountry{
+  /*text-align: center;*/
+  border: red 2px solid;
 }

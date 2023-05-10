@@ -47,7 +47,7 @@ export class FormComponent implements OnInit {
     });
     this.formService.sendForm(results).subscribe(
       res => {
-        console.log(res)
+        this.router.navigateByUrl('/home');
       }
     )
   }
