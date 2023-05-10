@@ -188,7 +188,7 @@ overflow-y: scroll;    /* Trigger vertical scroll    */
     width:70px;
     background-color: #6B9080;
     color:white;
-    border-radius:5px;
+    border-radius:10px;
     border:transparent;
     font-size: 13px;
     font-family: 'Inter', sans-serif;

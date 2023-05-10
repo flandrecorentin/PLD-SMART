@@ -5,12 +5,24 @@
     z-index: 1;
     top: 0;
     width:65px;
+    overflow-y:hidden;  
     height: 100vh;
     white-space: nowrap;
     transition:0.4s;
     border-right: #526d6253 1px solid;
     position: fixed;
+
 }
+
+#sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #sidebar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 #sidebar:hover{
     width:18vw;
 }
