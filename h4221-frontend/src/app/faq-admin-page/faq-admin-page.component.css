@@ -126,6 +126,12 @@
     font-size:18px;
     font-weight: 600;
     margin-bottom:0px;
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height:45px;
+    overflow: hidden;
 }
 
 #faq .answer{
@@ -229,6 +235,9 @@
 #faq .overlay .question{
     margin-top:20px;
     margin-bottom:0px;
+    height:auto;
+    display: block;
+    overflow: visible;
 }
 
 #faq .overlay .answer{
