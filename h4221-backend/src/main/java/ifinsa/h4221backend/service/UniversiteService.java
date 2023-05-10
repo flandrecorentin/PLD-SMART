@@ -36,4 +36,13 @@ public class UniversiteService {
             return false;
         }
     }
+
+    public List<Universite> chercherUniversitesParPays(String pays){
+        try{
+            return universiteDAO.findAllByPays(pays);
+        }
+        catch (Exception exception){
+            return null;
+        }
+    }
 }

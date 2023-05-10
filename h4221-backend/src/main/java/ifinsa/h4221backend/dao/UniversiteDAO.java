@@ -16,6 +16,7 @@ import java.util.List;
 @Repository
 public interface UniversiteDAO extends MongoRepository<Universite, String> {
 
-
+    @Query("{pays: ?0}")
+    List<Universite> findAllByPays(String pays);
 }
 
