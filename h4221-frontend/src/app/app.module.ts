@@ -3,6 +3,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { SurveyModule } from 'survey-angular-ui';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -21,10 +23,13 @@ import { UniversitePageComponent } from './universite-page/universite-page.compo
 import { FaqAdminPageComponent } from './faq-admin-page/faq-admin-page.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ChatbotComponent } from './chatbot-page/chatbot-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomePageComponent,
+    ChatbotComponent,
     HomePageComponent,
     ConnexionPageComponent,
     InscriptionPageComponent,
@@ -44,6 +49,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     SurveyModule,
     ScrollingModule
   ],

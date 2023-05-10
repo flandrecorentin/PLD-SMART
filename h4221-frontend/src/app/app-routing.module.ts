@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
+import { ChatbotComponent } from './chatbot-page/chatbot-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { InscriptionPageComponent } from './inscription-page/inscription-page.component';
 import { FaqAdminPageComponent } from './faq-admin-page/faq-admin-page.component';
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'universite', component: UniversitePageComponent, canActivate: [AuthguardGuard] },
   { path: '', component: AccueilPageComponent, canActivate: [AlreadyLoggedInGuard] },
   { path: 'faq-admin', component: FaqAdminPageComponent, canActivate: [AuthguardGuard, AdminGuard] },
-  { path: '**', redirectTo: 'home' },
+  { path: 'chatbot', component: ChatbotComponent},
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
