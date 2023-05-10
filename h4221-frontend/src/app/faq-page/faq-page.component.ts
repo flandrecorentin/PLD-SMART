@@ -52,7 +52,7 @@ export class FaqPageComponent {
     console.log(this.rechercheForm.value);
     this.selectedqas=this.allqas.filter(qa=> 
       qa.question.toLowerCase().includes(this.rechercheForm.value.recherche!.toLowerCase()) || 
-      qa.answer.toLowerCase().includes(this.rechercheForm.value.recherche!.toLowerCase()));
+      (qa.answer!=null ? qa.answer.toLowerCase().includes(this.rechercheForm.value.recherche!.toLowerCase()) : false));
     this.pagenumber=1;
     this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
   }
@@ -109,10 +109,11 @@ export class FaqPageComponent {
 
     submitQuestion(){
       var date = new Date();
-      var dateText = date.getDay()+"-"+date.getMonth()+"-"+date.getFullYear()
-      this.faqService.askFaq({question:this.questionForm.value.question,authorQuestion:"auteur",dateQuestion:dateText,categorie:this.questionForm.value.categorie}).subscribe(
+      var dateText = date.getDay()+"-"+date.getMonth()+"-"+date.getFullYear();
+      var mail = localStorage.getItem("mail");
+
+      this.faqService.askFaq({question:this.questionForm.value.question,authorQuestion:mail,dateQuestion:dateText,categorie:this.questionForm.value.categorie}).subscribe(
         (datas: any) => {
-            console.log("in");
             
           }
 
@@ -142,8 +143,48 @@ export class FaqPageComponent {
             })
             
           }
+          // function compare(a, b) {
+          //   if (a est inférieur à b selon les critères de tri)
+          //      return -1;
+          //   if (a est supérieur à b selon les critères de tri)
+          //      return 1;
+          //   // a doit être égal à b
+          //   return 0;
+          // }
+
+          this.allqas.sort(function(a,b) {
+            
+            var datea, dateb
+            if(a.answer!=null){
+               datea = a.answerdate.split('-')
+            }else{
+               datea = a.questiondate.split('-')
+            }
+
+            if(b.answer!=null){
+              dateb = b.answerdate.split('-')
+           }else{
+              dateb = b.questiondate.split('-')
+           }
+
+           if(datea[2]!=dateb[2]){
+            return +dateb[2]- +datea[2];
+           }else if(datea[1]!=dateb[1]){
+            return +dateb[1]- +datea[1];
+           }else if(datea[0]!=dateb[0]){
+            return +dateb[0]- +datea[0];
+           }else{
+            return 0;
+           }
+           
+           
+           
+          })
         this.selectedqas = this.allqas;
         this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
+        
+
+
 
           // {question:"28"+this.mockquestion, answer:this.mockanswer, type:this.mocktype
           // ,questionauthor:this.mockquestionauthor,

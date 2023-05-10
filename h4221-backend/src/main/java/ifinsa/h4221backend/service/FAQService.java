@@ -54,4 +54,14 @@ public class FAQService {
             return null;
         }
     }
+
+    public boolean createFAQ(FAQ faq){
+        try {
+            faqdao.save(faq);
+            return true;
+        }
+        catch (Exception exception){
+            return false;
+        }
+    }
 }
