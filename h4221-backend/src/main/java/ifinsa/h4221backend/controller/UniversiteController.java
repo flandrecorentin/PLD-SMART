@@ -2,6 +2,7 @@ package ifinsa.h4221backend.controller;
 
 import ifinsa.h4221backend.model.Universite;
 import ifinsa.h4221backend.service.UniversiteService;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -40,13 +41,17 @@ public class UniversiteController {
         }
     }
     @GetMapping("/universite/{pays}")
-    public ResponseEntity<JSONObject> recupererUniversitesParPays(@PathVariable(value="pays") String pays){
+    public ResponseEntity<JSONArray> recupererUniversitesParPays(@PathVariable(value="pays") String pays){
         try {
             List<Universite> universites = universiteService.chercherUniversitesParPays(pays);
             if(universites.size()>0){
-                JSONObject jsonUniversitesParPays = new JSONObject();
+                JSONArray jsonUniversitesParPays = new JSONArray();
                 for (Universite universite: universites) {
-                    jsonUniversitesParPays.put(universite.getIdentifiant(),universite.getNom());
+                    JSONObject jsonUniversite = new JSONObject();
+                    jsonUniversite.put("identifiant",universite.getIdentifiant());
+                    jsonUniversite.put("nom",universite.getNom());
+                    jsonUniversite.put("pays",universite.getPays());
+                    jsonUniversitesParPays.add(jsonUniversite);
                 }
                 System.out.println("[UniversiteController]: La récupération des "+ universites.size() +" universites a réussi");
                 return new ResponseEntity<>(jsonUniversitesParPays, HttpStatus.OK);
