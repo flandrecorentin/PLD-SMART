@@ -81,10 +81,12 @@ public class Initialisation implements ApplicationRunner {
         FAQ faq2 = new FAQ("Combien de voeux peut-on demander ?","Voeux", "Cela dépend du département. Par exemple, en IF 2 voeux sont initialement demandés. Contactez votre coordinateur de département pour connaitre ce nombre.","elise.dubillot@insa-lyon.fr", "elod@insa-lyon.fr","09-05-2023", "10-05-2023");
         FAQ faq3 = new FAQ("Existe-t-il des conditions spécifiques pour demander un double diplôme (DD) ?","Candidature", "Il n y a aucunes conditions demandés par l'INSA pour les DD","corentin.flandre@insa-lyon.fr", "elod@insa-lyon.fr","05-05-2023", "08-05-2023");
         FAQ faq4 = new FAQ("Qu'est-ce qu'est la bourse AMI","Bourses", "C'est une bourse spécifique pour les étudiants boursiers du Crous","colin.thomas@insa-lyon.fr", "elod@insa-lyon.fr","05-05-2023", "10-05-2023");
+        FAQ faq5 = new FAQ("Qu'est-ce qu'est la bourse BRMIE","Bourses", "Il s'agit de la BOURSE Région, vous recevrez les informations à temps","colin.thomas@insa-lyon.fr", "elod@insa-lyon.fr","05-05-2023", "10-05-2023");
         faqs.add(faq1);
         faqs.add(faq2);
         faqs.add(faq3);
         faqs.add(faq4);
+        faqs.add(faq5);
         for (FAQ faq: faqs) {
             faqService.createFAQ(faq);
         }
