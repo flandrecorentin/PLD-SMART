@@ -15,6 +15,7 @@ export class AuthenticationService {
   inscriptionUrl = this.backendUrl + '/inscription';
   connexionUrl = this.backendUrl + '/connexion'
   userDetailsUrl = this.backendUrl + '/information'
+  roleDetailsUrl = this.backendUrl + '/role'
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) { }
@@ -41,5 +42,12 @@ export class AuthenticationService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${localStorage.getItem("auth_token")}`
     })});
+  }
+
+  getUserRole() {
+    return this.http.get(this.roleDetailsUrl, {headers : new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem("auth_token")}`
+    }), responseType: "text"});
   }
 }
