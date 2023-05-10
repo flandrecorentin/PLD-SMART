@@ -1,0 +1,48 @@
+<app-sidebar></app-sidebar>
+<div id="universite">
+    <div id="header">
+        <p id="titre">{{universite.nom}}</p>
+    </div>
+    <div id="wrapper">
+        <div id="infos">
+        </div>
+        <div id="discussion">
+            <div id="titrewrapper"><span id="titre">Canal de discussion 💌</span>
+            <button id="ajoutConv">+ Créer</button></div>
+            <div id="scrollable"><table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let chat of universite.chat, let i=index" (click)="reveal(i)">
+                        <td><p>{{chat.nom}}</p></td> 
+                        <td><p>{{chat.date}}</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+            <div id="chatBlock">
+                <p id="titre">
+                    {{chatActuel.nom}}
+                    
+                </p>
+                    <div id="messagesBlock">
+
+                        <div *ngFor="let message of chatActuel.messages, let i=index">
+                            <p id="infos">{{message.auteur}} à {{message.heure}} - {{message.date}}</p>
+                            <p id="contenu">{{message.contenu}}</p>
+                        </div>
+                    </div>
+                        <textarea></textarea>
+                        <button>Envoi</button>
+            </div>
+        </div>
+        <div id="rex">
+
+        </div>
+    </div>
+</div>

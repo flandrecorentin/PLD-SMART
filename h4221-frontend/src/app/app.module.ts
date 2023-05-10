@@ -18,6 +18,7 @@ import { FormComponent } from './components/form/form.component';
 import { FormPageComponent } from './form-page/form-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { AccueilPageComponent } from './accueil-page/accueil-page.component';
+import { UniversitePageComponent } from './universite-page/universite-page.component';
 import { FaqAdminPageComponent } from './faq-admin-page/faq-admin-page.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -39,6 +40,7 @@ import { MapComponent } from './components/map/map.component';
     FormPageComponent,
     AccueilPageComponent,
     SettingsPageComponent,
+    UniversitePageComponent,
     MapComponent
   ],
   imports: [

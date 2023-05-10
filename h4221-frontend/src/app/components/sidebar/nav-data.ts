@@ -15,7 +15,7 @@ export const navbarData = [
         label: 'Retour d\'échange'
     },
     {
-        routeLink: '',
+        routeLink: '/settings',
         icon: '../../assets/settings.png',
         label: 'Paramètres et profil'
     }
