@@ -104,4 +104,15 @@ public class UserService implements UserDetailsService {
             return 0;
         }
     }
+
+    public String chercherRoleParToken(String tokenUser) {
+        try{
+            String mail = jwtUtil.extractUsername(tokenUser);
+            User user = userModelDAO.findUserByMail(mail);
+            String role = user.getRole();
+            return role;
+        }catch (Exception exception){
+            return null;
+        }
+    }
 }

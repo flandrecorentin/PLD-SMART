@@ -111,6 +111,25 @@ public class UserAdminController {
         }
     }
 
+    @GetMapping("/role")
+    public ResponseEntity<String> obtenirRoleUtilisateur(@RequestHeader(HttpHeaders.AUTHORIZATION) String tokenUser) {
+        try{
+            tokenUser = tokenUser.substring(7);
+            String role = userService.chercherRoleParToken(tokenUser);
+            if(role.equals("ROLE_ADMIN")||role.equals("ROLE_USER")){
+                System.out.println("[UserAdminController]: Récupération du role "+role);
+                return new ResponseEntity(role, HttpStatus.OK);
+            }else{
+                System.out.println("[UserAdminController]: Utilisateur non trouve ou problème token");
+                return new ResponseEntity(null, HttpStatus.NOT_FOUND);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("[UserAdminController]: Problème de serveur");
+            return new ResponseEntity(null, HttpStatus.FORBIDDEN);
+        }
+    }
+
     @PutMapping("/changepassword")
     public ResponseEntity modifierParametresPassword(@RequestHeader(HttpHeaders.AUTHORIZATION) String tokenUser, @RequestBody PasswordRequest passwordRequest){
         System.out.println(passwordRequest.getAncienMDP()+":"+passwordRequest.getNouveauMDP());
