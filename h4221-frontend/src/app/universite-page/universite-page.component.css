@@ -167,6 +167,18 @@ overflow-y: scroll;    /* Trigger vertical scroll    */
     font-weight:500px;
     border:rgba(128, 128, 128, 0.399) 1px solid;
 }
+
+#universite #nomConv{
+    height:20px;
+    border-radius: 5px;
+    border:rgba(128, 128, 128, 0.425) 1px solid;
+    width:150px;
+    float:right;
+    margin:5px;
+    font-size:0.8vw;
+    font-family: 'Inter', sans-serif;
+    font-weight:500px;
+}
 #universite #chatBlock button{
     height:25px;
     width: 4.5vw;
@@ -287,4 +299,40 @@ overflow-y: scroll;    /* Trigger vertical scroll    */
     margin-right:10px;
     margin-left:10px;
     border-top: 1px solid rgba(136, 136, 136, 0.237);
+}
+
+#universite #infos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+#universite #infos #infos1{
+    border:none;
+    box-shadow: none;
+    height:270px;
+    margin-left:5px;
+}
+#universite #infos p{
+    font-family: 'Inter', sans-serif;
+    font-size:0.9vw;
+    font-weight: 500;
+}
+#universite #infos #accords{
+    
+    border:none;
+    box-shadow: none;
+    height:270px;
+    overflow-y:scroll;
+}#universite #infos #accords div{
+    margin:5px;
+    padding:5px;
+}
+#universite #infos a{
+    font-family: 'Inter', sans-serif;
+    font-size:0.9vw;
+    font-weight: 500;
+    color:black;
+}
+#universite #infos .titre{  
+    font-size:1.5vw;
 }

@@ -45,4 +45,13 @@ public class UniversiteService {
             return null;
         }
     }
+
+    public Universite chercherUniversite(String univId) {
+        try{
+            return universiteDAO.findByIdentifiant(univId);
+        }
+        catch (Exception exception){
+            return null;
+        }
+    }
 }

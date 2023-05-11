@@ -1,13 +1,8 @@
 package ifinsa.h4221backend;
 
-import ifinsa.h4221backend.model.Departement;
-import ifinsa.h4221backend.model.FAQ;
-import ifinsa.h4221backend.model.Universite;
-import ifinsa.h4221backend.model.User;
-import ifinsa.h4221backend.service.FAQService;
-import ifinsa.h4221backend.service.PaysService;
-import ifinsa.h4221backend.service.UniversiteService;
-import ifinsa.h4221backend.service.UserService;
+import ifinsa.h4221backend.model.*;
+import ifinsa.h4221backend.service.*;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +30,9 @@ public class Initialisation implements ApplicationRunner {
     @Autowired
     PaysService paysService;
 
+    @Autowired
+    FormulaireREXService formulaireREXService;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         // appel des services à faire à l'initialisation
@@ -60,14 +58,22 @@ public class Initialisation implements ApplicationRunner {
 
         // Initialisation des Universites
         JSONParser jsonP = new JSONParser();
-        JSONObject jsonO = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/liste_univ_pays_accord.json"));
+        JSONObject jsonO = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/listedetaillefinales.json"));
         List<Universite> universites = new LinkedList<>();
         for(int i=0; i<jsonO.size(); i++){
             String key = jsonO.keySet().toArray()[i].toString();
             JSONObject jsonObject2 = (JSONObject) jsonO.get(key);
             String nom = jsonObject2.get("nom").toString();
             String pays = jsonObject2.get("pays").toString();
-            Universite universite = new Universite(key, nom, pays);
+            String ville = jsonObject2.get("ville").toString();
+            String url = jsonObject2.get("URL").toString();
+            String candidature = jsonObject2.get("candidature").toString();
+            String debutS1 = jsonObject2.get("debuts1").toString();
+            String finS1 = jsonObject2.get("Fins1").toString();
+            String debutS2 = jsonObject2.get("debuts2").toString();
+            String finS2 = jsonObject2.get("finS2").toString();
+            JSONArray jsonArray = (JSONArray) jsonObject2.get("accord");
+            Universite universite = new Universite(key, nom, pays, ville, url, candidature, debutS1, finS1, debutS2, finS2, jsonArray);
             universites.add(universite);
         }
         for (Universite universite: universites) {
@@ -97,6 +103,12 @@ public class Initialisation implements ApplicationRunner {
 
         // Initialisation des pays
         paysService.sauvegarderToutPays();
+
+        //Test d'une sauvegarde d'un REX Temp
+        JSONObject jsonTemp = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/rex-temp-example.json"));
+        FormulaireREXTemp formulaireREXTemp = new FormulaireREXTemp(users.get(1).getMail(), jsonTemp);
+        formulaireREXService.sauvegarderTemporairement(formulaireREXTemp);
+
         System.out.println("|| Fin Initialisation ");
     }
 

@@ -1,54 +1,110 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { ChatService } from '../config/chat.service';
+import { ChangeDetectorRef } from '@angular/core';
+import { Observable, Subscription, interval } from 'rxjs'; 
 @Component({
   selector: 'app-universite-page',
   templateUrl: './universite-page.component.html',
-  styleUrls: ['./universite-page.component.css']
+  styleUrls: ['./universite-page.component.css'],
 })
 export class UniversitePageComponent {
   univId:string;
 
-  
-  mockUniversite={
-    "nom":"University of Birmingham",
-    "chat":[
-      {
-        "nom":"Trouver une colloc",
-        "date":"01-02-2023",
-      },{
-        "nom":"Remplir le OLA",
-        "date":"03-02-2023",
-      },{
-        "nom":"Fonctionnement de préavis à l'étranger",
-        "date":"06-02-2023",
-      },{
-        "nom":"Quand prenez vous votre avion ?",
-        "date":"10-02-2023",
-      },{
-        "nom":"Quand prenez vous votre avion ?",
-        "date":"10-02-2023",
-      },{
-        "nom":"Quand prenez vous votre avion ?",
-        "date":"10-02-2023",
-      },{
-        "nom":"Quand prenez vous votre avion ?",
-        "date":"10-02-2023",
-      },{
-        "nom":"Quand prenez vous votre avion ?",
-        "date":"10-02-2023",
-      },{
-        "nom":"Quand prenez vous votre avion ?",
-        "date":"10-02-2023",
-      }
-    ]
-  }
-  universite=this.mockUniversite
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router, private chatService: ChatService, private cdr: ChangeDetectorRef) {
     this.univId=""
     
   }
-  ngOnInit() {
+  fakeUniv = {
+    "nom": "Technische Universitat Wien",
+    "pays": "Autriche",
+    "debuts1": "01/10/2020",
+    "Fins1": "31/01/2021",
+    "debuts2": "01/03/2021",
+    "finS2": "30/06/2021",
+    "candidature": "-",
+    "ville": "Wien",
+    "URL": "http://www.tuwien.ac.at",
+    "Fichier": "N/A",
+    "accord": [
+        {
+            "nom": "Technische Universitat Wien - Accord de double-diplome 1 - IF",
+            "place": "1/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/virtual-welcome-centre/incoming-exchange-students/",
+            "niveauLV": "B1"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - BS",
+            "place": "2/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - GCU",
+            "place": "2/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - GE",
+            "place": "3/3.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - GI",
+            "place": "4/4.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - GM",
+            "place": "4/4.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - IF",
+            "place": "2/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - SGM",
+            "place": "2/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - TC",
+            "place": "3/3.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        }
+      ]
+    }
+    univDetails=this.fakeUniv;
+
+
+  messageType={
+    author:"",
+    date:"",
+    text:""
+  }
+  displayedChat={
+    messageList:[this.messageType],
+    name:"",
+    creationDate:"",
+    creator:"",
+    stringId:""
+  }
+  selectedChat={name:"",
+                creationDate:"",
+              stringId:""}
+  allChats = [
+    this.selectedChat
+  ]
+  async ngOnInit() {
     this.route.queryParams
       .subscribe(params => {
         this.univId = params['univId'];
@@ -59,35 +115,115 @@ export class UniversitePageComponent {
       this.router.navigateByUrl("/home")
     }
 
+    const source = interval(5000);
+    const text = 'Your Text Here';
+    var subscription = source.subscribe(val => this.chatService.chatGetMessagesByConv(this.displayedChat.stringId).subscribe(
+      (rep: any) => {
+        this.displayedChat=rep
+        console.log(this.displayedChat)
+      }));
+      
+    var subscription2 = source.subscribe(val => this.chatService.chatGetConvByUni(this.univId).forEach(
+      (rep: any) => {
+        this.allChats=rep
+        this.selectedChat=rep[0];
+        console.log(this.allChats)
+        console.log(this.selectedChat)
+      }));
+
+
+    
+    //Partie CHAT
+    await this.chatService.chatGetConvByUni(this.univId).forEach(
+      (rep: any) => {
+        this.allChats=rep
+        this.selectedChat=rep[0];
+        console.log(this.allChats)
+        console.log(this.selectedChat)
+      });
+    this.chatService.chatGetMessagesByConv(this.allChats[0].stringId).subscribe(
+      (rep: any) => {
+        this.displayedChat=rep
+        console.log(this.displayedChat)
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
   reveal(i:any){
-    console.log(i);
+    this.chatService.chatGetMessagesByConv(this.allChats[i].stringId).subscribe(
+      (rep: any) => {
+        this.displayedChat=rep
+        console.log(this.displayedChat)
+      });
+  }
+  showMessages=true
+  async envoiMessage(texte:string){
+    var conversationId=this.displayedChat.stringId
+    var author=localStorage.getItem("mail")
+    var date=new Date();
+    var dateFormat=date.toDateString()
+    await this.chatService.chatSendMessage({"author":author,"date":dateFormat,"text":texte,"conversation":conversationId}).forEach(
+      (rep: any) => {
+      }
+    );
+    
+    this.chatService.chatGetMessagesByConv(this.displayedChat.stringId).subscribe(
+      (rep: any) => {
+        this.displayedChat=rep
+        console.log(this.displayedChat)
+      });
+    (<HTMLInputElement>document.getElementById("contenuMessageEnvoi")).value="";
+    // this.chatService.chatGetMessagesByConv(this.displayedChat.stringId).subscribe(
+    //   (rep: any) => {
+    //     this.displayedChat=rep
+    //     console.log(this.displayedChat)
+    //   });
+    // this.displayedChat={
+    //   name:this.displayedChat.name,
+    //   messageList:[...this.displayedChat.messageList],
+    //   creationDate:this.displayedChat.creationDate,
+    //   creator:this.displayedChat.creator,
+    //   stringId:this.displayedChat.stringId,
+    // }
   }
 
-  chatActuel={
-    "nom":"Quand prenez vous votre avion ?",
-    "date":"10-02-2023",
-    "messages":[{
-        "contenu":"Salut tout le monde !",
-        "date":"10-20-2023",
-        "heure":"10:23:23",
-        "auteur":"corentin.flandre@insa-lyon.fr"
-      },{
-        "contenu":"Salut wesh !",
-        "date":"10-20-2023",
-        "heure":"10:23:27",
-        "auteur":"colin.thomas@insa-lyon.fr"
-      },{
-        "contenu":"Bonjour à tout, ceci est un message à rallonge pour faire des essais de message à rallonge",
-        "date":"10-20-2023",
-        "heure":"10:24:01",
-        "auteur":"elise.dubillot@insa-lyon.fr"
-      },{
-        "contenu":"certes",
-        "date":"10-20-2023",
-        "heure":"10:25:23",
-        "auteur":"tom.delaporte@insa-lyon.fr"
-      },
-    ]
+  async creerConv(name:string){
+    var creator=localStorage.getItem("mail")
+    var date=new Date();
+    var dateFormat=date.toDateString()
+    await this.chatService.chatCreateConv({"creator":creator,"name":name,"creationDate":dateFormat,"university":this.univId,"scale":"","closed":""}).forEach(
+      (rep: any) => {
+      }
+    );
+    (<HTMLInputElement>document.getElementById("contenuMessageEnvoi")).value="";
+    // this.chatService.chatGetMessagesByConv(this.displayedChat.stringId).subscribe(
+    //   (rep: any) => {
+    //     this.displayedChat=rep
+    //     console.log(this.displayedChat)
+    //   });
+    await this.chatService.chatGetConvByUni(this.univId).forEach(
+      (rep: any) => {
+        this.allChats=rep
+        console.log(this.allChats)
+      });
+    this.allChats=[...this.allChats];
+      
+    (<HTMLInputElement>document.getElementById("nomConv")).value="";
   }
+
 }
