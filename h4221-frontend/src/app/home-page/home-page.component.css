@@ -192,6 +192,9 @@ margin-right:30px;
     border-radius: 5px;
     border: rgb(197, 197, 197) 1px solid;
 }
+#toFaq:hover{
+  color: rgb(227, 111, 111);
+}
 #home #toFaq img{
     height:20px;
     transform:translate(0,3px)
