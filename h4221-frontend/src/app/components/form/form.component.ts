@@ -53,17 +53,15 @@ export class FormComponent implements OnInit {
   }
 
   sendPartialResults(sender: Model) {
-    if(sender.isCurrentPageValid){
+    if (sender.isCurrentPageValid) {
       const mail = localStorage.getItem('mail');
-    const date = formatDate(Date.now(), 'dd-MM-yyyy', 'en');
-    var results : JSON = JSON.parse('{}');
-    Object.assign(results, 
-      { 
-      "author": mail,
-      "date": date,
-      "information": sender.data
-    });
-    console.log(results);
+      var results: JSON = JSON.parse('{}');
+      Object.assign(results,
+        {
+          "author": mail,
+          "formulairetemp": sender.data
+        });
+      console.log(results);
     }
   }
 
