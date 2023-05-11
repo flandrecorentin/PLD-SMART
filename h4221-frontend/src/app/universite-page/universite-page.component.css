@@ -167,6 +167,18 @@ overflow-y: scroll;    /* Trigger vertical scroll    */
     font-weight:500px;
     border:rgba(128, 128, 128, 0.399) 1px solid;
 }
+
+#universite #nomConv{
+    height:20px;
+    border-radius: 5px;
+    border:rgba(128, 128, 128, 0.425) 1px solid;
+    width:150px;
+    float:right;
+    margin:5px;
+    font-size:0.8vw;
+    font-family: 'Inter', sans-serif;
+    font-weight:500px;
+}
 #universite #chatBlock button{
     height:25px;
     width: 4.5vw;

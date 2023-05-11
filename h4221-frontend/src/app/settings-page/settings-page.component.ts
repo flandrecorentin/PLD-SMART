@@ -118,6 +118,7 @@ export class SettingsPageComponent {
     
     await this.authenticationService.getUserDetails().forEach(
       (rep:any) => {
+        
         this.nom = rep.lastName
         this.prenom = rep.firstName
         this.mail = rep.mail
@@ -138,6 +139,7 @@ export class SettingsPageComponent {
     await this.univService.getAllUnivs().forEach(
       (rep:any) => {
         this.allUnivs=rep
+        console.log(this.allUnivs)
         return 1;
       }
     );

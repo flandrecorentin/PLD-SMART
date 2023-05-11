@@ -1,7 +1,7 @@
 <app-sidebar></app-sidebar>
 <div id="universite">
     <div id="header">
-        <p id="titre">{{universite.nom}}</p>
+        <p id="titre">Birmingham</p>
     </div>
     <div id="wrapper">
         <div id="infos">
@@ -9,20 +9,22 @@
         </div>
         <div id="discussion">
             <div id="titrewrapper"><span id="titre">Canal de discussion 💌</span>
-            <button id="ajoutConv">+ Créer</button></div>
+                
+            <button id="ajoutConv" (click)="creerConv(nomConv.value)">+ Créer</button>
+            <textarea id="nomConv" #nomConv></textarea></div>
             <div id="scrollable" class="scrollable"><table>
                 <thead>
                     <tr>
                         <th>Nom</th>
                         <th>Date</th>
-                        <th>Suppr</th>
+                        <!-- <th>Suppr</th> -->
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let chat of universite.chat, let i=index" (click)="reveal(i)">
-                        <td><p>{{chat.nom}}</p></td> 
-                        <td><p>{{chat.date}}</p></td>
-                        <td><img id="imgSuppr" src="../assets/poubelle.png"/></td>
+                    <tr *ngFor="let chat of allChats, let i=index" (click)="reveal(i)">
+                        <td><p>{{chat.name}}</p></td> 
+                        <td><p>{{chat.creationDate}}</p></td>
+                        <!-- <td><img id="imgSuppr" src="../assets/poubelle.png"/></td> -->
                     </tr>
                 </tbody>
             </table>
@@ -30,18 +32,18 @@
 
             <div id="chatBlock">
                 <p id="titre">
-                    {{chatActuel.nom}}
+                    {{displayedChat.name}}
                     
                 </p>
-                    <div id="messagesBlock" class="scrollable">
+                    <div id="messagesBlock" class="scrollable" *ngIf="showMessages">
 
-                        <div *ngFor="let message of chatActuel.messages, let i=index">
-                            <p id="infos">{{message.auteur}} à {{message.heure}} - {{message.date}}</p>
-                            <p id="contenu">{{message.contenu}}</p>
+                        <div *ngFor="let message of displayedChat.messageList.slice().reverse(), let i=index">
+                            <p id="infos">{{message.author}} à {{message.date}}</p>
+                            <p id="contenu">{{message.text}}</p>
                         </div>
                     </div>
-                        <textarea></textarea>
-                        <button>Envoi</button>
+                        <textarea id="contenuMessageEnvoi" #messageEnvoi></textarea>
+                        <button (click)="envoiMessage(messageEnvoi.value)">Envoi</button>
             </div>
         </div>
         <div id="rex">
