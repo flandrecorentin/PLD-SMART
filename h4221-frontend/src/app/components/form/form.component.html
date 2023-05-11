@@ -1,1 +1,6 @@
+<div class="navigation-block">
+    <button *ngIf="!surveyModel.isLastPage" (click)="sendPartialResults(surveyModel)" class="navigation-button">
+        Sauvegarder mes réponses
+    </button>
+</div>
 <survey id="survey" class="survey" [model]="surveyModel"></survey>

@@ -7,9 +7,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class FormService {
 
   // Links to call back-end services
-  backendUrl = 'http://localhost:9000'
-  formURL = this.backendUrl + '/formulaire';
-  httpHeaders = new HttpHeaders({
+  private backendUrl = 'http://localhost:9000'
+  private formURL = this.backendUrl + '/formulaire';
+  private sendPartialFormUrl = this.backendUrl + '/formulaire-temp'
+  private httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${localStorage.getItem("auth_token")}`,
 });
@@ -22,6 +23,14 @@ export class FormService {
 
   getForm() {
     return this.http.get<JSON>(this.formURL, {headers: this.httpHeaders});
+  }
+
+  sendPartialForm(form: JSON) {
+    return this.http.post(this.sendPartialFormUrl, form, {headers: this.httpHeaders})
+  }
+
+  getPartialForm() {
+    return this.http.get<JSON>(this.sendPartialFormUrl, {headers: this.httpHeaders})
   }
 
 

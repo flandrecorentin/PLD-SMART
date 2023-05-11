@@ -132,4 +132,27 @@ public class FormulaireREXController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/formulaire-alreadysend")
+    public ResponseEntity<Boolean> formulaireREXDejaEnvoye(@RequestHeader(HttpHeaders.AUTHORIZATION) String tokenUser){
+        try {
+            boolean dejaEnvoye = formulaireREXService.formulaireREXDejaEnvoye(tokenUser);
+            if(dejaEnvoye){
+                System.out.println("[FormulaireREXController]: Formulaire REX déjà envoyé par l'utilisateur");
+                return new ResponseEntity<>(dejaEnvoye, HttpStatus.OK);
+            }
+            else if(!dejaEnvoye){
+                System.out.println("[FormulaireREXController]: Formulaire REX non envoyé par l'utilisateur");
+                return new ResponseEntity<>(dejaEnvoye, HttpStatus.OK);
+            }
+            else{
+                System.out.println("[FormulaireREXController]: Formulaire REX Temporaire non trouvé");
+                return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("[FormulaireREXController]: ERREUR lors de la sauvegarde du formulaire REX temporaire");
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

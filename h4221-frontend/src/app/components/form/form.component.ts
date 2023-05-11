@@ -52,11 +52,34 @@ export class FormComponent implements OnInit {
     )
   }
 
+  sendPartialResults(sender: Model) {
+    if (sender.isCurrentPageValid) {
+      const mail = localStorage.getItem('mail');
+      var results: JSON = JSON.parse('{}');
+      Object.assign(results,
+        {
+          "author": mail,
+          "formulairetemp": sender.data
+        });
+      this.formService.sendPartialForm(results).subscribe(
+        res => {
+          this.router.navigateByUrl('/home');
+        }
+      )
+    }
+  }
+
   ngOnInit() {
     this.formService.getForm().subscribe(
       (res) => {
         const survey = new Model(res);
         this.surveyModel = survey;
+        var partialResults: JSON = JSON.parse('{}');
+        this.formService.getPartialForm().subscribe( 
+          data => {
+            partialResults = data;
+            survey.data = partialResults;
+          })
         survey.onComplete.add(this.sendResults.bind(this))
       }
     )

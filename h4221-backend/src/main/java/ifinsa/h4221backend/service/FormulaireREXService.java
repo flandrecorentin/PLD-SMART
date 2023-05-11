@@ -82,4 +82,15 @@ public class FormulaireREXService {
             return null;
         }
     }
+
+    public boolean formulaireREXDejaEnvoye(String tokenUser) {
+        try{
+            tokenUser = tokenUser.substring(7);
+            UserInfo userInfo = userService.chercherParToken(tokenUser);
+            String mail = userInfo.getMail();
+            return formulaireREXDAO.findByAuthor(mail)!=null;
+        }catch (Exception exception){
+            return false;
+        }
+    }
 }
