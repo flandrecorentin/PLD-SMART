@@ -3,8 +3,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { SurveyModule } from 'survey-angular-ui';
-import { HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -29,7 +27,7 @@ import { ChatbotComponent } from './chatbot-page/chatbot-page.component';
   declarations: [
     AppComponent,
     HomePageComponent,
-    ChatbotComponent,
+    ChatbotComponent
     HomePageComponent,
     ConnexionPageComponent,
     InscriptionPageComponent,
