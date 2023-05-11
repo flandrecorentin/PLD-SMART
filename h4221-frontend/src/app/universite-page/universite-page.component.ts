@@ -1,21 +1,22 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChatService } from '../config/chat.service';
 import { UnivService } from '../config/univ.service';
 import { FormService } from '../config/form.service';
 import { ChangeDetectorRef } from '@angular/core';
 import { Observable, Subscription, interval } from 'rxjs'; 
+
 @Component({
   selector: 'app-universite-page',
   templateUrl: './universite-page.component.html',
   styleUrls: ['./universite-page.component.css'],
 })
-export class UniversitePageComponent {
+export class UniversitePageComponent implements OnInit, OnDestroy{
   univId:string;
-
+  subscriptionMessageByConv:any;
+  subscriptionUni:any;
   constructor(private univService: UnivService,private formService: FormService, private route: ActivatedRoute, private router: Router, private chatService: ChatService, private cdr: ChangeDetectorRef) {
     this.univId=""
-    
   }
 
   fakeRex={
@@ -252,9 +253,9 @@ AMIFirstContactDate:string[]=[];
       this.router.navigateByUrl("/home")
     }
 
-    const source = interval(1000);
+    const source = interval(1000)
     const text = 'Your Text Here';
-    var subscription = source.subscribe(val => this.chatService.chatGetMessagesByConv(this.displayedChat.stringId).subscribe(
+    this.subscriptionMessageByConv = source.subscribe(val => this.chatService.chatGetMessagesByConv(this.displayedChat.stringId).subscribe(
       (rep: any) => {
         this.displayedChat=rep
         
@@ -263,7 +264,7 @@ AMIFirstContactDate:string[]=[];
 
       });
       
-    var subscription2 = source.subscribe(val => this.chatService.chatGetConvByUni(this.univId).subscribe(
+    this.subscriptionUni = source.subscribe(val => this.chatService.chatGetConvByUni(this.univId).subscribe(
       (rep: any) => {
         this.allChats=rep
       }),(error:any)=>{
@@ -419,6 +420,12 @@ AMIFirstContactDate:string[]=[];
 
 
 
+  }
+
+  ngOnDestroy() {
+    this.subscriptionMessageByConv.unsubscribe();
+    this.subscriptionUni.unsubscribe()
+    console.log("Destroy")
   }
 
   
