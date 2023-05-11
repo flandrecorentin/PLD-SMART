@@ -15,6 +15,77 @@ export class UniversitePageComponent {
     this.univId=""
     
   }
+  fakeUniv = {
+    "nom": "Technische Universitat Wien",
+    "pays": "Autriche",
+    "debuts1": "01/10/2020",
+    "Fins1": "31/01/2021",
+    "debuts2": "01/03/2021",
+    "finS2": "30/06/2021",
+    "candidature": "-",
+    "ville": "Wien",
+    "URL": "http://www.tuwien.ac.at",
+    "Fichier": "N/A",
+    "accord": [
+        {
+            "nom": "Technische Universitat Wien - Accord de double-diplome 1 - IF",
+            "place": "1/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/virtual-welcome-centre/incoming-exchange-students/",
+            "niveauLV": "B1"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - BS",
+            "place": "2/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - GCU",
+            "place": "2/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - GE",
+            "place": "3/3.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - GI",
+            "place": "4/4.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - GM",
+            "place": "4/4.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - IF",
+            "place": "2/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - SGM",
+            "place": "2/2.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        },
+        {
+            "nom": "Technische Universitat Wien - Erasmus + SMS (etudiante) - TC",
+            "place": "3/3.00 Periode academique ( 2023/24 )",
+            "descr": "https://www.tuwien.at/en/studies/international/incoming-exchange-students",
+            "niveauLV": "B1/B2 Allemand et/ou B1 anglais"
+        }
+      ]
+    }
+    univDetails=this.fakeUniv;
+
+
   messageType={
     author:"",
     date:"",

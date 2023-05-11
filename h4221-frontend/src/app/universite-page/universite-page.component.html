@@ -1,12 +1,36 @@
 <app-sidebar></app-sidebar>
 <div id="universite">
     <div id="header">
-        <p id="titre">Birmingham</p>
+        <p id="titre">{{univDetails.nom}}</p>
     </div>
     <div id="wrapper">
         <div id="infos">
-            INFOS UNIV
+            <div id="infos1">
+                <p class="titre">Fiche d'identité</p>
+                <p>🌍 Pays : {{univDetails.pays}}</p>
+                <p>📍 Ville : {{univDetails.ville}}</p>
+                <p>📅 Dates du semestre 1 : {{univDetails.debuts1}} - {{univDetails.Fins1}}</p>
+                <p>📅 Dates du semestre 2 : {{univDetails.debuts2}} - {{univDetails.finS2}}</p>
+                <p>🌐 <a href={{univDetails.URL}}>Site de l'université</a></p>
+            </div>
+            
+            <div id="accords" class="scrollable">
+                
+                <p class="titre">Accords disponibles</p>
+                <div *ngFor="let accord of univDetails.accord, let i=index">
+                    <p>🤝 Nom de l'accord : {{accord.nom}}</p>
+                    <p>🪑 Nombre de places : {{accord.place}}</p>
+                    <p>📄 Description : <a href={{accord.descr}}>lien</a></p>
+                    <p>💬 Niveau de langue demandé : {{accord.niveauLV}}</p>
+                </div>
+            </div>
         </div>
+
+
+
+
+
+
         <div id="discussion">
             <div id="titrewrapper"><span id="titre">Canal de discussion 💌</span>
                 
