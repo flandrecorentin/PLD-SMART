@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -56,11 +57,12 @@ public class FormulaireREXController {
     }
 
 
-    @GetMapping("/formulaire/university/{university}")
-    public ResponseEntity<List<FormulaireREX>> chercherFormulaireParUniversite(@PathVariable(value="university") String university){
-        List<FormulaireREX> formulaireREXs = new LinkedList<>();
+    @GetMapping("/formulaire/university/{universite}")
+    public ResponseEntity<List<FormulaireREX>> chercherFormulaireParUniversite(@PathVariable(value="universite") String university){
         try {
+            List<FormulaireREX> formulaireREXs;
             formulaireREXs = formulaireREXService.findFormulaireREXsByExchangeUniversity(university);
+            System.out.println(formulaireREXs);
             if(formulaireREXs.size()==0){
                 System.out.println("[FormulaireREXController]: Aucun formulaire REX avec l'université " + university +" est renseigné en base de donnée");
                 return new ResponseEntity<>(formulaireREXs, HttpStatus.NOT_FOUND);

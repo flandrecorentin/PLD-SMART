@@ -1,0 +1,22 @@
+{
+  "author": "corentin.flandre@insa-lyon.fr",
+  "formulairetemp": {
+    "AccomodationNeighborhoodRecommendation": "Campus NTNU",
+    "AccomodationType": "Studio individuel",
+    "ExchangePeriod": "SEMESTRE_1",
+    "AccomodationPrice": 600,
+    "ExchangeCountry": "Norvege",
+    "AccomodationDistanceToUni": 2000,
+    "MeanOfTransport": "Avion",
+    "TransportDuration": 2,
+    "AccomodationHowDidYouFind": "UniCampaign",
+    "ExchangeUniversity": "norges-teknisk-naturvitenskapelige-universitet",
+    "TransportReservationWebsite": "https://angular.io/api/router/RouterLink",
+    "TransportReservationDate": "2023-05-11",
+    "AccomodationReservationDate": "2023-06-01",
+    "TransportPrice": 300,
+    "AccomodationHardToFind": 2,
+    "ExchangeType": "ERASMUS",
+    "AccomodationUsefulWebsites": "Le site Blocket, une version \"Leboncoin\" pour les pays nordiques"
+  }
+}
