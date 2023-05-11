@@ -31,6 +31,14 @@ public class FormulaireREXController {
         try{
             if(formulaireREXService.sauvegarder(formulaireREX)){
                 System.out.println("[FormulaireREXController]: Sauvegarde du questionnaire");
+                int stateOfSuppression = formulaireREXService.supprimerREXTemp(formulaireREX.getAuthor());
+                if(stateOfSuppression==0){
+                    System.out.println("[FormulaireREXController]: Suppression du questionnaire temporaire");
+                }else if(stateOfSuppression==1){
+                    System.out.println("[FormulaireREXController]: Pas de questionnaire temporaire à supprimer");
+                }else{
+                    System.out.println("[FormulaireREXController]: Erreur lors de la suppression du formulaire temporaire");
+                }
                 return new ResponseEntity(HttpStatus.OK);
             }else{
                 System.out.println("[FormulaireREXController]: Le formulaire  a un format invalide");
