@@ -13,6 +13,7 @@ import { AuthguardGuard } from './shared/authguard.guard';
 import { AccueilPageComponent } from './accueil-page/accueil-page.component';
 import { AlreadyLoggedInGuard } from './shared/already-logged-in.guard';
 import { AdminGuard } from './shared/admin.guard';
+import { FormAlreadySentGuard } from './shared/form-already-sent.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, canActivate:[AuthguardGuard]},
@@ -20,7 +21,7 @@ const routes: Routes = [
   { path: 'inscription', component: InscriptionPageComponent, canActivate:[AlreadyLoggedInGuard]},
   { path: 'settings', component: SettingsPageComponent, canActivate:[AuthguardGuard]},
   { path: 'faq', component: FaqPageComponent, canActivate:[AuthguardGuard]},
-  { path: 'form', component: FormPageComponent,canActivate:[AuthguardGuard]},
+  { path: 'form', component: FormPageComponent,canActivate:[AuthguardGuard, FormAlreadySentGuard]},
   { path: 'faq', component: FaqPageComponent, canActivate:[AuthguardGuard]},
   { path: 'form', component: FormPageComponent, canActivate:[AuthguardGuard]},
   { path: 'universite', component: UniversitePageComponent, canActivate:[AuthguardGuard]},
