@@ -43,4 +43,46 @@ public class ChatService {
             return false;
         }
     }
+
+
+    public List<Conversation> getConversationByUni(String university){
+        try{
+            return chatDAO.findAllByUni(university);
+        }
+        catch (Exception exception){
+            return null;
+        }
+    }
+
+    public List<Conversation> getConversationByName(String name){
+        try{
+            return chatDAO.findAllByName(name);
+        }
+        catch (Exception exception){
+            return null;
+        }
+    }
+
+    public Conversation getConversationById(String id) {
+        try {
+            Optional<Conversation> optionalConversation = chatDAO.findById(id);
+            if (optionalConversation.isPresent()) {
+                return optionalConversation.get();
+            } else {
+                return null;
+            }
+        } catch (Exception exception) {
+            return null;
+        }
+    }
+
+    public List<Conversation> getConversationsByNameAndUni(String name, String university){
+        try{
+            return chatDAO.findAllByNameAndUni(name, university);
+        }
+        catch (Exception exception){
+            return null;
+        }
+    }
+
 }
