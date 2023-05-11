@@ -8,7 +8,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 app = Flask(__name__)
 from pygpt4all import GPT4All_J
 #context = "I am a student in an engineering school and I will be leaving very soon on a university exchange. My goal is to prepare for this exchange by obtaining the necessary information."
-model = GPT4All_J(model_path='/home/charley/.local/share/nomic.ai/GPT4All/ggml-gpt4all-j-v1.3-groovy.bin')
+model = GPT4All_J(model_path='ggml-gpt4all-j-v1.3-groovy.bin')
 #from pygpt4all import GPT4All
 #model = GPT4All('/home/charley/.local/share/nomic.ai/GPT4All/ggml-gpt4all-l13b-snoozy.bin')
 
