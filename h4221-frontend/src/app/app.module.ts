@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { SurveyModule } from 'survey-angular-ui';
@@ -27,7 +27,7 @@ import { ChatbotComponent } from './chatbot-page/chatbot-page.component';
   declarations: [
     AppComponent,
     HomePageComponent,
-    ChatbotComponent
+    ChatbotComponent,
     HomePageComponent,
     ConnexionPageComponent,
     InscriptionPageComponent,
