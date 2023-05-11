@@ -16,6 +16,7 @@
   }
 
   .chat-messages {
+    position: relative;
     height: 400px;
     overflow-y: auto;
   }
@@ -62,14 +63,27 @@
     width: 20%;
     margin-left: 5px;
   }
-
+/*
 .loading-indicator {
-  display: flex;
+  position: fixed;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
-/*
+
+.loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+*/
+
+
 .loading-indicator {
   position: fixed;
   top: 0;
@@ -82,7 +96,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
 }
-*/
+
 
 .loading-indicator img {
   width: 150px;
