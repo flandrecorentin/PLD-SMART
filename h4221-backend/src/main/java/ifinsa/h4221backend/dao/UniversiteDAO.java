@@ -18,5 +18,8 @@ public interface UniversiteDAO extends MongoRepository<Universite, String> {
 
     @Query("{pays: ?0}")
     List<Universite> findAllByPays(String pays);
+
+    @Query("{identifiant: ?0}")
+    Universite findByIdentifiant(String identifiant);
 }
 

@@ -3799,26 +3799,6 @@
             }
         ]
     },
-    "": {
-        "nom": "",
-        "pays": "Indonesie",
-        "debuts1": "N/A",
-        "Fins1": "N/A",
-        "debuts2": "N/A",
-        "finS2": "N/A",
-        "candidature": "",
-        "ville": "Surabaya",
-        "URL": "http://www.its.ac.id",
-        "Fichier": "N/A",
-        "accord": [
-            {
-                "nom": "Institut Teknologi Sepuluh Nopember - Accord de mobilite",
-                "place": "",
-                "descr": "",
-                "niveauLV": ""
-            }
-        ]
-    },
     "dublin-city-university": {
         "nom": "Dublin City University",
         "pays": "Irlande",

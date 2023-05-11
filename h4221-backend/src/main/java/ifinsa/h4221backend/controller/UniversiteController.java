@@ -5,7 +5,6 @@ import ifinsa.h4221backend.service.UniversiteService;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -63,6 +62,25 @@ public class UniversiteController {
         }
         catch (Exception exception){
             System.out.println("[UniversiteController]: La récupération des universites pour le pays "+pays+" a rencontrés un problème côté backend");
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("/universite/details/{univId}")
+    public ResponseEntity<Universite> recupererUniversiteParIdentifiant(@PathVariable(value="univId") String univId){
+        try {
+            Universite universite = universiteService.chercherUniversite(univId);
+            if(universite!=null){
+                System.out.println("[UniversiteController]: La récupération des informations de l'universite "+ universite.getNom()+" a réussi");
+                return new ResponseEntity<>(universite, HttpStatus.OK);
+            }
+            else{
+                System.out.println("[UniversiteController]: L'identifiant "+univId+" ne correspond a aucune universite en BD");
+                return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("[UniversiteController]: La recherche de l'universite a rencontrés un problème côté backend");
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

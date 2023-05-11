@@ -2,6 +2,7 @@ package ifinsa.h4221backend;
 
 import ifinsa.h4221backend.model.*;
 import ifinsa.h4221backend.service.*;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,14 +58,22 @@ public class Initialisation implements ApplicationRunner {
 
         // Initialisation des Universites
         JSONParser jsonP = new JSONParser();
-        JSONObject jsonO = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/liste_univ_pays_accord.json"));
+        JSONObject jsonO = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/listedetaillefinales.json"));
         List<Universite> universites = new LinkedList<>();
         for(int i=0; i<jsonO.size(); i++){
             String key = jsonO.keySet().toArray()[i].toString();
             JSONObject jsonObject2 = (JSONObject) jsonO.get(key);
             String nom = jsonObject2.get("nom").toString();
             String pays = jsonObject2.get("pays").toString();
-            Universite universite = new Universite(key, nom, pays);
+            String ville = jsonObject2.get("ville").toString();
+            String url = jsonObject2.get("URL").toString();
+            String candidature = jsonObject2.get("candidature").toString();
+            String debutS1 = jsonObject2.get("debuts1").toString();
+            String finS1 = jsonObject2.get("Fins1").toString();
+            String debutS2 = jsonObject2.get("debuts2").toString();
+            String finS2 = jsonObject2.get("finS2").toString();
+            JSONArray jsonArray = (JSONArray) jsonObject2.get("accord");
+            Universite universite = new Universite(key, nom, pays, ville, url, candidature, debutS1, finS1, debutS2, finS2, jsonArray);
             universites.add(universite);
         }
         for (Universite universite: universites) {
