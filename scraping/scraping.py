@@ -21,8 +21,7 @@ driver.implicitly_wait(1) #maximum time to load the link
 etablissement = {}
 listeEtablissement = {}
 
-#Flitrer les accords IF
-"""
+#Filtrer la liste des accords pour n'afficher que ceux du départements IF
 btnRecherche1 = driver.find_element(By.XPATH, '//button[@class="irm_filter_btn float-right"]')
 time.sleep(0.5)
 btnRecherche1.click()
@@ -37,12 +36,11 @@ time.sleep(0.5)
 btnRecherche2 = driver.find_element(By.XPATH, '//button[@class="irm_filter_btn m_rt"]')
 btnRecherche2.click()
 time.sleep(1)
-"""
-
 
 #Scrollig parfait pour ouvrir la première page "Plus d'infos"
 try:
     try:
+        #clique sur les différents boutons "afficher plus" afin de défiler la page et afficher toutes les mobilités 
         while 1:
             afficherPlus = driver.find_element(By.LINK_TEXT, "Afficher plus")
             afficherPlus.location_once_scrolled_into_view
@@ -53,27 +51,22 @@ try:
 
     except:
 
-
+        #liste des boutons "plus de détail" de toutes les mobiltés
         listeplusInfo = driver.find_elements(By.LINK_TEXT, "Plus de détails")
-        #nom_fichier = open('listedetaille.json', 'w') 
 
         for plusInfo in listeplusInfo :
 
 
-
+            #scroll vers l'élément plus de détail puis clique
             time.sleep(1)
             plusInfo.location_once_scrolled_into_view
             time.sleep(1)
             driver.execute_script("window.scrollTo(0, window.scrollY - 200)")
-            
-
-
-            #//p[@class="_title" and text() = "Accord"]/../../../div[2]/div/p
             time.sleep(1)
-            #Ouverture de la page "Plus d'infos"
             plusInfo.click()
             time.sleep(1)
 
+            #On récupère le nom de l'université et on le normalise 
             try:
                 nomuniversite = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Etablissement externe"]/../../../div[2]/div/p').text
             except:
@@ -83,7 +76,7 @@ try:
             idnom = idNom.replace(" ","-")
             idnom = unidecode.unidecode(idnom)
             
-
+            #Chaque université peut proposé plusieurs échanges. On s'assure que chaque université n'apparaisse qu'une seule fois dans la BDD
             if idnom not in listeEtablissement : 
                 print("---------------------")
                 print(idNom)
@@ -93,7 +86,7 @@ try:
                 accord ={}
                 
 
-                #nom
+                #Nom de l'université
                 etablissement["nom"]=nomuniversite
                 try:
                     pays = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "PAYS (relation)"]/../../../div[2]/div/p')
@@ -102,17 +95,16 @@ try:
                 except:
                     etablissement["pays"]="N/A"
 
-                #accord
+                #Type d'accord proposé
                 try: 
                     print("début recherche accord")  
                     nomaccord = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Accord"]/../../../div[2]/div/p')
                     print("accord "+ nomaccord.text)
-                    accord["nom"] =unidecode.unidecode(nomaccord.text)
-                    
+                    accord["nom"]=unidecode.unidecode(nomaccord.text)    
                 except:
-                    accord["nom"] = "N/A"
+                    accord["nom"]="N/A"
 
-                #places
+                #Nombre de places
                 try:
                     place = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Places - Nombre et durée"]/../../../div[2]/div/p')
                     print(place.text)
@@ -128,7 +120,7 @@ try:
                 except:
                     accord["descr"]="N/A"
 
-                #niveau de langue
+                #Niveau de langue requis
                 try:
                     niveauLV = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Niveau de langues demandé"]/../../../div[2]/div/p')
                     print(niveauLV.text)
@@ -136,7 +128,7 @@ try:
                 except:
                     accord["niveauLV"]="N/A"
 
-                #début s1
+                #Date de début du S1
                 try:
                     debuts1= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Début S1"]/../../../div[2]/div/p')
                     debuts1.location_once_scrolled_into_view
@@ -146,6 +138,7 @@ try:
                 except:
                     etablissement["debuts1"]="N/A"
                     
+                #Date de fin du S1
                 try:
                     fins1= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Fin S1"]/../../../div[2]/div/p')
                     print(fins1.text)
@@ -154,6 +147,7 @@ try:
                 except:
                     etablissement["Fins1"]="N/A"
 
+                #Date de début du S2
                 try:
                     debuts2= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Début S2"]/../../../div[2]/div/p')
                     print(debuts2.text)
@@ -161,6 +155,7 @@ try:
                 except:
                     etablissement["debuts2"]="N/A"
 
+                #Date de fin du S
                 try:
                     fins2= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Fin S2"]/../../../div[2]/div/p')
                     print(fins2.text)
@@ -168,21 +163,20 @@ try:
                 except:
                     etablissement["finS2"]="N/A"
 
-                #candidature
+                #Procédure de candidature
                 try:
                     candidature= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Mode de candidature"]/../../../div[2]/div/p')
                     print(candidature.text)
                     etablissement["candidature"]=unidecode.unidecode(candidature.text)
                 except:
                     etablissement["candidature"]="N/A"
-                    
-                #etablissement["pays"]=unidecode.unidecode(pays.text)
 
-
+                #clique sur le bouton afin d'avoir des infos sur l'établissment
                 univBtn = driver.find_element(By.LINK_TEXT, "Etablissements")
                 univBtn.click()
                 time.sleep(0.5)
 
+                #Ville dans laquelle se trouve l'université
                 try:
                     Ville= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Ville"]/../../../div[2]/div/p')
                     print(Ville.text)
@@ -190,6 +184,7 @@ try:
                 except:
                     etablissement["ville"]="N/A"
 
+                #URL
                 try:
                     URL= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "URL"]/../../../div[2]/div/p')
                     print(URL.text)
@@ -197,6 +192,7 @@ try:
                 except:
                     etablissement["URL"]="N/A"
 
+                #Fichier
                 try:
                     Fichier= driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Fichier"]/../../../div[2]/div/p/a.get_attribute("href")')
                     print(Fichier.text)
@@ -204,22 +200,22 @@ try:
                 except:
                     etablissement["Fichier"]="N/A"
 
-
+                #ajout de l'établissement dans la liste d'etablissement
                 listeEtablissement[idnom] = etablissement
                 accords.append(accord)
                 etablissement["accord"]=accords
                 
 
             else:
+                #si l'établissement existe déjà ajout des informations sur le nouvel accord
                 accords = []
                 accord ={}
 
-                
+                #nom de l'accord
                 try:   
                     nomaccord = driver.find_element(By.XPATH, '//p[@class="_title" and text() = "Accord"]/../../../div[2]/div/p')
                     print(nomaccord.text)
-                    accord["nom"] =unidecode.unidecode(nomaccord.text)
-                    
+                    accord["nom"] =unidecode.unidecode(nomaccord.text) 
                 except:
                     print("")
 
@@ -248,22 +244,18 @@ try:
                 except:
                     accord["niveauLV"]="N/A"
 
-
                 listeEtablissement[idnom]['accord'].append(accord)
             
-
-            #time.sleep(1)
-            #Ouverture de l'onglet "etablissement"
-
-            #TODO récup info général
+            
             time.sleep(1)
+
+            #clique sur bouton de fermeture de la page d'information
             closeBtn = driver.find_element(By.XPATH, '//button[@class="_modal_univ_moreclose"]')
             closeBtn.click()
-            #json.dump(listeEtablissement, nom_fichier)
-        #Fermeture de la page "Plus d'infos"
-
+        #Ajout des infos dans le json
         with open('listedetaillefinales.json', 'w') as mon_fichier:
             json.dump(listeEtablissement, mon_fichier)
 except:
+    #Ajout des infos dans le json si exception
     with open('listedetaillefinales.json', 'w') as mon_fichier:
             json.dump(listeEtablissement, mon_fichier)
