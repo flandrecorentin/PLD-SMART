@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChatService } from '../config/chat.service';
 import { UnivService } from '../config/univ.service';
+import { FormService } from '../config/form.service';
 import { ChangeDetectorRef } from '@angular/core';
 import { Observable, Subscription, interval } from 'rxjs'; 
 @Component({
@@ -12,10 +13,90 @@ import { Observable, Subscription, interval } from 'rxjs';
 export class UniversitePageComponent {
   univId:string;
 
-  constructor(private univService: UnivService, private route: ActivatedRoute, private router: Router, private chatService: ChatService, private cdr: ChangeDetectorRef) {
+  constructor(private univService: UnivService,private formService: FormService, private route: ActivatedRoute, private router: Router, private chatService: ChatService, private cdr: ChangeDetectorRef) {
     this.univId=""
     
   }
+
+  fakeRex={
+    "_id": {
+      "$oid": "645ce5d9cd7fd958330ab1c5"
+    },
+    "author": "colin.thomas@insa-lyon.fr",
+    "date": "10-05-2023",
+    "information": {
+      "UniversityHandleDifferences": "2",
+      "ExchangeCountry": "Norvege",
+      "OrganisationRentTransportMean": "true",
+      "TransportDuration": "4",
+      "OpenQuestionWhy": "Je voulais aller dans un pays du nord, et c'était une bonne université.",
+      "BRMIE": "true",
+      "ExchangeUniversity": "norges-teknisk-naturvitenskapelige-universitet",
+      "AccomodationReservationDate": "2023-05-10",
+      "TransportPrice": "399",
+      "ERASMUS": "true",
+      "UniversityGeneralFeeling": "4",
+      "ExchangeType": "ERASMUS",
+      "AccomodationNeighborhoodRecommendation": "Oui, le quartier \"Nardo\" au sud de NTNU possède plusieurs logements.",
+      "OLADate": "2023-05-10",
+      "ExchangePeriod": "SEMESTRE_1",
+      "BRMIEApplicationDeadline": "2023-06-15",
+      "AccomodationHowDidYouFind": "Website",
+      "BRMIEFirstContactDate": "2023-05-10",
+      "OrganisationPublicTransportSubscription": "false",
+      "ModulesResponsibleName": "M. Gjovik Thorn",
+      "UniversityLanguageCourse": "true",
+      "UniversityPossibleToEnrollAssociation": "true",
+      "GrantAmount": "1099",
+      "ERASMUSDropInSessionForAttendanceCertificate": "false",
+      "AccomodationHardToFind": "3",
+      "ERASMUSOLAUniSIgnatureName": "M. Gjovick Thorn",
+      "AccomodationUsefulWebsites": "hybel.no, sit.no",
+      "ModuleInscriptionAbroad": "ByEmail",
+      "CNI": "true",
+      "OLAUniversityAcceptINSAPlatform": "true",
+      "AccomodationType": "Chambre dans une collocation",
+      "Module1": "Ethical hacking",
+      "Module2": "Mobile Development",
+      "Module3": "Customer Driven Project",
+      "Module4": "Customer Driven Project",
+      "Module5": "Customer Driven Project",
+      "Module6": "Customer Driven Project",
+      "Module7": "Customer Driven Project",
+      "Module8": "Customer Driven Project",
+      "question2": "hybel.no",
+      "question4": "false",
+      "UniversityStudentLife": "5",
+      "ModulesWhenPick": "2023-09-01",
+      "ModuleDescriptionModule1": "Course content\n\nThe course covers the theory and practical techniques of ethical hacking and penetration testing, which are essential elements in modern cybersecurity. Ethical hacking consists of testing the security of IT systems by trying to find and exploit security vulnerabilities. The course presents the steps of penetration testing including information gathering, network reconnaissance, how to get in touch with services, but also covers specific topics such as web hacking, binary exploitation, social engineering and wireless hacking.",
+      "ModuleDescriptionModule2": "Course content\nEach group is given a task from a client that is to be carried out as a project. All phases of a development project are to be covered: Preliminary studies, requirements specification, design, implementation, and evaluation. The emphasis is on the early phases. It is important that the groups work in close collaboration with the client. The groups will hand in a project report and give a final presentation and demonstration of a runnable system to the client and the censor. The following days are obligatory: the starting day of the course which is on Tuesday in the semester's second week, the guest lectures and the course in group dynamics, and the weekly supervision. A failure to meet on these days may prevent the student from completing the course.",
+      "ModuleDescriptionModule3": "Course content\nThis course teaches the basics of cross-platform mobile applications development with a focus on the React Native framework. The goal is to help students develop best practices for creating apps for both iOS and Android using JavaScript programming language.\n\nKeywords: JavaScript, React Native framework, development tools for building and debugging cross-platform mobile apps, UI design and implementation, handling of data and network calls, internationalisation of mobile app, use of device sensors.",
+      "ModuleDescriptionModule4": "Course content\nThis course teaches the basics of cross-platform mobile applications development with a focus on the React Native framework. The goal is to help students develop best practices for creating apps for both iOS and Android using JavaScript programming language.\n\nKeywords: JavaScript, React Native framework, development tools for building and debugging cross-platform mobile apps, UI design and implementation, handling of data and network calls, internationalisation of mobile app, use of device sensors.",
+      "ModuleDescriptionModule5": "Course content\nThis course teaches the basics of cross-platform mobile applications development with a focus on the React Native framework. The goal is to help students develop best practices for creating apps for both iOS and Android using JavaScript programming language.\n\nKeywords: JavaScript, React Native framework, development tools for building and debugging cross-platform mobile apps, UI design and implementation, handling of data and network calls, internationalisation of mobile app, use of device sensors.",
+      "ModuleDescriptionModule6": "Course content\nThis course teaches the basics of cross-platform mobile applications development with a focus on the React Native framework. The goal is to help students develop best practices for creating apps for both iOS and Android using JavaScript programming language.\n\nKeywords: JavaScript, React Native framework, development tools for building and debugging cross-platform mobile apps, UI design and implementation, handling of data and network calls, internationalisation of mobile app, use of device sensors.",
+      "ModuleDescriptionModule7": "Course content\nThis course teaches the basics of cross-platform mobile applications development with a focus on the React Native framework. The goal is to help students develop best practices for creating apps for both iOS and Android using JavaScript programming language.\n\nKeywords: JavaScript, React Native framework, development tools for building and debugging cross-platform mobile apps, UI design and implementation, handling of data and network calls, internationalisation of mobile app, use of device sensors.",
+      "ModuleDescriptionModule8": "Course content\nThis course teaches the basics of cross-platform mobile applications development with a focus on the React Native framework. The goal is to help students develop best practices for creating apps for both iOS and Android using JavaScript programming language.\n\nKeywords: JavaScript, React Native framework, development tools for building and debugging cross-platform mobile apps, UI design and implementation, handling of data and network calls, internationalisation of mobile app, use of device sensors.",
+      "AccomodationPrice": "500",
+      "question12": "1000",
+      "AccomodationDistanceToUni": "1500",
+      "UniversityIntegration": "4",
+      "MeanOfTransport": "Avion",
+      "ModulesResponsibleMail": "exchange@st.ntnu.no",
+      "TransportReservationWebsite": "https://www.klm.fr/",
+      "ModulePossibleToChangeOnceArrived": "true",
+      "TransportReservationDate": "2023-04-01",
+      "OrganisationHealthInsurance": "true",
+      "OpenQuestionMeetExpectation": "true",
+      "UniversityAssociationRessources": "Le site de l'université : https://www.ntnu.edu/",
+      "ModulesChangePeriodOnceArrived": "2",
+      "ERASMUSFirstContactDate": "2023-04-04",
+      "OrganisationPhone": "true"
+    },
+    "exchangeCountry": "Norvege",
+    "exchangeUniversity": "norges-teknisk-naturvitenskapelige-universitet",
+    "_class": "ifinsa.h4221backend.model.FormulaireREX"
+  }
+
   fakeUniv = {
     "nom": "Technische Universitat Wien",
     "pays": "Autriche",
@@ -85,6 +166,7 @@ export class UniversitePageComponent {
       ]
     }
     univDetails=this.fakeUniv;
+    allRex=[this.fakeRex, this.fakeRex];
 
 
   messageType={
@@ -106,7 +188,59 @@ export class UniversitePageComponent {
     this.selectedChat
   ]
 
+
   noConv=false;
+
+
+  
+  TransportDuration=0;
+  OpenQuestionWhy:string[]=[];
+  AccomodationNeighborhoodRecommendation:string[]=[];
+  TransportPrice=0;
+  MeanOfTransport={
+    "avion":0,
+    "voiture":0,
+    "bus":0
+  }
+  TransportReservationWebsite:string[]=[];
+  TransportReservationDate:string[]=[];
+  ModulesWhenPick:string[]=[];
+  UniversityStudentLife=0;
+  UniversityIntegration=0;
+  UniversityGeneralFeelings=0;
+  AccomodationReservationDate:string[]=[];
+  AccomodationHowDidYouFind={
+    Website:0,
+    UniCampaign:0,
+    Acquaintance:0
+  }
+  AccomodationType={
+  "Studio_individuel":0,
+  "Chambre_dans_une_collocation":0,
+  "Chambre_seule_en_residence_universitaire":0,
+  "Collocation_en_residence_universitaire":0,
+  "Chambre_chez_lhabitant":0,
+  "Chambre_dhotel":0
+}
+AccomodationHardToFind=0;
+Modules:{ nom: any;descr: any }[]=[];
+ModulesChangePeriodOnceArrived=0;
+ModuleResponsibleName:string[]=[]
+ModuleResponsibleMail:string[]=[]
+ERASMUSOLAUniSIgnatureName:string[]=[];
+ERASMUSFirstContactDate:string[]=[];
+ERASMUSApplicationDeadline:string[]=[];
+AmountErasmus=0;
+AmountBRMIE=0;
+BRMIEApplicationDeadline:string[]=[];
+BRMIEFirstContactDate:string[]=[];
+AmountAMI=0;
+AMIApplicationDeadline:string[]=[];
+AMIFirstContactDate:string[]=[];
+
+
+
+
   async ngOnInit() {
     this.route.queryParams
       .subscribe(params => {
@@ -175,6 +309,104 @@ export class UniversitePageComponent {
           console.log(this.univDetails)
         });
 
+      
+      var computeRex;
+      var Rex;
+      // PARTIE REX
+      this.formService.getRexByUniv(this.univId).subscribe(
+        (rep: any) => {
+          console.log("REXDETAILS")
+          console.log(rep)
+          this.allRex=rep
+        });
+
+
+
+      for(var rex of this.allRex){
+        if("Module1" in rex.information){
+          this.Modules.push({nom:rex.information.Module1, descr:rex.information.ModuleDescriptionModule1})
+        }if("Module2" in rex.information){
+          this.Modules.push({nom:rex.information.Module2, descr:rex.information.ModuleDescriptionModule2})
+        }if("Module3" in rex.information){
+          this.Modules.push({nom:rex.information.Module3, descr:rex.information.ModuleDescriptionModule3})
+        }if("Module4" in rex.information){
+          this.Modules.push({nom:rex.information.Module4, descr:rex.information.ModuleDescriptionModule4})
+        }if("Module5" in rex.information){
+          this.Modules.push({nom:rex.information.Module5, descr:rex.information.ModuleDescriptionModule5})
+        }if("Module6" in rex.information){
+          this.Modules.push({nom:rex.information.Module6, descr:rex.information.ModuleDescriptionModule6})
+        }if("Module7" in rex.information){
+          this.Modules.push({nom:rex.information.Module7, descr:rex.information.ModuleDescriptionModule7})
+        }if("Module8" in rex.information){
+          this.Modules.push({nom:rex.information.Module8, descr:rex.information.ModuleDescriptionModule8})
+        }
+        this.ModuleResponsibleMail.push(rex.information.ModulesResponsibleMail)
+        this.ModuleResponsibleName.push(rex.information.ModulesResponsibleName)
+        this.AccomodationHardToFind += +rex.information.AccomodationHardToFind;
+        this.ModulesChangePeriodOnceArrived += +rex.information.ModulesChangePeriodOnceArrived;
+        this.AccomodationReservationDate.push(rex.information.AccomodationReservationDate)
+        this.UniversityGeneralFeelings+= +rex.information.UniversityGeneralFeeling
+        this.UniversityIntegration+= +rex.information.UniversityIntegration
+        this.UniversityStudentLife+= +rex.information.UniversityStudentLife
+        this.TransportReservationWebsite.push(rex.information.TransportReservationWebsite)
+        this.TransportReservationDate.push(rex.information.TransportReservationDate)
+        this.ModulesWhenPick.push(rex.information.ModulesWhenPick)
+        this.TransportDuration += +rex.information.TransportDuration
+        this.OpenQuestionWhy.push(rex.information.OpenQuestionWhy)
+        console.log(rex.information.MeanOfTransport)
+        if(rex.information.MeanOfTransport=="Voiture"){
+          this.MeanOfTransport.voiture++;
+        }else if(rex.information.MeanOfTransport=="Avion"){
+          this.MeanOfTransport.avion++;
+        }else if(rex.information.MeanOfTransport=="Bus"){
+          this.MeanOfTransport.bus++;
+        }
+        if(rex.information.AccomodationHowDidYouFind=="Website"){
+          this.AccomodationHowDidYouFind.Website++;
+        }else if(rex.information.MeanOfTransport=="UniCampaign"){
+          this.AccomodationHowDidYouFind.UniCampaign++;
+        }else if(rex.information.MeanOfTransport=="Acquaintance"){
+          this.AccomodationHowDidYouFind.Acquaintance++;
+        }
+
+        if(rex.information.AccomodationType=="Studio individuel"){
+          this.AccomodationType.Studio_individuel++;
+        }else if(rex.information.AccomodationType=="Chambre dans une collocation"){
+          this.AccomodationType.Chambre_dans_une_collocation++;
+        }else if(rex.information.AccomodationType=="Chambre seule en résidence universitaire"){
+          this.AccomodationType.Chambre_seule_en_residence_universitaire++;
+        }else if(rex.information.AccomodationType=="Collocation en résidence universitaire"){
+          this.AccomodationType.Collocation_en_residence_universitaire++;
+        }else if(rex.information.AccomodationType=="Chambre chez l'habitant"){
+          this.AccomodationType.Chambre_chez_lhabitant++;
+        }else if(rex.information.AccomodationType=="Chambre d'hôtel"){
+          this.AccomodationType.Chambre_dhotel++;
+        }
+
+
+        this.AccomodationNeighborhoodRecommendation.push(rex.information.AccomodationNeighborhoodRecommendation);
+        if(rex.information.BRMIE=="true"){
+
+        }if(rex.information.ERASMUS=="true"){
+          
+        }
+        this.TransportPrice+= +rex.information.TransportPrice
+      
+      
+        // if(rex.information.ERASMUS=="true"){
+        //   this.ERASMUSApplicationDeadline.push(rex.information.ERASLUS)
+        // }
+      }
+
+      this.TransportDuration=this.TransportDuration/this.allRex.length;
+      this.TransportPrice=this.TransportPrice/this.allRex.length;
+      this.UniversityGeneralFeelings=this.UniversityGeneralFeelings/this.allRex.length;
+      this.UniversityIntegration=this.UniversityIntegration/this.allRex.length;
+      this.UniversityStudentLife=this.UniversityStudentLife/this.allRex.length;
+      this.AccomodationHardToFind=this.AccomodationHardToFind/this.allRex.length;
+      this.ModulesChangePeriodOnceArrived=this.ModulesChangePeriodOnceArrived/this.allRex.length;
+
+
 
 
 
@@ -188,6 +420,8 @@ export class UniversitePageComponent {
 
 
   }
+
+  
   reveal(i:any){
     this.chatService.chatGetMessagesByConv(this.allChats[i].stringId).subscribe(
       (rep: any) => {

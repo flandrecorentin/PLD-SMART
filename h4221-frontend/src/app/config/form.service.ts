@@ -9,6 +9,7 @@ export class FormService {
   // Links to call back-end services
   private backendUrl = 'http://localhost:9000'
   private formURL = this.backendUrl + '/formulaire';
+  private rexByUnivURL = this.backendUrl + '/formulaire/university/';
   private sendPartialFormUrl = this.backendUrl + '/formulaire-temp'
   private httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
@@ -31,6 +32,10 @@ export class FormService {
 
   getPartialForm() {
     return this.http.get<JSON>(this.sendPartialFormUrl, {headers: this.httpHeaders})
+  }
+
+  getRexByUniv(univId:string){
+    return this.http.get<JSON>(this.rexByUnivURL+univId, {headers: this.httpHeaders});
   }
 
 
