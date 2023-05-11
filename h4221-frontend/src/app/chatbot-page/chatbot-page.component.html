@@ -6,6 +6,9 @@
           {{ message.text }}
         </div>
       </div>
+      <div *ngIf="loading" class="loading-indicator">
+        <img src="../assets/wario-loading.gif" alt="Loading...">
+      </div>
     </div>
     <div class="chat-input">
       <input type="text" [(ngModel)]="newMessage" placeholder="Type your message here..." (keyup.enter)="sendMessage()">
