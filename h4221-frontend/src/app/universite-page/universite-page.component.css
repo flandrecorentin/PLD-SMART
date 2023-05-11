@@ -336,3 +336,8 @@ overflow-y: scroll;    /* Trigger vertical scroll    */
 #universite #infos .titre{  
     font-size:1.5vw;
 }
+
+#rex #titrePasRex{
+    text-align: center;
+    
+}

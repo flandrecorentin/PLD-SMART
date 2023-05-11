@@ -73,7 +73,11 @@
             </div>
         </div>
         <div id="rex">
-            <div id="rexWrapper" class="scrollable">
+            
+            <p class="titre" *ngIf="!afficherRex">Retours d'expériences</p>
+            <p class="soustitre" *ngIf="!afficherRex">Il n'y a pas de retours d'expérience pour cette destination.</p>
+            <hr *ngIf="!afficherRex"/>
+            <div id="rexWrapper" class="scrollable" *ngIf="afficherRex">
                 <p class="titre">Retours d'expériences</p>
                 <p class="soustitre">Transports</p>
                 <hr/>
