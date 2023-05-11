@@ -11,6 +11,7 @@ export class FormService {
   private formURL = this.backendUrl + '/formulaire';
   private rexByUnivURL = this.backendUrl + '/formulaire/university/';
   private sendPartialFormUrl = this.backendUrl + '/formulaire-temp'
+  private alreadySentUrl = this.backendUrl + '/formulaire-alreadysend'
   private httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${localStorage.getItem("auth_token")}`,
@@ -34,6 +35,10 @@ export class FormService {
     return this.http.get<JSON>(this.sendPartialFormUrl, {headers: this.httpHeaders})
   }
 
+  hasAlreadySentForm() {
+    return this.http.get<boolean>(this.alreadySentUrl, {headers: this.httpHeaders})
+  }
+  
   getRexByUniv(univId:string){
     return this.http.get<JSON>(this.rexByUnivURL+univId, {headers: this.httpHeaders});
   }
