@@ -112,7 +112,7 @@ public class FormulaireREXController {
             boolean state = formulaireREXService.sauvegarderTemporairement(formulaireREXTemp);
             if(state){
                 System.out.println("[FormulaireREXController]: Sauvegarde du formulaire REX " + formulaireREXTemp.getAuthor());
-                return new ResponseEntity<>(formulaireREXTemp, HttpStatus.OK);
+                return new ResponseEntity<>(HttpStatus.OK);
             }
             else{
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -120,7 +120,7 @@ public class FormulaireREXController {
         }
         catch (Exception exception){
             System.out.println("[FormulaireREXController]: ERREUR lors de la sauvegarde du formulaire REX temporaire");
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
