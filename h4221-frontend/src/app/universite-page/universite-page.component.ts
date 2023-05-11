@@ -20,7 +20,7 @@ export class UniversitePageComponent {
 
   fakeRex={
     "_id": {
-      "$oid": "645ce5d9cd7fd958330ab1c5"
+      "$oid": "645d0eedb595c32219be06d9"
     },
     "author": "colin.thomas@insa-lyon.fr",
     "date": "10-05-2023",
@@ -35,6 +35,10 @@ export class UniversitePageComponent {
       "AccomodationReservationDate": "2023-05-10",
       "TransportPrice": "399",
       "ERASMUS": "true",
+      "AMI":"false",
+      "AMIGrantAmount":"",
+      "AMIApplicationDeadline":"",
+      "AMIFirstContactDate":"",
       "UniversityGeneralFeeling": "4",
       "ExchangeType": "ERASMUS",
       "AccomodationNeighborhoodRecommendation": "Oui, le quartier \"Nardo\" au sud de NTNU possède plusieurs logements.",
@@ -57,15 +61,13 @@ export class UniversitePageComponent {
       "OLAUniversityAcceptINSAPlatform": "true",
       "AccomodationType": "Chambre dans une collocation",
       "Module1": "Ethical hacking",
-      "Module2": "Mobile Development",
-      "Module3": "Customer Driven Project",
+      "Module3": "Mobile Development",
+      "Module2": "Customer Driven Project",
       "Module4": "Customer Driven Project",
       "Module5": "Customer Driven Project",
       "Module6": "Customer Driven Project",
       "Module7": "Customer Driven Project",
       "Module8": "Customer Driven Project",
-      "question2": "hybel.no",
-      "question4": "false",
       "UniversityStudentLife": "5",
       "ModulesWhenPick": "2023-09-01",
       "ModuleDescriptionModule1": "Course content\n\nThe course covers the theory and practical techniques of ethical hacking and penetration testing, which are essential elements in modern cybersecurity. Ethical hacking consists of testing the security of IT systems by trying to find and exploit security vulnerabilities. The course presents the steps of penetration testing including information gathering, network reconnaissance, how to get in touch with services, but also covers specific topics such as web hacking, binary exploitation, social engineering and wireless hacking.",
@@ -76,11 +78,13 @@ export class UniversitePageComponent {
       "ModuleDescriptionModule6": "Course content\nThis course teaches the basics of cross-platform mobile applications development with a focus on the React Native framework. The goal is to help students develop best practices for creating apps for both iOS and Android using JavaScript programming language.\n\nKeywords: JavaScript, React Native framework, development tools for building and debugging cross-platform mobile apps, UI design and implementation, handling of data and network calls, internationalisation of mobile app, use of device sensors.",
       "ModuleDescriptionModule7": "Course content\nThis course teaches the basics of cross-platform mobile applications development with a focus on the React Native framework. The goal is to help students develop best practices for creating apps for both iOS and Android using JavaScript programming language.\n\nKeywords: JavaScript, React Native framework, development tools for building and debugging cross-platform mobile apps, UI design and implementation, handling of data and network calls, internationalisation of mobile app, use of device sensors.",
       "ModuleDescriptionModule8": "Course content\nThis course teaches the basics of cross-platform mobile applications development with a focus on the React Native framework. The goal is to help students develop best practices for creating apps for both iOS and Android using JavaScript programming language.\n\nKeywords: JavaScript, React Native framework, development tools for building and debugging cross-platform mobile apps, UI design and implementation, handling of data and network calls, internationalisation of mobile app, use of device sensors.",
+      "BRMIEGrants": "1000",
       "AccomodationPrice": "500",
-      "question12": "1000",
       "AccomodationDistanceToUni": "1500",
       "UniversityIntegration": "4",
       "MeanOfTransport": "Avion",
+      "AccomodationWebsite": "hybel.no",
+      "BankAccount": "false",
       "ModulesResponsibleMail": "exchange@st.ntnu.no",
       "TransportReservationWebsite": "https://www.klm.fr/",
       "ModulePossibleToChangeOnceArrived": "true",
@@ -234,10 +238,26 @@ AmountErasmus=0;
 AmountBRMIE=0;
 BRMIEApplicationDeadline:string[]=[];
 BRMIEFirstContactDate:string[]=[];
-AmountAMI=0;
+OlaDate:string[]=[];
+AMIGrantAmount=0;
 AMIApplicationDeadline:string[]=[];
 AMIFirstContactDate:string[]=[];
-
+TransportReservationDateMean=0;
+TransportReservationDateMeanString:string="";
+AccomodationReservationDateMeanString:string="";
+AccomodationReservationDateMean=0;
+OlaDateMeanString:string="";
+OlaDateMean=0;
+ERASMUSFirstContactDateMeanString:string="";
+ERASMUSFirstContactDateMean=0;
+BRMIEApplicationDeadlineMeanString:string="";
+BRMIEApplicationDeadlineMean=0;
+BRMIEFirstContactDateMeanString:string="";
+BRMIEFirstContactDateMean=0;
+AMIApplicationDeadlineMeanString:string="";
+AMIApplicationDeadlineMean=0;
+AMIFirstContactDateMeanString:string="";
+AMIFirstContactDateMean=0;
 
 
 
@@ -313,7 +333,7 @@ AMIFirstContactDate:string[]=[];
       var computeRex;
       var Rex;
       // PARTIE REX
-      this.formService.getRexByUniv(this.univId).subscribe(
+      await this.formService.getRexByUniv(this.univId).forEach(
         (rep: any) => {
           console.log("REXDETAILS")
           console.log(rep)
@@ -350,6 +370,16 @@ AMIFirstContactDate:string[]=[];
         this.UniversityStudentLife+= +rex.information.UniversityStudentLife
         this.TransportReservationWebsite.push(rex.information.TransportReservationWebsite)
         this.TransportReservationDate.push(rex.information.TransportReservationDate)
+        
+        this.TransportReservationDateMean+= (new Date(rex.information.TransportReservationDate)).getTime()
+        this.AccomodationReservationDateMean+= (new Date(rex.information.AccomodationReservationDate)).getTime()
+        this.OlaDateMean+= (new Date(rex.information.ERASMUSOLAUniSIgnatureName)).getTime()
+        this.ERASMUSFirstContactDateMean+= (new Date(rex.information.ERASMUSFirstContactDate)).getTime()
+        this.BRMIEApplicationDeadlineMean+= (new Date(rex.information.BRMIEApplicationDeadline)).getTime()
+        this.BRMIEFirstContactDateMean+= (new Date(rex.information.BRMIEFirstContactDate)).getTime()
+        this.AMIApplicationDeadlineMean+= (new Date(rex.information.AMIApplicationDeadline)).getTime()
+        this.AMIFirstContactDateMean+= (new Date(rex.information.AMIFirstContactDate)).getTime()
+
         this.ModulesWhenPick.push(rex.information.ModulesWhenPick)
         this.TransportDuration += +rex.information.TransportDuration
         this.OpenQuestionWhy.push(rex.information.OpenQuestionWhy)
@@ -386,9 +416,18 @@ AMIFirstContactDate:string[]=[];
 
         this.AccomodationNeighborhoodRecommendation.push(rex.information.AccomodationNeighborhoodRecommendation);
         if(rex.information.BRMIE=="true"){
-
-        }if(rex.information.ERASMUS=="true"){
-          
+          this.AmountBRMIE += +rex.information.BRMIEGrants;
+          this.BRMIEFirstContactDate.push(rex.information.BRMIEFirstContactDate);
+          this.BRMIEApplicationDeadline.push(rex.information.BRMIEApplicationDeadline);
+        
+        } if(rex.information.ERASMUS=="true"){
+          this.OlaDate.push(rex.information.OLADate);
+          this.AmountErasmus += +rex.information.GrantAmount;
+          this.ERASMUSFirstContactDate.push(rex.information.ERASMUSFirstContactDate);
+        } if(rex.information.AMI=="true"){
+          this.AMIGrantAmount += +rex.information.AMIGrantAmount;
+          this.AMIApplicationDeadline.push(rex.information.AMIApplicationDeadline);
+          this.AMIFirstContactDate.push(rex.information.AMIFirstContactDate);
         }
         this.TransportPrice+= +rex.information.TransportPrice
       
@@ -405,20 +444,45 @@ AMIFirstContactDate:string[]=[];
       this.UniversityStudentLife=this.UniversityStudentLife/this.allRex.length;
       this.AccomodationHardToFind=this.AccomodationHardToFind/this.allRex.length;
       this.ModulesChangePeriodOnceArrived=this.ModulesChangePeriodOnceArrived/this.allRex.length;
+      this.AmountErasmus=this.AmountErasmus/this.ERASMUSFirstContactDate.length;
+      this.AmountBRMIE=this.AmountBRMIE/this.BRMIEFirstContactDate.length;
+      this.AMIGrantAmount=this.AMIGrantAmount/this.AMIFirstContactDate.length;
+
+      this.TransportDuration=Math.round(this.TransportDuration*10)/10;
+      this.TransportPrice=Math.round(this.TransportPrice*10)/10;
+      this.UniversityGeneralFeelings=Math.round(this.UniversityGeneralFeelings*10)/10;
+      this.UniversityIntegration=Math.round(this.UniversityIntegration*10)/10;
+      this.UniversityStudentLife=Math.round(this.UniversityStudentLife*10)/10;
+      this.AccomodationHardToFind=Math.round(this.AccomodationHardToFind*10)/10;
+      this.ModulesChangePeriodOnceArrived=Math.round(this.ModulesChangePeriodOnceArrived*10)/10;
+      this.AmountErasmus=Math.round(this.AmountErasmus*10)/10;
+      this.AmountBRMIE=Math.round(this.AmountBRMIE*10)/10;
+      this.AMIGrantAmount=Math.round(this.AMIGrantAmount*10)/10;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+      this.TransportReservationDateMean=this.TransportReservationDateMean/this.allRex.length;
+      this.TransportReservationDateMeanString=new Date((new Date().setTime(this.TransportReservationDateMean))).toLocaleDateString()
+      
+      this.AccomodationReservationDateMean=this.AccomodationReservationDateMean/this.allRex.length;
+      this.AccomodationReservationDateMeanString=new Date((new Date().setTime(this.AccomodationReservationDateMean))).toLocaleDateString()
+      
+      this.OlaDateMean=this.OlaDateMean/this.allRex.length;
+      this.OlaDateMeanString=new Date((new Date().setTime(this.OlaDateMean))).toLocaleDateString()
+      
+      this.ERASMUSFirstContactDateMean=this.ERASMUSFirstContactDateMean/this.allRex.length;
+      this.ERASMUSFirstContactDateMeanString=new Date((new Date().setTime(this.ERASMUSFirstContactDateMean))).toLocaleDateString()
+      
+      this.BRMIEApplicationDeadlineMean=this.BRMIEApplicationDeadlineMean/this.allRex.length;
+      this.BRMIEApplicationDeadlineMeanString=new Date((new Date().setTime(this.BRMIEApplicationDeadlineMean))).toLocaleDateString()
+      
+      this.BRMIEFirstContactDateMean=this.BRMIEFirstContactDateMean/this.allRex.length;
+      this.BRMIEFirstContactDateMeanString=new Date((new Date().setTime(this.BRMIEFirstContactDateMean))).toLocaleDateString()
+      
+      this.AMIApplicationDeadlineMean=this.AMIApplicationDeadlineMean/this.allRex.length;
+      this.AMIApplicationDeadlineMeanString=new Date((new Date().setTime(this.AMIApplicationDeadlineMean))).toLocaleDateString()
+      
+      this.AMIFirstContactDateMean=this.AMIFirstContactDateMean/this.allRex.length;
+      this.AMIFirstContactDateMeanString=new Date((new Date().setTime(this.AMIFirstContactDateMean))).toLocaleDateString()
   }
 
   
