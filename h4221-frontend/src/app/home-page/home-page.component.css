@@ -198,3 +198,6 @@ margin-right:30px;
   padding: 25px;
   font-family: 'Inter', sans-serif;
 }
+#completerInfos{
+  cursor: pointer;
+}
