@@ -11,16 +11,16 @@
             <button id="buttonFormalités" class="button" (click)="onClickFilter('Formalités')">Formalités</button>
             <button id="buttonCandidatures" class="button" (click)="onClickFilter('Candidatures')">Candidatures</button>
             <button id="buttonVoeux" class="button" (click)="onClickFilter('Voeux')">Voeux</button>
-            <button id="buttonLogement" class="borderradiusright button" (click)="onClickFilter('Logement')">Logement</button>
+            <button id="buttonLogement" class="button" (click)="onClickFilter('Logement')">Logement</button>
+            <button id="buttonAutres" class="borderradiusright button" (click)="onClickFilter('Autres')">Autres</button>
 
-            
         </div>
         <form id="recherche-form" [formGroup]="rechercheForm" (ngSubmit)="submitRecherche()">
 
 
             <button type="submit" [disabled]="!rechercheForm.valid"><img src="../../assets/search.png"></button>
             <input type="text" formControlName="recherche" placeholder="Chercher une question">
-    
+
         </form>
 
     </div>
@@ -67,13 +67,14 @@
                 <datalist id=browsers >
                 <option> Bourses
                 <option> Formalités
-                    <option> Candidatures
-                        <option> Voeux
-                            <option> Logements
+                <option> Candidatures
+                <option> Voeux
+                <option> Logements
+                <option> Autres
                 </datalist>
                 <br/>
                 <button type="submit" [disabled]="!questionForm.valid">+ Proposer la question</button>
-        
+
             </form>
         </div>
 

@@ -4,7 +4,7 @@
     <div id="headerhome">
         <span id="titre">Bienvenue sur Mobilit’IF</span>
         <img src="../assets/globe.png" id="logotitre"/>
-        <button id="completerInfos" class="greenButton"><img src="../assets/baguette.png"/>Compléter mes informations</button>
+        <a><button routerLink="/settings" id="completerInfos" class="greenButton"><img src="../assets/baguette.png"/>Compléter mes informations</button></a>
 <!--        <button id="découvrirDestinations" class="greenButton"><img src="../assets/palmier.png"/>Découvrir les destinations</button>-->
     </div>
     <div class="wrapper">
@@ -23,7 +23,10 @@
             <div class="scrollable">
                 <div *ngFor="let univ of univsOfTheCountry; let i=index" class="univblock">
                     <p class="nomuniv">· {{univ.nom}} - ({{univ.pays}})</p>
-                    <p class="liensuniv"><a href={{univ.site}}>Consulter le site web</a> - <a routerLink="/universite" [queryParams]="{univId: univ.identifiant}" queryParamsHandling="merge" >Ouvrir la fiche destination</a></p>
+                    <p class="liensuniv">
+<!--                      <a href={{univ.site}}>Consulter le site web</a> -->
+                      -
+                      <a routerLink="/universite" [queryParams]="{univId: univ.identifiant}" queryParamsHandling="merge" >Ouvrir la fiche destination</a></p>
                 </div>
             </div>
         </div>
