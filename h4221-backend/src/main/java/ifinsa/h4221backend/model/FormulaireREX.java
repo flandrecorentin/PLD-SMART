@@ -71,4 +71,8 @@ public class FormulaireREX {
         this.exchangeCountry = this.information.get("ExchangeCountry");
         this.exchangeUniversity = this.information.get("ExchangeUniversity");
     }
+
+    public Map<String, String> getInformation() {
+        return information;
+    }
 }

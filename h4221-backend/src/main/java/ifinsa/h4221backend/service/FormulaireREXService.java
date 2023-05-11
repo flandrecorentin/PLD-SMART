@@ -93,4 +93,18 @@ public class FormulaireREXService {
             return false;
         }
     }
+
+    public int supprimerREXTemp(String author) {
+        try{
+            FormulaireREXTemp formulaireREXTemp =  formulaireREXTempDAO.findByAuthor(author);
+            if(formulaireREXTemp==null){
+                return 1;
+            }else{
+                formulaireREXTempDAO.deleteFormulaireREXTempByAuthor(author);
+                return 0;
+            }
+        }catch (Exception exception){
+            return 2;
+        }
+    }
 }

@@ -82,17 +82,47 @@ public class Initialisation implements ApplicationRunner {
         }
 
 
-        // Initialisation des formulairesREX
+//        Initialisation des formulairesREX
+
+        int nbReponses = 3;
+        List<FormulaireREX> formulaireREXs = new LinkedList<>();
         JSONParser jsonPREX = new JSONParser();
-        JSONObject jsonOREX = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/rex-colin-NTNU.json"));
-        String authorREX = jsonOREX.get("author").toString();
-        String dateREX = jsonOREX.get("date").toString();
-        String exchangeCountryREX= jsonOREX.get("exchangeCountry").toString();
-        String exchangeUniversityREX = jsonOREX.get("exchangeUniversity").toString();
-        Map<String, String> informationREX = (Map<String, String>) jsonOREX.get("information");
-        FormulaireREX formulaireREXColinNTNU = new FormulaireREX(authorREX, dateREX, informationREX, exchangeCountryREX, exchangeUniversityREX);
-        formulaireREXService.sauvegarder(formulaireREXColinNTNU);
-        System.out.println(formulaireREXColinNTNU);
+        for(int i=0; i < nbReponses; i++){
+            String mail;
+            boolean dejaEnvoye = true;
+            String fileName = null;
+            switch(i) {
+                // case colin
+                case 0:
+                    formulaireREXService.formulaireREXDejaEnvoye(users.get(1).getMail());
+                    dejaEnvoye = formulaireREXService.formulaireREXDejaEnvoye(users.get(1).getMail());
+                    fileName = "src/main/resources/static/rex-colin-NTNU.json";
+                    break;
+                //case elise
+                case 1:
+                    formulaireREXService.formulaireREXDejaEnvoye(users.get(2).getMail());
+                    dejaEnvoye = formulaireREXService.formulaireREXDejaEnvoye(users.get(2).getMail());
+                    fileName = "src/main/resources/static/rex-elise-NTNU.json";
+                    break;
+                // case corentin
+                case 2:
+                    formulaireREXService.formulaireREXDejaEnvoye(users.get(0).getMail());
+                    dejaEnvoye = formulaireREXService.formulaireREXDejaEnvoye(users.get(0).getMail());
+                    fileName = "src/main/resources/static/rex-corentin-NTNU.json";
+                    break;
+                default:
+            }
+            if(!dejaEnvoye && fileName!=null){
+                JSONObject jsonOREX = (JSONObject) jsonP.parse(new FileReader(fileName));
+                String authorREX = jsonOREX.get("author").toString();
+                String dateREX = jsonOREX.get("date").toString();
+                String exchangeCountryREX= jsonOREX.get("exchangeCountry").toString();
+                String exchangeUniversityREX = jsonOREX.get("exchangeUniversity").toString();
+                Map<String, String> informationREX = (Map<String, String>) jsonOREX.get("information");
+                FormulaireREX formulaireREXColinNTNU = new FormulaireREX(authorREX, dateREX, informationREX, exchangeCountryREX, exchangeUniversityREX);
+                formulaireREXService.sauvegarder(formulaireREXColinNTNU);
+            }
+        }
 
         // Initialisation FAQ
         List<FAQ> faqs = new LinkedList<>();

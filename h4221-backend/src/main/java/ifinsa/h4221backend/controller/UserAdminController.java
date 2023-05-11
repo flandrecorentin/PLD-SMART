@@ -133,7 +133,6 @@ public class UserAdminController {
 
     @PutMapping("/changepassword")
     public ResponseEntity modifierParametresPassword(@RequestHeader(HttpHeaders.AUTHORIZATION) String tokenUser, @RequestBody PasswordRequest passwordRequest){
-        System.out.println(passwordRequest.getAncienMDP()+":"+passwordRequest.getNouveauMDP());
         PasswordRequest test = new PasswordRequest("test1","test2");
         try{
             tokenUser = tokenUser.substring(7);

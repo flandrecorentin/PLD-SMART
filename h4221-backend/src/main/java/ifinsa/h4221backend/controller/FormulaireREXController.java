@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -30,6 +31,14 @@ public class FormulaireREXController {
         try{
             if(formulaireREXService.sauvegarder(formulaireREX)){
                 System.out.println("[FormulaireREXController]: Sauvegarde du questionnaire");
+                int stateOfSuppression = formulaireREXService.supprimerREXTemp(formulaireREX.getAuthor());
+                if(stateOfSuppression==0){
+                    System.out.println("[FormulaireREXController]: Suppression du questionnaire temporaire");
+                }else if(stateOfSuppression==1){
+                    System.out.println("[FormulaireREXController]: Pas de questionnaire temporaire à supprimer");
+                }else{
+                    System.out.println("[FormulaireREXController]: Erreur lors de la suppression du formulaire temporaire");
+                }
                 return new ResponseEntity(HttpStatus.OK);
             }else{
                 System.out.println("[FormulaireREXController]: Le formulaire  a un format invalide");
@@ -56,11 +65,12 @@ public class FormulaireREXController {
     }
 
 
-    @GetMapping("/formulaire/university/{university}")
-    public ResponseEntity<List<FormulaireREX>> chercherFormulaireParUniversite(@PathVariable(value="university") String university){
-        List<FormulaireREX> formulaireREXs = new LinkedList<>();
+    @GetMapping("/formulaire/university/{universite}")
+    public ResponseEntity<List<FormulaireREX>> chercherFormulaireParUniversite(@PathVariable(value="universite") String university){
         try {
+            List<FormulaireREX> formulaireREXs;
             formulaireREXs = formulaireREXService.findFormulaireREXsByExchangeUniversity(university);
+            System.out.println(formulaireREXs);
             if(formulaireREXs.size()==0){
                 System.out.println("[FormulaireREXController]: Aucun formulaire REX avec l'université " + university +" est renseigné en base de donnée");
                 return new ResponseEntity<>(formulaireREXs, HttpStatus.NOT_FOUND);
@@ -102,7 +112,7 @@ public class FormulaireREXController {
             boolean state = formulaireREXService.sauvegarderTemporairement(formulaireREXTemp);
             if(state){
                 System.out.println("[FormulaireREXController]: Sauvegarde du formulaire REX " + formulaireREXTemp.getAuthor());
-                return new ResponseEntity<>(formulaireREXTemp, HttpStatus.OK);
+                return new ResponseEntity<>(HttpStatus.OK);
             }
             else{
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -110,7 +120,7 @@ public class FormulaireREXController {
         }
         catch (Exception exception){
             System.out.println("[FormulaireREXController]: ERREUR lors de la sauvegarde du formulaire REX temporaire");
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 

@@ -15,4 +15,7 @@ import org.springframework.stereotype.Service;
 public interface FormulaireREXTempDAO extends MongoRepository<FormulaireREXTemp, String> {
     @Query("{author: ?0}")
     FormulaireREXTemp findByAuthor(String author);
+
+    @Query(value = "{author: ?0}", delete = true)
+    FormulaireREXTemp deleteFormulaireREXTempByAuthor(String author);
 }
