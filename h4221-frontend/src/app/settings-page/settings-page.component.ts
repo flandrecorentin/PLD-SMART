@@ -58,26 +58,51 @@ export class SettingsPageComponent {
       departement:this.settingsForm.value.departement,
       country:this.settingsForm.value.country,
     }
+    if(typeof(this.settingsForm.value.studyYear) == "number"){
+      
+      JSONEnvoi.studyYear= this.settingsForm.value.studyYear;
+    }
     if(this.settingsForm.value.studyYear=="Autre"){
       JSONEnvoi.studyYear= "0"
+
     }else{
       JSONEnvoi.studyYear= this.settingsForm.value.studyYear![0]
     }
+    
     var universiteTrouvee=this.allUnivs[0];
+    var pastrouve=1;
     for(let univIter of this.allUnivs){
       if (univIter.nom==JSONEnvoi.university){
         universiteTrouvee=univIter;
+        pastrouve=0;
         break;
       }
     }
+    if(pastrouve==1){
+      console.log("Ecole non existante")
+      return 1;
+    }
+
+    if(JSONEnvoi.studyYear!="0"&&JSONEnvoi.studyYear!="3"&&JSONEnvoi.studyYear!="4"&&JSONEnvoi.studyYear!="5"){
+      
+      console.log("Annee non existante")
+      return 1;
+    }
+    if(JSONEnvoi.departement!="IF"&&JSONEnvoi.departement!="GCU"&&JSONEnvoi.departement!="GM"&&JSONEnvoi.departement!="TC"&&JSONEnvoi.departement!="GE"&&JSONEnvoi.departement!="BS"&&JSONEnvoi.departement!="SGM"&&JSONEnvoi.departement!="GEN"&&JSONEnvoi.departement!="GI"){
+      
+      console.log("Departement non existant")
+      return 1;
+    }
+
     JSONEnvoi.university=universiteTrouvee!.identifiant;
     this.settingsService.modify(JSONEnvoi).subscribe(
       (rep: any) => {
         
       });
 
-    this.router.navigateByUrl("/home")
-  }
+      this.router.navigateByUrl("/home")
+      return 0;
+    }
 
   @Input() nom!: string;
   @Input() prenom!:String;
@@ -99,10 +124,12 @@ export class SettingsPageComponent {
         this.nationalite = rep.country
         this.universite = rep.university
         this.departement = rep.departement
-        if(rep.studyYear==0){
-        this.annee = "Autre"
+        if(rep.studyYear=="0"){
+          this.annee = "Autre"
+          rep.studyYear = this.annee
         }else{
           this.annee = rep.studyYear+"ème année"
+          rep.studyYear = this.annee
         }
         this.settingsForm.setValue(rep);
       }
