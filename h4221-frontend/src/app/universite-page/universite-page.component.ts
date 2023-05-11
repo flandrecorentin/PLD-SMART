@@ -260,6 +260,8 @@ AMIApplicationDeadlineMean=0;
 AMIFirstContactDateMeanString:string="";
 AMIFirstContactDateMean=0;
 
+afficherRex=true;
+
 
 
   async ngOnInit() {
@@ -275,21 +277,24 @@ AMIFirstContactDateMean=0;
 
     const source = interval(1000)
     const text = 'Your Text Here';
-    this.subscriptionMessageByConv = source.subscribe(val => this.chatService.chatGetMessagesByConv(this.displayedChat.stringId).subscribe(
+    this.subscriptionMessageByConv = source.subscribe(
+      val => this.chatService.chatGetMessagesByConv(this.displayedChat.stringId).subscribe(
       (rep: any) => {
         this.displayedChat=rep
         
         this.showMessages=true
-      }),(error:any)=>{
+      },
+      (err:any)=>{
 
-      });
+      }));
       
     this.subscriptionUni = source.subscribe(val => this.chatService.chatGetConvByUni(this.univId).subscribe(
       (rep: any) => {
         this.allChats=rep
-      }),(error:any)=>{
+      },
+      (err:any)=>{
         
-      });
+      }));
 
     //   this.chatService.chatGetConvByUni(this.univId).subscribe(
     //     (rep: any) => {
@@ -339,6 +344,9 @@ AMIFirstContactDateMean=0;
           console.log("REXDETAILS")
           console.log(rep)
           this.allRex=rep
+        }).catch((reason:any)=>{
+          
+        this.afficherRex=false;
         });
 
 
