@@ -472,7 +472,7 @@
     },
     {
      "type": "text",
-     "name": "question2",
+     "name": "AccomodationWebsite",
      "visibleIf": "{AccomodationHowDidYouFind} = 'Website'",
      "title": {
       "fr": "Quel est le lien du site que tu as utilisé ?"
@@ -1104,7 +1104,7 @@
       },
       {
        "type": "text",
-       "name": "question12",
+       "name": "BRMIEGrants",
        "title": {
         "fr": "Combien as-tu touché pour ta mobilité ? (en €)"
        },
@@ -1188,7 +1188,7 @@
     },
     {
      "type": "boolean",
-     "name": "question4",
+     "name": "BankAccount",
      "title": {
       "fr": "As-tu ouvert un compte bancaire sur place ?"
      },
