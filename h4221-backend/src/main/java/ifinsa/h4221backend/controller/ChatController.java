@@ -114,6 +114,26 @@ public class ChatController {
         }
     }
 
+    @GetMapping("/conversationsByNameAndUni/{university}/{name}")
+    public ResponseEntity<List<Conversation>> getConversationsByNameAndUni(@PathVariable(value="university") String university, @PathVariable(value="name") String name){
+        try {
+            List<Conversation> conversations = chatService.getConversationsByNameAndUni(name, university);
+            if(conversations.size()>0){
+                for (Conversation conversation : conversations) { conversation.convertIdToString(); }
+                System.out.println("[ChatController]: La récupération des "+conversations.size()+" conversations a réussi");
+                return new ResponseEntity<>(conversations, HttpStatus.OK);
+            }
+            else{
+                System.out.println("[ChatController]: Aucune conversation n'a été trouvé pour le nom : "+name+" et l'université : "+university);
+                return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+            }
+        }
+        catch (Exception exception){
+            System.out.println("[ChatController]: La récupération de la conversation de nom : "+name+" pour l'université : "+university+" a rencontrés un problème côté backend");
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 
 
 

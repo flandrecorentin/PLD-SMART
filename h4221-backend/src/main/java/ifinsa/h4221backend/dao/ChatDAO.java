@@ -19,5 +19,6 @@ public interface ChatDAO extends MongoRepository<Conversation, String> {
     @Query(value = "{university: ?0}", fields = "{messageList: 0}")
     List<Conversation> findAllByUni(String university);
 
-
+    @Query(value = "{name: { $regex: ?0, $options: 'i' }, university: ?1}", fields = "{messageList: 0}")
+    List<Conversation> findAllByNameAndUni(String name, String university);
 }

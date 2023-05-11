@@ -76,4 +76,13 @@ public class ChatService {
         }
     }
 
+    public List<Conversation> getConversationsByNameAndUni(String name, String university){
+        try{
+            return chatDAO.findAllByNameAndUni(name, university);
+        }
+        catch (Exception exception){
+            return null;
+        }
+    }
+
 }
