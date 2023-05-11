@@ -22,6 +22,7 @@ import { FaqAdminPageComponent } from './faq-admin-page/faq-admin-page.component
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ChatbotComponent } from './chatbot-page/chatbot-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ChatbotComponent } from './chatbot-page/chatbot-page.component';
     HttpClientModule,
     FormsModule,
     SurveyModule,
-    ScrollingModule
+    ScrollingModule,
+    BrowserAnimationsModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ], // Must add this one.
   providers: [],

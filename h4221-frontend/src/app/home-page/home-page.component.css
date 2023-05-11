@@ -234,3 +234,21 @@
 #completerInfos {
     cursor: pointer;
 }
+.chatbot-button{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color:white;
+  background-color: #93c2ae;
+  border:transparent;
+  width: 90px;
+  height: 40px;
+}
+
+.chatbot{
+  position: fixed;
+  top: 50px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  z-index: 9999; /* Ensure a higher z-index value to appear above other elements */
+  transition: transform 500ms ease-in-out; /* Adjust the duration here */
+}

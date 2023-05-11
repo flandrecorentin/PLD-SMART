@@ -1,8 +1,16 @@
 <app-sidebar></app-sidebar>
+
+<button class="chatbot-button" (click)="toggleChatbot()">Chat with Elod AI !</button>
 <div id="home">
 
     <div id="headerhome">
         <span id="titre">Bienvenue sur Mobilit’IF</span>
+        <img src="../assets/globe.png" id="logotitre"/>
+        <button id="completerInfos" class="greenButton"><img src="../assets/baguette.png"/>Compléter mes informations</button>
+        <div class="chatbot" [@slideInOut]="showChatbot.toString()">
+          <app-chatbot *ngIf="showChatbot" [@slideInOut]="showChatbot" ></app-chatbot>
+        </div>
+<!--        <button id="découvrirDestinations" class="greenButton"><img src="../assets/palmier.png"/>Découvrir les destinations</button>-->
         <img src="../assets/globe.png" id="logotitre" />
         <a><button routerLink="/settings" id="completerInfos" class="greenButton"><img
                     src="../assets/baguette.png" />Compléter mes informations</button></a>

@@ -1,15 +1,37 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FaqService } from '../services/faq.service';
 import { PaysService } from '../services/pays.service';
 import { UnivService } from '../services/univ.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import {AppSettings} from '../app-settings';
+import { FaqService } from '../config/faq.service';
+import { PaysService } from '../config/pays.service';
+import { UnivService } from '../config/univ.service';
+import {FormBuilder, Validators } from '@angular/forms';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
+
+
 
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  styleUrls: ['./home-page.component.css'],
+  animations: [
+    trigger('slideInOut', [
+      state('true', style({ transform: 'translateX(0)' })),
+      state('false', style({ transform: 'translateX(100%)' })),
+      transition('false => true', animate('500ms ease-in-out')),
+      transition('true => false', animate('500ms ease-in-out'))
+    ])
+  ]
 })
 export class HomePageComponent {
   resultat = ""
@@ -102,6 +124,11 @@ export class HomePageComponent {
         this.univsOfTheCountry = rep;
         console.log(this.univsOfTheCountry)
       });
+  }
+  public showChatbot = false;
+
+  public toggleChatbot(): void {
+    this.showChatbot = !this.showChatbot;
   }
 
   ngAfterViewInit() {

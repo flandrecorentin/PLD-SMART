@@ -6,6 +6,8 @@
     height: 500px;
     font-family: Arial, sans-serif;
     font-size: 14px;
+    background-color: #fff; /* Set the desired background color */
+    opacity: 1; /* Set the desired opacity value (between 0 and 1) */
   }
 
   .chat-header {
