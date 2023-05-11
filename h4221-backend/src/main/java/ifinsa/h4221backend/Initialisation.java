@@ -46,7 +46,7 @@ public class Initialisation implements ApplicationRunner {
         User colin = new User("colin.thomas@insa-lyon.fr", "Thomas", "Colin", Departement.IF, 4, "norges-teknisk-naturvitenskapelige-universitet", "Norvege", "123456");
         User elise = new User("elise.dubillot@insa-lyon.fr", "Dubillot", "Elise", Departement.IF, 4, "university-college-dublin", "Irlande", "123456");
         User tom = new User("tom.delaporte@insa-lyon.fr", "Delaporte", "Tom", Departement.IF, 5, "university-of-birmingham", "Royaume-Uni", "123456");
-        User elod = new User("admin@insa-lyon.fr", "Elod", "Admin", Departement.IF, 0, null, null, "12345678");
+        User elod = new User("admin@insa-lyon.fr", "Elod", "Admin", Departement.IF, 0, null, null, "123456");
         elod.setRole("ROLE_ADMIN");
         users.add(corentin);
         users.add(colin);
