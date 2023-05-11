@@ -1,14 +1,10 @@
 import { Component, Input, HostBinding } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {AppSettings} from '../app-settings';
 import { FaqService } from '../services/faq.service';
-import { PaysService } from '../services/pays.service';
 import { UnivService } from '../services/univ.service';
 import { FormBuilder, Validators } from '@angular/forms';
-import {AppSettings} from '../app-settings';
-import { FaqService } from '../config/faq.service';
-import { PaysService } from '../config/pays.service';
-import { UnivService } from '../config/univ.service';
-import {FormBuilder, Validators } from '@angular/forms';
+import { PaysService } from '../services/pays.service';
 import {
   trigger,
   state,

@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: '', component: AccueilPageComponent, canActivate: [AlreadyLoggedInGuard] },
   { path: 'faq-admin', component: FaqAdminPageComponent, canActivate: [AuthguardGuard, AdminGuard] },
   { path: 'chatbot', component: ChatbotComponent},
-  { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
+  { path: '**', redirectTo:'/' },
 ];
 
 @NgModule({
