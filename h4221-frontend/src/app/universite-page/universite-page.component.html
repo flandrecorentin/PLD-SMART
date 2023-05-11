@@ -11,16 +11,16 @@
                 <p>📍 Ville : {{univDetails.ville}}</p>
                 <p>📅 Dates du semestre 1 : {{univDetails.debuts1}} - {{univDetails.Fins1}}</p>
                 <p>📅 Dates du semestre 2 : {{univDetails.debuts2}} - {{univDetails.finS2}}</p>
-                <p>🌐 <a href={{univDetails.URL}}>Site de l'université</a></p>
+                <p>🌐 <a href={{univDetails.url}}>Site de l'université</a></p>
             </div>
             
             <div id="accords" class="scrollable">
                 
                 <p class="titre">Accords disponibles</p>
-                <div *ngFor="let accord of univDetails.accord, let i=index">
+                <div *ngFor="let accord of univDetails.accords, let i=index">
                     <p>🤝 Nom de l'accord : {{accord.nom}}</p>
                     <p>🪑 Nombre de places : {{accord.place}}</p>
-                    <p>📄 Description : <a href={{accord.descr}}>lien</a></p>
+                    <p *ngIf='accord.descr==null'>📄 Description : <a href={{accord.descr}}>lien</a></p>
                     <p>💬 Niveau de langue demandé : {{accord.niveauLV}}</p>
                 </div>
             </div>
@@ -32,7 +32,7 @@
 
 
         <div id="discussion">
-            <div id="titrewrapper"><span id="titre">Canal de discussion 💌</span>
+            <div id="titrewrapper"><span id="titre">Canal de discussion ✉️</span>
                 
             <button id="ajoutConv" (click)="creerConv(nomConv.value)">+ Créer</button>
             <textarea id="nomConv" #nomConv></textarea></div>
@@ -66,8 +66,10 @@
                             <p id="contenu">{{message.text}}</p>
                         </div>
                     </div>
+                    <div  *ngIf="showMessages">
                         <textarea id="contenuMessageEnvoi" #messageEnvoi></textarea>
                         <button (click)="envoiMessage(messageEnvoi.value)">Envoi</button>
+                    </div>
             </div>
         </div>
         <div id="rex">
