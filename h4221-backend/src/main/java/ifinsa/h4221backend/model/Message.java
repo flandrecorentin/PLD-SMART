@@ -1,5 +1,6 @@
 package ifinsa.h4221backend.model;
 
+import org.bson.types.ObjectId;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -18,7 +19,6 @@ import java.util.*;
 
 @Document("Message")
 public class Message {
-//TODO : compléter la classe
 
     private String author;
     private String date;
@@ -46,9 +46,6 @@ public class Message {
                 '}';
     }
 
-    public String getDate() {
-        return date;
-    }
 
     public void setAuthor(String author) {
         this.author = author;
@@ -77,4 +74,8 @@ public class Message {
     public String getConversation() {
         return conversation;
     }
+    public String getDate() {
+        return date;
+    }
+
 }

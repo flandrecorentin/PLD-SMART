@@ -17,12 +17,14 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import org.bson.types.ObjectId;
+import java.util.Arrays;
 
 @Document("Conversation")
 public class Conversation {
 
     @Id
     private ObjectId id;
+    private String stringId;
 
     private String name;
     private String creator;
@@ -62,6 +64,12 @@ public class Conversation {
                 '}';
     }
 
+    public boolean convertIdToString() {
+       this.stringId = this.id.toString();
+       if (this.stringId == null) return false;
+       return true;
+    }
+
     public String getCreator() {
         return creator;
     }
@@ -84,9 +92,6 @@ public class Conversation {
 
     public String getScale() { return scale;}
 
-    public void close() {
-        closed = true;
-    }
 
     public void posterMessage(Message message) {
         this.messageList.add(0,message);
@@ -108,5 +113,44 @@ public class Conversation {
 
     public void setScale(String scale) {
         this.scale = scale;
+    }
+    public void setNombreDeMessages(String nombreDeMessages) {
+        this.nombreDeMessages = Integer.parseInt(nombreDeMessages); ;
+    }
+
+    public void setMessageList(List<Message> messageList) {
+        this.nombreDeMessages = 0;
+        for (Message message: messageList) {
+            this.messageList.add(this.nombreDeMessages,message);
+            nombreDeMessages++;
+        }
+    }
+    public int getNombreDeMessages() {
+        return nombreDeMessages;
+    }
+
+    public List<Message> getMessageList() {
+        return messageList;
+    }
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setClosed(boolean closed) {
+        this.closed = closed;
+    }
+
+    public boolean isClosed() {
+        return closed;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+        this.stringId = id.toHexString();
+    }
+
+    public String getStringId() {
+        return stringId;
     }
 }
