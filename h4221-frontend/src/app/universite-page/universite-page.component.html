@@ -93,7 +93,8 @@
                 </div><hr/><div class="block">
                     <span>Dates de réservation</span>
                     <div>
-                    <span id="nom" class="doubleLong" *ngFor="let date of TransportReservationDate">{{date}}<br/></span>
+                <!-- <span id="nom" class="doubleLong" *ngFor="let date of TransportReservationDate">{{date}}<br/></span> -->
+                    <span id="nom" class="doubleLong">{{TransportReservationDateMeanString}}</span>
                     </div>
                 </div><hr/><div class="block">
                     <span>Prix moyen de transport aller-retour</span>
@@ -109,7 +110,7 @@
                 </div><hr/><div class="block">
                     <span>Date de réservation de logement</span>
                     <div class="doubleLong">
-                        <span id="nom" *ngFor="let texte of AccomodationReservationDate">{{texte}}<br/></span>
+                        <span id="nom">{{AccomodationReservationDateMeanString}}</span>
                     </div>
                 </div><hr/><div class="block">
                     <span>Manière de trouver le logement</span>
@@ -148,6 +149,63 @@
                     <span>Sentiments généraux quand à l'université</span>
                         <span id="nom" class="doubleLong">{{UniversityGeneralFeelings}}/5</span>
                 </div><hr/>
+                <p class="soustitre">Bourses</p>
+                <hr/>
+
+
+                <div class="block">
+                    <span>Montant moyen de la bourse ERASMUS</span>
+                        <span id="nom" class="doubleLong">{{AmountErasmus}}</span>
+                </div>
+                <hr/><div class="block">
+                    <span>Dates de premier contact par la bourse</span>
+                    <div>
+                    <span id="nom" class="doubleLong">{{ERASMUSFirstContactDateMeanString}}</span>
+                    </div>
+                </div><hr/><div class="block">
+                    <span>Dates d'envoi de l'OLA</span>
+                    <div>
+                    <span id="nom" class="doubleLong">{{OlaDateMeanString}}<br/></span>
+                    </div>
+                </div>
+
+                <hr/>
+                <div class="block">
+                    <span>Montant moyen de la bourse BRMIE</span>
+                        <span id="nom" class="doubleLong">{{AmountBRMIE}}</span>
+                </div>
+                <hr/><div class="block">
+                    <span>Dates de premier contact par la bourse</span>
+                    <div>
+                    <span id="nom" class="doubleLong">{{BRMIEFirstContactDateMeanString}}</span>
+                    </div>
+                </div><hr/><div class="block">
+                    <span>Deadline pour l'envoi de la demande</span>
+                    <div>
+                    <span id="nom" class="doubleLong">{{BRMIEApplicationDeadlineMeanString}}<br/></span>
+                    </div>
+                </div>
+
+                <hr/>
+                <div class="block">
+                    <span>Montant moyen de la bourse AMI</span>
+                        <span id="nom" class="doubleLong">{{AMIGrantAmount}}</span>
+                </div>
+                <hr/><div class="block">
+                    <span>Dates de premier contact par la bourse</span>
+                    <div>
+                    <span id="nom" class="doubleLong">{{AMIFirstContactDateMeanString}}<br/></span>
+                    </div>
+                </div><hr/><div class="block">
+                    <span>Deadline pour l'envoi de la demande</span>
+                    <div>
+                    <span id="nom" class="doubleLong">{{AMIApplicationDeadlineMeanString}}<br/></span>
+                    </div>
+                </div>
+                
+                
+                
+                <hr/>
                 <p class="soustitre">Modules choisis</p>
                 <hr/><div class="block">
                     <span>Date de choix de modules</span>

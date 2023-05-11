@@ -5,18 +5,12 @@ import ifinsa.h4221backend.model.AuthenticationRequest;
 import ifinsa.h4221backend.model.PasswordRequest;
 import ifinsa.h4221backend.model.User;
 import ifinsa.h4221backend.model.UserInfo;
-import ifinsa.h4221backend.service.ExampleService;
 import ifinsa.h4221backend.service.UserService;
-import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.util.Pair;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
