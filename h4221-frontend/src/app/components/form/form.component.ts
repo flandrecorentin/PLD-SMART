@@ -61,7 +61,11 @@ export class FormComponent implements OnInit {
           "author": mail,
           "formulairetemp": sender.data
         });
-      console.log(results);
+      this.formService.sendPartialForm(results).subscribe(
+        res => {
+          this.router.navigateByUrl('/home');
+        }
+      )
     }
   }
 
@@ -70,6 +74,12 @@ export class FormComponent implements OnInit {
       (res) => {
         const survey = new Model(res);
         this.surveyModel = survey;
+        var partialResults: JSON = JSON.parse('{}');
+        this.formService.getPartialForm().subscribe( 
+          data => {
+            partialResults = data;
+            survey.data = partialResults;
+          })
         survey.onComplete.add(this.sendResults.bind(this))
       }
     )
