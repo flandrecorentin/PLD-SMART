@@ -23,4 +23,8 @@ export class UnivService {
   // modify(form:any) {
   //   return this.http.post<JSON>(this.formURL, form, {headers: this.httpHeaders});
   // }
+  // http://localhost:9000/universite/Suede
+  getAllUnivsByCountry(form:any) {
+    return this.http.get<JSON>(this.univURL+"/"+form, {headers: this.httpHeaders});
+  }
 }

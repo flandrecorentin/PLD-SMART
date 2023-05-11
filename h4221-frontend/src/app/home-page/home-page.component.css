@@ -191,5 +191,10 @@ margin-right:30px;
 
 #choiceCountry{
   /*text-align: center;*/
-  border: red 2px solid;
+  /*border: red 2px solid;*/
+}
+#span-country{
+  /*margin: 100px;*/
+  padding: 25px;
+  font-family: 'Inter', sans-serif;
 }

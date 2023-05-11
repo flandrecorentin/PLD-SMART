@@ -12,6 +12,7 @@ import { FormPageComponent } from './form-page/form-page.component';
 import { AuthguardGuard } from './shared/authguard.guard';
 import { AccueilPageComponent } from './accueil-page/accueil-page.component';
 import { AlreadyLoggedInGuard } from './shared/already-logged-in.guard';
+import { AdminGuard } from './shared/admin.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, canActivate:[AuthguardGuard]},
@@ -24,8 +25,8 @@ const routes: Routes = [
   { path: 'form', component: FormPageComponent, canActivate:[AuthguardGuard]},
   { path: 'universite', component: UniversitePageComponent, canActivate:[AuthguardGuard]},
   { path: '', component: AccueilPageComponent, canActivate:[AlreadyLoggedInGuard]},
-  { path: 'faq-admin', component: FaqAdminPageComponent, canActivate:[AuthguardGuard]},
-  { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
+  { path: 'faq-admin', component: FaqAdminPageComponent, canActivate:[AuthguardGuard, AdminGuard]},
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

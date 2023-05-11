@@ -6,22 +6,38 @@ import ifinsa.h4221backend.model.AuthenticationRequest;
 import ifinsa.h4221backend.model.User;
 import ifinsa.h4221backend.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService implements UserDetailsService {
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Autowired
     UserModelDAO userModelDAO;
 
     @Autowired
     JwtUtil jwtUtil;
 
+    private AuthenticationManager authenticationManager;
+
+    public UserService(@Lazy AuthenticationManager authenticationManager) {
+        this.authenticationManager = authenticationManager;
+    }
+
     public boolean inscrireService(User user) {
         try {
             if (userModelDAO.findUserByMail(user.getMail()) == null) {
+                user.setPassword(passwordEncoder.encode(user.getPassword()));
                 userModelDAO.save(user);
                 return true;
             } else {
@@ -48,20 +64,14 @@ public class UserService implements UserDetailsService {
     }
 
     public User verifierConnexion(AuthenticationRequest authenticationRequest) {
-        User user = null;
-        try {
-            user = userModelDAO.findUserByMailAndPassword(authenticationRequest.getLogin(), authenticationRequest.getPassword());
-        } catch (Exception exception) {
-            user = null;
-        } finally {
-            return user;
-        }
-    }
-
-    public boolean connexionService(AuthenticationRequest authenticationRequest) {
-        if (userModelDAO.findUserByMailAndPassword(authenticationRequest.getLogin(), authenticationRequest.getPassword()) == null)
-            return true;
-        else return false;
+        authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        authenticationRequest.getLogin(),
+                        authenticationRequest.getPassword()
+                )
+        );
+        var user = userModelDAO.findUserByMail(authenticationRequest.getLogin());
+        return user;
     }
 
     @Override
@@ -87,11 +97,11 @@ public class UserService implements UserDetailsService {
             System.out.println(user.getPassword()+"=="+ancienPassword);
             if(user==null){
                 return 1;
-            }else if(!user.getPassword().equals(ancienPassword)){
+            }else if(!passwordEncoder.matches(ancienPassword, user.getPassword())){
                 return 2;
-            }else if(user.getPassword().equals(ancienPassword)){
+            }else if(passwordEncoder.matches(ancienPassword, user.getPassword())){
                 // faire modification password
-                user.setPassword(nouveauPassword);
+                user.setPassword(passwordEncoder.encode(nouveauPassword));
                 userModelDAO.save(user);
                 return 0;
             }else{
@@ -102,6 +112,17 @@ public class UserService implements UserDetailsService {
         }catch (Exception exception){
 
             return 0;
+        }
+    }
+
+    public String chercherRoleParToken(String tokenUser) {
+        try{
+            String mail = jwtUtil.extractUsername(tokenUser);
+            User user = userModelDAO.findUserByMail(mail);
+            String role = user.getRole();
+            return role;
+        }catch (Exception exception){
+            return null;
         }
     }
 }
