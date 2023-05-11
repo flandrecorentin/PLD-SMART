@@ -7,25 +7,29 @@
 
     <label for="lastName" class="label">Nom</label>
     <input id="lastName" type="text" formControlName="lastName" placeholder="Entrez votre nom" required>
-    <div *ngIf="inscriptionForm.controls.lastName.invalid && (inscriptionForm.controls.lastName.dirty || inscriptionForm.controls.lastName.touched)">
+    <div
+        *ngIf="inscriptionForm.controls.lastName.invalid && (inscriptionForm.controls.lastName.dirty || inscriptionForm.controls.lastName.touched)">
         <p class="label error">Le nom est obligatoire !</p>
     </div>
 
     <label for class="label">Prénom</label>
     <input id="firstName" type="text" formControlName="firstName" placeholder="Entrez votre prénom" required>
-    <div *ngIf="inscriptionForm.controls.firstName.invalid && (inscriptionForm.controls.firstName.dirty || inscriptionForm.controls.firstName.touched)">
+    <div
+        *ngIf="inscriptionForm.controls.firstName.invalid && (inscriptionForm.controls.firstName.dirty || inscriptionForm.controls.firstName.touched)">
         <p class="label error">Le prénom est obligatoire !</p>
     </div>
 
     <label for="email" class="label">Email</label>
     <input id="email" type="email" email="true" formControlName="mail" placeholder="Entrez votre email" required>
-    <div *ngIf="inscriptionForm.controls.mail.invalid && (inscriptionForm.controls.mail.dirty || inscriptionForm.controls.mail.touched)">
+    <div
+        *ngIf="inscriptionForm.controls.mail.invalid && (inscriptionForm.controls.mail.dirty || inscriptionForm.controls.mail.touched)">
         <p class="label error">Le mail est obligatoire !</p>
     </div>
 
     <label for="password" class="label">Mot de passe</label>
     <input id="password" type="password" formControlName="password" placeholder="••••••••" required>
-    <div *ngIf="inscriptionForm.controls.password.invalid && (inscriptionForm.controls.password.dirty || inscriptionForm.controls.password.touched)">
+    <div
+        *ngIf="inscriptionForm.controls.password.invalid && (inscriptionForm.controls.password.dirty || inscriptionForm.controls.password.touched)">
         <p class="label error">Le mot de passe est obligatoire !</p>
     </div>
 

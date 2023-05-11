@@ -6,7 +6,7 @@
 }
 
 .navigation-button {
-    color:white;
+    color: white;
     background-color: #93c2ae;
     padding: 8px;
     margin: 6px 2px;
@@ -15,9 +15,11 @@
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
 }
+
 .navigation-button:hover {
     box-shadow: 0 0 2px 0 #19b394 inset, 0 0 4px 2px #93c2ae;
 }
+
 .navigation-page-selector {
     width: 90px;
     box-sizing: border-box;
@@ -30,6 +32,7 @@
     border: none;
     padding: 0 5px;
 }
+
 .navigation-page-selector:focus {
     outline: 1px solid #1ab394;
 }

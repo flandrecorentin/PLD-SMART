@@ -9,13 +9,15 @@
 
         <label for="login" class="label">Email</label>
         <input id="login" type="email" email="true" formControlName="login" placeholder="Entrez votre e-mail">
-        <div *ngIf="loginForm.controls.login.invalid && (loginForm.controls.login.dirty || loginForm.controls.login.touched)">
+        <div
+            *ngIf="loginForm.controls.login.invalid && (loginForm.controls.login.dirty || loginForm.controls.login.touched)">
             <p class="label error">L'adresse mail est obligatoire !</p>
         </div>
 
         <label for="password" class="label">Password</label>
         <input id="password" type="password" formControlName="password" placeholder="••••••••">
-        <div *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">
+        <div
+            *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">
             <p class="label error">Le mot de passe est obligatoire !</p>
         </div>
 

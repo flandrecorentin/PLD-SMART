@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { SurveyModule } from 'survey-angular-ui';
 
 import { AppComponent } from './app.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
@@ -22,12 +21,10 @@ import { UniversitePageComponent } from './universite-page/universite-page.compo
 import { FaqAdminPageComponent } from './faq-admin-page/faq-admin-page.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
     HomePageComponent,
     ConnexionPageComponent,
     InscriptionPageComponent,
@@ -41,7 +38,6 @@ import { MapComponent } from './components/map/map.component';
     AccueilPageComponent,
     SettingsPageComponent,
     UniversitePageComponent,
-    MapComponent
   ],
   imports: [
     BrowserModule,

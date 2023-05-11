@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { navbarData } from './nav-data';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { AuthenticationService } from 'src/app/config/authentication.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,10 +9,10 @@ import { Router } from '@angular/router';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit{
+export class SidebarComponent implements OnInit {
   navData = navbarData;
-  isAdmin : boolean = false;
-  constructor(private fb: FormBuilder, private authenticationService: AuthenticationService, private router: Router) {}
+  isAdmin = false;
+  constructor(private fb: FormBuilder, private authenticationService: AuthenticationService, private router: Router) { }
 
   async ngOnInit() {
     this.authenticationService.getUserRole().subscribe(

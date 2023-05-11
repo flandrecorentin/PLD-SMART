@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500,550,600,700&display=swap');
+
 #sidebar {
     background: #FFFFFF;
     position: absolute;
     z-index: 1;
     top: 0;
-    width:65px;
-    overflow-y:hidden;  
+    width: 65px;
+    overflow-y: hidden;
     height: 100vh;
     white-space: nowrap;
-    transition:0.4s;
+    transition: 0.4s;
     border-right: #526d6253 1px solid;
     position: fixed;
 
@@ -16,140 +17,150 @@
 
 #sidebar::-webkit-scrollbar {
     display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  #sidebar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-#sidebar:hover{
-    width:18vw;
 }
-#sidebar #logo{
-    margin-left:10px;
-    width:40px;
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#sidebar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
-/*#logo{*/
-/*  margin-left:10px;*/
-/*  min-width: 40px;*/
-/*  transition: transform .2s;*/
-/*  border: red solid 3px;*/
-/*}*/
-/*#logo:hover{*/
-/*  transform: scale(1.3);*/
-/*}*/
-#sidebar #titre{
+
+#sidebar:hover {
+    width: 18vw;
+}
+
+#sidebar #logo {
+    margin-left: 10px;
+    width: 40px;
+}
+
+#sidebar #titre {
     font-family: 'Inter', sans-serif;
-    font-size:2vw;
+    font-size: 2vw;
     font-weight: 600;
-    margin-left:40px;
-    color:#6b908000;
-    transition-delay:0s;
-    transition-duration:0.2s;
+    margin-left: 40px;
+    color: #6b908000;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
     visibility: hidden;
-}#sidebar:hover #titre{
-    color:#6B9080;
-    transition-delay:0.2s;
-    transition-duration:0.2s;
+}
+
+#sidebar:hover #titre {
+    color: #6B9080;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
     visibility: visible;
 }
-#sidebar #recherche-form{
-    padding:0;
+
+#sidebar #recherche-form {
+    padding: 0;
 }
-#sidebar #recherche-form input{
-    height:35px;
-    border-radius:5px;
-    border:rgba(128, 128, 128, 0) 1px solid;
+
+#sidebar #recherche-form input {
+    height: 35px;
+    border-radius: 5px;
+    border: rgba(128, 128, 128, 0) 1px solid;
     background-color: #6b908000;
-    color:rgba(0, 0, 0, 0);
-    width:11vw;
-    margin:auto;
-    margin-left:1vw;
-    padding-left:40px;
-    transition-delay:0s;
-    transition-duration:0.2s;
+    color: rgba(0, 0, 0, 0);
+    width: 11vw;
+    margin: auto;
+    margin-left: 1vw;
+    padding-left: 40px;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
     visibility: hidden;
 }
 
-#sidebar #recherche-form ::placeholder{
-    color:#6b908000;
+#sidebar #recherche-form ::placeholder {
+    color: #6b908000;
 
-    transition-delay:0s;
-    transition-duration:0.2s;
-}
-#sidebar:hover #recherche-form ::placeholder{
-    color:grey;
-
-    transition-delay:0.2s;
-    transition-duration:0.2s;
-}
-#sidebar:hover #recherche-form input{
-    border:rgba(128, 128, 128, 0.218) 1px solid;
-
-    color:black;
-    transition-delay:0.2s;
-    transition-duration:0.2s;
-    visibility:visible;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
 }
 
-#sidebar #recherche-form button{
-    padding:0;
-    position:absolute;
-    margin-left:20px;
-    color:#ffffff00;
-    border:#6b908000;
+#sidebar:hover #recherche-form ::placeholder {
+    color: grey;
+
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
+}
+
+#sidebar:hover #recherche-form input {
+    border: rgba(128, 128, 128, 0.218) 1px solid;
+
+    color: black;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
+    visibility: visible;
+}
+
+#sidebar #recherche-form button {
+    padding: 0;
+    position: absolute;
+    margin-left: 20px;
+    color: #ffffff00;
+    border: #6b908000;
     background-color: transparent;
 }
 
 
-#sidebar ul{
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
-    margin-top:20px;
+#sidebar ul {
+    list-style-type: none;
+    /* Remove bullets */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margins */
+    margin-top: 20px;
 }
-#sidebar ul li{
-    margin:5px;
-    margin-left:20px;
-    margin-bottom:20px;
-}#sidebar img{
-    width:25px;
-    transform: translate(0%,25%);
+
+#sidebar ul li {
+    margin: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
-a{
+
+#sidebar img {
+    width: 25px;
+    transform: translate(0%, 25%);
+}
+
+a {
     text-decoration: none;
 }
-#sidebar span{
-    color:rgba(0, 0, 0, 0);
-    font-family: 'Inter', sans-serif;
-    font-size:1vw;
-    font-weight: 500;
-    top:0;
-    margin-left:15px;
-    transition-delay:0s;
-    transition-duration:0.2s;
-}
-#sidebar:hover span{
 
-    transition-delay:0.2s;
-    transition-duration:0.2s;
-    color:rgb(0, 0, 0);
+#sidebar span {
+    color: rgba(0, 0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    top: 0;
+    margin-left: 15px;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+}
+
+#sidebar:hover span {
+
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
+    color: rgb(0, 0, 0);
 }
 
 #sidebar #help {
-    position:absolute;
-    bottom:60px;
-    margin:5px;
-    margin-left:20px;
-    margin-bottom:20px;
+    position: absolute;
+    bottom: 60px;
+    margin: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 #sidebar #logout {
-    position:absolute;
-    bottom:10px;
-    margin:5px;
-    margin-left:20px;
-    margin-bottom:20px;
+    position: absolute;
+    bottom: 10px;
+    margin: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
-

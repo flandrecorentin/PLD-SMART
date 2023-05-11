@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { AuthenticationService } from '../config/authentication.service';
+import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
 import { Userdetails } from '../interfaces/userdetails';
 
@@ -23,15 +23,15 @@ export class ConnexionPageComponent {
   submitConnexion() {
     this.authenticationService.connexion(this.loginForm.value).subscribe(
       (rep: string) => {
-      localStorage.setItem('auth_token', rep);
-      this.authenticationService.getUserDetails().subscribe(
-        (userDetails : Userdetails) => {
-          if(userDetails.mail != null) {
-            localStorage.setItem('mail', userDetails.mail);
+        localStorage.setItem('auth_token', rep);
+        this.authenticationService.getUserDetails().subscribe(
+          (userDetails: Userdetails) => {
+            if (userDetails.mail != null) {
+              localStorage.setItem('mail', userDetails.mail);
+            }
           }
-        }
-      )
-      this.router.navigateByUrl('/home');
+        )
+        this.router.navigateByUrl('/home');
       },
       (error) => {
         console.log(error);

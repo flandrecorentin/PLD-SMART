@@ -1,7 +1,7 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormService } from 'src/app/config/form.service';
+import { FormService } from 'src/app/services/form.service';
 import { Model } from "survey-core"
 
 @Component({
@@ -13,18 +13,18 @@ export class FormComponent implements OnInit {
   title = 'My first survey';
   surveyModel !: Model;
 
-  constructor(private formService: FormService, private router: Router) {}
+  constructor(private formService: FormService, private router: Router) { }
 
   flattenObject = (obj: any) => {
-    const flattened : any = {}
-  
+    const flattened: any = {}
+
     Object.keys(obj).forEach((key) => {
       const value = obj[key.toString()]
-  
+
       if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
         Object.assign(flattened, this.flattenObject(value))
-      } else if(Array.isArray(value)) {
-        for(let i in value){
+      } else if (Array.isArray(value)) {
+        for (const i in value) {
           flattened[value[i]] = true
         }
       }
@@ -35,16 +35,16 @@ export class FormComponent implements OnInit {
     return flattened
   }
 
-  sendResults (sender: Model) {
+  sendResults(sender: Model) {
     const mail = localStorage.getItem('mail');
     const date = formatDate(Date.now(), 'dd-MM-yyyy', 'en');
-    var results : JSON = JSON.parse('{}');
-    Object.assign(results, 
-      { 
-      "author": mail,
-      "date": date,
-      "information": this.flattenObject(sender.data)
-    });
+    const results: JSON = JSON.parse('{}');
+    Object.assign(results,
+      {
+        "author": mail,
+        "date": date,
+        "information": this.flattenObject(sender.data)
+      });
     this.formService.sendForm(results).subscribe(
       res => {
         this.router.navigateByUrl('/home');
@@ -55,7 +55,7 @@ export class FormComponent implements OnInit {
   sendPartialResults(sender: Model) {
     if (sender.isCurrentPageValid) {
       const mail = localStorage.getItem('mail');
-      var results: JSON = JSON.parse('{}');
+      const results: JSON = JSON.parse('{}');
       Object.assign(results,
         {
           "author": mail,
@@ -74,8 +74,8 @@ export class FormComponent implements OnInit {
       (res) => {
         const survey = new Model(res);
         this.surveyModel = survey;
-        var partialResults: JSON = JSON.parse('{}');
-        this.formService.getPartialForm().subscribe( 
+        let partialResults: JSON = JSON.parse('{}');
+        this.formService.getPartialForm().subscribe(
           data => {
             partialResults = data;
             survey.data = partialResults;
@@ -83,7 +83,7 @@ export class FormComponent implements OnInit {
         survey.onComplete.add(this.sendResults.bind(this))
       }
     )
-    
+
   }
 
 }

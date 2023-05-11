@@ -13,9 +13,9 @@
                 <p>📅 Dates du semestre 2 : {{univDetails.debuts2}} - {{univDetails.finS2}}</p>
                 <p>🌐 <a href={{univDetails.url}}>Site de l'université</a></p>
             </div>
-            
+
             <div id="accords" class="scrollable">
-                
+
                 <p class="titre">Accords disponibles</p>
                 <div *ngFor="let accord of univDetails.accords, let i=index">
                     <p>🤝 Nom de l'accord : {{accord.nom}}</p>
@@ -33,212 +33,258 @@
 
         <div id="discussion">
             <div id="titrewrapper"><span id="titre">Canal de discussion ✉️</span>
-                
-            <button id="ajoutConv" (click)="creerConv(nomConv.value)">+ Créer</button>
-            <textarea id="nomConv" #nomConv></textarea></div>
-            <div id="scrollable" class="scrollable"><table>
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Date</th>
-                        <!-- <th>Suppr</th> -->
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let chat of allChats, let i=index" (click)="reveal(i)">
-                        <td><p>{{chat.name}}</p></td> 
-                        <td><p>{{chat.creationDate}}</p></td>
-                        <!-- <td><img id="imgSuppr" src="../assets/poubelle.png"/></td> -->
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+
+                <button id="ajoutConv" (click)="creerConv(nomConv.value)">+ Créer</button>
+                <textarea id="nomConv" #nomConv></textarea>
+            </div>
+            <div id="scrollable" class="scrollable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let chat of allChats, let i=index" (click)="reveal(i)">
+                            <td>
+                                <p>{{chat.name}}</p>
+                            </td>
+                            <td>
+                                <p>{{chat.creationDate}}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div id="chatBlock">
                 <p id="titre">
                     {{displayedChat.name}}
-                    
-                </p>
-                    <div id="messagesBlock" class="scrollable" *ngIf="showMessages">
 
-                        <div *ngFor="let message of displayedChat.messageList.slice().reverse(), let i=index">
-                            <p id="infos">{{message.author}} à {{message.date}}</p>
-                            <p id="contenu">{{message.text}}</p>
-                        </div>
+                </p>
+                <div id="messagesBlock" class="scrollable" *ngIf="showMessages">
+
+                    <div *ngFor="let message of displayedChat.messageList.slice().reverse(), let i=index">
+                        <p id="infos">{{message.author}} à {{message.date}}</p>
+                        <p id="contenu">{{message.text}}</p>
                     </div>
-                    <div  *ngIf="showMessages">
-                        <textarea id="contenuMessageEnvoi" #messageEnvoi></textarea>
-                        <button (click)="envoiMessage(messageEnvoi.value)">Envoi</button>
-                    </div>
+                </div>
+                <div *ngIf="showMessages">
+                    <textarea id="contenuMessageEnvoi" #messageEnvoi></textarea>
+                    <button (click)="envoiMessage(messageEnvoi.value)">Envoi</button>
+                </div>
             </div>
         </div>
         <div id="rex">
-            
+
             <p class="titre" *ngIf="!afficherRex">Retours d'expériences</p>
             <p class="soustitre" *ngIf="!afficherRex">Il n'y a pas de retours d'expérience pour cette destination.</p>
-            <hr *ngIf="!afficherRex"/>
+            <hr *ngIf="!afficherRex" />
             <div id="rexWrapper" class="scrollable" *ngIf="afficherRex">
                 <p class="titre">Retours d'expériences</p>
                 <p class="soustitre">Transports</p>
-                <hr/>
+                <hr />
                 <div class="block">
                     <span>Moyen de transport</span>
-                    <span id="nom" class="doubleLong" >Avion : {{MeanOfTransport.avion}}<br/>Voiture : {{MeanOfTransport.voiture}}<br/>Bus : {{MeanOfTransport.bus}}</span>
+                    <span id="nom" class="doubleLong">Avion : {{MeanOfTransport.avion}}<br />Voiture :
+                        {{MeanOfTransport.voiture}}<br />Bus : {{MeanOfTransport.bus}}</span>
                 </div>
-                <hr/>
+                <hr />
                 <div class="block">
                     <span>Durée de voyage moyenne</span>
-                    <span id="nom" class="doubleLong" >{{TransportDuration}}h</span>
-                </div><hr/><div class="block">
+                    <span id="nom" class="doubleLong">{{TransportDuration}}h</span>
+                </div>
+                <hr />
+                <div class="block">
                     <span>Sites de réservation</span>
                     <div>
-                    <span id="nom" class="doubleLong" *ngFor="let texte of TransportReservationWebsite">{{texte}}<br/></span>
+                        <span id="nom" class="doubleLong"
+                            *ngFor="let texte of TransportReservationWebsite">{{texte}}<br /></span>
                     </div>
-                </div><hr/><div class="block">
+                </div>
+                <hr />
+                <div class="block">
                     <span>Dates de réservation</span>
                     <div>
-                <!-- <span id="nom" class="doubleLong" *ngFor="let date of TransportReservationDate">{{date}}<br/></span> -->
-                    <span id="nom" class="doubleLong">{{TransportReservationDateMeanString}}</span>
+                        <span id="nom" class="doubleLong">{{TransportReservationDateMeanString}}</span>
                     </div>
-                </div><hr/><div class="block">
+                </div>
+                <hr />
+                <div class="block">
                     <span>Prix moyen de transport aller-retour</span>
-                    <span id="nom" class="doubleLong" >{{TransportPrice}}</span>
-                </div><hr/>
+                    <span id="nom" class="doubleLong">{{TransportPrice}}</span>
+                </div>
+                <hr />
                 <p class="soustitre">Logement</p>
-                <hr/>
+                <hr />
                 <div class="block">
                     <span>Quartiers recommandés</span>
                     <div class="doubleLong">
-                        <span id="nom" *ngFor="let texte of AccomodationNeighborhoodRecommendation">{{texte}}<br/><br/></span>
+                        <span id="nom"
+                            *ngFor="let texte of AccomodationNeighborhoodRecommendation">{{texte}}<br /><br /></span>
                     </div>
-                </div><hr/><div class="block">
+                </div>
+                <hr />
+                <div class="block">
                     <span>Date de réservation de logement</span>
                     <div class="doubleLong">
                         <span id="nom">{{AccomodationReservationDateMeanString}}</span>
                     </div>
-                </div><hr/><div class="block">
+                </div>
+                <hr />
+                <div class="block">
                     <span>Manière de trouver le logement</span>
                     <div class="doubleLong">
-                        <span id="nom">Site internet spécialisé : {{AccomodationHowDidYouFind.Website}}<br/></span>
-                        <span id="nom">Campagne de logement universitaire : {{AccomodationHowDidYouFind.UniCampaign}}<br/></span>
-                        <span id="nom">Connaissance sur place : {{AccomodationHowDidYouFind.Acquaintance}}<br/></span>
-                     </div>
-                </div><hr/>
+                        <span id="nom">Site internet spécialisé : {{AccomodationHowDidYouFind.Website}}<br /></span>
+                        <span id="nom">Campagne de logement universitaire :
+                            {{AccomodationHowDidYouFind.UniCampaign}}<br /></span>
+                        <span id="nom">Connaissance sur place : {{AccomodationHowDidYouFind.Acquaintance}}<br /></span>
+                    </div>
+                </div>
+                <hr />
                 <div class="block">
                     <span>Type de logement</span>
                     <div class="doubleLong">
-                        <span id="nom">Studio individuel : {{AccomodationType.Studio_individuel}}<br/></span>
-                        <span id="nom">Chambre dans une collocation : {{AccomodationType.Chambre_dans_une_collocation}}<br/></span>
-                        <span id="nom">Chambre seule en résidence universitaire : {{AccomodationType.Chambre_seule_en_residence_universitaire}}<br/></span>
-                        <span id="nom">Collocation en résidence universitaire : {{AccomodationType.Collocation_en_residence_universitaire}}<br/></span>
-                        <span id="nom">Chambre chez l'habitant : {{AccomodationType.Chambre_chez_lhabitant}}<br/></span>
-                        <span id="nom">Chambre d'hôtel : {{AccomodationType.Chambre_dhotel}}<br/></span>
-                     </div>
-                </div><hr/>
+                        <span id="nom">Studio individuel : {{AccomodationType.Studio_individuel}}<br /></span>
+                        <span id="nom">Chambre dans une collocation :
+                            {{AccomodationType.Chambre_dans_une_collocation}}<br /></span>
+                        <span id="nom">Chambre seule en résidence universitaire :
+                            {{AccomodationType.Chambre_seule_en_residence_universitaire}}<br /></span>
+                        <span id="nom">Collocation en résidence universitaire :
+                            {{AccomodationType.Collocation_en_residence_universitaire}}<br /></span>
+                        <span id="nom">Chambre chez l'habitant :
+                            {{AccomodationType.Chambre_chez_lhabitant}}<br /></span>
+                        <span id="nom">Chambre d'hôtel : {{AccomodationType.Chambre_dhotel}}<br /></span>
+                    </div>
+                </div>
+                <hr />
                 <div class="block">
                     <span>Difficulté à trouver un logement</span>
-                        <span id="nom" class="doubleLong">{{AccomodationHardToFind}}/5</span>
-                </div><hr/>
+                    <span id="nom" class="doubleLong">{{AccomodationHardToFind}}/5</span>
+                </div>
+                <hr />
                 <p class="soustitre">Notes sur 5</p>
-                <hr/>
+                <hr />
                 <div class="block">
                     <span>Vie étudiante sur place</span>
-                        <span id="nom" class="doubleLong">{{UniversityStudentLife}}/5</span>
-                </div><hr/>
+                    <span id="nom" class="doubleLong">{{UniversityStudentLife}}/5</span>
+                </div>
+                <hr />
                 <div class="block">
                     <span>Intégration à l'université</span>
-                        <span id="nom" class="doubleLong">{{UniversityIntegration}}/5</span>
-                </div><hr/>
+                    <span id="nom" class="doubleLong">{{UniversityIntegration}}/5</span>
+                </div>
+                <hr />
                 <div class="block">
                     <span>Sentiments généraux quand à l'université</span>
-                        <span id="nom" class="doubleLong">{{UniversityGeneralFeelings}}/5</span>
-                </div><hr/>
+                    <span id="nom" class="doubleLong">{{UniversityGeneralFeelings}}/5</span>
+                </div>
+                <hr />
                 <p class="soustitre">Bourses</p>
-                <hr/>
+                <hr />
 
 
                 <div class="block">
                     <span>Montant moyen de la bourse ERASMUS</span>
-                        <span id="nom" class="doubleLong">{{AmountErasmus}}</span>
+                    <span id="nom" class="doubleLong">{{AmountErasmus}}</span>
                 </div>
-                <hr/><div class="block">
+                <hr />
+                <div class="block">
                     <span>Dates de premier contact par la bourse</span>
                     <div>
-                    <span id="nom" class="doubleLong">{{ERASMUSFirstContactDateMeanString}}</span>
+                        <span id="nom" class="doubleLong">{{ERASMUSFirstContactDateMeanString}}</span>
                     </div>
-                </div><hr/><div class="block">
+                </div>
+                <hr />
+                <div class="block">
                     <span>Dates d'envoi de l'OLA</span>
                     <div>
-                    <span id="nom" class="doubleLong">{{OlaDateMeanString}}<br/></span>
+                        <span id="nom" class="doubleLong">{{OlaDateMeanString}}<br /></span>
                     </div>
                 </div>
 
-                <hr/>
+                <hr />
                 <div class="block">
                     <span>Montant moyen de la bourse BRMIE</span>
-                        <span id="nom" class="doubleLong">{{AmountBRMIE}}</span>
+                    <span id="nom" class="doubleLong">{{AmountBRMIE}}</span>
                 </div>
-                <hr/><div class="block">
+                <hr />
+                <div class="block">
                     <span>Dates de premier contact par la bourse</span>
                     <div>
-                    <span id="nom" class="doubleLong">{{BRMIEFirstContactDateMeanString}}</span>
+                        <span id="nom" class="doubleLong">{{BRMIEFirstContactDateMeanString}}</span>
                     </div>
-                </div><hr/><div class="block">
+                </div>
+                <hr />
+                <div class="block">
                     <span>Deadline pour l'envoi de la demande</span>
                     <div>
-                    <span id="nom" class="doubleLong">{{BRMIEApplicationDeadlineMeanString}}<br/></span>
+                        <span id="nom" class="doubleLong">{{BRMIEApplicationDeadlineMeanString}}<br /></span>
                     </div>
                 </div>
 
-                <hr/>
+                <hr />
                 <div class="block">
                     <span>Montant moyen de la bourse AMI</span>
-                        <span id="nom" class="doubleLong">{{AMIGrantAmount}}</span>
+                    <span id="nom" class="doubleLong">{{AMIGrantAmount}}</span>
                 </div>
-                <hr/><div class="block">
+                <hr />
+                <div class="block">
                     <span>Dates de premier contact par la bourse</span>
                     <div>
-                    <span id="nom" class="doubleLong">{{AMIFirstContactDateMeanString}}<br/></span>
-                    </div>
-                </div><hr/><div class="block">
-                    <span>Deadline pour l'envoi de la demande</span>
-                    <div>
-                    <span id="nom" class="doubleLong">{{AMIApplicationDeadlineMeanString}}<br/></span>
+                        <span id="nom" class="doubleLong">{{AMIFirstContactDateMeanString}}<br /></span>
                     </div>
                 </div>
-                
-                
-                
-                <hr/>
-                <p class="soustitre">Modules choisis</p>
-                <hr/><div class="block">
-                    <span>Date de choix de modules</span>
-                    <div class="doubleLong">
-                        <span id="nom" *ngFor="let texte of ModulesWhenPick">{{texte}}<br/></span>
-                    </div>
-                </div><hr/><div class="block">
-                    <span>Nom du responsable des modules</span>
-                    <div class="doubleLong">
-                        <span id="nom" *ngFor="let texte of ModuleResponsibleName">{{texte}}<br/></span>
-                    </div>
-                </div><hr/><div class="block">
-                    <span>Mail du responsable des modules</span>
-                    <div class="doubleLong">
-                        <span id="nom" *ngFor="let texte of ModuleResponsibleMail">{{texte}}<br/></span>
-                    </div>
-                </div><hr/>
+                <hr />
                 <div class="block">
-                    <span>Nombre de semaines pour changer les modules une fois arrivé</span>
-                        <span id="nom" class="doubleLong">{{ModulesChangePeriodOnceArrived}}</span>
-                </div><hr/><div class="block">
-                    <span>Modules</span>
-                    <div class="doubleLong">
-                        <span id="nom" *ngFor="let texte of Modules">Nom : {{texte.nom}}<br/>Description : {{texte.descr}}<br/><br/></span>
+                    <span>Deadline pour l'envoi de la demande</span>
+                    <div>
+                        <span id="nom" class="doubleLong">{{AMIApplicationDeadlineMeanString}}<br /></span>
                     </div>
                 </div>
 
-                
-                
+
+
+                <hr />
+                <p class="soustitre">Modules choisis</p>
+                <hr />
+                <div class="block">
+                    <span>Date de choix de modules</span>
+                    <div class="doubleLong">
+                        <span id="nom" *ngFor="let texte of ModulesWhenPick">{{texte}}<br /></span>
+                    </div>
+                </div>
+                <hr />
+                <div class="block">
+                    <span>Nom du responsable des modules</span>
+                    <div class="doubleLong">
+                        <span id="nom" *ngFor="let texte of ModuleResponsibleName">{{texte}}<br /></span>
+                    </div>
+                </div>
+                <hr />
+                <div class="block">
+                    <span>Mail du responsable des modules</span>
+                    <div class="doubleLong">
+                        <span id="nom" *ngFor="let texte of ModuleResponsibleMail">{{texte}}<br /></span>
+                    </div>
+                </div>
+                <hr />
+                <div class="block">
+                    <span>Nombre de semaines pour changer les modules une fois arrivé</span>
+                    <span id="nom" class="doubleLong">{{ModulesChangePeriodOnceArrived}}</span>
+                </div>
+                <hr />
+                <div class="block">
+                    <span>Modules</span>
+                    <div class="doubleLong">
+                        <span id="nom" *ngFor="let texte of Modules">Nom : {{texte.nom}}<br />Description :
+                            {{texte.descr}}<br /><br /></span>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
     </div>

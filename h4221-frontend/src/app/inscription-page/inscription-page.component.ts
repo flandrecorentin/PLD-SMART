@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
-import { AuthenticationService } from '../config/authentication.service';
-import { InscriptionDetails } from '../interfaces/inscription-details.model';
+import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class InscriptionPageComponent {
 
-  constructor(private router:Router, private fb: FormBuilder, private authenticationService: AuthenticationService) { }
+  constructor(private router: Router, private fb: FormBuilder, private authenticationService: AuthenticationService) { }
 
   inscriptionForm = this.fb.group({
     mail: ["", Validators.required],
@@ -21,8 +20,8 @@ export class InscriptionPageComponent {
   })
 
   submitInscription() {
-    if(this.inscriptionForm?.value != null){
-      this.authenticationService.inscription(this.inscriptionForm.value).subscribe( res => {
+    if (this.inscriptionForm?.value != null) {
+      this.authenticationService.inscription(this.inscriptionForm.value).subscribe(res => {
         this.router.navigateByUrl('/connexion');
       }
       );

@@ -1,6 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
-import {Input, NgModule} from '@angular/core';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NgModule } from '@angular/core';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ConnexionPageComponent } from './connexion-page/connexion-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
@@ -16,17 +15,17 @@ import { AdminGuard } from './shared/admin.guard';
 import { FormAlreadySentGuard } from './shared/form-already-sent.guard';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent, canActivate:[AuthguardGuard]},
-  { path: 'connexion', component: ConnexionPageComponent, canActivate:[AlreadyLoggedInGuard]},
-  { path: 'inscription', component: InscriptionPageComponent, canActivate:[AlreadyLoggedInGuard]},
-  { path: 'settings', component: SettingsPageComponent, canActivate:[AuthguardGuard]},
-  { path: 'faq', component: FaqPageComponent, canActivate:[AuthguardGuard]},
-  { path: 'form', component: FormPageComponent,canActivate:[AuthguardGuard, FormAlreadySentGuard]},
-  { path: 'faq', component: FaqPageComponent, canActivate:[AuthguardGuard]},
-  { path: 'form', component: FormPageComponent, canActivate:[AuthguardGuard]},
-  { path: 'universite', component: UniversitePageComponent, canActivate:[AuthguardGuard]},
-  { path: '', component: AccueilPageComponent, canActivate:[AlreadyLoggedInGuard]},
-  { path: 'faq-admin', component: FaqAdminPageComponent, canActivate:[AuthguardGuard, AdminGuard]},
+  { path: 'home', component: HomePageComponent, canActivate: [AuthguardGuard] },
+  { path: 'connexion', component: ConnexionPageComponent, canActivate: [AlreadyLoggedInGuard] },
+  { path: 'inscription', component: InscriptionPageComponent, canActivate: [AlreadyLoggedInGuard] },
+  { path: 'settings', component: SettingsPageComponent, canActivate: [AuthguardGuard] },
+  { path: 'faq', component: FaqPageComponent, canActivate: [AuthguardGuard] },
+  { path: 'form', component: FormPageComponent, canActivate: [AuthguardGuard, FormAlreadySentGuard] },
+  { path: 'faq', component: FaqPageComponent, canActivate: [AuthguardGuard] },
+  { path: 'form', component: FormPageComponent, canActivate: [AuthguardGuard] },
+  { path: 'universite', component: UniversitePageComponent, canActivate: [AuthguardGuard] },
+  { path: '', component: AccueilPageComponent, canActivate: [AlreadyLoggedInGuard] },
+  { path: 'faq-admin', component: FaqAdminPageComponent, canActivate: [AuthguardGuard, AdminGuard] },
   { path: '**', redirectTo: 'home' },
 ];
 

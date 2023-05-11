@@ -1,5 +1,5 @@
 <div id="sidebar">
-    <img id="logo" [routerLink]="navData[0].routeLink" src="../../assets/logo.png"/>
+    <img id="logo" [routerLink]="navData[0].routeLink" src="../../assets/logo.png" />
     <p id="titre">Mobilit'IF</p>
 
 
@@ -13,15 +13,16 @@
 
     <ul class="sidebar-nav">
         <li class="sidebar-van-item" *ngFor="let data of navData">
-            <a href="" class="sidebar-nav-link" [routerLink]="data.routeLink" *ngIf="(data.access=='ROLE_USER'|| (this.isAdmin == true && data.access == 'ROLE_ADMIN'))">
-                <img class="sidebar-link-icon" [src]="data.icon"/>
-                <span class="sidebar-link-text" >{{data.label}}</span>
+            <a href="" class="sidebar-nav-link" [routerLink]="data.routeLink"
+                *ngIf="(data.access==='ROLE_USER'|| (this.isAdmin == true && data.access === 'ROLE_ADMIN'))">
+                <img class="sidebar-link-icon" [src]="data.icon" />
+                <span class="sidebar-link-text">{{data.label}}</span>
             </a>
         </li>
     </ul>
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" id="help">
-        <img class="sidebar-link-icon" src="../../assets/assist.png"/>
-        <span class="sidebar-link-text" >Support</span>
+        <img class="sidebar-link-icon" src="../../assets/assist.png" />
+        <span class="sidebar-link-text">Support</span>
     </a>
 
     <a (click)="logout()" href="/" id="logout">

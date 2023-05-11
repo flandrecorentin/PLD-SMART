@@ -1,89 +1,89 @@
-
 <app-sidebar></app-sidebar>
+
 <div id="settings">
     <p id="titre">Paramètres et profil</p>
-    <hr/>
-
-    <!-- <form id="login-form" [formGroup]="loginForm" (ngSubmit)="submitConnexion()">
-
-        <label for="login" class="label">Email</label>
-        <input id="login" type="email" email="true" formControlName="login" placeholder="Entrez votre e-mail"> -->
+    <hr />
     <form id="settings-form" [formGroup]="settingsForm" (ngSubmit)="submitSettings()">
-        
+
         <div id="infosPersonnelles">
             <p class="titre">Mes informations personnelles</p>
             <p class="soustitre">Vérifiez vos informations personnelles</p>
-            <hr/>
+            <hr />
             <div class="block">
                 <span>Nom et prénom</span>
-                <input id="nom" formControlName="lastName" [value]="nom"/>
-                <input id="prenom" formControlName="firstName" placeholder="Prénom" [value]="prenom"/>
-            </div><hr/>
+                <input id="nom" formControlName="lastName" [value]="nom" />
+                <input id="prenom" formControlName="firstName" placeholder="Prénom" [value]="prenom" />
+            </div>
+            <hr />
             <div class="block">
                 <span>E-mail</span>
                 <input id="mail" class="doubleLong" formControlName="mail" placeholder="E-mail" [value]="mail">
-            </div><hr/>
+            </div>
+            <hr />
             <div class="block">
                 <span>Nationalité</span>
-                <input id="nationalite" class="doubleLong" formControlName="country" placeholder="Nationalité" [value]="nationalite">
-            </div><hr/>
+                <input id="nationalite" class="doubleLong" formControlName="country" placeholder="Nationalité"
+                    [value]="nationalite">
+            </div>
+            <hr />
             <div class="block">
                 <span>Département d'études</span>
                 <input id="annees" formControlName="studyYear" list=anneeslabel placeholder="Annee" [value]="annee">
-                <datalist id=anneeslabel >
-                        <option> 3ème année
-                        <option> 4ème année
-                        <option> 5ème année
-                        <option> Autre
-                    </datalist>
-                <input id="departement" formControlName="departement" list=dept placeholder="Departement" [value]="departement">
-                <datalist id=dept >
+                <datalist id=anneeslabel>
+                    <option> 3ème année
+                    <option> 4ème année
+                    <option> 5ème année
+                    <option> Autre
+                </datalist>
+                <input id="departement" formControlName="departement" list=dept placeholder="Departement"
+                    [value]="departement">
+                <datalist id=dept>
                     <option> IF
                     <option> GM
-                        <option> GCU
-                            <option> BS
-                                <option> TC
-                                    <option> SGM
-                                        <option> GEN
-                                            <option> GI
-                                                <option> GE
-                    </datalist>
-            </div><hr/>
+                    <option> GCU
+                    <option> BS
+                    <option> TC
+                    <option> SGM
+                    <option> GEN
+                    <option> GI
+                    <option> GE
+                </datalist>
+            </div>
+            <hr />
             <div class="block">
                 <span>Université</span>
-                <input id="universite" list=list formControlName="university" class="doubleLong" placeholder="Université d'échange" [value]="universite">
-                <datalist id=list >
-                    
+                <input id="universite" list=list formControlName="university" class="doubleLong"
+                    placeholder="Université d'échange" [value]="universite">
+                <datalist id=list>
+
                     <option *ngFor="for let univ of allUnivs, let i= index">{{univ.nom}}</option>
-                    </datalist>
+                </datalist>
             </div>
-            
+
         </div>
-        <!-- <button id="save" type="submit" [disabled]="!settingsForm.valid">Sauvegarder les modifications</button> -->
         <button id="save" type="submit">Sauvegarder les modifications</button>
-    
+
         <a class="link-same-page" routerLink="/home"><button id="annuler">Annuler</button></a>
-
-
-        
-    </form>    
+    </form>
     <form id="mdp-form" [formGroup]="mdpForm" (ngSubmit)="submitMdp()">
-            <hr/>
-            <p class="titre">Modifier mon mot de passe</p>
-            <p class="soustitre">Entrez votre ancien et votre nouveau mot de passe</p>
-            
-            <hr/>
-            <p id="messageErreur">{{errorMessage}}</p>
-            <div class="block">
-                <span>Ancien mot de passe</span>
-                <input id="ancienMdp" type="password" formControlName="ancienMdp" class="doubleLong" placeholder="·······"/>
-            </div>
-            <hr/>
-            <div class="block">
-                <span>Nouveau mot de passe</span>
-                <input id="nouveauMdp" type="password" formControlName="nouveauMdp" class="doubleLong" placeholder="·······"/>
-            </div>
-            
+        <hr />
+        <p class="titre">Modifier mon mot de passe</p>
+        <p class="soustitre">Entrez votre ancien et votre nouveau mot de passe</p>
+
+        <hr />
+        <p id="messageErreur">{{errorMessage}}</p>
+        <div class="block">
+            <span>Ancien mot de passe</span>
+            <input id="ancienMdp" type="password" formControlName="ancienMdp" class="doubleLong"
+                placeholder="·······" />
+        </div>
+        <hr />
+        <div class="block">
+            <span>Nouveau mot de passe</span>
+            <input id="nouveauMdp" type="password" formControlName="nouveauMdp" class="doubleLong"
+                placeholder="·······" />
+        </div>
+
         <button id="save" type="submit">Sauvegarder le mot de passe</button>
     </form>
-</div>  
+</div>

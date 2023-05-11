@@ -6,7 +6,8 @@
     <button id="reponse" (click)="onClickProposer()">+ Proposer une question</button>
     <div id="tri-questions">
         <div id="barre-boutons">
-            <button id="buttonAll" class="borderradiusleft button" (click)="onClickFilter('All')">Afficher toutes</button>
+            <button id="buttonAll" class="borderradiusleft button" (click)="onClickFilter('All')">Afficher
+                toutes</button>
             <button id="buttonBourses" class="button" (click)="onClickFilter('Bourses')">Bourses</button>
             <button id="buttonFormalités" class="button" (click)="onClickFilter('Formalités')">Formalités</button>
             <button id="buttonCandidatures" class="button" (click)="onClickFilter('Candidatures')">Candidatures</button>
@@ -35,44 +36,46 @@
     <div id="changerPage">
         <p>Page {{pagenumber}} sur {{maxPageNumber}}</p>
         <div id="boutons">
-        <button (click)="onClickPlus()">Next</button>
-        <button (click)="onClickMoins()">Previous</button>
-    </div>
+            <button (click)="onClickPlus()">Next</button>
+            <button (click)="onClickMoins()">Previous</button>
+        </div>
     </div>
 
 
 
     <div id="popup" class="overlay">
         <div id="questiondetailspopup">
-            <img src="../assets/close.png" (click)="onClickClose()"/>
-            <br/>
+            <img src="../assets/close.png" (click)="onClickClose()" />
+            <br />
             <p class="type">{{popupqa.type}}</p>
             <p class="question">{{popupqa.question}}</p>
             <p class="questiondetails">Posté le {{popupqa.questiondate}} par {{popupqa.questionauthor}}</p>
             <p class="answer" *ngIf=popupqa.answered>{{popupqa.answer}}</p>
-            <p class="answerdetails" *ngIf=popupqa.answered>Posté le {{popupqa.answerdate}} <param name="" value=""> {{popupqa.answerauthor}}</p>
+            <p class="answerdetails" *ngIf=popupqa.answered>Posté le {{popupqa.answerdate}}
+                <param name="" value=""> {{popupqa.answerauthor}}
+            </p>
         </div>
 
 
 
 
         <div id="proposerquestionpopup">
-            <img src="../assets/close.png" (click)="onClickClose()"/>
-            <br/>
+            <img src="../assets/close.png" (click)="onClickClose()" />
+            <br />
             <form id="question-form" [formGroup]="questionForm" (ngSubmit)="submitQuestion()">
 
 
-                <textarea formControlName="question" placeholder="Entrez votre question" ></textarea>
-                <input type=text list=browsers formControlName="categorie" placeholder="Type de question"/>
-                <datalist id=browsers >
-                <option> Bourses
-                <option> Formalités
-                <option> Candidatures
-                <option> Voeux
-                <option> Logements
-                <option> Autres
+                <textarea formControlName="question" placeholder="Entrez votre question"></textarea>
+                <input type=text list=browsers formControlName="categorie" placeholder="Type de question" />
+                <datalist id=browsers>
+                    <option> Bourses
+                    <option> Formalités
+                    <option> Candidatures
+                    <option> Voeux
+                    <option> Logements
+                    <option> Autres
                 </datalist>
-                <br/>
+                <br />
                 <button type="submit" [disabled]="!questionForm.valid">+ Proposer la question</button>
 
             </form>
