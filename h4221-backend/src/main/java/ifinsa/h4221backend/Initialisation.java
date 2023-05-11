@@ -1,13 +1,7 @@
 package ifinsa.h4221backend;
 
-import ifinsa.h4221backend.model.Departement;
-import ifinsa.h4221backend.model.FAQ;
-import ifinsa.h4221backend.model.Universite;
-import ifinsa.h4221backend.model.User;
-import ifinsa.h4221backend.service.FAQService;
-import ifinsa.h4221backend.service.PaysService;
-import ifinsa.h4221backend.service.UniversiteService;
-import ifinsa.h4221backend.service.UserService;
+import ifinsa.h4221backend.model.*;
+import ifinsa.h4221backend.service.*;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +28,9 @@ public class Initialisation implements ApplicationRunner {
 
     @Autowired
     PaysService paysService;
+
+    @Autowired
+    FormulaireREXService formulaireREXService;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -97,6 +94,12 @@ public class Initialisation implements ApplicationRunner {
 
         // Initialisation des pays
         paysService.sauvegarderToutPays();
+
+        //Test d'une sauvegarde d'un REX Temp
+        JSONObject jsonTemp = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/rex-temp-example.json"));
+        FormulaireREXTemp formulaireREXTemp = new FormulaireREXTemp(users.get(1).getMail(), jsonTemp);
+        formulaireREXService.sauvegarderTemporairement(formulaireREXTemp);
+
         System.out.println("|| Fin Initialisation ");
     }
 
