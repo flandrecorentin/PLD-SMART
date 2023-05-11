@@ -10,6 +10,7 @@ export class FormService {
   private backendUrl = 'http://localhost:9000'
   private formURL = this.backendUrl + '/formulaire';
   private sendPartialFormUrl = this.backendUrl + '/formulaire-temp'
+  private alreadySentUrl = this.backendUrl + '/formulaire-alreadysend'
   private httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${localStorage.getItem("auth_token")}`,
@@ -33,5 +34,8 @@ export class FormService {
     return this.http.get<JSON>(this.sendPartialFormUrl, {headers: this.httpHeaders})
   }
 
+  hasAlreadySentForm() {
+    return this.http.get<boolean>(this.alreadySentUrl, {headers: this.httpHeaders})
+  }
 
 }
