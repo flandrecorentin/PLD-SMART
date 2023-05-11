@@ -46,6 +46,14 @@ public class FormulaireREX {
         return author;
     }
 
+    public FormulaireREX(String author, String date, Map<String, String> information, String exchangeCountry, String exchangeUniversity) {
+        this.author = author;
+        this.date = date;
+        this.information = information;
+        this.exchangeCountry = exchangeCountry;
+        this.exchangeUniversity = exchangeUniversity;
+    }
+
     public String getDate() {
         return date;
     }

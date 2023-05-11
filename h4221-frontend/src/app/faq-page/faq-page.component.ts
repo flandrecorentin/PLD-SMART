@@ -78,8 +78,21 @@ export class FaqPageComponent {
       this.pagenumber=1;
       if(filtre=="All"){
         this.selectedqas = this.allqas; 
+        
+        var elements = document.getElementsByTagName('button');
+        Array.from(elements).forEach(function (element) {
+          element.style.backgroundColor = "white";
+        });
+        document.getElementById("buttonAll")!.style.backgroundColor="#c7c7c7";
       }else{
-        this.selectedqas = this.allqas.filter((t) => t.type==filtre); 
+        this.selectedqas = this.allqas.filter((t) => t.type==filtre);
+        var elements = document.getElementsByTagName('button');
+        Array.from(elements).forEach(function (element) {
+          console.log(element);
+          element.style.backgroundColor = "#ffffff";
+          console.log(element);
+        });
+        document.getElementById("button"+filtre)!.style.backgroundColor="#c7c7c7";
       }
       this.qas = this.selectedqas.slice((this.pagenumber-1)*15, this.pagenumber*15);
     }

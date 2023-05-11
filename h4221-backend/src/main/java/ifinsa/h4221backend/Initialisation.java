@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 import java.io.FileReader;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class Initialisation implements ApplicationRunner {
@@ -82,8 +83,16 @@ public class Initialisation implements ApplicationRunner {
 
 
         // Initialisation des formulairesREX
-
-
+        JSONParser jsonPREX = new JSONParser();
+        JSONObject jsonOREX = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/rex-colin-NTNU.json"));
+        String authorREX = jsonOREX.get("author").toString();
+        String dateREX = jsonOREX.get("date").toString();
+        String exchangeCountryREX= jsonOREX.get("exchangeCountry").toString();
+        String exchangeUniversityREX = jsonOREX.get("exchangeUniversity").toString();
+        Map<String, String> informationREX = (Map<String, String>) jsonOREX.get("information");
+        FormulaireREX formulaireREXColinNTNU = new FormulaireREX(authorREX, dateREX, informationREX, exchangeCountryREX, exchangeUniversityREX);
+        formulaireREXService.sauvegarder(formulaireREXColinNTNU);
+        System.out.println(formulaireREXColinNTNU);
 
         // Initialisation FAQ
         List<FAQ> faqs = new LinkedList<>();
@@ -106,7 +115,7 @@ public class Initialisation implements ApplicationRunner {
 
         //Test d'une sauvegarde d'un REX Temp
         JSONObject jsonTemp = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/rex-temp-example.json"));
-        FormulaireREXTemp formulaireREXTemp = new FormulaireREXTemp(users.get(1).getMail(), jsonTemp);
+        FormulaireREXTemp formulaireREXTemp = new FormulaireREXTemp(users.get(3).getMail(), jsonTemp);
         formulaireREXService.sauvegarderTemporairement(formulaireREXTemp);
 
         System.out.println("|| Fin Initialisation ");
