@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {AppSettings} from '../app-settings';
 import { FaqService } from '../config/faq.service';
 import { PaysService } from '../config/pays.service';
 import { UnivService } from '../config/univ.service';
@@ -75,47 +74,9 @@ export class HomePageComponent {
 
         }
         this.qas = this.allqas.slice(0, 5);
-
-        // {question:"28"+this.mockquestion, answer:this.mockanswer, type:this.mocktype
-        // ,questionauthor:this.mockquestionauthor,
-        // answerauthor:this.mockanswerauthor,
-        // questiondate:this.mockdatequestion,
-        // answerdate:this.mockdateanswer},
-
       }
     );
 
-
-    /* Bouton 4 - Afficher SVG */
-
-    // var svg = chargerHttpXML("../assets/worldHigh.svg");
-    // var serializer = new XMLSerializer();
-    // var str = serializer.serializeToString(svg);
-    // var elementHtmlParent = window.document.getElementById(
-    //     "map"
-    // );
-    // elementHtmlParent!.innerHTML = str;
-    // /* Ajout pour le bouton 5 */
-
-    //     elementHtmlParent!.setAttribute(
-    //         "style",
-    //         "background-color: #0af;display: flex;flex-direction: row;justify-content:center;"
-    //     )
-    //     /* Ajouts pour la carte */
-    //     const lesPays = document.getElementsByClassName("land");
-    //     Array.from(lesPays).forEach((pays) => {
-    //         // Do stuff here
-
-    //         pays.addEventListener("mouseover", () =>
-    //             console.log(pays.getAttribute("id"))
-    //         );
-    //         // pays.addEventListener("mouseleave", () =>
-    //         //     )
-    //         // );
-    //     });
-
-
-    // liste des pays
     await this.univService.getAllUnivs().forEach(
       (rep: any) => {
         this.univsOfTheCountry = rep
@@ -145,25 +106,28 @@ export class HomePageComponent {
     // this.router.navigateByUrl("/")
   }
 
+  ngAfterViewInit() {
+    let selectedArea: any = null;
+    let areas = document.querySelectorAll<SVGElement>('path');
+    areas.forEach((area) => {
+      area.addEventListener('mouseover', function () {
+        area.style.fill = '#93c2ae';
+      });
+      area.addEventListener('mouseout', function () {
+        area.style.fill = '';
+      });
+      area.addEventListener('click', function () {
+        console.log(selectedArea)
+        // Here, we would finally call our RESTApi to filter the country name.
+        if (selectedArea) {
+          document.querySelector<SVGElement>(`#${selectedArea}`)!.setAttribute('class', 'st0');
+        }
+        if (selectedArea !== area.id) {
+          selectedArea = area.id;
+          area.setAttribute('class', 'selectedArea');
+        }
+      });
+    });
+  }
+
 }
-// function chargerHttpXML(xmlDocumentUrl:any) {
-
-//   var httpAjax;
-
-//   // httpAjax = window.XMLHttpRequest ?
-//   //     new XMLHttpRequest() :
-//   //     new ActiveXObject('Microsoft.XMLHTTP');
-//   httpAjax = new XMLHttpRequest();
-
-//   if (httpAjax.overrideMimeType) {
-//       httpAjax.overrideMimeType('text/xml');
-//   }
-
-//   //chargement du fichier XML � l'aide de XMLHttpRequest synchrone (le 3� param�tre est d�fini � false)
-//   httpAjax.open('GET', xmlDocumentUrl, false);
-//   httpAjax.send();
-
-//   return httpAjax.responseXML;
-// }
-
-
