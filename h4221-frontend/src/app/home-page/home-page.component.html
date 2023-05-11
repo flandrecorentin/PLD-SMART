@@ -14,6 +14,7 @@
               <div id="choiceCountry">
                 <span id="span-country">Choix par pays:</span>
                 <input id="paysChoice" list=list formControlName="pays" class="doubleLong" placeholder="Pays" [value]="pays">
+                <input type="submit" value="OK">
                 <datalist id=list >
                   <option *ngFor="for let pays of allPays, let i= index">{{pays.identifiant}}</option>
                 </datalist>
