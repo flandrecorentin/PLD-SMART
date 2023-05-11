@@ -1244,5 +1244,6 @@
   }
  ],
  "sendResultOnPageNext": true,
- "showProgressBar": "top"
+ "showProgressBar": "top",
+ "showTOC": true
 }
