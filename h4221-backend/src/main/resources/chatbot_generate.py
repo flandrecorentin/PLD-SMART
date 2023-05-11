@@ -1,13 +1,13 @@
 import sys
+
 from pygpt4all import GPT4All_J
 model = GPT4All_J(model_path='/home/charley/.local/share/nomic.ai/GPT4All/ggml-gpt4all-j-v1.3-groovy.bin')
 """
 from pygpt4all import GPT4All
 model = GPT4All('/home/charley/.local/share/nomic.ai/GPT4All/ggml-gpt4all-l13b-snoozy.bin')
 """
-
 prompt = sys.argv[1]
 print('\nBegin\n')
-for token in model.generate(prompt):
+for token in model.generate(prompt,n_predict=300,n_threads=8):
     print(token, end='', flush=True)
 print('\nEnd\n')
