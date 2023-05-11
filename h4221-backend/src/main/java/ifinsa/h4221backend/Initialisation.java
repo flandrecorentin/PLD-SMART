@@ -1,13 +1,7 @@
 package ifinsa.h4221backend;
 
-import ifinsa.h4221backend.model.Departement;
-import ifinsa.h4221backend.model.FAQ;
-import ifinsa.h4221backend.model.Universite;
-import ifinsa.h4221backend.model.User;
-import ifinsa.h4221backend.service.FAQService;
-import ifinsa.h4221backend.service.PaysService;
-import ifinsa.h4221backend.service.UniversiteService;
-import ifinsa.h4221backend.service.UserService;
+import ifinsa.h4221backend.model.*;
+import ifinsa.h4221backend.service.*;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +29,9 @@ public class Initialisation implements ApplicationRunner {
     @Autowired
     PaysService paysService;
 
+    @Autowired
+    FormulaireREXService formulaireREXService;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         // appel des services à faire à l'initialisation
@@ -46,7 +43,7 @@ public class Initialisation implements ApplicationRunner {
         User colin = new User("colin.thomas@insa-lyon.fr", "Thomas", "Colin", Departement.IF, 4, "norges-teknisk-naturvitenskapelige-universitet", "Norvege", "123456");
         User elise = new User("elise.dubillot@insa-lyon.fr", "Dubillot", "Elise", Departement.IF, 4, "university-college-dublin", "Irlande", "123456");
         User tom = new User("tom.delaporte@insa-lyon.fr", "Delaporte", "Tom", Departement.IF, 5, "university-of-birmingham", "Royaume-Uni", "123456");
-        User elod = new User("admin@insa-lyon.fr", "Elod", "Admin", Departement.IF, 0, null, null, "12345678");
+        User elod = new User("admin@insa-lyon.fr", "Elod", "Admin", Departement.IF, 0, null, null, "123456");
         elod.setRole("ROLE_ADMIN");
         users.add(corentin);
         users.add(colin);
@@ -97,6 +94,12 @@ public class Initialisation implements ApplicationRunner {
 
         // Initialisation des pays
         paysService.sauvegarderToutPays();
+
+        //Test d'une sauvegarde d'un REX Temp
+        JSONObject jsonTemp = (JSONObject) jsonP.parse(new FileReader("src/main/resources/static/rex-temp-example.json"));
+        FormulaireREXTemp formulaireREXTemp = new FormulaireREXTemp(users.get(1).getMail(), jsonTemp);
+        formulaireREXService.sauvegarderTemporairement(formulaireREXTemp);
+
         System.out.println("|| Fin Initialisation ");
     }
 

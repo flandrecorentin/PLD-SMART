@@ -115,8 +115,13 @@ export class HomePageComponent {
     //     });
 
 
-    //  Liste des universites
-
+    // liste des pays
+    await this.univService.getAllUnivs().forEach(
+      (rep: any) => {
+        this.univsOfTheCountry = rep
+        return 1;
+      }
+    );
 
     // liste des pays
     await this.paysService.getAllPays().forEach(

@@ -4,8 +4,8 @@
     <div id="headerhome">
         <span id="titre">Bienvenue sur Mobilit’IF</span>
         <img src="../assets/globe.png" id="logotitre"/>
-        <button id="completerInfos"><img src="../assets/baguette.png"/>Compléter mes informations</button>
-        <button id="découvrirDestinations" class="greenButton"><img src="../assets/palmier.png"/>Découvrir les destinations</button>
+        <button id="completerInfos" class="greenButton"><img src="../assets/baguette.png"/>Compléter mes informations</button>
+<!--        <button id="découvrirDestinations" class="greenButton"><img src="../assets/palmier.png"/>Découvrir les destinations</button>-->
     </div>
     <div class="wrapper">
         <div id="univs">
@@ -14,6 +14,7 @@
               <div id="choiceCountry">
                 <span id="span-country">Choix par pays:</span>
                 <input id="paysChoice" list=list formControlName="pays" class="doubleLong" placeholder="Pays" [value]="pays">
+                <input type="submit" value="OK">
                 <datalist id=list >
                   <option *ngFor="for let pays of allPays, let i= index">{{pays.identifiant}}</option>
                 </datalist>
