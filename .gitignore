@@ -1,3 +1,4 @@
 .vscode
 */.vscode
 chatbot-backend/*.bin
+__pycache__
