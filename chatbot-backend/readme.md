@@ -16,15 +16,14 @@
     ```
 3. Installer les dépendances avec pip :
     ``` 
-    pip install pygpt4all
+    pip install gpt4all
     pip install -U Flask
     pip install -U flask-cors
     ```
-4. Télécharger le modèle gpt4all-J (attention plusieurs Go) et le mettre dans le répertoire chatbot-backend. <br>
-    Lien : [ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin)
+4. Le modèle utilisé sera le ggml-mpt-7b-chat.bin. Au premier lancement du serveur flask, il sera téléchargé et placé dans "~/.cache/gpt4all/"
 ## Lancement du serveur chatbot
 5. Se placer dans le dossier chatbot-backend dans un terminal
 6. Lancer le serveur python avec 
-    <br>`flask --app chatbot_generate_v2 run`
+    <br>`flask --app chatbot_v3 run`
 7. Pour relancer le serveur, faire "ctrl+c" dans le terminal puis ré-executer la commande précédente
 
